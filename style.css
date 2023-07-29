@@ -1,6 +1,6 @@
 body {
     background-image: url('dadjoke.jpg');
-    background-size: 600px 600px;
+    background-size: 500px 500px;
     background-repeat: no-repeat;
     background-position: top; 
 }
@@ -21,7 +21,7 @@ h1 {
 }
 
 #btn {
-    margin-top: 150px;
+    margin-top: 300px;
     background: white;
     color: black;
     border: 2px solid white;
