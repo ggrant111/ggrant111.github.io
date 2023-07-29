@@ -7,7 +7,7 @@ body {
 
 h1 {
     margin: auto;
-    font-size: 10vh;
+    font-size: 8vh;
     background-color: gray;
     border-radius: 10px;
 }
@@ -21,7 +21,7 @@ h1 {
 }
 
 #btn {
-    margin-top: 350px;
+    margin-top: 250px;
     background: white;
     color: black;
     border: 2px solid white;
