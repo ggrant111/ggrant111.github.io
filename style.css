@@ -1,25 +1,32 @@
 body {
-    background-image: url('dadjoke.jpg');
-    background-size: 500px 250px;
-    background-repeat: no-repeat;
-    background-position: top;
-    background-position-y: 85px;
+    background-color: lightslategray;
 }
 
 h1 {
     margin: auto;
-    background-color: lightslategray;
-    font-size: 40px;
+    background-color: ;
+    font-size: 55px;
     border-radius: 10px;
-    border-color: black;
-    padding: 10px 50px;
     color: aliceblue;
-    text-shadow: 0 0 8px  black;
-    box-shadow: 0 0 4px black
+}
+
+#mainImage {
+    text-align:center;
+    padding: 10px ;
+    margin:auto;
+}
+
+#mainImage img{
+    width: 100%;
+    max-width: 400px;
+    align-content:center;
+    border-radius: 10px;
+    justify-self:center;
+    box-shadow: 0 0 20px black;
+    
 }
 
 .btn {
-    margin-top: 265px;
     box-shadow: 0 0 20px black;
     background: white;
     padding: 10px 10px;
@@ -48,14 +55,14 @@ h1 {
 #content {
     margin: auto;
     font-size: 1.5rem;
-    height: auto;
+    height: 50px;
+    max-height: auto;
     max-width: 400px;
     margin-top: 10px;
-    background-color: lightslategray; 
+    background-color: ; 
     color: aliceblue;
     border-radius: 10px;
     font-family: sans-serif;
     text-align: center; 
-    padding-top: 10px;
-    padding-bottom: 10px;  
+   padding: 10px; 
 }
