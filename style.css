@@ -61,4 +61,5 @@ sound {
     border-radius: 5px;
     font-size: 20px;
     font-weight: bold;
+    justify-content: center;
 }
