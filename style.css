@@ -12,9 +12,6 @@ h1 {
     border-radius: 10px;
 }
 
-sound {
-    margin: auto;
-}
 
 #container {
     display: flex;
@@ -51,7 +48,7 @@ sound {
     padding-bottom: 10px;  
 }
 
-#randomSoundButton {
+#sound {
     margin-top: 15px;
     background: blue;
     color: black;
