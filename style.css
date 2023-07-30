@@ -48,8 +48,8 @@ h1 {
 }
 
 #randomSoundButton {
-    margin-top: 300px;
-    background: white;
+    margin-top: 15px;
+    background: blue;
     color: black;
     border: 2px solid white;
     padding: 10px 10px;
