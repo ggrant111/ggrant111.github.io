@@ -46,3 +46,15 @@ h1 {
     padding-top: 10px;
     padding-bottom: 10px;  
 }
+
+#randomSoundbutton {
+    margin-top: 300px;
+    background: white;
+    color: black;
+    border: 2px solid white;
+    padding: 10px 10px;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 20px;
+    font-weight: bold;
+}
