@@ -10,6 +10,7 @@ h1 {
     font-size: 40px;
     background-color: gray;
     border-radius: 10px;
+    border-color: black;
 }
 
 
@@ -48,15 +49,16 @@ h1 {
     padding-bottom: 10px;  
 }
 
-#sound  {
+#sound {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     font-family: sans-serif;
 }
-#randomSoundButton {
-    margin-top: 300px;
+
+#randomSoundButton{
+    margin-top: 12px;
     background: white;
     color: black;
     border: 2px solid white;
