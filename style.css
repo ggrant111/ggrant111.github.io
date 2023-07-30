@@ -13,23 +13,10 @@ h1 {
     padding: 10px;
 }
 
-
-#container {
-    display: flex;
-    justify-content: center;
-    font-family: sans-serif;
-}
-
-#button {
-    display: flex;
-    justify-content: space-around;
-    max-width: 600px;
-    width: 100%;
-}
-
-#btn {
+.btn {
     margin-top: 175px;
-    margin-right: 250px;
+    box-shadow: white;
+    /* margin-right: 250px; */
     background: white;
     color: black;
     padding: 10px 10px;
@@ -38,6 +25,20 @@ h1 {
     font-size: 20px;
     font-weight: bold;
     transform: scale(.50);
+}
+
+#container {
+    display: flex;
+    justify-content: center;
+    font-family: sans-serif;
+}
+
+#buttons {
+    display: flex;
+    margin: auto;
+    justify-content: space-between;
+    max-width: 400px;
+    width: 100%;
 }
 
 #content {
@@ -53,18 +54,4 @@ h1 {
     text-align: center; 
     padding-top: 10px;
     padding-bottom: 10px;  
-}
-
-
-#randomSoundButton{
-    margin-top: 175px;
-    
-    background: white;
-    color: black;
-    padding: 10px 10px;
-    cursor: pointer;
-    border-radius: 15px;
-    font-size: 20px;
-    font-weight: bold;
-    transform: scale(.50);
 }

@@ -9,22 +9,27 @@
 </head>
 <body>
     <div id="container">
-        <h1 style="color: rgb(146, 156, 159);">Punny Pop</h1>
-                     
+        <h1 style="color: lightblue;">Punny Pop</h1>
     </div>
-    <div id="button">
-        <button id="btn" class="btn">
-            <img src="img/shuffle.png" alt="Shuffle Joke"/>
-        </button> 
-        <button id="randomSoundButton" class="randomSoundButton" onclick="playRandomSound()">
+    
+    <div id="buttons">
+        <button id="sound" class="btn">
             <img src="img/playsound.png" alt="Play Sound"/>
         </button>
-        <audio id="sound1" src="sounds/sound1.wav" style="display: none;"></audio>
-        <audio id="sound2" src="sounds/sound2.wav" style="display: none;"></audio>
-        <audio id="sound3" src="sounds/sound3.wav" style="display: none;"></audio>
-        <audio id="sound4" src="sounds/sound4.wav" style="display: none;"></audio>
+            <audio id="sound1" src="sounds/sound1.wav" style="display: none;"></audio>
+            <audio id="sound2" src="sounds/sound2.wav" style="display: none;"></audio>
+            <audio id="sound3" src="sounds/sound3.wav" style="display: none;"></audio>
+            <audio id="sound4" src="sounds/sound4.wav" style="display: none;"></audio>
+        <button id="randJoke" class="btn">
+            <img src="img/shuffle.png" alt="Shuffle Joke"/>
+        </button> 
+        <button id="speakButton" class="btn">
+            <img src="img/speak.png" alt="Speak Joke"/>
+        </button>
     </div>
+
     <div id="content">
+        <!-- Your generated joke content will be displayed here -->
     </div> 
     <script src="app.js"></script> 
 </body>
