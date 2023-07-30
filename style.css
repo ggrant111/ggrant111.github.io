@@ -8,35 +8,37 @@ body {
 h1 {
     margin: auto;
     font-size: 40px;
-    background-color: gray;
+    background-color: ;
     border-radius: 10px;
     border-color: black;
+    padding: 10px;
 }
 
 
 #container {
     display: flex;
-    flex-direction: column;
-    justify-content: center ;
-    align-items: center;
+    /* flex-direction: column; */
+    justify-content: center;
+    /* align-items: center; */
     font-family: sans-serif;
-    display: inline-block;
-    margin: auto;
-    
+    /* display: inline-block; */
+    /* margin: auto; */
+    /* align-content: flex-start; */
 }
 
 #button {
-    display: inline;
+    display: flex;
     justify-content: center;
 }
 
 #btn {
-    margin-top: 300px;
+    margin-top: 175px;
+    margin-right: 250px;
     background: white;
     color: black;
     padding: 10px 10px;
     cursor: pointer;
-    border-radius: 5px;
+    border-radius: 15px;
     font-size: 20px;
     font-weight: bold;
     transform: scale(.50);
@@ -59,12 +61,13 @@ h1 {
 
 
 #randomSoundButton{
-    margin-top: 12px;
+    margin-top: 175px;
+    
     background: white;
     color: black;
     padding: 10px 10px;
     cursor: pointer;
-    border-radius: 5px;
+    border-radius: 15px;
     font-size: 20px;
     font-weight: bold;
     transform: scale(.50);
