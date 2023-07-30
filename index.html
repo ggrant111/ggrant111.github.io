@@ -10,20 +10,17 @@
     <div id="container">
         <h1 style="color: lightblue;">Punny Pop</h1>
         <button id="btn" class="btn">Generate Next Joke</button> 
-        <button id="laughButton" onclick="playLaughSound()">Laugh</button>
-
-    <audio id="laughSound" src="path/to/laugh_sound.mp3" style="display: none;"></audio>
-
-    <button id="randomSoundButton" onclick="playRandomSound()">Random Sound</button>
-
-    <audio id="sound1" src="path/to/laugh_sound.mp3" style="display: none;"></audio>
-    <audio id="sound2" src="path/to/moan_sound.mp3" style="display: none;"></audio>
-    <audio id="sound3" src="path/to/knee_slap_sound.mp3" style="display: none;"></audio>
-    <audio id="sound4" src="path/to/chuckle_sound.mp3" style="display: none;"></audio>
-    
+                  
     </div>
     <div id="content">
     </div> 
-    <script src="app.js"></script>        
+    <script src="app.js"></script> 
+    <div>
+        <button id="randomSoundButton" onclick="playRandomSound()">Random Sound</button>
+        <audio id="sound1" src="sounds/sound1.mp3" style="display: none;"></audio>
+        <audio id="sound2" src="sounds/sound2.mp3" style="display: none;"></audio>
+        <audio id="sound3" src="sounds/sound3.mp3" style="display: none;"></audio>
+        <audio id="sound4" src="sounds/sound4.mp3" style="display: none;"></audio>
+    </div>
 </body>
 </html>
