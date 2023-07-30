@@ -16,13 +16,8 @@ h1 {
 
 #container {
     display: flex;
-    /* flex-direction: column; */
     justify-content: center;
-    /* align-items: center; */
     font-family: sans-serif;
-    /* display: inline-block; */
-    /* margin: auto; */
-    /* align-content: flex-start; */
 }
 
 #button {
