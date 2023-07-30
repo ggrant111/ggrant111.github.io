@@ -1,6 +1,6 @@
 body {
     background-image: url('dadjoke.jpg');
-    background-size: 500px 500px;
+    background-size: 500px 250px;
     background-repeat: no-repeat;
     background-position: top; 
 }
@@ -11,23 +11,24 @@ h1 {
     border-radius: 10px;
     border-color: black;
     padding: 10px;
+    color: whitesmoke;
+    text-shadow: 4px 4px 4px black;
 }
 
 .btn {
     margin-top: 175px;
-    box-shadow: white;
-    /* margin-right: 250px; */
+    box-shadow: 2px 2px 10px black;
     background: white;
-    color: black;
     padding: 10px 10px;
     cursor: pointer;
-    border-radius: 15px;
+    border-radius: 100px;
+    border: none;
     font-size: 20px;
     font-weight: bold;
-    transform: scale(.50);
+    transform: scale(.750);
 }
 
-#container {
+#title-container {
     display: flex;
     justify-content: center;
     font-family: sans-serif;
