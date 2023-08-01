@@ -82,7 +82,7 @@ function sendJokeToFriend() {
     const contentText = document.getElementById("content").textContent;
     
     // Check if the Web Share API is supported by the browser
-    if (navigator.share) {
+    if (navigator.canShare && navigator.share) {
         navigator.share({
             title: "Check out this joke!",
             text: contentText,
