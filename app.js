@@ -67,9 +67,9 @@ function screenshot(){
  }
     
 
-function goToSettingsPage() {
-    // Use window.location.href to navigate to the settings.html page
-    window.location.href = "settings.html";
+function goToHelpPage() {
+    // Use window.location.href to navigate to the help.html page
+    window.location.href = "help.html";
 }
 
 function goToHomePage() {
