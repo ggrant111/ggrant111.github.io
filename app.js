@@ -53,9 +53,18 @@ function shareContentAsImage() {
 
         // Create a link to download the im
         const link = document.createElement("a");
-        link.download = "punny_pop_content.png"; // Set the filename for the downloaded image
-        link.href = dataURL;
-        link.click();
+    
+    // Check if the Web Share API is supported by the browser
+    if (navigator.canShare && navigator.share) {
+        navigator.share(link)
+        .then(() => console.log("Joke shared successfully"))
+        .catch((error) => console.error("Error sharing joke:", error));
+    } else {
+        // Provide a fallback option for browsers that do not support the Web Share API
+        console.log("Web Share API not supported");
+        // You can display an alert or provide an alternative sharing method here.
+    }
+        
     });
 }
 
@@ -83,11 +92,7 @@ function sendJokeToFriend() {
     
     // Check if the Web Share API is supported by the browser
     if (navigator.canShare && navigator.share) {
-        navigator.share({
-            title: "Here is a Punny Pop Joke for you!",
-            text: contentText + "sent from " + href('ggrant111.github.com'),
-            url: 'ggrant111.github.io'
-        })
+        navigator.share(link)
         .then(() => console.log("Joke shared successfully"))
         .catch((error) => console.error("Error sharing joke:", error));
     } else {
