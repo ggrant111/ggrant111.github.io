@@ -84,8 +84,9 @@ function sendJokeToFriend() {
     // Check if the Web Share API is supported by the browser
     if (navigator.canShare && navigator.share) {
         navigator.share({
-            title: "Check out this joke!",
+            title: "Here is a Punny Pop Joke for you!",
             text: contentText,
+            url: 'ggrant111.github.io'
         })
         .then(() => console.log("Joke shared successfully"))
         .catch((error) => console.error("Error sharing joke:", error));
