@@ -76,3 +76,14 @@ function goToHomePage() {
     // Use window.location.href to navigate to the index.html page
     window.location.href = "index.html";
 }
+
+// Function to send the joke to a friend
+function sendJokeToFriend() {
+    const contentText = document.getElementById("content").textContent;
+    const emailSubject = encodeURIComponent("Check out this joke!");
+    const emailBody = encodeURIComponent(contentText);
+    const mailtoLink = `mailto:?subject=${emailSubject}&body=${emailBody}`;
+
+    // Open the default email app with the "mailto" link
+    window.location.href = mailtoLink;
+}
