@@ -30,7 +30,7 @@ h2 {
     border-radius: 10px;
     justify-self:center;
     box-shadow: 0 0 20px black;
-    
+    border-bottom: solid rgb(161, 164, 167);    
 }
 
 .btn {
@@ -54,6 +54,7 @@ h2 {
     font-family: sans-serif;
     text-align: center;
     background-color: none;
+    border-bottom: solid rgb(161, 164, 167);
 }
 
 #buttons {
@@ -94,10 +95,8 @@ h2 {
     height: auto;
     display: flex;
     flex-direction:column;
-    align-items:  baseline;
-    text-align:center;
+    align-items:  left;
     list-style:none;
-    text-wrap:;
     margin:auto;
     padding: 20px;
     
@@ -107,10 +106,16 @@ h2 {
     font-size: 18px;
     color: aliceblue;
     text-align:right;
-    width: auto;
+    width: 300;
+    max-width: 400px;
     height:auto;
-    justify-content:space-around;
+    justify-content:space-evenly;
     display: flex;
     padding: 10px;
-    
+    vertical-align: middle;
+      
 }
+
+li:not(:last-of-type) {
+    border-bottom: 4px solid rgb(161, 164, 167);
+  }
