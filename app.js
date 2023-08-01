@@ -80,10 +80,18 @@ function goToHomePage() {
 // Function to send the joke to a friend
 function sendJokeToFriend() {
     const contentText = document.getElementById("content").textContent;
-    const emailSubject = encodeURIComponent("Check out this joke!");
-    const emailBody = encodeURIComponent(contentText);
-    const mailtoLink = `mailto:?subject=${emailSubject}&body=${emailBody}`;
-
-    // Open the default email app with the "mailto" link
-    window.location.href = mailtoLink;
+    
+    // Check if the Web Share API is supported by the browser
+    if (navigator.share) {
+        navigator.share({
+            title: "Check out this joke!",
+            text: contentText,
+        })
+        .then(() => console.log("Joke shared successfully"))
+        .catch((error) => console.error("Error sharing joke:", error));
+    } else {
+        // Provide a fallback option for browsers that do not support the Web Share API
+        console.log("Web Share API not supported");
+        // You can display an alert or provide an alternative sharing method here.
+    }
 }
