@@ -80,12 +80,13 @@ function goToHomePage() {
 // Function to send the joke to a friend
 function sendJokeToFriend() {
     const contentText = document.getElementById("content").textContent;
-    
+    const webSiteURL = 'ggrant111.github.io';
+
     // Check if the Web Share API is supported by the browser
     if (navigator.canShare && navigator.share) {
         navigator.share({
             title: "Check out this joke!",
-            text: contentText,
+            text: contentText + '\n\n' + webSiteURL,
         })
         .then(() => console.log("Joke shared successfully"))
         .catch((error) => console.error("Error sharing joke:", error));
