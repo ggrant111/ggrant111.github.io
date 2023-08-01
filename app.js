@@ -85,7 +85,7 @@ function sendJokeToFriend() {
     if (navigator.canShare && navigator.share) {
         navigator.share({
             title: "Here is a Punny Pop Joke for you!",
-            text: contentText,
+            text: contentText + "sent from " + href('ggrant111.github.com'),
             url: 'ggrant111.github.io'
         })
         .then(() => console.log("Joke shared successfully"))
