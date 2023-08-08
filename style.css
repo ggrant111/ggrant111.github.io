@@ -3,6 +3,10 @@ body {
     overflow: hidden;
 }
 
+.splashlogo-container {
+    width: 100%;
+    max-width: 400px;
+}
 .splash-screen {
     display: none;
     position: fixed;
@@ -118,12 +122,13 @@ p {
     height: auto;
     max-width: 400px;
     margin-top: 10px;
-    background-color: lightslategray; 
-    color: aliceblue;
-    border-radius: 10px;
+    background-color: aliceblue; 
+    color: lightslategray;
+    border-radius: 20px;
     font-family: sans-serif;
     text-align: center;
     padding: 10px; 
+    filter: drop-shadow(2px 4px 6px black);
 }
 
 .small-btn {
