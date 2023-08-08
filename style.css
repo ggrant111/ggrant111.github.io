@@ -3,10 +3,7 @@ body {
     overflow: hidden;
 }
 
-.splashlogo-container {
-    width: 100%;
-    max-width: 400px;
-}
+
 .splash-screen {
     display: none;
     position: fixed;
@@ -21,13 +18,23 @@ body {
     transition: opacity 0.5s ease-in-out; /* Add a transition for fading */
     z-index: 200;
     justify-content: center;
-    padding-top: 5vh;
+    padding-top: 3vh;
     font-family: 'Montserrat', sans-serif;
+}
+
+#splashlogo-container {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    max-width: 400px;
+    text-align: center;
+    margin: auto;
 }
  #splash-logo {
     width: 80%;
-    text-align: center;
+    
     z-index: 210;
+    
  }
 
  #title-container {
