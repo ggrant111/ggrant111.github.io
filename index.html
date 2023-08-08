@@ -5,20 +5,27 @@
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
-    <title>Punny Pop</title>
+    <title>
+        Punny Pop
+    </title>
     <link rel="shortcut icon" href="favicon.ico">
     <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600&family=Poppins:wght@300&display=swap" rel="stylesheet">
     <script src="https://html2canvas.hertzen.com/dist/html2canvas.min.js"></script>
 </head>
 <body>
+    <div id="splashScreen" class="splash-screen">
+        <!-- Add your splash screen content here -->
+        <h1 style="color: white;">Welcome<br>to<br>Punny Pop!</h1>
+        <img id="splash-logo" src="/img/pp-square-logo-01.svg" alt="">
+        <p>Your daily dose of dad jokes awaits!</p>
+    </div>
     <div id="title-container">
-        <button id="shareJoke" class="small-btn" onclick="sendJokeToFriend()">
-            <img src="img/share.png" alt="Share Joke">
-        </button>
-        <h1>Punny Pop</h1>
-        <button id="help" class="small-btn" onclick=goToHelpPage()>
-            <img src="img/help.svg" alt="Help Page">
-        </button>
+        <img id="shareJoke" class="small-btn" onclick="sendJokeToFriend()" src="img/share.png" alt="Share Joke">
+        <img id="small-logo" src="/img/pp-logo-long=01.svg" alt="">
+        <img id="help" class="small-btn" onclick=goToHelpPage() src="img/help.svg" alt="Help Page">
     </div>
     <div id="mainImage">
         <img src="dadjoke.jpg" alt="Laughing Dad">
