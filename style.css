@@ -5,7 +5,7 @@ body {
 
 
 .splash-screen {
-    display: none;
+    display: flex;
     position: fixed;
     top: 0;
     left: 0;
@@ -14,27 +14,16 @@ body {
     background-color: rgba(3, 3, 3, 0.9);
     color: white;
     text-align: center;
-    opacity: 1; /* Initial opacity */
-    transition: opacity 0.5s ease-in-out; /* Add a transition for fading */
     z-index: 200;
-    justify-content: center;
-    padding-top: 3vh;
     font-family: 'Montserrat', sans-serif;
+    flex-direction: column;
 }
 
 #splashlogo-container {
-    display: flex;
-    justify-content: center;
-    width: 100%;
-    max-width: 400px;
-    text-align: center;
-    margin: auto;
-    max-height: 38vh;
+    height: 50vh;
 }
- #splash-logo {
-    width: 60%;
-    
-    z-index: 210;
+svg {
+    height: 100%;
     
  }
 
@@ -487,15 +476,13 @@ body {
     justify-content: space-evenly;
     max-width: 400px;
     width: 100%;
-    font-family: sans-serif;
+    font-family: 'Monserrat',sans-serif;
     text-align: center;
     background-color: none;
     border-bottom: solid rgb(161, 164, 167);
     
 }
 h1 {
-    margin: 5px;
-    font-family: 'Poppins', sans-serif;
     background-color: none;
     font-size: 30px;
     border-radius: 10px;
@@ -523,7 +510,6 @@ p {
     font-size: xx-large;
     max-width: 350px;
     margin: auto;
-    position: relative;
 }
 #mainImage {
     text-align:center;
