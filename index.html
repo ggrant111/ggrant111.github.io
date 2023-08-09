@@ -722,9 +722,12 @@
     </div>
     </div>
     <div id="title-container">
-        <img id="shareJoke" class="small-btn" onclick="sendJokeToFriend()" src="img/share.png" alt="Share Joke">
+        <img id="shareJoke" class="small-btn" onclick="sendJokeToFriend()" src="img/share-svgrepo-com.svg" alt="Share Joke">
         <img id="small-logo" src="img/pp-logo-long=01.svg" alt="">
-        <img id="help" class="small-btn" onclick=goToHelpPage() src="img/help.svg" alt="Help Page">
+        <!-- <img id="help" class="small-btn" onclick=goToHelpPage() src="img/help.svg" alt="Help Page"> -->
+        
+        <img class="small-btn" src="img/help-svgrepo-com.svg" href="#popup" id="help_btn">
+        
     </div>
     <div id="mainImage">
         <img src="dadjoke.jpg" alt="Laughing Dad">
@@ -739,11 +742,40 @@
             <audio id="sound3" src="sounds/sound3.wav" style="display: none;"></audio>
             <audio id="sound4" src="sounds/sound4.wav" style="display: none;"></audio>
         <button id="randJoke" class="btn">
-            <img src="img/shuffle.png" alt="Shuffle Joke"/>
+            <img src="img/shuffle-1-svgrepo-com.svg" alt="Shuffle Joke" style="max-height: 100px;"/>
         </button> 
         <button id="speakButton" class="btn">
-            <img src="img/speak.png" alt="Speak Joke"/>
+            <img src="img/speak-svgrepo-com.svg" alt="Speak Joke" style="max-height: 100px;" />
         </button>
+    </div>
+   
+    <div class="popup" id="popup" style="    background-color: rgba(0 0 0 /.75);
+    ">
+        <div class="popup__content">
+        <ul id="help-list" class="lists">
+            <li class=list-items>
+                <img src="/img/shuffle.png" alt="Shuffle" width="50" height="50">
+                Shuffle Joke - will return a random joke with each button press
+            </li>
+            <br>
+            <li class="list-items">
+                <img src="/img/playsound.png" alt="Random Sound" width="50" height="50">
+                Play Random Sounds - will rnadomly play thorugh a list of laughs, claps and moans
+            </li>
+            <br>
+            <li class="list-items">
+                <img src="/img/speak.png" alt="Speak Joke" width="50" height="50">
+                Have Device Tell the Joke Using Device Speakers
+            </li>
+            <br>
+            <li class="list-items"><img src="/img/share.png" alt="Share Joke" width="50" height="50">
+                Share Joke - This will allow you to share the joke with your friends and families for them to enjoy!
+            </li>
+            <br>
+            <a href="#" class="button">Close</a>
+            </ul>
+            
+        </div>
     </div>
 
     <div id="content">
