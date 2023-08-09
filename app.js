@@ -22,7 +22,7 @@ const splashShown = sessionStorage.getItem("splashShown");
 if (!splashShown) {
     const splashScreen = document.getElementById("splashScreen");
     splashScreen.style.display = "";
-    setTimeout(hideSplashScreen, 7000); // Set a timeout to hide after 3 seconds
+    setTimeout(hideSplashScreen, 6000); // Set a timeout to hide after 3 seconds
 
     // Set a flag in session storage to indicate that the splash screen has been shown
     sessionStorage.setItem("splashShown", true);

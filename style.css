@@ -478,11 +478,11 @@ svg {
     margin: auto;
     justify-content: space-evenly;
     max-width: 400px;
-    width: 100%;
+    width: 90%;
     font-family: 'Monserrat',sans-serif;
     text-align: center;
     background-color: none;
-    border-bottom: solid rgb(161, 164, 167);
+    border-bottom: solid aliceblue;
     height: 100%;
     max-height: 76px;
     
@@ -496,11 +496,11 @@ h1 {
 }
 
 #small-logo {
-    width: 60%;
+    width: 40%;
+    max-width: 250px;
     text-align: center;
     justify-content: flex-start;
-    filter: red;
-    filter: drop-shadow(2px 0px 8px aliceblue);
+    filter: drop-shadow(2px 0px 8px black);
 
 }
 
@@ -521,6 +521,7 @@ p {
     text-align:center;
     padding: 10px ;
     margin:auto;
+    height: 100%;
 }
 
 #mainImage img{
@@ -536,6 +537,11 @@ p {
 #small-logo .path {
     fill: orange;
 }
+ 
+#buttons img {
+    height:100%;
+    max-height: 95px;
+} 
 .btn {
     /* box-shadow: 0 0 20px black;
     background: white;
@@ -576,6 +582,9 @@ p {
     font-family: sans-serif;
     text-align: center;
     padding: 10px; 
+    border: 1px;
+    border-color: slategray;
+    filter: drop-shadow(2px 4px 6px black);
     
 }
 
@@ -585,7 +594,10 @@ p {
     transform: scale(.45);
     border-radius: 25px;
     filter: drop-shadow(2px 4px 6px black);
-    width: 38%;
+    width: 32%;
+    height: 100%;
+
+    max-height: 95px;
 }
 
 .lists {
