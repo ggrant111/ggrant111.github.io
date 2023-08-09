@@ -23,7 +23,7 @@ body {
 #splashlogo-container {
     display: flex;
     height: 50vh;
-    margin-top: 25%;
+    margin-top: 50px;
 }
 svg {
     height: 100%;
