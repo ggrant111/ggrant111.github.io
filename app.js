@@ -1,6 +1,10 @@
 document.getElementById("randJoke").addEventListener("click", joke);
 document.getElementById("sound").addEventListener("click", playRandomSound);
 document.getElementById("speakButton").addEventListener("click", speakText);
+var wrapper = document.querySelector('.splash-screen svg')
+
+
+
 
 // Function to hide the splash screen with fade-out effect
 function hideSplashScreen() {
@@ -26,6 +30,9 @@ if (!splashShown) {
 
 
 
+function draw() {
+    wrapper.classList.add('active')
+  }
 
 
 async function joke() {
@@ -120,3 +127,5 @@ function sendJokeToFriend() {
         // You can display an alert or provide an alternative sharing method here.
     }
 }
+
+window.onload = draw; 
