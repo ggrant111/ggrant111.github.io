@@ -107,7 +107,7 @@ function sendJokeToFriend() {
     if (navigator.canShare && navigator.share) {
         navigator.share({
             title: "Check out this joke!",
-            text: contentText + '\n\n' + webSiteURL,
+            text: contentText + '\n\n' + "--sent from " + webSiteURL,
         })
         .then(() => console.log("Joke shared successfully"))
         .catch((error) => console.error("Error sharing joke:", error));
