@@ -7,7 +7,6 @@ body {
     overflow: visible;
 }
 
-
 .splash-screen {
     display: flex;
     position: fixed;
@@ -29,15 +28,12 @@ body {
     height: 50vh;
     margin-top: 50px;
 }
+
 svg {
-    height: 100%;
-    
- }
+    height: 100%; 
+}
 
-
-    
-
- #title-container {
+#title-container {
   display: flex;
   flex-direction: row;
   margin: auto;
@@ -49,6 +45,7 @@ svg {
   height: 100%;
   align-items: center;
 }
+
 h1 {
     background-color: none;
     font-size: 30px;
@@ -60,7 +57,6 @@ h1 {
     max-width: 250px;
     text-align: center;
     filter: drop-shadow(2px 0px 8px black);
-
 }
 
 h2 {
@@ -71,6 +67,7 @@ h2 {
     color: aliceblue;
     font-family: 'Montserrat', sans-serif;
 }
+
 p {
     font-size: xx-large;
     max-width: 350px;
@@ -92,21 +89,19 @@ p {
     box-shadow: 0 0 20px black;
     border-bottom: solid rgb(161, 164, 167);    
 }
-
-#small-logo .path {
-    fill: orange;
-}
  
 #buttons img {
     height:100%;
     max-height: 95px;
 } 
+
 .btn {
     transform: scale(.750);
     background-color: transparent;
     border: none;
 
 }
+
 .svg {
     max-height: 100px;
 }
@@ -176,37 +171,38 @@ li:not(:last-of-type) {
   border-bottom: 3px solid slategray;
   }
 
-  .button {
-    background-color: none; /* Green */
-    border: none;
-    color: white;
-    padding: 15px 32px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 16px;
-    border-radius: 100px;
-    margin-top: 25px;
-    
+.button {
+  background-color: none; /* Green */
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  border-radius: 100px;
+  margin-top: 25px;
+  
 
-  }
-  dialog {
-    background-color: black;
-    box-shadow: none;
-  }
+}
 
-  #closeHelp {
-    color: black;
-    font-size: 1.5rem;
-    font-weight: bolder;      
-    font-family: 'Montserrat';
-  }
+dialog {
+  background-color: black;
+  box-shadow: none;
+}
 
-  .popup {
-    height: 100vh;
-    width: 100%;
-    border: none;
-    border-color: none;
-    padding-top: 15%;
-  }
+#closeHelp {
+  color: black;
+  font-size: 1.5rem;
+  font-weight: bolder;      
+  font-family: 'Montserrat';
+}
+
+.popup {
+  height: 100vh;
+  width: 100%;
+  border: none;
+  border-color: none;
+  padding-top: 15%;
+}
   
