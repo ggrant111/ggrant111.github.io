@@ -17,11 +17,9 @@
     <script>
         const button = document.querySelector("button")
 
-        Notification.requestPermission("click", () => {
-            if (perm === "granted") {
-                new Notification("your mom had fun!")
-            }
-        })
+        button.addEventListener("click", () => {
+            new Notification("your mom had fun!")
+                })
     </script>
 </body>  
 </html>
