@@ -2,9 +2,18 @@ document.getElementById("randJoke").addEventListener("click", joke);
 document.getElementById("sound").addEventListener("click", playRandomSound);
 document.getElementById("speakButton").addEventListener("click", speakText);
 var wrapper = document.querySelector('.splash-screen svg')
+const cancelButton = document.getElementById("closeHelp");
+// document.getElementById("splashScreen").addEventListener("click" , splashScreen.style.visibility = "hidden");
 
 
+function myFunction() { 
+  document.getElementById("popup").showModal(); 
+  console.log("modal show")
+} 
 
+cancelButton.addEventListener("click", () => {
+    popup.close();
+});
 
 // Function to hide the splash screen with fade-out effect
 function hideSplashScreen() {
@@ -12,7 +21,7 @@ function hideSplashScreen() {
     splashScreen.style.opacity = "0"; // Apply fade-out effect
     setTimeout(() => {
         splashScreen.style.display = "none"; // Hide the splash screen
-    }, 500); // Wait for the fade-out transition duration (in milliseconds)
+    }, 1000); // Wait for the fade-out transition duration (in milliseconds)
 }
 
 // Check if the splash screen has been shown before in this session
@@ -63,15 +72,6 @@ function speakText() {
     }
 }
 
-// Function to convert content text to speech
-function speakText() {
-    const contentText = document.getElementById("content").textContent;
-    if (contentText.trim() !== "") {
-        const utterance = new SpeechSynthesisUtterance(contentText);
-        speechSynthesis.speak(utterance);
-    }
-}
-
 // Function to share the content as an image
 function shareContentAsImage() {
     // Select the content element to be captured
@@ -98,16 +98,6 @@ function screenshot(){
  }
     
 
-function goToHelpPage() {
-    // Use window.location.href to navigate to the help.html page
-    window.location.href = "help.html";
-}
-
-function goToHomePage() {
-    // Use window.location.href to navigate to the index.html page
-    window.location.href = "index.html";
-}
-
 // Function to send the joke to a friend
 function sendJokeToFriend() {
     const contentText = document.getElementById("content").textContent;
@@ -117,7 +107,7 @@ function sendJokeToFriend() {
     if (navigator.canShare && navigator.share) {
         navigator.share({
             title: "Check out this joke!",
-            text: contentText + '\n\n' + webSiteURL,
+            text: contentText + '\n\n' + "--sent from " + webSiteURL,
         })
         .then(() => console.log("Joke shared successfully"))
         .catch((error) => console.error("Error sharing joke:", error));

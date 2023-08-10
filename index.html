@@ -6,11 +6,10 @@
     <link rel="apple-touch-icon" sizes="180x180" href="/punnypoplogo180px.png">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
-    <title>
-        Punny Pop
-    </title>
+    <title>Punny Pop</title>
     <link rel="shortcut icon" href="favicon.ico">
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="splashscreenanimation.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600&family=Poppins:wght@300&display=swap" rel="stylesheet">
@@ -18,13 +17,8 @@
 </head>
 <body>
     <div id="splashScreen" class="splash-screen">
-        <!-- Add your splash screen content here -->
-        <!-- <h1 style="color: white;">Welcome<br>to<br>Punny Pop!</h1> -->
         <div id="splashlogo-container">
-            <!--?xml version="1.0" encoding="UTF-8"?-->
-            <!--?xml version="1.0" encoding="utf-8"?-->
-            <!-- Generator: Adobe Illustrator 27.7.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
-            <svg version="1.1" id="Logo-Group" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 500 500" style="enable-background:new 0 0 500 500;" xml:space="preserve" width="500" height="500">
+        <svg version="1.1" id="Logo-Group" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 500 500" style="enable-background:new 0 0 500 500;" xml:space="preserve" width="500" height="500">
     <style type="text/css">
         .st0{fill:none;stroke:#FFFFFF;stroke-miterlimit:10;}
     </style>
@@ -724,14 +718,11 @@
     <div id="title-container">
         <img id="shareJoke" class="small-btn" onclick="sendJokeToFriend()" src="img/share-svgrepo-com.svg" alt="Share Joke">
         <img id="small-logo" src="img/pp-logo-long=01.svg" alt="">
-     
-        <img class="small-btn" src="img/help-svgrepo-com.svg" href="#popup" id="help_btn">
-        
+        <img class="small-btn" src="img/help-svgrepo-com.svg" href="#popup" id="help_btn" onclick="myFunction()">
     </div>
     <div id="mainImage">
         <img src="dadjoke.jpg" alt="Laughing Dad">
     </div>
-    
     <div id="buttons">
         <button id="sound" class="btn">
             <img src="img/laugh-5104.svg" alt="Play Sound" style="max-height: 100px;"/>
@@ -748,35 +739,32 @@
         </button>
     </div>
    
-    <div class="popup" id="popup" style="    background-color: rgba(0 0 0 /.75);
-    ">
-        <div class="popup__content">
+    <dialog class="popup" id="popup" method="dialog">
+        <div>
         <ul id="help-list" class="lists">
             <li class=list-items>
-                <img src="/img/shuffle.png" alt="Shuffle" width="50" height="50">
-                Shuffle Joke - will return a random joke with each button press
+                <img src="/img/shuffle-1-svgrepo-com.svg" alt="Shuffle" width="50" height="50">
+                Returns a random joke with each button press
             </li>
             <br>
             <li class="list-items">
-                <img src="/img/playsound.png" alt="Random Sound" width="50" height="50">
-                Play Random Sounds - will rnadomly play thorugh a list of laughs, claps and moans
+                <img src="/img/laugh-5104.svg" alt="Random Sound" width="50" height="50">
+                Randomly plays through gh a list of laughs, claps and moans
             </li>
             <br>
             <li class="list-items">
-                <img src="/img/speak.png" alt="Speak Joke" width="50" height="50">
-                Have Device Tell the Joke Using Device Speakers
+                <img src="/img/speak-svgrepo-com.svg" alt="Speak Joke" width="50" height="50">
+                Reads the joke outloud
             </li>
             <br>
-            <li class="list-items"><img src="/img/share.png" alt="Share Joke" width="50" height="50">
-                Share Joke - This will allow you to share the joke with your friends and families for them to enjoy!
+            <li class="list-items"><img src="/img/share-svgrepo-com.svg" alt="Share Joke" width="50" height="50">
+                Share Joke with your friends and families for them to enjoy!
             </li>
             <br>
-            <a href="#" class="button">Close</a>
-            </ul>
-            
+            <button id="closeHelp" class="button">Close</button>
+            </ul>    
         </div>
-    </div>
-
+    </dialog>
     <div id="content">
         <ul class="lists">
             <li>Shuffle button above will generate a random joke</li>
