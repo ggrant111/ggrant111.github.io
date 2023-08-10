@@ -663,6 +663,14 @@ li:not(:last-of-type) {
     font-weight: bolder;      
     font-family: 'Montserrat';
   }
+
+  .popup {
+    height: 100vh;
+    width: 100%;
+    border: none;
+    border-color: none;
+    padding-top: 15%;
+  }
   /* #help_btn {
     display: flex;
     width: 15%;
