@@ -44,7 +44,7 @@ function draw() {
   }
 
 
-  async function joke() {
+async function joke() {
     let config = {
     headers: {
         Accept: "application/json",
@@ -55,6 +55,8 @@ function draw() {
     document.getElementById("content").innerHTML = b.joke;
     console.log(b.joke);
 }
+
+
 
 // Function to play a random sound
 function playRandomSound() {
