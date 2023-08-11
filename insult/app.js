@@ -1,4 +1,4 @@
-document.getElementById("randJoke").addEventListener("click", joke);
+document.getElementById("randJoke").addEventListener("click", getInsult);
 document.getElementById("sound").addEventListener("click", playRandomSound);
 document.getElementById("speakButton").addEventListener("click", speakText);
 var wrapper = document.querySelector('.splash-screen svg')
@@ -43,20 +43,20 @@ if (!splashShown) {
 //     wrapper.classList.add('active')
 //   }
 
-async function joke() {
-    let url = 'https://evilinsult.com/generate_insult.php?lang=en&type=json';
-    let proxyUrl = 'https://crossorigin.me/' + url;
-    
+async function getInsult() {
     try {
-        let response = await fetch(proxyUrl);
-        let data = await response.json();
-        document.getElementById("content").innerHTML = data.insult;
-        console.log(data.insult);
+        let response = await fetch("https://insult.mattbas.org/api/insult.txt");
+        let insult = await response.text();
+        document.getElementById("content").textContent = insult;
+        console.log(insult);
     } catch (error) {
         console.error("An error occurred:", error);
     }
 }
 
+getInsult();
+
+getInsult();
 
 
 // async function joke() {
