@@ -1,4 +1,4 @@
-document.getElementById("randJoke").addEventListener("click", joke);
+document.getElementById("randJoke").addEventListener("click", generateRandomInsult);
 document.getElementById("sound").addEventListener("click", playRandomSound);
 document.getElementById("speakButton").addEventListener("click", speakText);
 var wrapper = document.querySelector('.splash-screen svg')
@@ -39,28 +39,40 @@ if (!splashShown) {
 
 
 
-function draw() {
-    wrapper.classList.add('active')
-  }
+// function draw() {
+//     wrapper.classList.add('active')
+//   }
 
+async function generateRandomInsult() {
+    try {
+        const response = await fetch("https://evilinsult.com/generate_insult.php?lang=en&type=json");
+        const data = await response.json();
 
-async function joke() {
-    // let config = {
-    // headers: {
-    //     Accept: "application/json",
-    //     language: "en",
-    //     },
-    // };
-
-    let a = await fetch("https://insult.mattbas.org/api/insult.json");
-    let b = await a.json();
-    document.getElementById("content").innerHTML = b.insult;
-    console.log(b.insult);
-    // let a = await fetch("https://icanhazdadjoke.com/", config);
-    // let b = await a.json();
-    // document.getElementById("content").innerHTML = b.joke;
-    // console.log(b.joke);
+        const insult = data.insult;
+        
+        // Display the insult on the page
+        const contentElement = document.getElementById("content");
+        contentElement.textContent = insult;
+    } catch (error) {
+        console.error("Error fetching insult:", error);
+    }
 }
+
+
+// async function joke() {
+//     let config = {
+//     headers: {
+//         Accept: "application/json",
+//         language: "en",
+//         },
+//     };
+
+//     let a = await fetch("https://evilinsult.com/generate_insult.php");
+//     let b = await a.json();
+//     document.getElementById("content").innerHTML = b.insult;
+//     console.log(b.insult);
+//     console.log(b.joke);
+// }
 
 // Function to play a random sound
 function playRandomSound() {
@@ -124,4 +136,4 @@ function sendJokeToFriend() {
     }
 }
 
-window.onload = draw; 
+// window.onload = draw; 
