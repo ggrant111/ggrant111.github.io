@@ -189,6 +189,10 @@ li:not(:last-of-type) {
 
 }
 
+#close {
+    color: black;
+    font-weight: 700;
+}
 #title {
     padding: 0;
     color:aliceblue;

@@ -205,7 +205,11 @@ dialog {
   border-color: none;
   padding-top: 15%;
 }
- 
+
+#close {
+    color: black;
+    font-weight: 700;
+}
 #vulgar {
     position: absolute;
 }

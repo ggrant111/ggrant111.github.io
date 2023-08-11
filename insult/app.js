@@ -1,6 +1,7 @@
 document.getElementById("randJoke").addEventListener("click", getInsult);
 document.getElementById("sound").addEventListener("click", playRandomSound);
 document.getElementById("speakButton").addEventListener("click", speakText);
+document.getElementById("close").addEventListener("click", hideSplashScreen)
 var wrapper = document.querySelector('.splash-screen svg')
 const cancelButton = document.getElementById("closeHelp");
 // document.getElementById("splashScreen").addEventListener("click" , splashScreen.style.visibility = "hidden");
