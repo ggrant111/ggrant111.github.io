@@ -189,6 +189,14 @@ li:not(:last-of-type) {
 
 }
 
+#title {
+    padding: 0;
+    color:aliceblue;
+    text-align: center;
+    font-weight: 500;
+    filter: drop-shadow(2px 4px 6px black);
+
+}
 dialog {
   background-color: black;
   box-shadow: none;
