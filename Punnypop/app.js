@@ -45,15 +45,14 @@ function draw() {
 
 
   async function joke() {
-    let config = {
-    headers: {
-        Accept: "application/json",
-        },
-    };
-    let a = await fetch("https://icanhazdadjoke.com/", config);
-    let b = await a.json();
-    document.getElementById("content").innerHTML = b.joke;
-    console.log(b.joke);
+    try {
+        let response = await axios.get("https://insult.mattbas.org/api/insult.json");
+        let data = response.data;
+        document.getElementById("content").innerHTML = data.joke;
+        console.log(data.joke);
+    } catch (error) {
+        console.error("An error occurred:", error);
+    }
 }
 
 // Function to play a random sound
