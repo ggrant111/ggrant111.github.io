@@ -45,21 +45,17 @@ function draw() {
 
 
 async function joke() {
-    // let config = {
-    // headers: {
-    //     Accept: "application/json",
-    //     language: "en",
-    //     },
-    // };
+    let config = {
+    headers: {
+        Accept: "application/json",
+        language: "en",
+        },
+    };
 
-    let a = await fetch("https://insult.mattbas.org/api/insult.json");
+    let a = await fetch("https://icanhazdadjoke.com/", config);
     let b = await a.json();
-    document.getElementById("content").innerHTML = b.insult;
-    console.log(b.insult);
-    // let a = await fetch("https://icanhazdadjoke.com/", config);
-    // let b = await a.json();
-    // document.getElementById("content").innerHTML = b.joke;
-    // console.log(b.joke);
+    document.getElementById("content").innerHTML = b.joke;
+    console.log(b.joke);
 }
 
 // Function to play a random sound
