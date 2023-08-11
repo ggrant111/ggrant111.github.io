@@ -1,4 +1,4 @@
-document.getElementById("randJoke").addEventListener("click", generateRandomInsult);
+document.getElementById("randJoke").addEventListener("click", joke);
 document.getElementById("sound").addEventListener("click", playRandomSound);
 document.getElementById("speakButton").addEventListener("click", speakText);
 var wrapper = document.querySelector('.splash-screen svg')
@@ -43,20 +43,20 @@ if (!splashShown) {
 //     wrapper.classList.add('active')
 //   }
 
-async function generateRandomInsult() {
+async function joke() {
+    let url = 'https://evilinsult.com/generate_insult.php?lang=en&type=json';
+    let proxyUrl = 'https://crossorigin.me/' + url;
+    
     try {
-        const response = await fetch("https://evilinsult.com/generate_insult.php?lang=en&type=json");
-        const data = await response.json();
-
-        const insult = data.insult;
-        
-        // Display the insult on the page
-        const contentElement = document.getElementById("content");
-        contentElement.textContent = insult;
+        let response = await fetch(proxyUrl);
+        let data = await response.json();
+        document.getElementById("content").innerHTML = data.insult;
+        console.log(data.insult);
     } catch (error) {
-        console.error("Error fetching insult:", error);
+        console.error("An error occurred:", error);
     }
 }
+
 
 
 // async function joke() {
