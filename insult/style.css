@@ -3,7 +3,7 @@
 }
 
 body {
-    background-color: lightslategray;
+    background-color: black;
     overflow: visible;
 }
 
@@ -43,9 +43,11 @@ svg {
   max-width: 400px;
   background-color: none;
   border-bottom: solid aliceblue;
-  border-width: 3px;
+  border-width: 5px;
   height: 100%;
   align-items: center;
+  background-color: black;
+  border-radius: 15px;
 }
 
 h1 {
@@ -121,12 +123,12 @@ p {
 
 #content {
     margin: auto;
-    font-size: 1.5rem;
+    font-size: 1.75rem;
     height: auto;
     max-width: 400px;
     margin-top: 10px;
     background-color: aliceblue; 
-    color: lightslategray;
+    color: black;
     border-radius: 20px;
     font-weight: bolder;
     text-align: center;
