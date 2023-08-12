@@ -7,6 +7,26 @@ const cancelButton = document.getElementById("closeHelp");
 // document.getElementById("splashScreen").addEventListener("click" , splashScreen.style.visibility = "hidden");
 
 
+
+    // Replace with your JSON URL
+    var animationDataUrl = "https://lottie.host/9357dc98-b5fb-431b-bbb6-01768a9bb854/uiwIcRycrE.json";
+    
+    var animationContainer = document.getElementById("mainImage");
+    
+    // Load the animation
+    var anim = lottie.loadAnimation({
+        container: animationContainer,
+        renderer: "svg", // You can choose "canvas" or "html" here
+        loop: true,
+        autoplay: true,
+        path: animationDataUrl
+    });
+
+    // Adjust the speed of the animation (1 is the default speed)
+    anim.setSpeed(0.25); // Change the value to adjust the speed (0.5 is half speed)
+
+
+
 function myFunction() { 
   document.getElementById("popup").showModal(); 
   console.log("modal show")
