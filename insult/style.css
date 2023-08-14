@@ -1,181 +1,195 @@
 * {
-  font-family: 'Montserrat';
+  font-family: "Montserrat";
+  overflow: hidden;
 }
 
 body {
-    background-color: black;
-    overflow: visible;
+  background-color: black;
+  overflow: visible;
 }
 
 .splash-screen {
-    width: 100vw;
-    height: 100vh;
-    display: flex;
-    position: fixed;
-    top: 0;
-    left: 0;
-    background-color: rgba(3, 3, 3, 0.9);
-    color: white;
-    text-align: center;
-    align-items: center;
-    z-index: 200;
-    font-family: 'Montserrat', sans-serif;
-    flex-direction: column;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: rgba(3, 3, 3, 0.9);
+  color: white;
+  text-align: center;
+  align-items: center;
+  z-index: 200;
+  font-family: "Montserrat", sans-serif;
+  flex-direction: column;
 }
 
 #splashlogo-container {
-    display: flex;
-    height: 50vh;
-    margin-top: 50px;
-    flex-direction: column;
-    align-items: center;
+  display: flex;
+  height: 70vh;
+  margin-top: 50px;
+  flex-direction: column;
+  align-items: center;
 }
 
 svg {
-    height: 100%; 
+  height: 100%;
 }
 
 #title-container {
   display: flex;
-  flex-direction: row;
+  /* flex-direction: row; */
   margin: auto;
   justify-content: space-evenly;
   max-width: 400px;
   background-color: none;
   border-bottom: solid aliceblue;
   border-width: 5px;
-  height: 100%;
+  /* height: 100%; */
   align-items: center;
-  background-color: black;
-  border-radius: 15px;
+  /* background-color: black; */
+  /* border-radius: 15px; */
 }
 
 h1 {
-    background-color: none;
-    font-size: 30px;
-    border-radius: 10px;
-    color: aliceblue;
+  background-color: none;
+  font-size: 30px;
+  border-radius: 10px;
+  color: aliceblue;
 }
 
 #small-logo {
-    max-width: 250px;
-    text-align: center;
-    filter: drop-shadow(2px 0px 8px black);
+  max-height: 50px;
+  text-align: center;
+  filter: drop-shadow(2px 0px 8px black);
 }
 
 h2 {
-    margin: 5px;
-    background-color: none;
-    font-size: 35px;
-    border-radius: 10px;
-    color: aliceblue;
-    font-family: 'Montserrat', sans-serif;
+  margin: 5px;
+  background-color: none;
+  font-size: 35px;
+  border-radius: 10px;
+  color: aliceblue;
+  font-family: "Montserrat", sans-serif;
 }
 
 p {
-    font-size: xx-large;
-    max-width: 350px;
-    margin: auto;
-    padding: 25%;
+  font-size: xx-large;
+  max-width: 350px;
+  margin: auto;
+  padding: 25%;
 }
 #mainImage {
-    text-align:center;
-    padding: 10px ;
-    margin:auto;
-    height: 100%;
-    max-height: 200px;
+  text-align: center;
+  padding: 10px;
+  margin: auto;
+  height: 100%;
+  max-height: 200px;
 }
 
-#mainImage img{
-    width: 200px;
-    max-width: 400px;
-    align-content:center;
-    border-radius: 10px;
-    justify-self:center;
-    box-shadow: 0 0 20px black;
-    border-bottom: solid rgb(161, 164, 167);    
+#mainImage img {
+  width: 200px;
+  max-width: 400px;
+  align-content: center;
+  border-radius: 10px;
+  justify-self: center;
 }
- 
+
+.active {
+  animation-name: rotate;
+  animation-duration: 3s;
+  animation-iteration-count: infinite;
+}
+
+@keyframes rotate {
+  0% {
+    rotate: 0deg;
+  }
+
+  100% {
+    rotate: 1080deg;
+  }
+}
+
 #buttons img {
-    height:100%;
-    max-height: 95px;
-} 
+  height: 100%;
+  max-height: 95px;
+}
 
 .btn {
-    transform: scale(.750);
-    background-color: transparent;
-    border: none;
-
+  transform: scale(0.75);
+  background-color: transparent;
+  border: none;
 }
 
 .svg {
-    max-height: 100px;
+  max-height: 100px;
 }
 
 #buttons {
-    display: flex;
-    margin: auto;
-    justify-content: space-between;
-    max-width: 400px;
-    width: 100%;
-    background-color: none;
-    filter: drop-shadow(2px 4px 6px black);
+  display: flex;
+  margin: auto;
+  justify-content: space-between;
+  max-width: 400px;
+  width: 100%;
+  background-color: none;
+  filter: drop-shadow(2px 4px 6px black);
 }
 
 #content {
-    margin: auto;
-    font-size: 1.75rem;
-    height: auto;
-    max-width: 400px;
-    margin-top: 10px;
-    background-color: aliceblue; 
-    color: black;
-    border-radius: 20px;
-    font-weight: bolder;
-    text-align: center;
-    padding: 10px; 
-    border: 1px;
-    border-color: slategray;
-    filter: drop-shadow(2px 4px 6px black);    
+  margin: auto;
+  font-size: 1.1rem;
+  height: auto;
+  max-width: 400px;
+  margin-top: 10px;
+  background-color: aliceblue;
+  color: black;
+  border-radius: 20px;
+  font-weight: bolder;
+  text-align: center;
+  padding: 10px;
+  border: 1px;
+  border-color: slategray;
+  filter: drop-shadow(2px 4px 6px black);
 }
 
 .small-btn {
-    cursor: pointer;
-    border: none;
-    transform: scale(.45);
-    border-radius: 25px;
-    filter: drop-shadow(2px 4px 6px black);
-    width: 32%;
-    height: 100%;
-    max-height: 95px;
+  cursor: pointer;
+  border: none;
+  transform: scale(0.45);
+  border-radius: 25px;
+  filter: drop-shadow(2px 4px 6px black);
+  width: 32%;
+  height: 100%;
+  max-height: 95px;
 }
 
 .lists {
-    max-width: 400px;
-    display: flex;
-    flex-direction:column;
-    align-items:  left;
-    list-style:none;
-    margin:auto;
-    padding: 20px;
-    background-color: none;
-} 
+  max-width: 400px;
+  display: flex;
+  flex-direction: column;
+  align-items: left;
+  list-style: none;
+  margin: auto;
+  padding: 20px;
+  background-color: none;
+}
 
 .list-items {
-    font-size: 18px;
-    color: aliceblue;
-    text-align: right;
-    max-width: 400px;
-    height: auto;
-    justify-content: space-between;
-    display: flex;
-    padding: 10px;    
+  font-size: 18px;
+  color: aliceblue;
+  text-align: right;
+  max-width: 400px;
+  height: auto;
+  justify-content: space-between;
+  display: flex;
+  padding: 10px;
 }
 
 li:not(:last-of-type) {
   padding: 10px;
   border-bottom: 3px solid slategray;
-  }
+}
 
 .button {
   background-color: none; /* Green */
@@ -188,21 +202,18 @@ li:not(:last-of-type) {
   font-size: 16px;
   border-radius: 100px;
   margin-top: 25px;
-  
-
 }
 
 #close {
-    color: black;
-    font-weight: 700;
+  color: black;
+  font-weight: 700;
 }
 #title {
-    padding: 0;
-    color:aliceblue;
-    text-align: center;
-    font-weight: 500;
-    filter: drop-shadow(2px 4px 6px black);
-
+  padding: 0;
+  color: aliceblue;
+  text-align: center;
+  font-weight: 500;
+  filter: drop-shadow(2px 4px 6px black);
 }
 dialog {
   background-color: black;
@@ -212,8 +223,8 @@ dialog {
 #closeHelp {
   color: black;
   font-size: 1.5rem;
-  font-weight: bolder;      
-  font-family: 'Montserrat';
+  font-weight: bolder;
+  font-family: "Montserrat";
 }
 
 .popup {
@@ -225,8 +236,14 @@ dialog {
 }
 
 #vulgar {
-    width: 55%;
-    background-color: aliceblue;
-
+  width: 55%;
+  background-color: aliceblue;
 }
-  
+
+.footerDiv {
+  position: absolute;
+  bottom: 0;
+  left: 35vw;
+  right: 35vw;
+  color: aliceblue;
+}

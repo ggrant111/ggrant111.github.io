@@ -1,91 +1,149 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="apple-mobile-web-app-capable" content="yes">
-    <link rel="apple-touch-icon" sizes="180x180" href="/punnypoplogo180px.png">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="/punnypoplogo180px.png"
+    />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no"
+    />
     <title>Roast Roulette</title>
-    <link rel="shortcut icon" href="favicon.ico">
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="splashscreenanimation.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600&family=Poppins:wght@300&display=swap" rel="stylesheet">
-    <script src="https://html2canvas.hertzen.com/dist/html2canvas.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/bodymovin/5.7.2/lottie.min.js"></script>
-
-</head>
-<body>
+    <link rel="shortcut icon" href="favicon.ico" />
+    <link rel="stylesheet" href="style.css" />
+    <!-- <link rel="stylesheet" href="splashscreenanimation.css"> -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600&family=Poppins:wght@300&display=swap"
+      rel="stylesheet"
+    />
+    <!-- <script src="https://html2canvas.hertzen.com/dist/html2canvas.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bodymovin/5.7.2/lottie.min.js"></script> -->
+  </head>
+  <body>
     <div id="splashScreen" class="splash-screen">
-        <div id="splashlogo-container">
-            <img id="vulgar" src="img/noun-vulgar-4283427.svg" alt="">
-            <p id="splashtext">Unleash Your Inner Wordsmith with Witty Wickedness!</p>
-            <button id="close" class="button">CLOSE</button>
-        </div>
+      <div id="splashlogo-container">
+        <img id="vulgar" src="img/noun-vulgar-4283427.svg" alt="" />
+        <p id="splashtext">
+          Unleash Your Inner Wordsmith with Witty Wickedness!
+        </p>
+        <button id="close" class="button">CLOSE</button>
+      </div>
     </div>
     <div id="title-container">
-        <img id="shareJoke" class="small-btn" onclick="sendJokeToFriend()" src="img/share-svgrepo-com.svg" alt="Share insult">
-        <img id="small-logo" src="img/rr-long-logo_adobe_express.svg" alt="">
-        <img class="small-btn" src="img/help-svgrepo-com.svg" href="#popup" id="help_btn" onclick="myFunction()">
+      <img
+        id="shareJoke"
+        class="small-btn"
+        onclick="sendJokeToFriend()"
+        src="img/share-svgrepo-com.svg"
+        alt="Share insult"
+      />
+      <img id="small-logo" src="img/rr-long-logo_adobe_express.svg" alt="" />
+      <img
+        class="small-btn"
+        src="img/help-svgrepo-com.svg"
+        href="#popup"
+        id="help_btn"
+        onclick="myFunction()"
+      />
     </div>
     <div id="mainImage">
-              
-        <lottie-player src=“https://lottie.host/9357dc98-b5fb-431b-bbb6-01768a9bb854/uiwIcRycrE.json” background=“#fff” speed=“1” style="width: 150px; height: 150px"  loop controls autoplay direction=“1” mode=“normal”></lottie-player>
+      <img id="wheel" src="/insult/img/roulette-svgrepo-com (1).svg" alt="" />
     </div>
+
     <div id="buttons">
-        <button id="sound" class="btn">
-            <img src="img/laugh-5104.svg" alt="Play Sound" style="max-height: 100px;"/>
-        </button>
-            <audio id="sound1" src="sounds/sound1.wav" style="display: none;"></audio>
-            <audio id="sound2" src="sounds/sound2.wav" style="display: none;"></audio>
-            <audio id="sound3" src="sounds/sound3.wav" style="display: none;"></audio>
-            <audio id="sound4" src="sounds/sound4.wav" style="display: none;"></audio>
-        <button id="randJoke" class="btn">
-            <img src="img/shuffle-1-svgrepo-com.svg" alt="Shuffle insult" style="max-height: 100px;"/>
-        </button> 
-        <button id="speakButton" class="btn">
-            <img src="img/speak-svgrepo-com.svg" alt="Speak insult" style="max-height: 100px;" />
-        </button>
+      <button id="sound" class="btn">
+        <img
+          src="img/laugh-5104.svg"
+          alt="Play Sound"
+          style="max-height: 100px"
+        />
+      </button>
+      <audio id="sound1" src="sounds/sound1.wav" style="display: none"></audio>
+      <audio id="sound2" src="sounds/sound2.wav" style="display: none"></audio>
+      <audio id="sound3" src="sounds/sound3.wav" style="display: none"></audio>
+      <audio id="sound4" src="sounds/sound4.wav" style="display: none"></audio>
+      <button id="randJoke" class="btn">
+        <img
+          src="img/shuffle-1-svgrepo-com.svg"
+          alt="Shuffle insult"
+          style="max-height: 100px"
+        />
+      </button>
+      <button id="speakButton" class="btn">
+        <img
+          src="img/speak-svgrepo-com.svg"
+          alt="Speak insult"
+          style="max-height: 100px"
+        />
+      </button>
     </div>
-   
+
     <dialog class="popup" id="popup" method="dialog">
-        <div>
+      <div>
         <ul id="help-list" class="lists">
-            <li class=list-items>
-                <img src="img/shuffle-1-svgrepo-com.svg" alt="Shuffle" width="50" height="50">
-                Returns a random insult with each button press
-            </li>
-            <br>
-            <li class="list-items">
-                <img src="img/laugh-5104.svg" alt="Random Sound" width="50" height="50">
-                Randomly plays through a list of laughs, claps and moans
-            </li>
-            <br>
-            <li class="list-items">
-                <img src="img/speak-svgrepo-com.svg" alt="Speak insult" width="50" height="50">
-                Reads the insult outloud
-            </li>
-            <br>
-            <li class="list-items"><img src="img/share-svgrepo-com.svg" alt="Share insult" width="50" height="50">
-                Share insult with your friends and families for them to enjoy!
-            </li>
-            <br>
-            <button id="closeHelp" class="button">Close</button>
-            </ul>    
-        </div>
+          <li class="list-items">
+            <img
+              src="img/shuffle-1-svgrepo-com.svg"
+              alt="Shuffle"
+              width="50"
+              height="50"
+            />
+            Returns a random insult with each button press
+          </li>
+          <br />
+          <li class="list-items">
+            <img
+              src="img/laugh-5104.svg"
+              alt="Random Sound"
+              width="50"
+              height="50"
+            />
+            Randomly plays through a list of laughs, claps and moans
+          </li>
+          <br />
+          <li class="list-items">
+            <img
+              src="img/speak-svgrepo-com.svg"
+              alt="Speak insult"
+              width="50"
+              height="50"
+            />
+            Reads the insult outloud
+          </li>
+          <br />
+          <li class="list-items">
+            <img
+              src="img/share-svgrepo-com.svg"
+              alt="Share insult"
+              width="50"
+              height="50"
+            />
+            Share insult with your friends and families for them to enjoy!
+          </li>
+          <br />
+          <button id="closeHelp" class="button">Close</button>
+        </ul>
+      </div>
     </dialog>
     <div id="content">
-        <ul class="lists">
-            <li>Shuffle button above will generate a random insult</li>
-            <li>Laughing button will play a random sound</li>
-            <li>Voice button read the insult to you</li>
-            <li>Share the insult using the share button</li>
-        </ul>        
+      <ul class="lists">
+        <li>Shuffle button above will generate a random insult</li>
+        <li>Laughing button will play a random sound</li>
+        <li>Voice button read the insult to you</li>
+        <li>Share the insult using the share button</li>
+      </ul>
     </div>
+    
     <script src="https://html2canvas.hertzen.com/dist/html2canvas.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script> 
-    <script src="app.js"></script> 
-</body>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="app.js"></script>
+  </body>
+  <div class="footerDiv"><footer>PunnyPop &copy 2023</footer></div>
 </html>
