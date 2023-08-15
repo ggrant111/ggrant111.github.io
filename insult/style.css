@@ -38,17 +38,13 @@ svg {
 
 #title-container {
   display: flex;
-  /* flex-direction: row; */
   margin: auto;
   justify-content: space-evenly;
   max-width: 400px;
   background-color: none;
   border-bottom: solid aliceblue;
   border-width: 5px;
-  /* height: 100%; */
   align-items: center;
-  /* background-color: black; */
-  /* border-radius: 15px; */
 }
 
 h1 {
@@ -61,7 +57,6 @@ h1 {
 #small-logo {
   max-height: 50px;
   text-align: center;
-  filter: drop-shadow(2px 0px 8px black);
 }
 
 h2 {
