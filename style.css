@@ -1,0 +1,44 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+body {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  justify-content: center;
+  background-color: aliceblue;
+}
+div {
+  display: flex;
+  height: 23vh;
+  min-width: 400px;
+  margin: auto;
+  margin-top: 20vh;
+}
+h1 {
+  font-family: sans-serif;
+  background-color: black;
+  color: aliceblue;
+  border-style: solid;
+  margin: auto;
+  padding: 1rem;
+  border-radius: 50px;
+  box-shadow: 3px 3px 6px black;
+}
+a {
+  min-width: 400px;
+}
+
+.pp {
+  background-repeat: no-repeat;
+  background-image: url(PP-LOGO\ LONG-01.svg);
+}
+
+.rr {
+  background-repeat: no-repeat;
+  background-image: url(rr-long-logo.svg);
+}
+button {
+  background-color: none;
+}
