@@ -47,26 +47,26 @@ svg {
   align-items: center;
 }
 
-h1 {
+/* h1 {
   background-color: none;
   font-size: 30px;
   border-radius: 10px;
   color: aliceblue;
-}
+} */
 
 #small-logo {
   max-height: 50px;
   text-align: center;
 }
 
-h2 {
+/* h2 {
   margin: 5px;
   background-color: none;
   font-size: 35px;
   border-radius: 10px;
   color: aliceblue;
   font-family: "Montserrat", sans-serif;
-}
+} */
 
 p {
   font-size: xx-large;
