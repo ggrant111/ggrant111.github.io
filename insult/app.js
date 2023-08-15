@@ -89,7 +89,7 @@ async function getInsultWithDelay() {
     contentElement.textContent =
       "Let's see what creative insult fate has in store for you!";
 
-    await new Promise((resolve) => setTimeout(resolve, 2500)); // Delay of 2.5 seconds
+    await new Promise((resolve) => setTimeout(resolve, 500)); // Delay of 2.5 seconds
 
     let response = await fetch("https://insult.mattbas.org/api/insult.txt");
     let insult = await response.text();
