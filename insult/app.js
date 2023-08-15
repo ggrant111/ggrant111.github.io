@@ -16,17 +16,6 @@ var animationDataUrl =
 
 var animationContainer = document.getElementById("mainImage");
 
-// // Load the animation
-// var anim = lottie.loadAnimation({
-//   container: animationContainer,
-//   renderer: "svg", // You can choose "canvas" or "html" here
-//   loop: true,
-//   autoplay: true,
-//   path: animationDataUrl,
-// });
-
-// // Adjust the speed of the animation (1 is the default speed)
-// anim.setSpeed(0.25); // Change the value to adjust the speed (0.5 is half speed)
 
 function toggleActive() {
   mainImage.classList.add("active");
@@ -68,20 +57,7 @@ if (!splashShown) {
   sessionStorage.setItem("splashShown", true);
 }
 
-// function draw() {
-//     wrapper.classList.add('active')
-//   }
 
-// async function getInsult() {
-//   try {
-//     let response = await fetch("https://insult.mattbas.org/api/insult.txt");
-//     let insult = await response.text();
-//     document.getElementById("content").textContent = insult;
-//     console.log(insult);
-//   } catch (error) {
-//     console.error("An error occurred:", error);
-//   }
-// }
 
 async function getInsultWithDelay() {
   try {
@@ -100,24 +76,17 @@ async function getInsultWithDelay() {
   }
 }
 
-// getInsult();
+// Get a reference to the audio element
+var audioElement = document.getElementById("sound5");
 
-// getInsult();
+// Get a reference to the button element
+var playButton = document.getElementById("randJoke");
 
-// async function joke() {
-//     let config = {
-//     headers: {
-//         Accept: "application/json",
-//         language: "en",
-//         },
-//     };
-
-//     let a = await fetch("https://evilinsult.com/generate_insult.php");
-//     let b = await a.json();
-//     document.getElementById("content").innerHTML = b.insult;
-//     console.log(b.insult);
-//     console.log(b.joke);
-// }
+// Add a click event listener to the button
+playButton.addEventListener("click", function() {
+    // Play the audio
+    audioElement.play();
+});
 
 // Function to play a random sound
 function playRandomSound() {
@@ -180,4 +149,4 @@ function sendJokeToFriend() {
   }
 }
 
-// window.onload = draw;
+
