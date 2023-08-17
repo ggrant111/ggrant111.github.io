@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Mad Libs Generator</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600&family=Poppins:wght@100;200;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="styles.css"/>
+  </head>
+  <body>
+    <h1>Sentence Sorcerer</h1>
+    <!-- <div id="madLibsForm"></div> -->
+    <button type="button" id="generateBtn">Conjure up your Story</button>
+    <div id="madLibResult">
+        To create a story and enter in your own words to use click on the Conjure up your Story button. You will be prompted to enter in words and it will tell you the type of word to enter in. After you enter all the word teh Sorcerer will conjure up some magic and generate a story for you. You can have the story read aloud by clicking the read story button below. You will be able to see the last 10 stories you created with the Sorcerer by clicking View History button. Have fun and use your creativity!
+    </div>
+    <button type="button" id="readBtn">Read Story</button>
+    <button type="button" id="viewHistoryBtn">View History</button>
+    <div id="historyModal" class="modal">
+      <div class="modal-content">
+        <span class="close">&times;</span>
+        <h2>Sentence Sorcerer History</h2>
+        <ul id="historyList"></ul>
+      </div>
+    </div>
+    <script src="madlibs.js"></script>
+  </body>
+</html>

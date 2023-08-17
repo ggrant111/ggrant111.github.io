@@ -1,0 +1,109 @@
+body {
+  font-family: "Montserrat", Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f8f8f8;
+  max-width: 600px;
+  margin: auto;
+}
+
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+h1 {
+  font-family: "Montserrat", Arial, sans-serif;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+#madLibsForm,
+#madLibResult {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 20px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+  margin-bottom: 20px;
+}
+
+label {
+  display: block;
+  margin-bottom: 10px;
+  font-weight: bold;
+}
+
+input {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+}
+
+#generateBtn,
+#readBtn,
+#viewHistoryBtn {
+  display: block;
+  margin: 0 auto;
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background-color 0.2s;
+}
+
+#generateBtn:hover,
+#readBtn:hover,
+#viewHistoryBtn:hover {
+  background-color: #0056b3;
+}
+
+#historyModal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  /* Set a maximum height for the modal to fit within the viewport */
+  /* max-height: 80vh; */
+  /* Enable vertical scrolling when content exceeds the modal height */
+  overflow-y: auto;
+}
+
+#historyList {
+  /* Add padding and margin to the list items */
+  padding: 10px;
+  margin: 0;
+  /* Set a specific height if needed, but let the overflow handle scrolling */
+  /* height: 200px; */
+}
+
+.modal-content {
+  background-color: #fff;
+  margin: 15% auto;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+  max-width: 80%;
+}
+
+.close {
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.close:hover {
+  color: #aaa;
+}
+
+/* Add responsive styles here if needed */

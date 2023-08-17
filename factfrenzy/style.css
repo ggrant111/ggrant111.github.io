@@ -1,0 +1,104 @@
+* {
+  margin: 0;
+  padding: 0;
+  color: #ffffff;
+  font-weight: bold;
+  /* background-color: black; */
+}
+
+.splash-screen {
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: rgba(3, 3, 3, 0.95);
+  color: white;
+  z-index: 200;
+  font-family: "Montserrat", sans-serif;
+  flex-direction: column;
+}
+
+#splashlogo-container {
+  height: 70vh;
+  flex-direction: column;
+  align-items: center;
+}
+#splashLogo {
+  filter: drop-shadow(2px 2px 0px aliceblue);
+}
+
+.button {  
+  border: none;
+  color: black;
+  padding: 15px 32px;
+  font-size: 16px;
+  border-radius: 100px;
+  margin-top: 25px;
+}
+
+.maindiv {
+  display: flex;
+  flex-direction: column;
+  /* background-color: aqua; */
+  width: 100%;
+  max-width: 600px;
+  height: 100vh;
+  margin: auto;
+  background-color: black;
+  opacity: 1;
+}
+
+#head {
+  max-height: 10vh;
+  background-color: transparent;
+  border-radius: 50px;
+}
+#head img {
+    max-height: 4rem;
+
+}
+#head img :nth-child(2){
+    max-height: 10vh;
+    filter: invert(1);
+   
+}
+
+#graphic {
+  max-height: 30vh;
+  background-color: transparent;
+  border-radius: 50px;
+}
+
+#buttons {
+  max-height: 20vh;
+  background-color: transparent;
+  border-radius: 50px;
+}
+#buttons img {
+    max-height: 7rem;
+
+}
+
+#content {
+  align-items: center;
+  text-align: center;
+  padding: 20px;
+  min-height: 30vh;
+  background-color: transparent;
+  border-radius: 50px;
+}
+
+#footer {
+    background-color: transparent;
+  border-radius: 50px;
+}
+img {
+  min-width: 20%;
+  background-color: transparent;
+}
+div {
+  display: flex;
+  justify-content: space-evenly;
+  background-color: transparent;
+}
