@@ -19,7 +19,7 @@ script {
 button {
   margin: 10px;
   padding: 10px 20px;
-  font-size: 2rem;
+  font-size: 1rem;
   background-color: #337ab7; /* Complementary blue button color */
   color: white;
   border: none;
@@ -33,7 +33,7 @@ label {
 
 #madlibOutput {
   margin-top: 20px;
-  font-size: 24px;
+  font-size: 1rem;
   background-color: #003366; /* Dark blue background */
   color: white;
   padding: 20px;
@@ -93,7 +93,7 @@ label {
 }
 
 .modal-content input {
-  font-size: 1rem;
+  font-size: .75rem;
   padding: 10px;
   border: 1px solid #ccc;
   border-radius: 3px;
@@ -132,7 +132,6 @@ label {
   border: none;
   background-color: transparent;
   color: #337ab7; /* Complementary blue button color */
-  padding: 10px;
   cursor: pointer;
   transition: color 0.3s;
 }
