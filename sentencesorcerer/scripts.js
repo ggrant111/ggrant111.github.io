@@ -99,18 +99,18 @@ function viewHistory() {
     historyModal.style.display = "block";
 }
 
-// Splitting the text into smaller chunks
-function splitTextIntoChunks(text, chunkSize) {
-    const chunks = [];
-    while (text.length > chunkSize) {
-        let index = text.lastIndexOf(' ', chunkSize); // Find the last space within the chunk size
-        let chunk = text.substring(0, index);
-        chunks.push(chunk);
-        text = text.substring(index + 1);
-    }
-    chunks.push(text); // Push the last chunk
-    return chunks;
-}
+// // Splitting the text into smaller chunks    ##########can remove to have use british woman voice
+// function splitTextIntoChunks(text, chunkSize) {
+//     const chunks = [];
+//     while (text.length > chunkSize) {
+//         let index = text.lastIndexOf(' ', chunkSize); // Find the last space within the chunk size
+//         let chunk = text.substring(0, index);
+//         chunks.push(chunk);
+//         text = text.substring(index + 1);
+//     }
+//     chunks.push(text); // Push the last chunk
+//     return chunks;
+// }
 
 // // Speaking the chunks sequentially
 // function speakChunksSequentially(chunks) {
