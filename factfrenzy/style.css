@@ -1,4 +1,5 @@
 * {
+  font-family: 'Poppins';
   margin: 0;
   padding: 0;
   color: #ffffff;
@@ -25,6 +26,7 @@
   align-items: center;
 }
 #splashLogo {
+  max-width: 90%;
   filter: drop-shadow(2px 2px 0px aliceblue);
 }
 
@@ -71,9 +73,10 @@
 }
 
 #buttons {
-  max-height: 20vh;
+  height: 10vh;
   background-color: transparent;
   border-radius: 50px;
+  justify-content: space-evenly;
 }
 #buttons img {
     max-height: 7rem;
@@ -87,6 +90,11 @@
   min-height: 30vh;
   background-color: transparent;
   border-radius: 50px;
+  
+}
+
+.custom-font {
+  font-size: 1.75rem;
 }
 
 #footer {
@@ -101,4 +109,17 @@ div {
   display: flex;
   justify-content: space-evenly;
   background-color: transparent;
+}
+
+.popup {
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background-color: black;
+  position: absolute;
+  width: 95%;
+  height: 95%;
+  font-size: 1.25rem;
+  margin: auto;
+
 }
