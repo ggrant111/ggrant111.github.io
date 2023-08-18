@@ -1,28 +1,62 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
   <head>
-    <title>Mad Libs Generator</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600&family=Poppins:wght@100;200;400;500;600;700;800;900&display=swap" rel="stylesheet">
-    <link rel="stylesheet" type="text/css" href="styles.css"/>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+    />
+    <title>Madlib Generator</title>
+    <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
-    <h1>Sentence Sorcerer</h1>
-    <!-- <div id="madLibsForm"></div> -->
-    <button type="button" id="generateBtn">Conjure up your Story</button>
-    <div id="madLibResult">
-        To create a story and enter in your own words to use click on the Conjure up your Story button. You will be prompted to enter in words and it will tell you the type of word to enter in. After you enter all the word teh Sorcerer will conjure up some magic and generate a story for you. You can have the story read aloud by clicking the read story button below. You will be able to see the last 10 stories you created with the Sorcerer by clicking View History button. Have fun and use your creativity!
-    </div>
-    <button type="button" id="readBtn">Read Story</button>
-    <button type="button" id="viewHistoryBtn">View History</button>
+    <button id="fetchTemplate" class="create-button">
+      Create MadLib <i class="fas fa-magic"></i>
+    </button>
+
     <div id="historyModal" class="modal">
       <div class="modal-content">
         <span class="close">&times;</span>
-        <h2>Sentence Sorcerer History</h2>
-        <ul id="historyList"></ul>
+        <h2>Saved Madlibs</h2>
+        <div id="savedMadlibs"></div>
       </div>
     </div>
-    <script src="madlibs.js"></script>
+
+    <!-- Madlib Input Modal -->
+    <div id="inputModal" class="modal">
+      <div class="modal-content">
+        <div class="input-group">
+          <label for="exampleInput">Placeholder:</label>
+          <input id="exampleInput" type="text" />
+        </div>
+        <!-- More input groups if necessary -->
+        <button id="submit" class="fas fa-magic"></button>
+      </div>
+    </div>
+
+    <div id="madlibOutput">
+      <p>To create a new MadLib click the button above</p>
+
+      <p>You will be prmpted to enter in words to complete the MadLib</p>
+
+      <p>
+        This is where the madlib will display after the Sorcerer is finished
+      </p>
+
+      <p>
+        The buttons at the bottom of the page will read the MadLib to you, allow
+        you to share it and view the last 10 MadLibs you have generated
+      </p>
+
+      <p>Have fun and use your creativity!!</p>
+    </div>
+    <div id="lowerButtons">
+      <button id="speak"><i class="fas fa-volume-up"></i></button>
+      <button id="share"><i class="fas fa-share-alt"></i></button>
+      <button id="viewHistory"><i class="fas fa-history"></i></button>
+    </div>
+
+    <script src="scripts.js"></script>
   </body>
 </html>
