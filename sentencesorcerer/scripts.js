@@ -61,8 +61,8 @@ function openInputModal(placeholders, template) {
     });
 
     const submitButton = document.createElement("button");
-    submitButton.innerHTML = '<i class="fas fa-magic"></i>'; // Corrected line
-    submitButton.addEventListener("click", function () {
+    submitButton.innerHTML = '<i class="fas fa-magic"></i>'; 
+        submitButton.addEventListener("click", function () {
         const inputs = modalContent.querySelectorAll("input");
         const userInputs = Array.from(inputs).map((input) => input.value);
         generateMadlib(template, placeholders, userInputs);
