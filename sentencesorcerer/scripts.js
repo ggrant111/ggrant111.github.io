@@ -112,45 +112,50 @@ function splitTextIntoChunks(text, chunkSize) {
     return chunks;
 }
 
-// Speaking the chunks sequentially
-function speakChunksSequentially(chunks) {
-    return new Promise((resolve) => {
-        let index = 0;
+// // Speaking the chunks sequentially
+// function speakChunksSequentially(chunks) {
+//     return new Promise((resolve) => {
+//         let index = 0;
 
-        function speakNextChunk() {
-            if (index >= chunks.length) {
-                resolve();
-                return;
-            }
+//         function speakNextChunk() {
+//             if (index >= chunks.length) {
+//                 resolve();
+//                 return;
+//             }
 
-            const utterance = new SpeechSynthesisUtterance(chunks[index]);
-            const selectedVoice = availableVoices.find(voice => voice.name === 'Google UK English Female');
-            if (selectedVoice) {
-                utterance.voice = selectedVoice;
-            }
+//             const utterance = new SpeechSynthesisUtterance(chunks[index]);
+//             const selectedVoice = availableVoices.find(voice => voice.name === 'Google UK English Female');
+//             if (selectedVoice) {
+//                 utterance.voice = selectedVoice;
+//             }
 
-            utterance.onend = () => {
-                index++;
-                speakNextChunk();
-            };
+//             utterance.onend = () => {
+//                 index++;
+//                 speakNextChunk();
+//             };
 
-            window.speechSynthesis.speak(utterance);
-        }
+//             window.speechSynthesis.speak(utterance);
+//         }
 
-        speakNextChunk();
-    });
-}
+//         speakNextChunk();
+//     });
+// }
+
+// function speakMadlib() {
+//     const text = document.getElementById('madlibOutput').textContent;
+//     const chunks = splitTextIntoChunks(text, 200); // Split into chunks of approximately 200 characters
+
+//     if (voicesLoaded) {
+//         speakChunksSequentially(chunks);
+//     } else {
+//         // Retry after a short delay if voices are not loaded yet
+//         setTimeout(() => speakMadlib(), 100);
+//     }
+// }
 
 function speakMadlib() {
-    const text = document.getElementById('madlibOutput').textContent;
-    const chunks = splitTextIntoChunks(text, 200); // Split into chunks of approximately 200 characters
-
-    if (voicesLoaded) {
-        speakChunksSequentially(chunks);
-    } else {
-        // Retry after a short delay if voices are not loaded yet
-        setTimeout(() => speakMadlib(), 100);
-    }
+    const utterance = new SpeechSynthesisUtterance(document.getElementById('madlibOutput').textContent);
+    window.speechSynthesis.speak(utterance);
 }
 
 function shareMadlib() {
