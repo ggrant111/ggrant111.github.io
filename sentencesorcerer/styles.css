@@ -71,7 +71,7 @@ label {
   background-color: #f0f0f0; /* Light gray modal background */
   padding: 20px;
   border: 1px solid #888;
-  width: calc(100% - 40px); /* Adjusting for the 20px margin on each side */
+  max-width: 90%;
   max-height: calc(
     85% - 40px
   ); /* Adjusting for the 20px margin on top and bottom */
@@ -132,7 +132,7 @@ label {
   display: flex;
   justify-content: space-evenly;
   align-items: stretch;
-  border-top: 2px solid #003366;
+  border: 2px solid #003366;
 }
 #lowerButtons button {
   border: none;
@@ -151,7 +151,7 @@ p {
   padding: 20px;
 }
 hr {
-  width: 500px;
+  width: 100%;
   border: 2px solid black;
   margin-top: 1rem;
   margin-bottom: 1rem;
