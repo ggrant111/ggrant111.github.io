@@ -39,7 +39,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
           const playerCard = `
                 <div class="card" data-player-id="${player.id}">
-                    <img src="https://nhl.bamcontent.com/images/headshots/current/168x168/${player.id}.jpg" 
+                    <img src="http://nhl.bamcontent.com/images/headshots/current/168x168/${player.id}.jpg" 
                         alt="${player.fullName}" 
                         onerror="this.onerror=null; this.src='assets/images/noheadshot.png';">
                     <div>
@@ -76,7 +76,7 @@ document.addEventListener("DOMContentLoaded", function () {
           const teamId = player.currentTeam.id;
 
           // Set player details in the modal header
-          playerImage.src = `https://nhl.bamcontent.com/images/headshots/current/168x168/${playerId}.jpg`;
+          playerImage.src = `http://nhl.bamcontent.com/images/headshots/current/168x168/${playerId}.jpg`;
           playerImage.onerror = function () {
             this.src = "assets/images/noheadshot.png";
           };
