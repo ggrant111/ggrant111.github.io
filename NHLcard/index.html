@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>NHL Player Card</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h1>NHL Player Card</h1>
+      <div class="selection">
+        <label for="team-select">Select Team:</label>
+        <select id="team-select">
+          <!-- Teams will be populated here from the API -->
+        </select>
+        <button id="fetch-roster-btn">Show Team Roster</button>
+      </div>
+      <div id="player-cards-container">
+        <!-- Player cards will be appended here -->
+      </div>
+    </div>
+
+    <!-- Modal structure -->
+    <div id="player-modal" class="modal">
+      <div class="modal-content">
+        <span class="close-btn">&times;</span>
+        <div id="modal-header">
+          <img id="player-image" alt="Player Image" width="100" />
+          <h2 id="modal-player-name"></h2>
+          <img id="team-logo" alt="Team Logo" width="50" />
+          <p id="player-number-and-position"></p>
+        </div>
+        <label for="season-select">Select Season:</label>
+        <select id="season-select">
+          <!-- Seasons will be populated here from the player's career -->
+        </select>
+        <div id="modal-body">
+          <!-- Player stats will be displayed here -->
+        </div>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
