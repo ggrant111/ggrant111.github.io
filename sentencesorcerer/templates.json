@@ -1,43 +1,42 @@
 [
-    {
-      "title": "Adventure",
-      "content": "Once upon a time in a {{adjective}} kingdom, there lived a {{noun}} who dreamed of {{verb}} like never before. One day, they stumbled upon a {{color}} {{noun}} that led to a magical {{noun}}. In this land, they met a {{adjective}} {{noun}} who offered to help them on their quest.\n\nTogether, they faced many challenges, from battling a {{adjective}} {{noun}} to solving {{color}} riddles in a {{location}}. Along the way, they discovered a potion that granted them the power to {{verb}} and {{verb}} like {{adjective}}. With their newfound {{plural noun}}, they {{past tense verb}} the final hurdle and reached the {{noun}} of their journey.\n\nAs they looked out over the {{noun}}, they realized that the real treasure was the friendships they had formed and the unforgettable memories they had created."
-    },
-    {
-      "title": "Mystery",
-      "content": "In a {{color}} mansion, a {{adjective}} detective worked to solve the case of the missing {{noun}}. The {{noun}} disappeared under mysterious circumstances, leaving behind only a {{adjective}} {{object}}. As the detective examined the {{location}}, they encountered a stranger with a {{color}} hat. Could this stranger hold the key to solving the mystery? The detective investigated clues, interviewed witnesses, and unraveled a plot that was more complex than they could have imagined.\n\nIn the end, the detective uncovered the truth and revealed that the {{noun}} was actually taken by a {{adjective}} {{creature}}. The town breathed in relief as the mystery was finally resolved."
-    },
-    {
-      "title": "Sci-Fi",
-      "content": "In the year {{number}}, humans discovered a {{adjective}} {{noun}} on the planet {{planet}}. This {{noun}} had {{color}} skin and {{adjective}} eyes that seemed to radiate intelligence. Scientists from around the world gathered to study the {{noun}} and learn from its vast knowledge. They were amazed by the advanced technology the {{noun}} possessed, including a {{color}} device that could manipulate time.\n\nAs humanity engaged with the visitor, they faced ethical dilemmas and scientific challenges. The {{noun}} offered to share its advanced technology to help solve some of Earth's problems, but some feared the consequences of meddling on {{planet}}'s culture.\n\nIn the end, humanity arrived at a decision: to embrace the visitor's technology or to preserve their own way of life."
-    },
-    {
-      "title": "Romance",
-      "content": "In a quaint {{location}}, two {{occupation}} met and their love story began. {{name}} was a {{adjective}} {{noun}} with a passion for {{hobby}}. {{name}} was a {{adjective}} {{noun}} who appreciated the finer things in life.\n\nOne {{day of the week}}, they crossed paths at a {{event}} and their eyes locked across the room. {{name}} mustered the courage to approach {{name}} and they soon discovered they had many shared interests. They spent hours talking, laughing, and stargazing.\n\nTheir romance blossomed into a deep connection. They held hands, shared secrets, and pursued each other's dreams. Together, they faced challenges and built a love that was stronger than anything they had ever experienced before."
-    },
-    {
-      "title": "Horror",
-      "content": "Late at night, a {{adjective}} {{creature}} emerged from the {{object}} and terrorized the small town of {{town}}. Its {{adjective}} eyes glowed in the darkness as it roamed the streets, emitting bone-chilling screeches that sent shivers down the spines of all who heard them. The townspeople were horrified as they sought safety.\n\n{{name}}, the {{adjective}} {{occupation}}, took it upon themselves to confront the {{creature}}. Armed with only a {{color}} flashlight and a {{adjective}} object, they ventured into the eerie woods where the {{creature}} was believed to have originated. As they delved deeper into the forest, the tension grew and the air thickened.\n\nAt last, {{name}} spotted the {{creature}} lurking in the shadows. Their heart raced as they raised their object and took a brave step forward..."
-    },
-    {
-      "title": "Comedy",
-      "content": "At an event, a {{adjective}} comedian told hilarious jokes about {{plural noun}} and amusing situations. The audience erupted with laughter as the comedian shared stories that were relatable and funny. They poked fun at everyday scenarios, encouraging everyone in the room to laugh at themselves.\n\nOne of the jokes involved a {{color}} {{noun}} and a {{adjective}} {{noun}}. The comedian's delivery was so entertaining that even those with a different sense of humor couldn't help but burst out laughing. {{name}}, a {{adjective}} {{occupation}}, laughed so hard that they spilled their drink.\n\nBy the end of the show, everyone was in high spirits, their hearts filled with joy and cherished memories of a night spent laughing together."
-    },
-    {
-      "title": "Fantasy",
-      "content": "In the magical land of {{place}}, a {{adjective}} wizard embarked on a journey to find the enchanted {{noun}}. Legends spoke of its radiant glow and the mystical powers it possessed. With their trusted staff in hand, the wizard ventured across {{place}}, facing fantastical creatures and traversing through enchanted forests.\n\nGuided by an ancient map, the wizard arrived at the Temple of {{noun}}. There, they encountered a wise guardian who challenged them with enigmatic riddles. With wit and determination, the wizard solved each riddle and earned the guardian's respect.\n\nFinally, the wizard reached the heart of the temple and discovered the {{noun}} resting upon a pedestal. As they touched it, a surge of magical energy flowed through them, empowering them with extraordinary abilities."
-    },
-    {
-      "title": "Superhero",
-      "content": "With great power comes great responsibility. A hero with extraordinary powers protected the city from formidable villains who spread chaos and destruction. Known as the {{superhero name}}, they soared through the skies, leaping buildings, and performing incredible feats of strength.\n\nOne day, a dire threat emerged. A monstrous creature with piercing eyes threatened to engulf the city in flames. The {{superhero name}} faced their toughest challenge as they battled the creature in an epic showdown.\n\nWith the help of {{name}}, a steadfast supporter who believed in the {{superhero name}}'s exceptional abilities, the hero triumphed over the creature and saved the city from devastation."
-    },
-    {
-      "title": "Historical",
-      "content": "In the year {{number}}, during a significant event, a visionary {{occupation}} played a pivotal role in shaping history. {{name}}'s bold actions altered the course of events and influenced the lives of countless individuals. Their inspiring leadership and pivotal decisions sparked a movement that would be forever remembered.\n\nAt the peak of the event, {{name}} delivered a stirring speech that touched the hearts of those who heard it. They championed noble ideals and called for meaningful change, igniting a passionate fire among the people.\n\nDespite encountering challenges and opposition, {{name}} remained steadfast in their commitment to create a better future. Their legacy continues to inspire generations around the world to this day."
-    },
-    {
-      "title": "Dystopian",
-      "content": "In an oppressive society, a brave individual rebelled against the tyrannical regime and sparked a revolution. {{name}}'s courage caught the attention of others who were weary of living under the rule of the oppressors.\n\nWith bold banners and resolute slogans, the rebels took to the streets, demanding fundamental rights and striving for a brighter future. The authorities responded with brutal force, but the rebels stood strong, united by their unwavering determination.\n\nAs the revolution progressed, {{name}} emerged as a formidable leader, rallying the rebels and leading them to victory. The oppressive society crumbled, giving way to a new era of hope and possibility."
-    }
-  ]
-  
+  {
+    "title": "Adventure",
+    "content": "Once upon a time in a {{adjective}} kingdom, there lived a {{noun}} who dreamed of {{verb}} like never before. One day, they stumbled upon a {{color}} {{noun}} that led to a magical {{noun}}. In this land, they met a {{adjective}} {{noun}} who offered to help them on their quest.\n\nTogether, they faced many challenges, from battling a {{adjective}} {{noun}} to solving {{color}} riddles in a {{location}}. Along the way, they discovered a potion that granted them the power to {{verb}} and {{verb}} like {{adjective}}. With their newfound {{plural noun}}, they {{past tense verb}} the final hurdle and reached the {{noun}} of their journey.\n\nAs they looked out over the {{noun}}, they realized that the real treasure was the friendships they had formed and the unforgettable memories they had created."
+  },
+  {
+    "title": "Mystery",
+    "content": "In a {{color}} mansion, a {{adjective}} detective worked to solve the case of the missing {{noun}}. The {{noun}} disappeared under mysterious circumstances, leaving behind only a {{adjective}} {{object}}. As the detective examined the {{location}}, they encountered a stranger with a {{color}} hat. Could this stranger hold the key to solving the mystery? The detective investigated clues, interviewed witnesses, and unraveled a plot that was more complex than they could have imagined.\n\nIn the end, the detective uncovered the truth and revealed that the {{noun}} was actually taken by a {{adjective}} {{creature}}. The town breathed in relief as the mystery was finally resolved."
+  },
+  {
+    "title": "Sci-Fi",
+    "content": "In the year {{number}}, humans discovered a {{adjective}} {{noun}} on the planet {{planet}}. This {{noun}} had {{color}} skin and {{adjective}} eyes that seemed to radiate intelligence. Scientists from around the world gathered to study the {{noun}} and learn from its vast knowledge. They were amazed by the advanced technology the {{noun}} possessed, including a {{color}} device that could manipulate time.\n\nAs humanity engaged with the visitor, they faced ethical dilemmas and scientific challenges. The {{noun}} offered to share its advanced technology to help solve some of Earth's problems, but some feared the consequences of meddling on {{planet}}'s culture.\n\nIn the end, humanity arrived at a decision: to embrace the visitor's technology or to preserve their own way of life."
+  },
+  {
+    "title": "Romance",
+    "content": "In a quaint {{location}}, two {{occupation}} met and their love story began. {{name}} was a {{adjective}} {{noun}} with a passion for {{hobby}}. {{name}} was a {{adjective}} {{noun}} who appreciated the finer things in life.\n\nOne {{day of the week}}, they crossed paths at a {{event}} and their eyes locked across the room. {{name}} mustered the courage to approach {{name}} and they soon discovered they had many shared interests. They spent hours talking, laughing, and stargazing.\n\nTheir romance blossomed into a deep connection. They held hands, shared secrets, and pursued each other's dreams. Together, they faced challenges and built a love that was stronger than anything they had ever experienced before."
+  },
+  {
+    "title": "Horror",
+    "content": "Late at night, a {{adjective}} {{creature}} emerged from the {{object}} and terrorized the small town of {{town}}. Its {{adjective}} eyes glowed in the darkness as it roamed the streets, emitting bone-chilling screeches that sent shivers down the spines of all who heard them. The townspeople were horrified as they sought safety.\n\n{{name}}, the {{adjective}} {{occupation}}, took it upon themselves to confront the {{creature}}. Armed with only a {{color}} flashlight and a {{adjective}} object, they ventured into the eerie woods where the {{creature}} was believed to have originated. As they delved deeper into the forest, the tension grew and the air thickened.\n\nAt last, {{name}} spotted the {{creature}} lurking in the shadows. Their heart raced as they raised their object and took a brave step forward..."
+  },
+  {
+    "title": "Comedy",
+    "content": "At an event, a {{adjective}} comedian told hilarious jokes about {{plural noun}} and amusing situations. The audience erupted with laughter as the comedian shared stories that were relatable and funny. They poked fun at everyday scenarios, encouraging everyone in the room to laugh at themselves.\n\nOne of the jokes involved a {{color}} {{noun}} and a {{adjective}} {{noun}}. The comedian's delivery was so entertaining that even those with a different sense of humor couldn't help but burst out laughing. {{name}}, a {{adjective}} {{occupation}}, laughed so hard that they spilled their drink.\n\nBy the end of the show, everyone was in high spirits, their hearts filled with joy and cherished memories of a night spent laughing together."
+  },
+  {
+    "title": "Fantasy",
+    "content": "In the magical land of {{place}}, a {{adjective}} wizard embarked on a journey to find the enchanted {{noun}}. Legends spoke of its radiant glow and the mystical powers it possessed. With their trusted staff in hand, the wizard ventured across {{place}}, facing fantastical creatures and traversing through enchanted forests.\n\nGuided by an ancient map, the wizard arrived at the Temple of {{noun}}. There, they encountered a wise guardian who challenged them with enigmatic riddles. With wit and determination, the wizard solved each riddle and earned the guardian's respect.\n\nFinally, the wizard reached the heart of the temple and discovered the {{noun}} resting upon a pedestal. As they touched it, a surge of magical energy flowed through them, empowering them with extraordinary abilities."
+  },
+  {
+    "title": "Superhero",
+    "content": "With great power comes great responsibility. A hero with extraordinary powers protected the city from formidable villains who spread chaos and destruction. Known as the {{superhero name}}, they soared through the skies, leaping buildings, and performing incredible feats of strength.\n\nOne day, a dire threat emerged. A monstrous creature with piercing eyes threatened to engulf the city in flames. The {{superhero name}} faced their toughest challenge as they battled the creature in an epic showdown.\n\nWith the help of {{name}}, a steadfast supporter who believed in the {{superhero name}}'s exceptional abilities, the hero triumphed over the creature and saved the city from devastation."
+  },
+  {
+    "title": "Historical",
+    "content": "In the year {{number}}, during a significant event, a visionary {{occupation}} played a pivotal role in shaping history. {{name}}'s bold actions altered the course of events and influenced the lives of countless individuals. Their inspiring leadership and pivotal decisions sparked a movement that would be forever remembered.\n\nAt the peak of the event, {{name}} delivered a stirring speech that touched the hearts of those who heard it. They championed noble ideals and called for meaningful change, igniting a passionate fire among the people.\n\nDespite encountering challenges and opposition, {{name}} remained steadfast in their commitment to create a better future. Their legacy continues to inspire generations around the world to this day."
+  },
+  {
+    "title": "Dystopian",
+    "content": "In an oppressive society, a brave individual rebelled against the tyrannical regime and sparked a revolution. {{name}}'s courage caught the attention of others who were weary of living under the rule of the oppressors.\n\nWith bold banners and resolute slogans, the rebels took to the streets, demanding fundamental rights and striving for a brighter future. The authorities responded with brutal force, but the rebels stood strong, united by their unwavering determination.\n\nAs the revolution progressed, {{name}} emerged as a formidable leader, rallying the rebels and leading them to victory. The oppressive society crumbled, giving way to a new era of hope and possibility."
+  }
+]
