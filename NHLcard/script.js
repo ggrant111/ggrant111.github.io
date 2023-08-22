@@ -9,6 +9,7 @@ document.addEventListener("DOMContentLoaded", function () {
   const modalBody = document.getElementById("modal-body");
   const seasonSelect = document.getElementById("season-select");
 
+
   // Load teams into dropdown
   fetch("https://statsapi.web.nhl.com/api/v1/teams")
     .then((response) => response.json())
@@ -39,14 +40,14 @@ document.addEventListener("DOMContentLoaded", function () {
 
           const playerCard = `
                 <div class="card" data-player-id="${player.id}">
-                    <img src="http://nhl.bamcontent.com/images/headshots/current/168x168/${player.id}.jpg" 
+                    <img src="http://nhl.bamcontent.com/images/headshots/current/168x168/${player.id}.png" 
                         alt="${player.fullName}" 
                         onerror="this.onerror=null; this.src='assets/images/noheadshot.png';">
-                    <div>
+                    <div id="playerInfo">
                         <h2>${player.fullName}</h2>
                         <img src="${teamLogoUrl}" alt="Team Logo" width="115">
-                        <p>Position: ${playerDetails.position.name}</p>
-                        <p>Number: ${playerDetails.jerseyNumber}</p>
+                        <p>${playerDetails.position.name}</p>
+                        <p>#${playerDetails.jerseyNumber}</p>
                     </div>
                 </div>
             `;
