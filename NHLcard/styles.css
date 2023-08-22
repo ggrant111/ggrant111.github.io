@@ -45,6 +45,7 @@ body {
     border: 10px solid transparent; /* Setting a transparent border which will be colored using JS */
     box-sizing: content-box; /* Ensures padding and border do not affect overall size */
     transition: border-color 0.3s; /* smooth transition for border color changes */
+    border-radius: 50%; 
 }
 
 .card h2 {
