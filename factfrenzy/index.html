@@ -3,13 +3,36 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+    <!-- <link rel="manifest" href="/site.webmanifest" /> -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600&family=Poppins:wght@300&display=swap"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="style.css" />
-    <title>Document</title>
+    <audio id="sound1" src="sounds/sound1.wav" style="display: none"></audio>
+    <audio id="sound2" src="sounds/sound2.wav" style="display: none"></audio>
+    <audio id="sound3" src="sounds/sound3.wav" style="display: none"></audio>
+    <audio id="sound4" src="sounds/sound4.wav" style="display: none"></audio>
+    <audio
+      id="sound5"
+      src="sounds/big-wheel-beeps.mp3"
+      style="display: none"
+    ></audio>
+    <title>FactFrenzy</title>
   </head>
   <body>
     <div id="splashScreen" class="splash-screen">
       <div id="splashlogo-container">
-        <img id="splashLogo" src="/factfrenzy/img/ff-logo-slogan-01.svg" alt="" />
+        <img
+          id="splashLogo"
+          src="/factfrenzy/img/ff-logo-slogan-01.svg"
+          alt=""
+        />
         <!-- <p id="splashtext">
           Feed Your Curiosity, One Fact at a Time
         </p> -->
@@ -18,17 +41,17 @@
     </div>
     <div class="maindiv">
       <div id="head">
-        <img src="img/help-svgrepo-com.svg" alt="" />
-        <img src="img/ff-logo-long-01.svg" alt="" />
+        <img id="help" src="img/help-svgrepo-com.svg" alt="" />
+        <img src="img/ff-logo-main-light.svg" alt="" />
         <img src="img/share-svgrepo-com.svg" alt="" />
       </div>
       <div id="graphic">
-        <img src="img/square-logo-pp-01.svg" alt="" />
+        <!-- <img src="img/ff-logo-main-light.svg" alt="" /> -->
       </div>
       <div id="buttons">
-        <img src="img/laugh-5104.svg" alt="" />
-        <img src="img/shuffle-1-svgrepo-com.svg" alt="" />
-        <img src="img/speak-svgrepo-com.svg" alt="" />
+        <img id="sound" src="img/laugh-5104.svg" alt="" />
+        <img id="randFact" src="img/shuffle-1-svgrepo-com.svg" alt="" />
+        <img id="speakButton" src="img/speak-svgrepo-com.svg" alt="" />
       </div>
       <div id="content">
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque fuga
@@ -38,8 +61,55 @@
         asperiores possimus dolorum explicabo. Error dignissimos dolorem
         accusantium quos aut corrupti quae consectetur ea voluptates odit.
       </div>
-      <div id="footer"><p>PunnyPop © 2020</p></div>
+      <div id="footer"><p>FactFrenzy © 2023</p></div>
     </div>
+    <dialog class="popup" id="popup" method="dialog">
+      <div>
+        <ul id="help-list" class="lists">
+          <li class="list-items">
+            <img
+              src="img/shuffle-1-svgrepo-com.svg"
+              alt="Shuffle"
+              width="50"
+              height="50"
+            />
+            Returns a random insult with each button press
+          </li>
+          <br />
+          <li class="list-items">
+            <img
+              src="img/laugh-5104.svg"
+              alt="Random Sound"
+              width="50"
+              height="50"
+            />
+            Randomly plays through a list of laughs, claps and moans
+          </li>
+          <br />
+          <li class="list-items">
+            <img
+              src="img/speak-svgrepo-com.svg"
+              alt="Speak insult"
+              width="50"
+              height="50"
+            />
+            Reads the insult outloud
+          </li>
+          <br />
+          <li class="list-items">
+            <img
+              src="img/share-svgrepo-com.svg"
+              alt="Share insult"
+              width="50"
+              height="50"
+            />
+            Share insult with your friends and families for them to enjoy!
+          </li>
+          <br />
+          <button id="closeHelp" class="button">Close</button>
+        </ul>
+      </div>
+    </dialog>
 
     <script src="app.js"></script>
   </body>
