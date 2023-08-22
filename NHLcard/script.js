@@ -1,60 +1,110 @@
 document.addEventListener("DOMContentLoaded", function () {
   const teamSelect = document.getElementById("team-select");
   const fetchRosterBtn = document.getElementById("fetch-roster-btn");
-  const playerCardsContainer = document.getElementById(
-    "player-cards-container"
-  );
+  const playerCardsContainer = document.getElementById("player-cards-container");
   const modal = document.getElementById("player-modal");
   const closeModalBtn = document.querySelector(".close-btn");
   const modalBody = document.getElementById("modal-body");
   const seasonSelect = document.getElementById("season-select");
+  const backBtn = document.getElementById("back-btn");
+  const teamCardsContainer = document.getElementById("team-cards-container");
 
-
-  // Load teams into dropdown
-  fetch("https://statsapi.web.nhl.com/api/v1/teams")
-    .then((response) => response.json())
-    .then((data) => {
-      data.teams.forEach((team) => {
-        const option = document.createElement("option");
-        option.value = team.id;
-        option.textContent = team.name;
-        teamSelect.appendChild(option);
+  // Fetch the colors data
+  fetch('colors.json')
+    .then(response => response.json())
+    .then(colorsData => {
+      // Store colors in an object for easy retrieval
+      const teamColors = {};
+      colorsData.forEach(colorData => {
+        teamColors[colorData.name] = colorData.colors.hex;
       });
+
+      // Fetch NHL teams
+      fetch("https://statsapi.web.nhl.com/api/v1/teams")
+        .then(response => response.json())
+        .then(data => {
+          data.teams.forEach((team) => {
+            const teamCard = document.createElement("div");
+            teamCard.className = "team-card";
+            teamCard.setAttribute("data-team-id", team.id);
+
+            // Use team name to get the colors
+            const primaryColor = teamColors[team.name] ? `#${teamColors[team.name][0]}` : "#ffffff"; // Default to white if no color
+            const secondaryColor = teamColors[team.name] && teamColors[team.name][1] ? `#${teamColors[team.name][1]}` : primaryColor;
+            teamCard.style.backgroundColor = primaryColor;
+            teamCard.style.borderColor = secondaryColor;
+            teamCard.style.color = secondaryColor;
+
+
+            // Create and append team logo
+            const teamLogo = document.createElement("img");
+            let teamId = team.id;
+            const LogoUrl = `https://www-league.nhlstatic.com/images/logos/teams-current-primary-light/${teamId}.svg`;
+            teamLogo.src = LogoUrl;
+            teamCard.appendChild(teamLogo);
+
+            // Create and append team name
+            // const teamName = document.createElement("h3");
+            // teamName.textContent = team.name;
+            // teamCard.appendChild(teamName);
+
+            // Append the card to a container
+            teamCardsContainer.appendChild(teamCard);
+
+            teamCard.addEventListener("click", function () {
+              const teamId = this.getAttribute("data-team-id");
+
+              // Fetch roster for selected team
+              fetch(`https://statsapi.web.nhl.com/api/v1/teams/${teamId}/roster`)
+                .then((response) => response.json())
+                .then((data) => {
+                  // Clear previous player cards
+                  playerCardsContainer.innerHTML = "";
+
+                  // Generate a card for each player
+                  data.roster.forEach((playerDetails) => {
+                    const player = playerDetails.person;
+                    const teamLogoUrl = `https://www-league.nhlstatic.com/images/logos/teams-current-primary-light/${teamId}.svg`;
+
+                    const playerCard = `
+                      <div class="card" data-player-id="${player.id}">
+                          <img src="http://nhl.bamcontent.com/images/headshots/current/168x168/${player.id}.png" 
+                              alt="${player.fullName}" 
+                              onerror="this.onerror=null; this.src='assets/images/noheadshot.png';">
+                          <div id="playerInfo">
+                              <h2>${player.fullName}</h2>
+                              <img src="${teamLogoUrl}" alt="Team Logo" width="115">
+                              <p>${playerDetails.position.name}</p>
+                              <p>#${playerDetails.jerseyNumber}</p>
+                          </div>
+                      </div>
+                    `;
+
+                    // Hide teams and show the back button
+                    Array.from(document.querySelectorAll('.team-card')).forEach(el => el.style.display = 'none');
+                    backBtn.style.display = 'block';
+
+                    playerCardsContainer.innerHTML += playerCard;
+                  });
+                });
+            });
+          });
+        });
     });
 
-  // Event listener for the "Show Team Roster" button
-  fetchRosterBtn.addEventListener("click", function () {
-    const teamId = teamSelect.value;
 
-    // Fetch roster for selected team
-    fetch(`https://statsapi.web.nhl.com/api/v1/teams/${teamId}/roster`)
-      .then((response) => response.json())
-      .then((data) => {
-        // Clear previous player cards
-        playerCardsContainer.innerHTML = "";
 
-        // Generate a card for each player
-        data.roster.forEach((playerDetails) => {
-          const player = playerDetails.person;
-          const teamLogoUrl = `https://www-league.nhlstatic.com/images/logos/teams-current-primary-light/${teamId}.svg`;
 
-          const playerCard = `
-                <div class="card" data-player-id="${player.id}">
-                    <img src="http://nhl.bamcontent.com/images/headshots/current/168x168/${player.id}.png" 
-                        alt="${player.fullName}" 
-                        onerror="this.onerror=null; this.src='assets/images/noheadshot.png';">
-                    <div id="playerInfo">
-                        <h2>${player.fullName}</h2>
-                        <img src="${teamLogoUrl}" alt="Team Logo" width="115">
-                        <p>${playerDetails.position.name}</p>
-                        <p>#${playerDetails.jerseyNumber}</p>
-                    </div>
-                </div>
-            `;
 
-          playerCardsContainer.innerHTML += playerCard;
-        });
-      });
+    backBtn.addEventListener("click", function() {
+      // Hide player cards
+      playerCardsContainer.innerHTML = "";
+      
+      // Show teams
+      Array.from(document.querySelectorAll('.team-card')).forEach(el => el.style.display = 'block');
+      
+      // Hide the back button
+      backBtn.style.display = 'none';
   });
 
   playerCardsContainer.addEventListener("click", function (event) {
@@ -77,7 +127,7 @@ document.addEventListener("DOMContentLoaded", function () {
           const teamId = player.currentTeam.id;
 
           // Set player details in the modal header
-          playerImage.src = `http://nhl.bamcontent.com/images/headshots/current/168x168/${playerId}.jpg`;
+          playerImage.src = `http://nhl.bamcontent.com/images/headshots/current/168x168/${playerId}.png`;
           playerImage.onerror = function () {
             this.src = "assets/images/noheadshot.png";
           };
@@ -196,30 +246,6 @@ document.addEventListener("DOMContentLoaded", function () {
 
         // Sort the seasons in descending order
         availableSeasons.sort((a, b) => b - a);
-
-        seasonSelect.innerHTML = ""; // Clear existing options
-
-        availableSeasons.forEach((season) => {
-          const option = document.createElement("option");
-          option.value = season;
-          option.textContent = `${season.substring(0, 4)}-${season.substring(
-            4
-          )}`;
-          seasonSelect.appendChild(option);
-        });
-      });
-  }
-
-  function populatePlayerSeasonsDropdown(playerId) {
-    // Fetch available seasons for the player
-    fetch(
-      `https://statsapi.web.nhl.com/api/v1/people/${playerId}/stats?stats=yearByYear`
-    )
-      .then((response) => response.json())
-      .then((data) => {
-        const availableSeasons = data.stats[0].splits.map(
-          (split) => split.season
-        );
 
         seasonSelect.innerHTML = ""; // Clear existing options
 

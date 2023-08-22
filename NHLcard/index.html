@@ -3,18 +3,25 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>NHL Player Card</title>
+    <title>Ice-Cards</title>
     <link rel="stylesheet" href="styles.css"  />
   </head>
   <body>
     <div class="container">
-      <h1>NHL Player Card</h1>
-      <div class="selection">
+      <img src="/nhlcard/assets/images/ice-card-rect-black.svg" id="mainLogo" alt="">
+      <!-- <h1>Ice-Cards</h1> -->
+      <!-- <h2>Face-off with your Favorites!</h2> -->
+      <br>
+      <!-- <div class="selection">
         <label for="team-select">Select Team:</label>
         <select id="team-select">
-          <!-- Teams will be populated here from the API -->
-        </select>
+           Teams will be populated here from the API -->
+        <!-- </select>
         <button id="fetch-roster-btn">Show Team Roster</button>
+      </div>  -->
+      <button id="back-btn" style="display: none;">Back to Teams</button>
+      <div id="team-cards-container">
+        <!-- Player cards will be appended here -->
       </div>
       <div id="player-cards-container">
         <!-- Player cards will be appended here -->
@@ -43,4 +50,5 @@
 
     <script src="script.js"></script>
   </body>
+  <footer>Ice-Cards 2023&copy;</footer>
 </html>

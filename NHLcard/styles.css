@@ -1,7 +1,12 @@
 body {
     font-family: Arial, sans-serif;
     background-color: #f4f4f4;
-    padding: 20px;
+    margin: 0;
+}
+
+br {
+    border: 3px solid black;
+    width: 100%;
 }
 
 .container {
@@ -11,6 +16,49 @@ body {
     padding: 20px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
+
+#mainLogo {
+    max-height: 100%;
+    max-width: 100%;
+    padding-bottom: 10px;
+    border-bottom: 3px solid black;
+    
+}
+
+
+#team-cards-container {
+    border-radius: 8px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    max-width: 100%;
+    box-shadow: 0 0 18px 4px rgba(0, 0, 0, 1);
+    background-color: lightslategrey;
+}
+
+.team-card img {
+    width: 100px;
+    height: auto;
+}
+
+.team-card {
+    display: flex;
+    border-radius: 8px;
+    border: 8px solid;
+    padding: 10px;
+    margin: 10px;
+    transition: background-color 0.3s, border-color 0.3s;
+    color: border-color;
+}
+
+.team-card:hover {
+    /* Add some hover effects if you like */
+    transform: scale(1.05);
+}
+
+
 
 .selection {
     margin-bottom: 20px;
@@ -23,6 +71,7 @@ body {
     justify-content: space-around;
     align-items: center;
     border: 1px solid #ccc;
+    border-radius: 10px;
     padding: 20px;
     background-color: #001628;
     margin-top: 20px;
@@ -42,6 +91,7 @@ body {
 }
 
 .card img {
+    max-width: 150px;
     border: 10px solid transparent; /* Setting a transparent border which will be colored using JS */
     box-sizing: content-box; /* Ensures padding and border do not affect overall size */
     transition: border-color 0.3s; /* smooth transition for border color changes */
