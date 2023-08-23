@@ -9,16 +9,9 @@
   <body>
     <div class="container">
       <img src="/NHLcard/assets/images/ice-card-rect-black.svg" id="mainLogo" alt="">
-      <!-- <h1>Ice-Cards</h1> -->
-      <!-- <h2>Face-off with your Favorites!</h2> -->
+     
       <br>
-      <!-- <div class="selection">
-        <label for="team-select">Select Team:</label>
-        <select id="team-select">
-           Teams will be populated here from the API -->
-        <!-- </select>
-        <button id="fetch-roster-btn">Show Team Roster</button>
-      </div>  -->
+      
       <button id="back-btn" style="display: none;">Back to Teams</button>
       <div id="team-cards-container">
         <!-- Player cards will be appended here -->
@@ -32,11 +25,16 @@
     <div id="player-modal" class="modal">
       <div class="modal-content">
         <span class="close-btn">&times;</span>
+        <h2 id="modal-player-name"></h2>
         <div id="modal-header">
-          <img id="player-image" alt="Player Image" width="100" />
-          <h2 id="modal-player-name"></h2>
-          <img id="team-logo" alt="Team Logo" width="50" />
+          <div id="playerPicture"><img id="player-image" alt="Player Image" width="100" />
+          
+          <img id="team-logo" alt="Team Logo" width="100" />
           <p id="player-number-and-position"></p>
+          </div>
+          <div id="playerInfo"><p>Age: <span id="player-age">Age</span><br> Hometown: <span id="player-hometown">Hometown</span></p>
+          <p id="playerPhysical">Height: <span id="player-height">Height</span><br> Weight: <span id="player-weight">Weight </span><br><span id="player-handed">Handeds</span> </p>
+          </div>
         </div>
         <label for="season-select">Select Season:</label>
         <select id="season-select">

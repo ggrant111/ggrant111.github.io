@@ -6,6 +6,8 @@ document.addEventListener("DOMContentLoaded", function () {
   const seasonSelect = document.getElementById("season-select");
   const backBtn = document.getElementById("back-btn");
   const teamCardsContainer = document.getElementById("team-cards-container");
+  let selectedTeamPrimaryColor = "";
+  let selectedTeamSecondaryColor = "";
 
   // Fetch the colors data
   fetch('colors.json')
@@ -25,6 +27,7 @@ document.addEventListener("DOMContentLoaded", function () {
             const teamCard = document.createElement("div");
             teamCard.className = "team-card";
             teamCard.setAttribute("data-team-id", team.id);
+            
 
             // Use team name to get the colors
             const primaryColor = teamColors[team.name] ? `#${teamColors[team.name][0]}` : "#ffffff"; // Default to white if no color
@@ -32,6 +35,7 @@ document.addEventListener("DOMContentLoaded", function () {
             teamCard.style.backgroundColor = primaryColor;
             teamCard.style.borderColor = secondaryColor;
             teamCard.style.color = secondaryColor;
+            
 
 
             // Create and append team logo
@@ -41,12 +45,7 @@ document.addEventListener("DOMContentLoaded", function () {
             teamLogo.src = LogoUrl;
             teamCard.appendChild(teamLogo);
 
-            // Create and append team name
-            // const teamName = document.createElement("h3");
-            // teamName.textContent = team.name;
-            // teamCard.appendChild(teamName);
-
-            // Append the card to a container
+           // Append the card to a container
             teamCardsContainer.appendChild(teamCard);
 
             teamCard.addEventListener("click", function () {
@@ -78,11 +77,52 @@ document.addEventListener("DOMContentLoaded", function () {
                       </div>
                     `;
 
+
                     // Hide teams and show the back button
                     Array.from(document.querySelectorAll('.team-card')).forEach(el => el.style.display = 'none');
                     backBtn.style.display = 'block';
 
-                    playerCardsContainer.innerHTML += playerCard;
+                    // playerCardsContainer.innerHTML += playerCard;
+                    // Existing code where you create the playerCard string...
+                    const playerCardContent = `
+                    <div class="card" data-player-id="${player.id}">
+                        <img src="http://nhl.bamcontent.com/images/headshots/current/168x168/${player.id}.png" 
+                            alt="${player.fullName}" 
+                            onerror="this.onerror=null; this.src='assets/images/noheadshot.png';">
+                        <div id="playerInfo">
+                            <h2>${player.fullName}</h2>
+                            <img src="${teamLogoUrl}" alt="Team Logo" width="115">
+                            <p>${playerDetails.position.name}</p>
+                            <p>#${playerDetails.jerseyNumber}</p>
+                        </div>
+                    </div>
+                    `;
+
+                    // Create an actual DOM element from the string
+                    const tempDiv = document.createElement('div');
+                    tempDiv.innerHTML = playerCardContent.trim();
+                    const actualPlayerCard = tempDiv.firstChild;
+                    const bodyElement = document.body;
+
+                    // Style the player card
+                    actualPlayerCard.style.backgroundColor = primaryColor;
+                    actualPlayerCard.style.borderColor = secondaryColor;
+                    actualPlayerCard.style.color = secondaryColor;
+                    bodyElement.style.backgroundColor = selectedTeamSecondaryColor;
+                    selectedTeamPrimaryColor = primaryColor;
+                    selectedTeamSecondaryColor = secondaryColor;
+                    // Find the player's image element inside the card
+                    const playerImage = actualPlayerCard.querySelector('img');
+
+                    // Apply the primaryColor as the border color to the image
+                    playerImage.style.border = `10px solid ${secondaryColor}`;
+
+                    // Append the styled card to the container
+                    playerCardsContainer.appendChild(actualPlayerCard);
+
+                    // Append the styled card to the container
+                    playerCardsContainer.appendChild(actualPlayerCard);
+
                   });
                 });
             });
@@ -105,6 +145,8 @@ document.addEventListener("DOMContentLoaded", function () {
       backBtn.style.display = 'none';
   });
 
+
+  //Creates Player Modal when a player is clicked
   playerCardsContainer.addEventListener("click", function (event) {
     if (event.target.closest(".card")) {
       const playerId = event.target
@@ -113,9 +155,12 @@ document.addEventListener("DOMContentLoaded", function () {
       const playerImage = document.getElementById("player-image");
       const playerName = document.getElementById("modal-player-name");
       const teamLogo = document.getElementById("team-logo");
-      const playerNumberAndPosition = document.getElementById(
-        "player-number-and-position"
-      );
+      const playerNumberAndPosition = document.getElementById("player-number-and-position");
+      const playerAge = document.getElementById("player-age");
+      const playerHeight = document.getElementById("player-height");
+      const playerWeight = document.getElementById("player-weight");
+      const playerHometown = document.getElementById("player-hometown");
+      const playerHanded = document.getElementById("player-handed");
 
       // Fetch player details
       fetch(`https://statsapi.web.nhl.com/api/v1/people/${playerId}`)
@@ -123,6 +168,7 @@ document.addEventListener("DOMContentLoaded", function () {
         .then((data) => {
           const player = data.people[0];
           const teamId = player.currentTeam.id;
+
 
           // Set player details in the modal header
           playerImage.src = `http://nhl.bamcontent.com/images/headshots/current/168x168/${playerId}.png`;
@@ -133,6 +179,13 @@ document.addEventListener("DOMContentLoaded", function () {
           playerName.textContent = player.fullName;
           teamLogo.src = `https://www-league.nhlstatic.com/images/logos/teams-current-primary-light/${teamId}.svg`;
           playerNumberAndPosition.textContent = `#${player.primaryNumber} - ${player.primaryPosition.name}`;
+          playerAge.textContent = player.currentAge;
+          playerHeight.textContent = player.height;
+          playerWeight.textContent = player.weight;
+          playerHometown.textContent = `${player.birthCity}, ${player.birthStateProvince}, ${player.birthCountry}`;
+          playerHanded.textContent = (player.primaryPosition.name === "Goalie" ? " Catches: " : " Shoots: ") + 
+                           (player.shootsCatches === "L" ? " Left" : " Right");
+
 
           // Get current season
           const currentYear = new Date().getFullYear();
@@ -144,7 +197,15 @@ document.addEventListener("DOMContentLoaded", function () {
 
           // Populate the season dropdown based on the years the player has played
           populatePlayerSeasonsDropdown(playerId);
-
+          const modalHeader = document.querySelector('#modal-header');
+          modalHeader.style.backgroundColor = selectedTeamSecondaryColor;
+          modalHeader.style.color = selectedTeamPrimaryColor;
+          
+          // If you have other elements to style:
+          // const modalHeaderButton = modalHeader.querySelector('.header-button');
+          // modalHeaderButton.style.backgroundColor = secondaryColor;
+          
+          
           // Show the modal
           modal.style.display = "block";
         });
@@ -182,46 +243,25 @@ document.addEventListener("DOMContentLoaded", function () {
                     ${createStatString("pim", "Penalty Minutes")}
                     ${createStatString("evenSaves", "Even Saves")}
                     ${createStatString("evenShots", "Even Shots")}
-                    ${createStatString(
-                      "evenStrengthSavePercent",
-                      "Even Strength Save %"
-                    )}
+                    ${createStatString("evenStrengthSavePercent","Even Strength Save %")}
                     ${createStatString("gamesStarted", "Games Started")}
-                    ${createStatString(
-                      "goalsAgainstAvgerage",
-                      "Goals Against Avg"
-                    )}
+                    ${createStatString("goalsAgainstAvgerage","Goals Against Avg")}
                     ${createStatString("goalsAgainst", "Goals Against")}
                     ${createStatString("losses", "Losses")}
                     ${createStatString("option", "Overtime")}
-                    ${createStatString(
-                      "powerPlaySavePercent",
-                      "Power Play Saves %"
-                    )}
+                    ${createStatString("powerPlaySavePercent","Power Play Saves %")}
                     ${createStatString("powerPlaySaves", "Power Play Saves")}
                     ${createStatString("powerPlayShots", "Power Play Shots")}
                     ${createStatString("savePercentage", "Save %")}
                     ${createStatString("saves", "Saves")}
-                    ${createStatString(
-                      "shortHandedSavePercent",
-                      "Short Handed Save %"
-                    )}
-                    ${createStatString(
-                      "shortHandedSaves",
-                      "Short Handed Saves"
-                    )}
-                    ${createStatString(
-                      "shortHandedShots",
-                      "Short Handed Shots"
-                    )}
+                    ${createStatString("shortHandedSavePercent","Short Handed Save %")}
+                    ${createStatString("shortHandedSaves","Short Handed Saves")}
+                    ${createStatString("shortHandedShots","Short Handed Shots")}
                     ${createStatString("shotsAgainst", "Shots Against")}
                     ${createStatString("shutouts", "Shutouts")}
                     ${createStatString("ties", "Ties")}
                     ${createStatString("evenTimeOnIce", "Even Time on Ice")}
-                    ${createStatString(
-                      "evenTimeOnIcePerGame",
-                      "Even Time on Ice/Game %"
-                    )}
+                    ${createStatString("evenTimeOnIcePerGame","Even Time on Ice/Game %")}
                     ${createStatString("timeOnIce", "Time on Ice")}
                     ${createStatString("timeOnIcePerGame", "Time on Ice/Game")}
                     ${createStatString("wins", "Wins")}
@@ -266,10 +306,12 @@ document.addEventListener("DOMContentLoaded", function () {
     fetchStatsForSeason(playerId, this.value);
   });
 
+  // Close the modal when the close button is clicked
   closeModalBtn.addEventListener("click", function () {
     modal.style.display = "none";
   });
 
+  // Close the modal when the user clicks outside of it
   window.addEventListener("click", function (event) {
     if (event.target === modal) {
       modal.style.display = "none";
