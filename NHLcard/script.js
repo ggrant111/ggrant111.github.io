@@ -1,6 +1,4 @@
 document.addEventListener("DOMContentLoaded", function () {
-  const teamSelect = document.getElementById("team-select");
-  const fetchRosterBtn = document.getElementById("fetch-roster-btn");
   const playerCardsContainer = document.getElementById("player-cards-container");
   const modal = document.getElementById("player-modal");
   const closeModalBtn = document.querySelector(".close-btn");
