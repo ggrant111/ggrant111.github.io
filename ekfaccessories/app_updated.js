@@ -14,7 +14,7 @@ function fetchDataAndPopulate() {
                     <h2>${accessory.name}</h2>
                     <img src="${accessory.imageUrl}" alt="${accessory.name}" >
                     
-                    <button class="info-btn" data-description="${accessory.description}" data-price="${accessory.price}">More Info</button>
+                    <button class="info-btn" data-description="${accessory.description}" data-price="${accessory.price}">Details</button>
                 `;
                 accessoriesDiv.appendChild(section);
 
