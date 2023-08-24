@@ -1,9 +1,9 @@
 [
 
   {
-    "id": 0,
+    "id": 50,
     "name": "Ed Kenley Ford Accessories",
-    "description": ".",
+    "description": "If you are looking for an accessory that you dont see here just let us know and we will find it for you!",
     "imageUrl": "https://pictures.dealer.com/e/edkenleyfordfd/0995/3feb516aa5c0ed2a63ea8812544c7746x.jpg?impolicy=downsize&h=200"
    },
   {
@@ -44,7 +44,7 @@
   },
   {
    "id": 6,
-   "name": "Clear Bra",
+   "name": "Paint Protection Film",
    "description": "Paint Protection Film, often called 'clearbra', is a transparent polyurethane layer safeguarding vehicle paint. Virtually undetectable, it maintains its shine for years. As certified Xpel film installers, we ensure protection against chips, scratches, and scuffs. The self-healing film erases minor damages, preserving your car's appearance and value over time.",
    "price": 999,
    "imageUrl": "https://blackoutempire.com/wp-content/uploads/2022/09/XPEL-VEHICLE-COVERAGE-OPTIONS-PARTIAL-FRONT-END.jpg"
