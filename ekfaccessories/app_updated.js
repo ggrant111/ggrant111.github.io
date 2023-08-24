@@ -12,7 +12,7 @@ function fetchDataAndPopulate() {
                 section.className = 'scroll-section';
                 section.innerHTML = `
                     <h2>${accessory.name}</h2>
-                    <img src="${accessory.imageUrl}" alt="${accessory.name}" style="max-width: 800px; max-height: 400px;">
+                    <img src="${accessory.imageUrl}" alt="${accessory.name}" >
                     
                     <button class="info-btn" data-description="${accessory.description}" data-price="${accessory.price}">More Info</button>
                 `;
