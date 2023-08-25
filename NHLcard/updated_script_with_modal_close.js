@@ -1,42 +1,47 @@
 document.addEventListener("DOMContentLoaded", function () {
-  const playerCardsContainer = document.getElementById("player-cards-container");
+  const playerCardsContainer = document.getElementById(
+    "player-cards-container"
+  );
   const modal = document.getElementById("player-modal");
   const closeModalBtn = document.querySelector(".close-btn");
   const modalBody = document.getElementById("modal-body");
-  const seasonSelect = document.getElementById("season-select");
+  const seasonSelect = document.getElementById("playerSeasonSelect");
   const backBtn = document.getElementById("back-btn");
   const teamCardsContainer = document.getElementById("team-cards-container");
+  let selectedPlayerId = null;
   let selectedTeamPrimaryColor = "";
   let selectedTeamSecondaryColor = "";
 
   // Fetch the colors data
-  fetch('colors.json')
-    .then(response => response.json())
-    .then(colorsData => {
+  fetch("colors.json")
+    .then((response) => response.json())
+    .then((colorsData) => {
       // Store colors in an object for easy retrieval
       const teamColors = {};
-      colorsData.forEach(colorData => {
+      colorsData.forEach((colorData) => {
         teamColors[colorData.name] = colorData.colors.hex;
       });
 
       // Fetch NHL teams
       fetch("https://statsapi.web.nhl.com/api/v1/teams")
-        .then(response => response.json())
-        .then(data => {
+        .then((response) => response.json())
+        .then((data) => {
           data.teams.forEach((team) => {
             const teamCard = document.createElement("div");
             teamCard.className = "team-card";
             teamCard.setAttribute("data-team-id", team.id);
-            
 
             // Use team name to get the colors
-            const primaryColor = teamColors[team.name] ? `#${teamColors[team.name][0]}` : "#ffffff"; // Default to white if no color
-            const secondaryColor = teamColors[team.name] && teamColors[team.name][1] ? `#${teamColors[team.name][1]}` : primaryColor;
+            const primaryColor = teamColors[team.name]
+              ? `#${teamColors[team.name][0]}`
+              : "#ffffff"; // Default to white if no color
+            const secondaryColor =
+              teamColors[team.name] && teamColors[team.name][1]
+                ? `#${teamColors[team.name][1]}`
+                : primaryColor;
             teamCard.style.backgroundColor = primaryColor;
             teamCard.style.borderColor = secondaryColor;
             teamCard.style.color = secondaryColor;
-            
-
 
             // Create and append team logo
             const teamLogo = document.createElement("img");
@@ -45,14 +50,16 @@ document.addEventListener("DOMContentLoaded", function () {
             teamLogo.src = LogoUrl;
             teamCard.appendChild(teamLogo);
 
-           // Append the card to a container
+            // Append the card to a container
             teamCardsContainer.appendChild(teamCard);
 
             teamCard.addEventListener("click", function () {
               const teamId = this.getAttribute("data-team-id");
 
               // Fetch roster for selected team
-              fetch(`https://statsapi.web.nhl.com/api/v1/teams/${teamId}/roster`)
+              fetch(
+                `https://statsapi.web.nhl.com/api/v1/teams/${teamId}/roster`
+              )
                 .then((response) => response.json())
                 .then((data) => {
                   // Clear previous player cards
@@ -77,10 +84,11 @@ document.addEventListener("DOMContentLoaded", function () {
                       </div>
                     `;
 
-
                     // Hide teams and show the back button
-                    Array.from(document.querySelectorAll('.team-card')).forEach(el => el.style.display = 'none');
-                    backBtn.style.display = 'block';
+                    Array.from(document.querySelectorAll(".team-card")).forEach(
+                      (el) => (el.style.display = "none")
+                    );
+                    backBtn.style.display = "block";
 
                     // playerCardsContainer.innerHTML += playerCard;
                     // Existing code where you create the playerCard string...
@@ -99,7 +107,7 @@ document.addEventListener("DOMContentLoaded", function () {
                     `;
 
                     // Create an actual DOM element from the string
-                    const tempDiv = document.createElement('div');
+                    const tempDiv = document.createElement("div");
                     tempDiv.innerHTML = playerCardContent.trim();
                     const actualPlayerCard = tempDiv.firstChild;
                     const bodyElement = document.body;
@@ -108,21 +116,18 @@ document.addEventListener("DOMContentLoaded", function () {
                     actualPlayerCard.style.backgroundColor = primaryColor;
                     actualPlayerCard.style.borderColor = secondaryColor;
                     actualPlayerCard.style.color = secondaryColor;
-                    bodyElement.style.backgroundColor = selectedTeamSecondaryColor;
+                    bodyElement.style.backgroundColor =
+                      selectedTeamSecondaryColor;
                     selectedTeamPrimaryColor = primaryColor;
                     selectedTeamSecondaryColor = secondaryColor;
                     // Find the player's image element inside the card
-                    const playerImage = actualPlayerCard.querySelector('img');
+                    const playerImage = actualPlayerCard.querySelector("img");
 
                     // Apply the primaryColor as the border color to the image
                     playerImage.style.border = `10px solid ${secondaryColor}`;
 
                     // Append the styled card to the container
                     playerCardsContainer.appendChild(actualPlayerCard);
-
-                    // Append the styled card to the container
-                    playerCardsContainer.appendChild(actualPlayerCard);
-
                   });
                 });
             });
@@ -130,32 +135,32 @@ document.addEventListener("DOMContentLoaded", function () {
         });
     });
 
+  backBtn.addEventListener("click", function () {
+    // Hide player cards
+    playerCardsContainer.innerHTML = "";
 
+    // Show teams
+    Array.from(document.querySelectorAll(".team-card")).forEach(
+      (el) => (el.style.display = "block")
+    );
 
-
-
-    backBtn.addEventListener("click", function() {
-      // Hide player cards
-      playerCardsContainer.innerHTML = "";
-      
-      // Show teams
-      Array.from(document.querySelectorAll('.team-card')).forEach(el => el.style.display = 'block');
-      
-      // Hide the back button
-      backBtn.style.display = 'none';
+    // Hide the back button
+    backBtn.style.display = "none";
   });
-
 
   //Creates Player Modal when a player is clicked
   playerCardsContainer.addEventListener("click", function (event) {
     if (event.target.closest(".card")) {
-      const playerId = event.target
+      selectedPlayerId = event.target
         .closest(".card")
         .getAttribute("data-player-id");
+      const playerId = selectedPlayerId;
       const playerImage = document.getElementById("player-image");
       const playerName = document.getElementById("modal-player-name");
       const teamLogo = document.getElementById("team-logo");
-      const playerNumberAndPosition = document.getElementById("player-number-and-position");
+      const playerNumberAndPosition = document.getElementById(
+        "player-number-and-position"
+      );
       const playerAge = document.getElementById("player-age");
       const playerHeight = document.getElementById("player-height");
       const playerWeight = document.getElementById("player-weight");
@@ -168,7 +173,6 @@ document.addEventListener("DOMContentLoaded", function () {
         .then((data) => {
           const player = data.people[0];
           const teamId = player.currentTeam.id;
-
 
           // Set player details in the modal header
           playerImage.src = `http://nhl.bamcontent.com/images/headshots/current/168x168/${playerId}.png`;
@@ -183,9 +187,11 @@ document.addEventListener("DOMContentLoaded", function () {
           playerHeight.textContent = player.height;
           playerWeight.textContent = player.weight;
           playerHometown.textContent = `${player.birthCity}, ${player.birthStateProvince}, ${player.birthCountry}`;
-          playerHanded.textContent = (player.primaryPosition.name === "Goalie" ? " Catches: " : " Shoots: ") + 
-                           (player.shootsCatches === "L" ? " Left" : " Right");
-
+          playerHanded.textContent =
+            (player.primaryPosition.name === "Goalie"
+              ? " Catches: "
+              : " Shoots: ") +
+            (player.shootsCatches === "L" ? " Left" : " Right");
 
           // Get current season
           const currentYear = new Date().getFullYear();
@@ -197,44 +203,105 @@ document.addEventListener("DOMContentLoaded", function () {
 
           // Populate the season dropdown based on the years the player has played
           populatePlayerSeasonsDropdown(playerId);
-          const modalHeader = document.querySelector('#modal-header');
+          const modalHeader = document.querySelector("#modal-header");
           modalHeader.style.backgroundColor = selectedTeamSecondaryColor;
           modalHeader.style.color = selectedTeamPrimaryColor;
-          
+
           // If you have other elements to style:
           // const modalHeaderButton = modalHeader.querySelector('.header-button');
           // modalHeaderButton.style.backgroundColor = secondaryColor;
-          
-          
+
           // Show the modal
           modal.style.display = "block";
         });
     }
   });
 
-  function fetchStatsForSeason(playerId, season) {
+  function fetchStatsForSeason(playerId, selectedSeason) {
     fetch(
-      `https://statsapi.web.nhl.com/api/v1/people/${playerId}/stats?stats=statsSingleSeason&season=${season}`
+      `https://statsapi.web.nhl.com/api/v1/people/${playerId}/stats?stats=yearByYear`
     )
       .then((response) => response.json())
       .then((data) => {
-        const stats = data.stats[0].splits[0].stat;
+        const splits = data.stats[0].splits;
 
-        // Log the entire stats object to the console
-        console.log(stats);
+        // Fetch stats for the selected season
+        const seasonStats = splits.find(
+          (split) => split.season === selectedSeason
+        );
 
-        // Helper function to create a stat string if it's not undefined
-        const createStatString = (stat, label) => {
-          return stats[stat] !== undefined
-            ? `<p>${label}: ${stats[stat]}</p>`
-            : "";
-        };
+        // Determine the previous season
+        const previousSeason = (parseInt(selectedSeason) - 10001).toString();
 
-        // Construct and display the player stats
-        const playerStats = `
-                    <h3>Season ${season.substring(0, 4)}-${season.substring(
-          4
-        )} Stats</h3>
+        // Fetch stats for the previous season
+        const previousSeasonStats = splits.find(
+          (split) => split.season === previousSeason
+        );
+
+        // Ensure both current and previous season stats are available
+        if (
+          seasonStats &&
+          seasonStats.stat &&
+          previousSeasonStats &&
+          previousSeasonStats.stat
+        ) {
+          const currentGoals = seasonStats.stat.goals;
+          const previousGoals = previousSeasonStats.stat.goals;
+
+          // Calculate the difference in goals
+          const stats = seasonStats.stat;
+          const prevStats = previousSeasonStats.stat;
+
+          // List of stats to compare
+          const statsKeys = Object.keys(stats);
+
+          let differences = {};
+
+          statsKeys.forEach((key) => {
+            let difference = stats[key] - (prevStats[key] || 0);
+            let triangleDirection, color;
+
+            if (difference > 0) {
+              triangleDirection = "▲"; // Up triangle for improvement
+              color = "green";
+            } else if (difference < 0) {
+              triangleDirection = "▼"; // Down triangle for decline
+              color = "red";
+            } else {
+              triangleDirection = ""; // No triangle for no change
+              color = "grey";
+            }
+
+            differences[key] = {
+              difference: difference,
+              triangle: triangleDirection,
+              color: color,
+            };
+          });
+
+          // Define the createStatString function here
+          const createStatString = (stat, label) => {
+            return stats[stat] !== undefined
+              ? `<p>${label}: ${stats[stat]}</p>`
+              : "";
+          };
+
+          // Construct and display the player stats
+          let leagueName =
+            seasonStats.league.name === "National Hockey League"
+              ? "NHL"
+              : seasonStats.league.name;
+          const playerStats = `
+          
+
+<h3>Season ${selectedSeason.substring(0, 4)}-${selectedSeason.substring(
+            4
+          )} Stats - Played for ${
+            seasonStats.team.name
+          } in the ${leagueName}</h3>
+<div class="player-stats"><div id="display-player-stats">
+
+                    
                     ${createStatString("games", "Games Played")}
                     ${createStatString("goals", "Goals")}
                     ${createStatString("assists", "Assists")}
@@ -243,78 +310,140 @@ document.addEventListener("DOMContentLoaded", function () {
                     ${createStatString("pim", "Penalty Minutes")}
                     ${createStatString("evenSaves", "Even Saves")}
                     ${createStatString("evenShots", "Even Shots")}
-                    ${createStatString("evenStrengthSavePercent","Even Strength Save %")}
+                    ${createStatString(
+                      "evenStrengthSavePercent",
+                      "Even Strength Save %"
+                    )}
                     ${createStatString("gamesStarted", "Games Started")}
-                    ${createStatString("goalsAgainstAvgerage","Goals Against Avg")}
+                    ${createStatString(
+                      "goalsAgainstAvgerage",
+                      "Goals Against Avg"
+                    )}
                     ${createStatString("goalsAgainst", "Goals Against")}
                     ${createStatString("losses", "Losses")}
                     ${createStatString("option", "Overtime")}
-                    ${createStatString("powerPlaySavePercent","Power Play Saves %")}
+                    ${createStatString(
+                      "powerPlaySavePercent",
+                      "Power Play Saves %"
+                    )}
                     ${createStatString("powerPlaySaves", "Power Play Saves")}
                     ${createStatString("powerPlayShots", "Power Play Shots")}
                     ${createStatString("savePercentage", "Save %")}
                     ${createStatString("saves", "Saves")}
-                    ${createStatString("shortHandedSavePercent","Short Handed Save %")}
-                    ${createStatString("shortHandedSaves","Short Handed Saves")}
-                    ${createStatString("shortHandedShots","Short Handed Shots")}
+                    ${createStatString(
+                      "shortHandedSavePercent",
+                      "Short Handed Save %"
+                    )}
+                    ${createStatString(
+                      "shortHandedSaves",
+                      "Short Handed Saves"
+                    )}
+                    ${createStatString(
+                      "shortHandedShots",
+                      "Short Handed Shots"
+                    )}
                     ${createStatString("shotsAgainst", "Shots Against")}
                     ${createStatString("shutouts", "Shutouts")}
                     ${createStatString("ties", "Ties")}
                     ${createStatString("evenTimeOnIce", "Even Time on Ice")}
-                    ${createStatString("evenTimeOnIcePerGame","Even Time on Ice/Game %")}
+                    ${createStatString(
+                      "evenTimeOnIcePerGame",
+                      "Even Time on Ice/Game %"
+                    )}
                     ${createStatString("timeOnIce", "Time on Ice")}
                     ${createStatString("timeOnIcePerGame", "Time on Ice/Game")}
                     ${createStatString("wins", "Wins")}
+                    </div><div id="metrics"><p style="color: ${
+                      differences["games"].color
+                    }">
+${differences["games"].triangle} from Previous Season
+</p>
+<p style="color: ${differences["goals"].color}">
+    ${differences["goals"].triangle} from Previous Season
+</p>
+<p style="color: ${differences["assists"].color}">
+${differences["assists"].triangle} from Previous Season
+</p>
+<p style="color: ${differences["blocked"].color}">
+${differences["blocked"].triangle} from Previous Season
+</p>
+<p style="color: ${differences["points"].color}">
+${differences["points"].triangle} from Previous Season
+</p>
+<p style="color: ${differences["pim"].color}">
+${differences["pim"].triangle} from Previous Season
+</p>
+</div></div>
+
                 `;
 
-        modalBody.innerHTML = playerStats;
+          modalBody.innerHTML = playerStats;
+        } else {
+          modalBody.innerHTML = "No stats available for the selected season.";
+        }
       });
   }
 
   function populatePlayerSeasonsDropdown(playerId) {
-    // Fetch available seasons for the player
     fetch(
       `https://statsapi.web.nhl.com/api/v1/people/${playerId}/stats?stats=yearByYear`
     )
       .then((response) => response.json())
       .then((data) => {
-        const availableSeasons = data.stats[0].splits.map(
-          (split) => split.season
-        );
+        const seasons = new Set();
+        const splits = data.stats[0].splits;
 
-        // Sort the seasons in descending order
-        availableSeasons.sort((a, b) => b - a);
+        splits.forEach((split) => {
+          const season = split.season;
+          if (split.stat && (split.stat.points || split.stat.points === 0)) {
+            seasons.add(season);
+          }
+        });
 
-        seasonSelect.innerHTML = ""; // Clear existing options
+        const seasonSelect = document.getElementById("playerSeasonSelect");
+        seasonSelect.innerHTML = ""; // clear previous options
 
-        availableSeasons.forEach((season) => {
+        // Convert the Set to an array and sort it in descending order
+        const sortedSeasons = Array.from(seasons).sort((a, b) => b - a);
+
+        sortedSeasons.forEach((season) => {
           const option = document.createElement("option");
           option.value = season;
           option.textContent = `${season.substring(0, 4)}-${season.substring(
-            4
+            4,
+            8
           )}`;
           seasonSelect.appendChild(option);
         });
+
+        // Activate the dropdown now that it's populated
+        seasonSelect.removeAttribute("disabled");
+      })
+      .catch((error) => {
+        console.error("Error fetching player seasons:", error);
       });
   }
 
   // Event listener for the season dropdown change
   seasonSelect.addEventListener("change", function () {
-    const playerId = playerCardsContainer
-      .querySelector(".card[data-player-id]")
-      .getAttribute("data-player-id");
-    fetchStatsForSeason(playerId, this.value);
+    if (selectedPlayerId) {
+      fetchStatsForSeason(selectedPlayerId, this.value);
+    }
+
+    console.log(selectedPlayerId);
   });
 
   // Close the modal when the close button is clicked
   closeModalBtn.addEventListener("click", function () {
     modal.style.display = "none";
+    console.log("clicked");
   });
 
   // Close the modal when the user clicks outside of it
   window.addEventListener("click", function (event) {
     if (event.target === modal) {
       modal.style.display = "none";
+      console.log("clicked");
     }
   });
 });
