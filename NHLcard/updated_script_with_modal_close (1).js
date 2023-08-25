@@ -230,15 +230,18 @@ document.addEventListener("DOMContentLoaded", function () {
           (split) => split.season === selectedSeason
         );
 
-        // Determine the previous season
+        // Determine the Previous Season
         const previousSeason = (parseInt(selectedSeason) - 10001).toString();
+        const formattedPrevSeason = `${previousSeason
+          .toString()
+          .slice(0, 4)}-${previousSeason.toString().slice(4)}`;
 
-        // Fetch stats for the previous season
+        // Fetch stats for the ${formattedPrevSeason}
         const previousSeasonStats = splits.find(
           (split) => split.season === previousSeason
         );
 
-        // Ensure both current and previous season stats are available
+        // Ensure both current and Previous Season stats are available
         if (
           seasonStats &&
           seasonStats.stat &&
@@ -318,59 +321,60 @@ document.addEventListener("DOMContentLoaded", function () {
 <div class="player-stats" id="display-player-stats">
 
                     
-${createStatString("games", "Games Played")}
-${createStatString("wins", "Wins")}
-${createStatString("losses", "Losses")}
-${createStatString("ties", "Ties")}
-${createStatString("ot", "Overtime")}
-${createStatString("gamesStarted", "Games Started")}
+${createStatString("games", "GP")}
+${createStatString("wins", "W")}
+${createStatString("losses", "L")}
+${createStatString("ties", "T")}
+${createStatString("ot", "OT")}
+${createStatString("gamesStarted", "GS")}
 
-${createStatString("goals", "Goals")}
-${createStatString("assists", "Assists")}
-${createStatString("points", "Points")}
-${createStatString("shotPct", "Shooting Percentage")}
-${createStatString("shots", "Shots")}
-${createStatString("shotsAgainst", "Shots Against")}
+${createStatString("goals", "G")}
+${createStatString("assists", "A")}
+${createStatString("points", "P")}
+${createStatString("shotPct", "S%")}
+${createStatString("shots", "S")}
+${createStatString("shotsAgainst", "SA")}
 
-${createStatString("powerPlayGoals", "Power Play Goals")}
-${createStatString("powerPlayPoints", "Power Play Points")}
-${createStatString("shortHandedGoals", "Short Handed Goals")}
-${createStatString("shortHandedPoints", "Short Handed Points")}
-${createStatString("gameWinningGoals", "Game Winning Goals")}
-${createStatString("overTimeGoals", "Overtime Goals")}
+${createStatString("powerPlayGoals", "PPG")}
+${createStatString("powerPlayPoints", "PPP")}
+${createStatString("shortHandedGoals", "SHG")}
+${createStatString("shortHandedPoints", "SHP")}
+${createStatString("gameWinningGoals", "GWG")}
+${createStatString("overTimeGoals", "OTG")}
 
-${createStatString("evenSaves", "Even Saves")}
-${createStatString("powerPlaySaves", "Power Play Saves")}
-${createStatString("shortHandedSaves", "Short Handed Saves")}
-${createStatString("savePercentage", "Save")}
-${createStatString("evenStrengthSavePercentage", "Even Strength Save")}
-${createStatString("powerPlaySavePercentage", "Power Play Saves")}
-${createStatString("shortHandedSavePercentage", "Short Handed Save")}
-${createStatString("goalsAgainst", "Goals Against")}
-${createStatString("goalsAgainstAverage", "Goals Against Avg")}
-${createStatString("shutouts", "Shutouts")}
+${createStatString("evenSaves", "ES")}
+${createStatString("powerPlaySaves", "PPS")}
+${createStatString("shortHandedSaves", "SHS")}
+${createStatString("savePercentage", "SV%")}
+${createStatString("evenStrengthSavePercentage", "ESV%")}
+${createStatString("powerPlaySavePercentage", "PPSV%")}
+${createStatString("shortHandedSavePercentage", "SHSV%")}
+${createStatString("goalsAgainst", "GA")}
+${createStatString("goalsAgainstAverage", "GAA")}
+${createStatString("shutouts", "SO")}
 
-${createStatString("pim", "Penalty Minutes")}
-${createStatString("penaltyMinutes", "Penalty Minutes")}
-${createStatString("hits", "Hits")}
-${createStatString("blocked", "Blocked Shots")}
-${createStatString("plusMinus", "Plus/Minus")}
-${createStatString("faceOffPct", "Face Off Percentage")}
+${createStatString("pim", "PIM")}
+${createStatString("penaltyMinutes", "PIM")}
+${createStatString("hits", "H")}
+${createStatString("blocked", "BS")}
+${createStatString("plusMinus", "+/-")}
+${createStatString("faceOffPct", "FO%")}
 ${createStatString("shifts", "Shifts")}
 
-${createStatString("timeOnIce", "Time on Ice")}
-${createStatString("evenTimeOnIce", "Even Time on Ice")}
-${createStatString("powerPlayTimeOnIce", "Power Play Time On Ice")}
-${createStatString("shortHandedTimeOnIce", "Short Handed Time On Ice")}
-${createStatString("timeOnIcePerGame", "Time on Ice/Game")}
-${createStatString("evenTimeOnIcePerGame", "Even Time on Ice/Game")}
+${createStatString("timeOnIce", "TOI")}
+${createStatString("evenTimeOnIce", "ETOI")}
+${createStatString("powerPlayTimeOnIce", "PPTOI")}
+${createStatString("shortHandedTimeOnIce", "SHTOI")}
+${createStatString("timeOnIcePerGame", "TOI/G")}
+${createStatString("evenTimeOnIcePerGame", "ETOI/G")}
+
 </div>
 <div id="metrics">
 
 ${
   differences?.["games"]
     ? `<p style="color: ${differences["games"].color}">
-    ${differences["games"].triangle} from Previous Season
+    ${differences["games"].triangle} from ${formattedPrevSeason}
 </p>`
     : ""
 }
@@ -378,7 +382,7 @@ ${
 ${
   differences?.["wins"]
     ? `<p style="color: ${differences["wins"].color}">
-    ${differences["wins"].triangle} from Previous Season
+    ${differences["wins"].triangle} from ${formattedPrevSeason}
 </p>`
     : ""
 }
@@ -386,7 +390,7 @@ ${
 ${
   differences?.["losses"]
     ? `<p style="color: ${differences["losses"].color}">
-    ${differences["losses"].triangle} from Previous Season
+    ${differences["losses"].triangle} from ${formattedPrevSeason}
 </p>`
     : ""
 }
@@ -394,7 +398,7 @@ ${
 ${
   differences?.["ties"]
     ? `<p style="color: ${differences["ties"].color}">
-    ${differences["ties"].triangle} from Previous Season
+    ${differences["ties"].triangle} from ${formattedPrevSeason}
 </p>`
     : ""
 }
@@ -402,7 +406,7 @@ ${
 ${
   differences?.["ot"]
     ? `<p style="color: ${differences["ot"].color}">
-    ${differences["ot"].triangle} from Previous Season
+    ${differences["ot"].triangle} from ${formattedPrevSeason}
 </p>`
     : ""
 }
@@ -410,7 +414,7 @@ ${
 ${
   differences?.["gamesStarted"]
     ? `<p style="color: ${differences["gamesStarted"].color}">
-    ${differences["gamesStarted"].triangle} from Previous Season
+    ${differences["gamesStarted"].triangle} from ${formattedPrevSeason}
 </p>`
     : ""
 }
@@ -418,7 +422,7 @@ ${
 ${
   differences?.["goals"]
     ? `<p style="color: ${differences["goals"].color}">
-    ${differences["goals"].triangle} from Previous Season
+    ${differences["goals"].triangle} from ${formattedPrevSeason}
 </p>`
     : ""
 }
@@ -426,7 +430,7 @@ ${
 ${
   differences?.["assists"]
     ? `<p style="color: ${differences["assists"].color}">
-    ${differences["assists"].triangle} from Previous Season
+    ${differences["assists"].triangle} from ${formattedPrevSeason}
 </p>`
     : ""
 }
@@ -434,7 +438,7 @@ ${
 ${
   differences?.["points"]
     ? `<p style="color: ${differences["points"].color}">
-    ${differences["points"].triangle} from Previous Season
+    ${differences["points"].triangle} from ${formattedPrevSeason}
 </p>`
     : ""
 }
@@ -442,7 +446,7 @@ ${
 ${
   differences?.["shotPct"]
     ? `<p style="color: ${differences["shotPct"].color}">
-    ${differences["shotPct"].triangle} from Previous Season
+    ${differences["shotPct"].triangle} from ${formattedPrevSeason}
 </p>`
     : ""
 }
@@ -450,7 +454,7 @@ ${
 ${
   differences?.["shots"]
     ? `<p style="color: ${differences["shots"].color}">
-    ${differences["shots"].triangle} from Previous Season
+    ${differences["shots"].triangle} from ${formattedPrevSeason}
 </p>`
     : ""
 }
@@ -458,7 +462,7 @@ ${
 ${
   differences?.["shotsAgainst"]
     ? `<p style="color: ${differences["shotsAgainst"].color}">
-    ${differences["shotsAgainst"].triangle} from Previous Season
+    ${differences["shotsAgainst"].triangle} from ${formattedPrevSeason}
 </p>`
     : ""
 }
@@ -466,7 +470,7 @@ ${
 ${
   differences?.["powerPlayGoals"]
     ? `<p style="color: ${differences["powerPlayGoals"].color}">
-    ${differences["powerPlayGoals"].triangle} from Previous Season
+    ${differences["powerPlayGoals"].triangle} from ${formattedPrevSeason}
 </p>`
     : ""
 }
@@ -474,7 +478,7 @@ ${
 ${
   differences?.["powerPlayPoints"]
     ? `<p style="color: ${differences["powerPlayPoints"].color}">
-    ${differences["powerPlayPoints"].triangle} from Previous Season
+    ${differences["powerPlayPoints"].triangle} from ${formattedPrevSeason}
 </p>`
     : ""
 }
@@ -482,7 +486,7 @@ ${
 ${
   differences?.["shortHandedGoals"]
     ? `<p style="color: ${differences["shortHandedGoals"].color}">
-    ${differences["shortHandedGoals"].triangle} from Previous Season
+    ${differences["shortHandedGoals"].triangle} from ${formattedPrevSeason}
 </p>`
     : ""
 }
@@ -490,7 +494,7 @@ ${
 ${
   differences?.["shortHandedPoints"]
     ? `<p style="color: ${differences["shortHandedPoints"].color}">
-    ${differences["shortHandedPoints"].triangle} from Previous Season
+    ${differences["shortHandedPoints"].triangle} from ${formattedPrevSeason}
 </p>`
     : ""
 }
@@ -498,7 +502,7 @@ ${
 ${
   differences?.["gameWinningGoals"]
     ? `<p style="color: ${differences["gameWinningGoals"].color}">
-    ${differences["gameWinningGoals"].triangle} from Previous Season
+    ${differences["gameWinningGoals"].triangle} from ${formattedPrevSeason}
 </p>`
     : ""
 }
@@ -506,7 +510,7 @@ ${
 ${
   differences?.["overTimeGoals"]
     ? `<p style="color: ${differences["overTimeGoals"].color}">
-    ${differences["overTimeGoals"].triangle} from Previous Season
+    ${differences["overTimeGoals"].triangle} from ${formattedPrevSeason}
 </p>`
     : ""
 }
@@ -514,7 +518,7 @@ ${
 ${
   differences?.["evenSaves"]
     ? `<p style="color: ${differences["evenSaves"].color}">
-    ${differences["evenSaves"].triangle} from Previous Season
+    ${differences["evenSaves"].triangle} from ${formattedPrevSeason}
 </p>`
     : ""
 }
@@ -522,7 +526,7 @@ ${
 ${
   differences?.["powerPlaySaves"]
     ? `<p style="color: ${differences["powerPlaySaves"].color}">
-    ${differences["powerPlaySaves"].triangle} from Previous Season
+    ${differences["powerPlaySaves"].triangle} from ${formattedPrevSeason}
 </p>`
     : ""
 }
@@ -530,7 +534,7 @@ ${
 ${
   differences?.["shortHandedSaves"]
     ? `<p style="color: ${differences["shortHandedSaves"].color}">
-    ${differences["shortHandedSaves"].triangle} from Previous Season
+    ${differences["shortHandedSaves"].triangle} from ${formattedPrevSeason}
 </p>`
     : ""
 }
@@ -538,7 +542,7 @@ ${
 ${
   differences?.["savePercentage"]
     ? `<p style="color: ${differences["savePercentage"].color}">
-    ${differences["savePercentage"].triangle} from Previous Season
+    ${differences["savePercentage"].triangle} from ${formattedPrevSeason}
 </p>`
     : ""
 }
@@ -546,7 +550,7 @@ ${
 ${
   differences?.["evenStrengthSavePercentage"]
     ? `<p style="color: ${differences["evenStrengthSavePercentage"].color}">
-    ${differences["evenStrengthSavePercentage"].triangle} from Previous Season
+    ${differences["evenStrengthSavePercentage"].triangle} from ${formattedPrevSeason}
 </p>`
     : ""
 }
@@ -554,7 +558,7 @@ ${
 ${
   differences?.["powerPlaySavePercentage"]
     ? `<p style="color: ${differences["powerPlaySavePercentage"].color}">
-    ${differences["powerPlaySavePercentage"].triangle} from Previous Season
+    ${differences["powerPlaySavePercentage"].triangle} from ${formattedPrevSeason}
 </p>`
     : ""
 }
@@ -562,7 +566,7 @@ ${
 ${
   differences?.["shortHandedSavePercentage"]
     ? `<p style="color: ${differences["shortHandedSavePercentage"].color}">
-    ${differences["shortHandedSavePercentage"].triangle} from Previous Season
+    ${differences["shortHandedSavePercentage"].triangle} from ${formattedPrevSeason}
 </p>`
     : ""
 }
@@ -570,7 +574,7 @@ ${
 ${
   differences?.["goalsAgainst"]
     ? `<p style="color: ${differences["goalsAgainst"].color}">
-    ${differences["goalsAgainst"].triangle} from Previous Season
+    ${differences["goalsAgainst"].triangle} from ${formattedPrevSeason}
 </p>`
     : ""
 }
@@ -578,7 +582,7 @@ ${
 ${
   differences?.["goalsAgainstAverage"]
     ? `<p style="color: ${differences["goalsAgainstAverage"].color}">
-    ${differences["goalsAgainstAverage"].triangle} from Previous Season
+    ${differences["goalsAgainstAverage"].triangle} from ${formattedPrevSeason}
 </p>`
     : ""
 }
@@ -586,7 +590,7 @@ ${
 ${
   differences?.["shutouts"]
     ? `<p style="color: ${differences["shutouts"].color}">
-    ${differences["shutouts"].triangle} from Previous Season
+    ${differences["shutouts"].triangle} from ${formattedPrevSeason}
 </p>`
     : ""
 }
@@ -594,7 +598,7 @@ ${
 ${
   differences?.["pim"]
     ? `<p style="color: ${differences["pim"].color}">
-    ${differences["pim"].triangle} from Previous Season
+    ${differences["pim"].triangle} from ${formattedPrevSeason}
 </p>`
     : ""
 }
@@ -602,7 +606,7 @@ ${
 ${
   differences?.["penaltyMinutes"]
     ? `<p style="color: ${differences["penaltyMinutes"].color}">
-    ${differences["penaltyMinutes"].triangle} from Previous Season
+    ${differences["penaltyMinutes"].triangle} from ${formattedPrevSeason}
 </p>`
     : ""
 }
@@ -610,7 +614,7 @@ ${
 ${
   differences?.["hits"]
     ? `<p style="color: ${differences["hits"].color}">
-    ${differences["hits"].triangle} from Previous Season
+    ${differences["hits"].triangle} from ${formattedPrevSeason}
 </p>`
     : ""
 }
@@ -618,7 +622,7 @@ ${
 ${
   differences?.["blocked"]
     ? `<p style="color: ${differences["blocked"].color}">
-    ${differences["blocked"].triangle} from Previous Season
+    ${differences["blocked"].triangle} from ${formattedPrevSeason}
 </p>`
     : ""
 }
@@ -626,7 +630,7 @@ ${
 ${
   differences?.["plusMinus"]
     ? `<p style="color: ${differences["plusMinus"].color}">
-    ${differences["plusMinus"].triangle} from Previous Season
+    ${differences["plusMinus"].triangle} from ${formattedPrevSeason}
 </p>`
     : ""
 }
@@ -634,7 +638,7 @@ ${
 ${
   differences?.["faceOffPct"]
     ? `<p style="color: ${differences["faceOffPct"].color}">
-    ${differences["faceOffPct"].triangle} from Previous Season
+    ${differences["faceOffPct"].triangle} from ${formattedPrevSeason}
 </p>`
     : ""
 }
@@ -642,7 +646,7 @@ ${
 ${
   differences?.["shifts"]
     ? `<p style="color: ${differences["shifts"].color}">
-    ${differences["shifts"].triangle} from Previous Season
+    ${differences["shifts"].triangle} from ${formattedPrevSeason}
 </p>`
     : ""
 }
@@ -650,7 +654,7 @@ ${
 ${
   differences?.["timeOnIce"]
     ? `<p style="color: ${differences["timeOnIce"].color}">
-    ${differences["timeOnIce"].triangle} from Previous Season
+    ${differences["timeOnIce"].triangle} from ${formattedPrevSeason}
 </p>`
     : ""
 }
@@ -658,7 +662,7 @@ ${
 ${
   differences?.["evenTimeOnIce"]
     ? `<p style="color: ${differences["evenTimeOnIce"].color}">
-    ${differences["evenTimeOnIce"].triangle} from Previous Season
+    ${differences["evenTimeOnIce"].triangle} from ${formattedPrevSeason}
 </p>`
     : ""
 }
@@ -666,7 +670,7 @@ ${
 ${
   differences?.["powerPlayTimeOnIce"]
     ? `<p style="color: ${differences["powerPlayTimeOnIce"].color}">
-    ${differences["powerPlayTimeOnIce"].triangle} from Previous Season
+    ${differences["powerPlayTimeOnIce"].triangle} from ${formattedPrevSeason}
 </p>`
     : ""
 }
@@ -674,7 +678,7 @@ ${
 ${
   differences?.["shortHandedTimeOnIce"]
     ? `<p style="color: ${differences["shortHandedTimeOnIce"].color}">
-    ${differences["shortHandedTimeOnIce"].triangle} from Previous Season
+    ${differences["shortHandedTimeOnIce"].triangle} from ${formattedPrevSeason}
 </p>`
     : ""
 }
@@ -682,7 +686,7 @@ ${
 ${
   differences?.["timeOnIcePerGame"]
     ? `<p style="color: ${differences["timeOnIcePerGame"].color}">
-    ${differences["timeOnIcePerGame"].triangle} from Previous Season
+    ${differences["timeOnIcePerGame"].triangle} from ${formattedPrevSeason}
 </p>`
     : ""
 }
@@ -690,7 +694,7 @@ ${
 ${
   differences?.["evenTimeOnIcePerGame"]
     ? `<p style="color: ${differences["evenTimeOnIcePerGame"].color}">
-    ${differences["evenTimeOnIcePerGame"].triangle} from Previous Season
+    ${differences["evenTimeOnIcePerGame"].triangle} from ${formattedPrevSeason}
 </p>`
     : ""
 }
