@@ -1,5 +1,5 @@
 body {
-  font-family: Arial, sans-serif;
+  font-family: "Poppins", sans-serif;
   background-color: #f4f4f4;
   margin: 0;
   transition: background-color 1.5s ease;
@@ -144,7 +144,7 @@ h4 {
 #modal-body {
   display: flex;
   align-content: flex-end;
-  justify-content: space-around;
+  justify-content: center;
   flex-wrap: wrap;
 }
 .modal-content {
