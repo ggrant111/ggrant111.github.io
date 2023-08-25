@@ -17,6 +17,15 @@ br {
   padding: 20px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
+#player-stats,
+#metrics {
+  display: inline-block;
+  width: 49%; /* Adjust as needed */
+  vertical-align: top;
+}
+#metrics {
+  padding-left: 1%; /* Adds spacing between the two columns */
+}
 
 #mainLogo {
   max-height: 100%;
@@ -101,9 +110,9 @@ br {
 #display-player-stats {
   text-align: right;
 }
-.player-stats {
+/* .player-stats {
   display: flex;
-}
+} */
 h3 {
   font-size: 1rem;
 }
@@ -120,6 +129,7 @@ h4 {
 }
 
 /* Modal styles */
+
 .modal {
   display: none;
   position: fixed;
@@ -131,7 +141,12 @@ h4 {
   overflow: auto;
   background-color: rgba(0, 0, 0, 0.4);
 }
-
+#modal-body {
+  display: flex;
+  align-content: flex-end;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
 .modal-content {
   background-color: #fefefe;
   margin: 5% auto;

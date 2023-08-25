@@ -315,7 +315,7 @@ document.addEventListener("DOMContentLoaded", function () {
           )} Stats - Played for ${
             seasonStats.team.name
           } in the ${leagueName}</h3>
-<div class="player-stats"><div id="display-player-stats">
+<div class="player-stats" id="display-player-stats">
 
                     
 ${createStatString("games", "Games Played")}
@@ -364,7 +364,7 @@ ${createStatString("powerPlayTimeOnIce", "Power Play Time On Ice")}
 ${createStatString("shortHandedTimeOnIce", "Short Handed Time On Ice")}
 ${createStatString("timeOnIcePerGame", "Time on Ice/Game")}
 ${createStatString("evenTimeOnIcePerGame", "Even Time on Ice/Game")}
-
+</div>
 <div id="metrics">
 
 ${
