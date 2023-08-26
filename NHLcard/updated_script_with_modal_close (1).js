@@ -154,44 +154,30 @@ document.addEventListener("DOMContentLoaded", function () {
       selectedPlayerId = event.target
         .closest(".card")
         .getAttribute("data-player-id");
-      const playerId = selectedPlayerId;
-      const playerImage = document.getElementById("player-image");
-      const playerName = document.getElementById("modal-player-name");
-      const teamLogo = document.getElementById("team-logo");
-      const playerNumberAndPosition = document.getElementById(
-        "player-number-and-position"
-      );
-      const playerAge = document.getElementById("player-age");
-      const playerHeight = document.getElementById("player-height");
-      const playerWeight = document.getElementById("player-weight");
-      const playerHometown = document.getElementById("player-hometown");
-      const playerHanded = document.getElementById("player-handed");
+      const playerId = event.target
+        .closest(".card")
+        .getAttribute("data-player-id");
+
+      console.log("Selected Player ID:", playerId, selectedPlayerId);
 
       // Fetch player details
       fetch(`https://statsapi.web.nhl.com/api/v1/people/${playerId}`)
         .then((response) => response.json())
         .then((data) => {
+          console.log(data);
           const player = data.people[0];
           const teamId = player.currentTeam.id;
 
-          // Set player details in the modal header
-          playerImage.src = `https://nhl.bamcontent.com/images/headshots/current/168x168/${playerId}.png`;
-          playerImage.onerror = function () {
-            this.src = "assets/images/noheadshot.png";
-          };
+          // Extract the teamLogoUrl
+          const teamLogoUrl = `https://www-league.nhlstatic.com/images/logos/teams-current-primary-light/${teamId}.svg`;
 
-          playerName.textContent = player.fullName;
-          teamLogo.src = `https://www-league.nhlstatic.com/images/logos/teams-current-primary-light/${teamId}.svg`;
-          playerNumberAndPosition.textContent = `#${player.primaryNumber} - ${player.primaryPosition.name}`;
-          playerAge.textContent = player.currentAge;
-          playerHeight.textContent = player.height;
-          playerWeight.textContent = player.weight;
-          playerHometown.textContent = `${player.birthCity}, ${player.birthStateProvince}, ${player.birthCountry}`;
-          playerHanded.textContent =
-            (player.primaryPosition.name === "Goalie"
-              ? " Catches: "
-              : " Shoots: ") +
-            (player.shootsCatches === "L" ? " Left" : " Right");
+          // Set the teamLogoUrl as the background of the modal-header
+          const modalHeader = document.querySelector("#modal-header");
+          modalHeader.style.backgroundImage = `linear-gradient(rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5)), url(${teamLogoUrl})`;
+          modalHeader.style.backgroundRepeat = "no-repeat";
+          modalHeader.style.backgroundSize = "cover";
+          modalHeader.style.backgroundPosition = "center";
+          modalHeader.style.backgroundOpacity = "0.5";
 
           // Get current season
           const currentYear = new Date().getFullYear();
@@ -203,13 +189,47 @@ document.addEventListener("DOMContentLoaded", function () {
 
           // Populate the season dropdown based on the years the player has played
           populatePlayerSeasonsDropdown(playerId);
-          const modalHeader = document.querySelector("#modal-header");
+
+          // Set player details in the modal header
+          const playerImage = document.getElementById("player-image");
+          playerImage.src = `https://nhl.bamcontent.com/images/headshots/current/168x168/${playerId}.png`;
+          playerImage.onerror = function () {
+            this.src = "assets/images/noheadshot.png";
+          };
+
+          const playerName = document.getElementById("modal-player-name");
+          playerName.textContent = `${player.fullName} #${player.primaryNumber} - ${player.primaryPosition.name}`;
+
+          // const teamLogo = document.getElementById("team-logo");
+          // teamLogo.src = teamLogoUrl;
+
+          // const playerNumberAndPosition = document.getElementById(
+          //   "player-number-and-position"
+          // );
+          // playerNumberAndPosition.textContent = `#${} - ${}`;
+
+          const playerAge = document.getElementById("player-age");
+          playerAge.textContent = player.currentAge;
+
+          const playerHeight = document.getElementById("player-height");
+          playerHeight.textContent = player.height;
+
+          const playerWeight = document.getElementById("player-weight");
+          playerWeight.textContent = player.weight;
+
+          const playerHometown = document.getElementById("player-hometown");
+          playerHometown.textContent = `${player.birthCity}, ${player.birthStateProvince}, ${player.birthCountry}`;
+
+          const playerHanded = document.getElementById("player-handed");
+          playerHanded.textContent =
+            (player.primaryPosition.name === "Goalie"
+              ? " Catches: "
+              : " Shoots: ") +
+            (player.shootsCatches === "L" ? " Left" : " Right");
+
+          // Set background color for modal header
           modalHeader.style.backgroundColor = selectedTeamSecondaryColor;
           modalHeader.style.color = selectedTeamPrimaryColor;
-
-          // If you have other elements to style:
-          // const modalHeaderButton = modalHeader.querySelector('.header-button');
-          // modalHeaderButton.style.backgroundColor = secondaryColor;
 
           // Show the modal
           modal.style.display = "block";
@@ -224,6 +244,7 @@ document.addEventListener("DOMContentLoaded", function () {
       .then((response) => response.json())
       .then((data) => {
         const splits = data.stats[0].splits;
+        console.log(playerId);
 
         // Fetch stats for the selected season
         const seasonStats = splits.find(
@@ -743,6 +764,7 @@ ${
         });
 
         // Activate the dropdown now that it's populated
+
         seasonSelect.removeAttribute("disabled");
       })
       .catch((error) => {
