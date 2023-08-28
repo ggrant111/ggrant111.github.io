@@ -141,9 +141,9 @@ a:hover {
 }
 
 @media (max-width: 768px) {
-  /* .navbar {
+  .navbar {
     display: none;
-  } */
+  }
   #logo {
     display: none;
   }
@@ -158,55 +158,5 @@ a:hover {
   }
   .modal-content {
     left: 50%;
-  }
-}
-
-/* Hamburger Button */
-.hamburger {
-  display: none;
-  flex-direction: column;
-  cursor: pointer;
-  width: 30px;
-  height: 22px;
-  position: fixed;
-  top: 10px;
-  left: 10px;
-  z-index: 10;
-  background-color: transparent;
-  border: none;
-  outline: none;
-}
-
-.hamburger span {
-  width: 100%;
-  height: 3px;
-  background-color: black;
-  margin-bottom: 5px;
-  border-radius: 3px;
-}
-
-/* Responsive Styles */
-@media screen and (max-width: 768px) {
-  .navbar {
-    width: 100vw;
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 10px;
-    transform: translateX(-100vw);
-    transition: transform 0.3s ease-in-out;
-    background-color: white;
-  }
-
-  .navbar.active {
-    transform: translateX(0);
-    height: calc(100vh - 50px);
-  }
-
-  .hamburger {
-    display: flex;
-  }
-
-  .scroll-container {
-    margin-left: 0px;
   }
 }

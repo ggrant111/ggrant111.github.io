@@ -1,192 +1,191 @@
 [
-
   {
     "id": 50,
     "name": "Ed Kenley Ford Accessories",
     "description": "If you are looking for an accessory that you dont see here just let us know and we will find it for you!",
     "imageUrl": "https://pictures.dealer.com/e/edkenleyfordfd/0995/3feb516aa5c0ed2a63ea8812544c7746x.jpg?impolicy=downsize&h=200"
-   },
-  {
-   "id": 1,
-   "name": "Paint and Interior Protection",
-   "description": "With a commitment to innovation, we have imbedded technology into our manufacturing process for both exterior and interior surfaces. Over the last ten years, the Company has sold nearly nine million contracts and manages approximately three million warranties on new and preowned vehicles.",
-   "price": 1195,
-   "imageUrl": "https://www.caltexus.com/wp-content/uploads/2021/07/RA-NG2-SMALL-300x259.png"
   },
   {
-   "id": 2,
-   "name": "Tonneau Cover",
-   "description": "The BAKFlip MX4 Aluminum Tonneau Cover safeguards trucks and valuables. Boasting UV and scratch resistance, its lightweight design uses high-density foam. Made of aluminum with a matte finish, it's versatile with the tailgate up or down. Made in the USA, it includes a 5-Year Warranty.",
-   "price": 1395,
-   "imageUrl": "https://www.napaonline.com/img/group/main/60/6050_1_md.jpg"
+    "id": 1,
+    "name": "Paint and Interior Protection",
+    "description": "With a commitment to innovation, we have imbedded technology into our manufacturing process for both exterior and interior surfaces. Over the last ten years, the Company has sold nearly nine million contracts and manages approximately three million warranties on new and preowned vehicles.",
+    "price": 1195,
+    "imageUrl": "https://www.caltexus.com/wp-content/uploads/2021/07/RA-NG2-SMALL-300x259.png"
   },
   {
-   "id": 3,
-   "name": "B&W Turnoverball",
-   "description": "Instead of worrying about where to store the ball when you're not using it, the Turnoverball let's you store it where you need it.",
-   "price": 1195,
-   "imageUrl": "https://marvel-b1-cdn.bc0a.com/f00000000129952/www.bwtrailerhitches.com/sites/default/files/kits/images/GNRK1121.jpg",
-   "videoUrl": "https://www.bwtrailerhitches.com/sites/default/files/video-files/turnoverball%2015.4.mp4"
+    "id": 2,
+    "name": "Tonneau Cover",
+    "description": "The BAKFlip MX4 Aluminum Tonneau Cover safeguards trucks and valuables. Boasting UV and scratch resistance, its lightweight design uses high-density foam. Made of aluminum with a matte finish, it's versatile with the tailgate up or down. Made in the USA, it includes a 5-Year Warranty.",
+    "price": 1395,
+    "imageUrl": "https://www.napaonline.com/img/group/main/60/6050_1_md.jpg"
   },
   {
-   "id": 4,
-   "name": "Wheel Well Liners",
-   "description": "Heavy-duty liners help cover up and shield body-colored parts and numerous underpinnings within the rear wheelhouses",
-   "price": 499,
-   "imageUrl": "https://accessories.ford.com/s3/ML3Z9927886A_0.jpg"
+    "id": 3,
+    "name": "B&W Turnoverball",
+    "description": "Instead of worrying about where to store the ball when you're not using it, the Turnoverball let's you store it where you need it.",
+    "price": 1195,
+    "imageUrl": "https://marvel-b1-cdn.bc0a.com/f00000000129952/www.bwtrailerhitches.com/sites/default/files/kits/images/GNRK1121.jpg",
+    "videoUrl": "https://www.bwtrailerhitches.com/sites/default/files/video-files/turnoverball%2015.4.mp4"
   },
   {
-   "id": 5,
-   "name": "Spray On Bed Liner",
-   "description": "Reflex® Spray-On Liners provide durable protection for trucks. This thick coating shields against dents, scratches, and rust while its non-slip surface secures cargo. Proven to last, Reflex offers a range of colors and suits multiple applications beyond just truck beds.",
-   "price": 749,
-   "imageUrl": "https://cksprayin.com/wp-content/uploads/2019/10/reflex-sprayin-liners-1.jpg"
+    "id": 4,
+    "name": "Wheel Well Liners",
+    "description": "Heavy-duty liners help cover up and shield body-colored parts and numerous underpinnings within the rear wheelhouses",
+    "price": 499,
+    "imageUrl": "https://accessories.ford.com/s3/ML3Z9927886A_0.jpg"
   },
   {
-   "id": 6,
-   "name": "Paint Protection Film",
-   "description": "Paint Protection Film, often called 'clearbra', is a transparent polyurethane layer safeguarding vehicle paint. Virtually undetectable, it maintains its shine for years. As certified Xpel film installers, we ensure protection against chips, scratches, and scuffs. The self-healing film erases minor damages, preserving your car's appearance and value over time.",
-   "price": 999,
-   "imageUrl": "https://blackoutempire.com/wp-content/uploads/2022/09/XPEL-VEHICLE-COVERAGE-OPTIONS-PARTIAL-FRONT-END.jpg"
+    "id": 5,
+    "name": "Spray On Bed Liner",
+    "description": "Reflex® Spray-On Liners provide durable protection for trucks. This thick coating shields against dents, scratches, and rust while its non-slip surface secures cargo. Proven to last, Reflex offers a range of colors and suits multiple applications beyond just truck beds.",
+    "price": 749,
+    "imageUrl": "https://cksprayin.com/wp-content/uploads/2019/10/reflex-sprayin-liners-1.jpg"
   },
   {
-   "id": 7,
-   "name": "Air Bags",
-   "description": "Precision-engineered inflatable devices that enhance a truck's suspension prowess. They dynamically adjust to varying loads, ensuring the truck remains level, thereby preventing undue sagging, optimizing handling, and ensuring a smooth ride.",
-   "price": 997,
-   "imageUrl": "https://media.suspensionconnection.com/products/firestone-air-bags-firestone-2407-2.jpg"
+    "id": 6,
+    "name": "Paint Protection Film",
+    "description": "Paint Protection Film, often called 'clearbra', is a transparent polyurethane layer safeguarding vehicle paint. Virtually undetectable, it maintains its shine for years. As certified Xpel film installers, we ensure protection against chips, scratches, and scuffs. The self-healing film erases minor damages, preserving your car's appearance and value over time.",
+    "price": 999,
+    "imageUrl": "https://blackoutempire.com/wp-content/uploads/2022/09/XPEL-VEHICLE-COVERAGE-OPTIONS-PARTIAL-FRONT-END.jpg"
   },
   {
-   "id": 8,
-   "name": "Bed Extender",
-   "description": "The bed extender boosts pickup truck cargo space, accommodating longer items like kayaks or lumber. Made from sturdy materials like aluminum, it securely attaches to tailgates. Some models offer vertical positioning for small items. Perfect for varied uses, it ensures safe cargo transit.",
-   "price": 547,
-   "imageUrl": "https://accessories.ford.com/s3/ML3Z99286A40B_0.jpg"
+    "id": 7,
+    "name": "Air Bags",
+    "description": "Precision-engineered inflatable devices that enhance a truck's suspension prowess. They dynamically adjust to varying loads, ensuring the truck remains level, thereby preventing undue sagging, optimizing handling, and ensuring a smooth ride.",
+    "price": 997,
+    "imageUrl": "https://media.suspensionconnection.com/products/firestone-air-bags-firestone-2407-2.jpg"
   },
   {
-   "id": 9,
-   "name": "Rubber Bed Mat",
-   "description": "A robust rubber mat meticulously designed to shield truck beds from potential damage. Its textured non-slip surface guarantees cargo stability, making it an indispensable accessory for long-haul truckers and daily users alike.",
-   "price": 239,
-   "imageUrl": "https://realtruck.com/production/3435-weathertech-techliner-bed-mat/r/341x256/fff/70/c26da81886b656faa81bc17b70f15577.jpg"
+    "id": 8,
+    "name": "Bed Extender",
+    "description": "The bed extender boosts pickup truck cargo space, accommodating longer items like kayaks or lumber. Made from sturdy materials like aluminum, it securely attaches to tailgates. Some models offer vertical positioning for small items. Perfect for varied uses, it ensures safe cargo transit.",
+    "price": 547,
+    "imageUrl": "https://accessories.ford.com/s3/ML3Z99286A40B_0.jpg"
   },
   {
-   "id": 10,
-   "name": "Bed Rug",
-   "description": "A luxurious carpet-like bed rug that transforms truck beds into plush spaces. Skillfully crafted to offer a protective layer against impacts, it's a fusion of comfort and functionality, perfect for safeguarding delicate cargo.",
-   "price": 695,
-   "imageUrl": "https://bedrug.com/cache/images_ePIM_original_BR_Clssc_BedLnr_2021_Blue_F150_Ford_04_w700_h500_q80.jpg"
+    "id": 9,
+    "name": "Rubber Bed Mat",
+    "description": "A robust rubber mat meticulously designed to shield truck beds from potential damage. Its textured non-slip surface guarantees cargo stability, making it an indispensable accessory for long-haul truckers and daily users alike.",
+    "price": 239,
+    "imageUrl": "https://realtruck.com/production/3435-weathertech-techliner-bed-mat/r/341x256/fff/70/c26da81886b656faa81bc17b70f15577.jpg"
   },
   {
-   "id": 11,
-   "name": "Ford Brake Controller",
-   "description": "A pivotal device for those towing trailers, it meticulously regulates power to the trailer's brakes. By ensuring synchronized stopping between the vehicle and the trailer, it significantly enhances safety and reduces wear and tear on brakes.",
-   "price": 595,
-   "imageUrl": "https://accessories.ford.com/s3/HC3Z19H332AA_0.jpg"
+    "id": 10,
+    "name": "Bed Rug",
+    "description": "A luxurious carpet-like bed rug that transforms truck beds into plush spaces. Skillfully crafted to offer a protective layer against impacts, it's a fusion of comfort and functionality, perfect for safeguarding delicate cargo.",
+    "price": 695,
+    "imageUrl": "https://bedrug.com/cache/images_ePIM_original_BR_Clssc_BedLnr_2021_Blue_F150_Ford_04_w700_h500_q80.jpg"
   },
   {
-   "id": 12,
-   "name": "Bug Shield",
-   "description": "A bug shield, or hood deflector, is a curved accessory fixed to a vehicle's front, mainly on the hood. Crafted from sturdy materials like acrylic, it diverts airflow, directing bugs and debris away from the windshield and paint. Beyond protection, it adds a sleek look to the vehicle.",
-   "price": 250,
-   "imageUrl": "https://www.autoventshade.com/cache/images_product-images_AVS760x500AeroskinSmokeImage4_w760_h500_cr_q75.jpg"
+    "id": 11,
+    "name": "Ford Brake Controller",
+    "description": "A pivotal device for those towing trailers, it meticulously regulates power to the trailer's brakes. By ensuring synchronized stopping between the vehicle and the trailer, it significantly enhances safety and reduces wear and tear on brakes.",
+    "price": 595,
+    "imageUrl": "https://accessories.ford.com/s3/HC3Z19H332AA_0.jpg"
   },
   {
-   "id": 13,
-   "name": "Canvasback Cargo Cover",
-   "description": "An expertly tailored liner that seamlessly fits vehicle cargo areas. Crafted from superior water-resistant fabric, it offers impeccable protection against unexpected spills, dirt, and daily wear, preserving the pristine look of interiors.",
-   "price": 297,
-   "imageUrl": "https://m.media-amazon.com/images/I/711VWF-eabL.jpg"
+    "id": 12,
+    "name": "Bug Shield",
+    "description": "A bug shield, or hood deflector, is a curved accessory fixed to a vehicle's front, mainly on the hood. Crafted from sturdy materials like acrylic, it diverts airflow, directing bugs and debris away from the windshield and paint. Beyond protection, it adds a sleek look to the vehicle.",
+    "price": 250,
+    "imageUrl": "https://www.autoventshade.com/cache/images_product-images_AVS760x500AeroskinSmokeImage4_w760_h500_cr_q75.jpg"
   },
   {
-   "id": 14,
-   "name": "Headresyt DVDs Tablet Style",
-   "description": "Headrest DVD tablet-style systems provide in-car entertainment. Integrating smoothly into car seat headrests, they offer tablet-like multimedia experiences with touch-screen displays. They play DVDs, stream videos, and mirror smartphones. With headphones or speakers, they ensure enjoyable, distraction-free travel. Their modern design makes them a sought-after upgrade for family cars.",
-   "price": 2195,
-   "imageUrl": "https://i5.walmartimages.com/seo/Nextbase-Duo-Cinema-Rear-Seat-DVD-Player-with-2-10-1-Screens_faf74ee1-e368-43c5-984e-b2ea80603791.81289b7794a4a84cb466ac104d2692c6.png"
+    "id": 13,
+    "name": "Canvasback Cargo Cover",
+    "description": "An expertly tailored liner that seamlessly fits vehicle cargo areas. Crafted from superior water-resistant fabric, it offers impeccable protection against unexpected spills, dirt, and daily wear, preserving the pristine look of interiors.",
+    "price": 297,
+    "imageUrl": "https://m.media-amazon.com/images/I/711VWF-eabL.jpg"
   },
   {
-   "id": 15,
-   "name": "Fender Flares",
-   "description": "Stylish extensions designed for wheel wells, these flares not only boost the vehicle's aesthetic appeal but also offer a robust shield against mud, stones, and other road debris. They are especially beneficial for trucks with larger tires or off-road configurations.",
-   "price": 1695,
-   "imageUrl": "https://accessories.ford.com/s3/VML3Z16268A_0.jpg"
+    "id": 14,
+    "name": "Headresyt DVDs Tablet Style",
+    "description": "Headrest DVD tablet-style systems provide in-car entertainment. Integrating smoothly into car seat headrests, they offer tablet-like multimedia experiences with touch-screen displays. They play DVDs, stream videos, and mirror smartphones. With headphones or speakers, they ensure enjoyable, distraction-free travel. Their modern design makes them a sought-after upgrade for family cars.",
+    "price": 2195,
+    "imageUrl": "https://i5.walmartimages.com/seo/Nextbase-Duo-Cinema-Rear-Seat-DVD-Player-with-2-10-1-Screens_faf74ee1-e368-43c5-984e-b2ea80603791.81289b7794a4a84cb466ac104d2692c6.png"
   },
   {
-   "id": 16,
-   "name": "All Weather Floor Mats",
-   "description": "Rugged floor mats designed to endure diverse weather conditions. Their design ensures maximum coverage, offering unparalleled protection against dirt, water, and spills, ensuring the vehicle's floor remains spotless.",
-   "price": 297,
-   "imageUrl": "https://accessories.ford.com/s3/ML3Z1613300CA_0.jpg"
+    "id": 15,
+    "name": "Fender Flares",
+    "description": "Stylish extensions designed for wheel wells, these flares not only boost the vehicle's aesthetic appeal but also offer a robust shield against mud, stones, and other road debris. They are especially beneficial for trucks with larger tires or off-road configurations.",
+    "price": 1695,
+    "imageUrl": "https://accessories.ford.com/s3/VML3Z16268A_0.jpg"
   },
   {
-   "id": 17,
-   "name": "60 Gallon Fuel Tank - Super Duty",
-   "description": "An expansive fuel tank designed to significantly extend a vehicle's range between refuelings. Crafted for durability, it's the perfect companion for adventurers and long-distance travelers, reducing the need for frequent fuel stops.",
-   "price": 2850,
-   "imageUrl": "https://cdn11.bigcommerce.com/s-m32opxf6o2/images/stencil/original/products/9362/25968/10-1004_0-BKJF__90026.1674519305.jpg?c=1"
+    "id": 16,
+    "name": "All Weather Floor Mats",
+    "description": "Rugged floor mats designed to endure diverse weather conditions. Their design ensures maximum coverage, offering unparalleled protection against dirt, water, and spills, ensuring the vehicle's floor remains spotless.",
+    "price": 297,
+    "imageUrl": "https://accessories.ford.com/s3/ML3Z1613300CA_0.jpg"
   },
   {
-   "id": 18,
-   "name": "Anderson Hitch",
-   "description": "A trailblazing towing solution known for its lightweight composition and unmatched strength. The Andersen Hitch promises a smooth towing experience, coupled with features that curb swaying, ensuring safety and ease of use.",
-   "price": 1097,
-   "imageUrl": "https://andersenhitches.com/wp-content/uploads/2021/07/3220_Ultimate_October_2019_800x.jpg"
+    "id": 17,
+    "name": "60 Gallon Fuel Tank - Super Duty",
+    "description": "An expansive fuel tank designed to significantly extend a vehicle's range between refuelings. Crafted for durability, it's the perfect companion for adventurers and long-distance travelers, reducing the need for frequent fuel stops.",
+    "price": 2850,
+    "imageUrl": "https://cdn11.bigcommerce.com/s-m32opxf6o2/images/stencil/original/products/9362/25968/10-1004_0-BKJF__90026.1674519305.jpg?c=1"
   },
   {
-   "id": 19,
-   "name": "Leather Seats by Katzkin",
-   "description": "Premium leather seats, a hallmark of luxury and craftsmanship by Katzkin. These seats offer unparalleled comfort and a refined look, elevating the vehicle's interior ambiance and making every drive a luxurious experience",
-   "price": 2095,
-   "imageUrl": "https://www.katzkinvis.com/interiorselector/uploads/16179179462021%20Ford%20F-150%20Master%20Platinum%20Tekstitchk03_lg.jpg"
+    "id": 18,
+    "name": "Anderson Hitch",
+    "description": "A trailblazing towing solution known for its lightweight composition and unmatched strength. The Andersen Hitch promises a smooth towing experience, coupled with features that curb swaying, ensuring safety and ease of use.",
+    "price": 1097,
+    "imageUrl": "https://andersenhitches.com/wp-content/uploads/2021/07/3220_Ultimate_October_2019_800x.jpg"
   },
   {
-   "id": 20,
-   "name": "Level Kits",
-   "description": "A meticulously designed modification kit that elevates the front end of trucks, achieving a balanced and aggressive stance. Apart from aesthetics, it also enhances ground clearance, making off-road adventures smoother.",
-   "price": 797,
-   "imageUrl": "https://www.roughcountry.com/media/catalog/product/cache/589b0b0e3587c135a53c6bb6cef2d094/i/m/img_0088_1.jpg"
+    "id": 19,
+    "name": "Leather Seats by Katzkin",
+    "description": "Premium leather seats, a hallmark of luxury and craftsmanship by Katzkin. These seats offer unparalleled comfort and a refined look, elevating the vehicle's interior ambiance and making every drive a luxurious experience",
+    "price": 2095,
+    "imageUrl": "https://www.katzkinvis.com/interiorselector/uploads/16179179462021%20Ford%20F-150%20Master%20Platinum%20Tekstitchk03_lg.jpg"
   },
   {
-   "id": 21,
-   "name": "Lift Kit - Bronco",
-   "description": "A comprehensive kit tailored for the iconic Bronco, aiming to elevate its stance and amplify its off-road prowess. By raising its chassis, it paves the way for larger tires, ensuring enhanced ground clearance and superior obstacle navigation.",
-   "price": 1097,
-   "imageUrl": "https://www.roughcountry.com/media/catalog/product/cache/589b0b0e3587c135a53c6bb6cef2d094/i/m/img_9139.jpg"
+    "id": 20,
+    "name": "Level Kits",
+    "description": "A meticulously designed modification kit that elevates the front end of trucks, achieving a balanced and aggressive stance. Apart from aesthetics, it also enhances ground clearance, making off-road adventures smoother.",
+    "price": 797,
+    "imageUrl": "https://www.roughcountry.com/media/catalog/product/cache/589b0b0e3587c135a53c6bb6cef2d094/i/m/img_0088_1.jpg"
   },
   {
-   "id": 22,
-   "name": "Mud Flaps",
-   "description": "Durable shields strategically placed behind vehicle wheels. Their primary function is to deter splashes and debris, ensuring the vehicle's sides remain clean and safeguarded from potential scratches or dings.",
-   "price": 250,
-   "imageUrl": "https://www.huskyliners.com/cache/images_products_mudguards_Sleek_FactoryLook_w600_h360_cr_q100.jpg"
+    "id": 21,
+    "name": "Lift Kit - Bronco",
+    "description": "A comprehensive kit tailored for the iconic Bronco, aiming to elevate its stance and amplify its off-road prowess. By raising its chassis, it paves the way for larger tires, ensuring enhanced ground clearance and superior obstacle navigation.",
+    "price": 1097,
+    "imageUrl": "https://www.roughcountry.com/media/catalog/product/cache/589b0b0e3587c135a53c6bb6cef2d094/i/m/img_9139.jpg"
   },
   {
-   "id": 23,
-   "name": "Ford Remote Start",
-   "description": "An innovative system that empowers drivers to ignite their vehicle from a distance. Especially valuable in extreme weather conditions, it ensures interiors are at optimal temperatures, promoting a comfortable driving experience.",
-   "price": 695,
-   "imageUrl": "https://accessories.ford.com/s3/JS7Z15K601C_0.jpg"
+    "id": 22,
+    "name": "Mud Flaps",
+    "description": "Durable shields strategically placed behind vehicle wheels. Their primary function is to deter splashes and debris, ensuring the vehicle's sides remain clean and safeguarded from potential scratches or dings.",
+    "price": 250,
+    "imageUrl": "https://www.huskyliners.com/cache/images_products_mudguards_Sleek_FactoryLook_w600_h360_cr_q100.jpg"
   },
   {
-   "id": 24,
-   "name": "Nerf Bars",
-   "description": "Sturdy tubular side steps, essential for trucks and SUVs. Their design aids in effortless entry and exit, while their rugged aesthetic complements the vehicle's overall look, providing both utility and style.",
-   "price": 797,
-   "imageUrl": "https://accessories.ford.com/s3/KB3Z16450BB_0.jpg"
+    "id": 23,
+    "name": "Ford Remote Start",
+    "description": "An innovative system that empowers drivers to ignite their vehicle from a distance. Especially valuable in extreme weather conditions, it ensures interiors are at optimal temperatures, promoting a comfortable driving experience.",
+    "price": 695,
+    "imageUrl": "https://accessories.ford.com/s3/JS7Z15K601C_0.jpg"
   },
   {
-   "id": 25,
-   "name": "Retrax Tonneau Cover",
-   "description": "A state-of-the-art retractable bed cover, known for its durability and seamless operation. It ensures cargo remains shielded from external elements, enhancing security while also boosting the truck's aesthetic and fuel efficiency.",
-   "price": 2495,
-   "imageUrl": "https://realtruck.com/production/retrax-ix-tonneau-cover-2021-ford-f-150-01/r/860x650/fff/80/0c343e52a7eecc1c957765c4610e4373.jpeg"
+    "id": 24,
+    "name": "Nerf Bars",
+    "description": "Sturdy tubular side steps, essential for trucks and SUVs. Their design aids in effortless entry and exit, while their rugged aesthetic complements the vehicle's overall look, providing both utility and style.",
+    "price": 797,
+    "imageUrl": "https://accessories.ford.com/s3/KB3Z16450BB_0.jpg"
   },
   {
-   "id": 26,
-   "name": "Window TInt",
-   "description": "A meticulously designed film applied to vehicle glass surfaces. Its multi-faceted benefits include reducing harmful UV exposure, mitigating glare, and ensuring privacy. Additionally, it protects interiors from sun damage and elevates the vehicle's aesthetic appeal.",
-   "price": 297,
-   "imageUrl": "https://s.turbifycdn.com/aah/yhst-58169358463758/complete-ford-f-150-super-cab-precut-window-tint-kits-13.jpg"
+    "id": 25,
+    "name": "Retrax Tonneau Cover",
+    "description": "A state-of-the-art retractable bed cover, known for its durability and seamless operation. It ensures cargo remains shielded from external elements, enhancing security while also boosting the truck's aesthetic and fuel efficiency.",
+    "price": 2495,
+    "imageUrl": "https://realtruck.com/production/retrax-ix-tonneau-cover-2021-ford-f-150-01/r/860x650/fff/80/0c343e52a7eecc1c957765c4610e4373.jpeg"
+  },
+  {
+    "id": 26,
+    "name": "Window Tint",
+    "description": "A meticulously designed film applied to vehicle glass surfaces. Its multi-faceted benefits include reducing harmful UV exposure, mitigating glare, and ensuring privacy. Additionally, it protects interiors from sun damage and elevates the vehicle's aesthetic appeal.",
+    "price": 297,
+    "imageUrl": "https://s.turbifycdn.com/aah/yhst-58169358463758/complete-ford-f-150-super-cab-precut-window-tint-kits-13.jpg"
   }
- ]
+]
