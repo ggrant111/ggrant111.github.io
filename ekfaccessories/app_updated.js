@@ -1,3 +1,4 @@
+// Function to fetch data and populate the page
 function fetchDataAndPopulate() {
   fetch("data.json")
     .then((response) => response.json())
@@ -11,11 +12,25 @@ function fetchDataAndPopulate() {
         section.id = `section-${index}`;
         section.className = "scroll-section";
         section.innerHTML = `
-                      <h2>${accessory.name}</h2>
-                      <img src="${accessory.imageUrl}" alt="${accessory.name}" >
-                      
-                      <button class="info-btn" data-description="${accessory.description}" data-price="${accessory.price}">Details</button>
-                  `;
+          <h2>${accessory.name}</h2>
+          <img src="${accessory.imageUrl}" alt="${accessory.name}">
+        `;
+
+        // Create Info Button
+        const infoBtn = document.createElement("button");
+        infoBtn.className = "info-btn";
+        infoBtn.setAttribute("data-description", accessory.description);
+        infoBtn.setAttribute("data-price", accessory.price);
+        infoBtn.setAttribute("data-var1", accessory.var1 || "");
+        infoBtn.setAttribute("data-var2", accessory.var2 || "");
+        infoBtn.setAttribute("data-var3", accessory.var3 || "");
+        infoBtn.setAttribute("data-var4", accessory.var4 || "");
+        infoBtn.innerText = "Details";
+
+        // Append Button to Section
+        section.appendChild(infoBtn);
+
+        // Append Section to Div
         accessoriesDiv.appendChild(section);
 
         // Create Navigation Link
@@ -40,15 +55,13 @@ function fetchDataAndPopulate() {
     });
 }
 
+// Function to toggle the navigation bar
 function toggleNavbar() {
   var navbar = document.querySelector(".navbar");
   navbar.classList.toggle("active");
 }
 
-document.addEventListener("DOMContentLoaded", fetchDataAndPopulate);
-
-// ... (rest of your JS code, like the modal logic, remains unchanged)
-
+// Fetch data and populate the page when the DOM is ready
 document.addEventListener("DOMContentLoaded", fetchDataAndPopulate);
 
 // Modal Logic
@@ -58,13 +71,26 @@ document.addEventListener("click", (event) => {
   if (event.target.classList.contains("info-btn")) {
     modalDescription.innerText = event.target.getAttribute("data-description");
     document.getElementById("modalPrice").innerText =
-      "Price: $" + event.target.getAttribute("data-price");
+      // "Price: $" +
+      event.target.getAttribute("data-price");
+
+    // Check and set var1, var2, var3, var4
+    ["var1", "var2", "var3", "var4"].forEach((varName) => {
+      const value = event.target.getAttribute(`data-${varName}`);
+      if (value) {
+        document.getElementById(varName).innerText = `${value}`;
+      } else {
+        document.getElementById(varName).innerText = "";
+      }
+    });
+
     modal.style.display = "block";
   } else if (event.target.classList.contains("close-btn")) {
     modal.style.display = "none";
   }
 });
 
+// Close modal if clicked outside the modal content
 window.addEventListener("click", (event) => {
   if (event.target === modal) {
     modal.style.display = "none";
