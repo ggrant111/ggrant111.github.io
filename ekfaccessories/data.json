@@ -362,7 +362,7 @@
   {
     "id": 20,
     "name": "Level Kits",
-    "description": "A level kit for trucks is a modification tool designed to raise the front end, aligning it with the rear for a balanced stance. Made from durable materials, it not only enhances the truck's aesthetic appeal but also provides additional ground clearance, accommodating larger tires. Simple yet effective, a level kit is a popular choice for truck enthusiasts seeking improved off-road capabilities and an aggressive, elevated look.",
+    "description": "A level kit for trucks is a modification tool designed to raise the front end, aligning it with the rear for a balanced stance. Made from durable materials, it not only enhances the truck's aesthetic appeal but also provides additional ground clearance, accommodating larger tires.",
     "price": "$797 - Super-Duty",
     "var1": "$697 - F-150 - Includes Alignment",
     "var2": "$897 - Ranger",
@@ -380,7 +380,7 @@
   {
     "id": 21,
     "name": "Lift Kit - Bronco",
-    "description": "A lift kit for the Bronco is a comprehensive modification package designed to elevate its stance and enhance off-road capabilities. Tailored specifically for this iconic SUV, the kit includes components like extended shocks, spacers, and brackets. By raising the Bronco's chassis, it allows for the fitting of larger tires, resulting in improved ground clearance and obstacle navigation. For Bronco enthusiasts seeking a dominating presence and superior off-road performance, a lift kit is the ultimate upgrade.",
+    "description": "A lift kit for the Bronco is a comprehensive modification package designed to elevate its stance and enhance off-road capabilities. Tailored specifically for this iconic SUV, the kit includes components like extended shocks, spacers, and brackets. By raising the Bronco's chassis, it allows for the fitting of larger tires, resulting in improved ground clearance and obstacle navigation.",
     "price": "$1097 - Bronco Sport",
     "var1": "$1297 - 2\" Bronco",
     "var2": "$2097 - 4\" Bronco",
@@ -416,7 +416,7 @@
   {
     "id": 23,
     "name": "Ford Remote Start",
-    "description": "A remote start system allows vehicle owners to start their car or truck from a distance, usually via a key fob or smartphone app. This feature not only warms or cools the vehicle before driving, enhancing comfort, but also offers added security benefits. Especially valuable in extreme weather conditions, a remote start ensures the engine and interior are at optimal temperatures, providing convenience and extending the lifespan of the engine by promoting smoother starts.",
+    "description": "A remote start system allows vehicle owners to start their car or truck from a distance, usually via a key fob or smartphone app. Especially valuable in extreme weather conditions, a remote start ensures the engine and interior are at optimal temperatures, providing convenience and extending the lifespan of the engine by promoting smoother starts.",
     "price": "$695",
     "var1": "",
     "var2": "",
@@ -434,7 +434,7 @@
   {
     "id": 24,
     "name": "Nerf Bars",
-    "description": "Nerf bars are tubular side steps mounted on the sides of trucks and SUVs, facilitating easier entry and exit. Made from sturdy materials like steel or aluminum, they offer a step-up while adding a rugged aesthetic to the vehicle. Beyond aesthetics and convenience, nerf bars also provide an added layer of protection against potential dings or scrapes from obstacles or other vehicles. Available in various finishes and styles, they combine functionality with design, enhancing both safety and the vehicle's visual appeal.",
+    "description": "Nerf bars are tubular side steps mounted on the sides of trucks and SUVs, facilitating easier entry and exit. Made from sturdy materials like steel or aluminum, they offer a step-up while adding a rugged aesthetic to the vehicle. Beyond aesthetics and convenience, nerf bars also provide an added layer of protection against potential dings or scrapes from obstacles or other vehicles. Available in various finishes and styles.",
     "price": "$797",
     "var1": "",
     "var2": "",
@@ -470,7 +470,7 @@
   {
     "id": 26,
     "name": "Window TInt",
-    "description": "Window tint is a thin laminate film applied to the interior or exterior of glass surfaces in vehicles. Serving multiple purposes, it provides privacy, reduces harmful UV radiation, prevents glare, and helps regulate interior temperatures. Besides the functional benefits, tinted windows enhance a vehicle's aesthetic appeal, offering a sleek and polished look. Available in various shades and grades, window tint ensures comfort, safety, and style, while also protecting the vehicle's interior from sun damage.",
+    "description": "Window tint is a thin laminate film applied to the interior or exterior of glass surfaces in vehicles. Serving multiple purposes, it provides privacy, reduces harmful UV radiation, prevents glare, and helps regulate interior temperatures.",
     "price": "$258-297 - All windows",
     "var1": "$97 - 2 Windows",
     "var2": "add $150 for Ceramic Tint",
