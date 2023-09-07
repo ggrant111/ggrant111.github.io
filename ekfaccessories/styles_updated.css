@@ -160,7 +160,9 @@ a:hover {
     border-radius: 0px;
   }
   .modal-content {
+    font-size: medium;
     left: 50%;
+    max-height: 100vh;
   }
 }
 
