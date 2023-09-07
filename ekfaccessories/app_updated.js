@@ -25,6 +25,7 @@ function fetchDataAndPopulate() {
         infoBtn.setAttribute("data-var2", accessory.var2 || "");
         infoBtn.setAttribute("data-var3", accessory.var3 || "");
         infoBtn.setAttribute("data-var4", accessory.var4 || "");
+        infoBtn.setAttribute("data-var5", accessory.var5 || "");
         infoBtn.innerText = "Details";
 
         // Append Button to Section
@@ -75,7 +76,7 @@ document.addEventListener("click", (event) => {
       event.target.getAttribute("data-price");
 
     // Check and set var1, var2, var3, var4
-    ["var1", "var2", "var3", "var4"].forEach((varName) => {
+    ["var1", "var2", "var3", "var4", "var5"].forEach((varName) => {
       const value = event.target.getAttribute(`data-${varName}`);
       if (value) {
         document.getElementById(varName).innerText = `${value}`;
