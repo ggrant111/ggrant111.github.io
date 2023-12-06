@@ -1,0 +1,58 @@
+body {
+    font-family: sans-serif;
+    background-color: rgba(0, 0, 0, 0.1);
+}
+
+.container {
+    width: 80%;
+    margin: 0 auto;
+    text-align: center;
+    padding-top: 50px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
+#address {
+    width: 300px;
+    padding: 15px;
+    margin-right: 10px;
+    border-radius: 60px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    border: none;
+}
+#addressName {
+    width: 15%;
+    padding: 15px;
+    border-radius: 60px;
+    box-shadow: rgba(0, 0, 0, 0.2);
+    border: none;
+}
+
+#videoContainer {
+    text-align: center;
+    margin-top: 20px;
+
+}
+
+#videoContainer video{
+    max-width: 80vw;
+    border-radius: 30px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
+}
+#addressHistory {
+    width: 25%;
+    border-radius: 60px;
+    box-shadow: 0 0 10px rgba(0,0,0,.20);
+    padding: 15px;
+    border: none;
+}
+
+#addressSearch {
+    padding: 15px;
+    border-radius: 60px;
+    color: #fff;
+    background-color: cornflowerblue;
+    border: none;
+    box-shadow:  0 0 10px rgba(0, 0, 0, 0.2);
+}

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Aerial View</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCH9HT3RMz3G2rJa6Wr49paY_3GY4iPe7Q&libraries=places"></script>
+</head>
+<body>
+    <div class="container">
+        <input type="text" id="addressName" placeholder="Enter a name for this address">
+        <input type="text" id="address" placeholder="Enter a US postal address">
+        <button id="addressSearch"  onclick="checkAndDisplayVideo()">Check Aerial View</button>
+        <select id="addressHistory" onchange="selectAddress()">
+            
+
+            <!-- Options will be added here by JavaScript -->
+        </select></div>
+        
+        <div id="videoContainer"></div>
+    
+    <script src="script.js"></script>
+</body>
+</html>
