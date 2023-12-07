@@ -1,24 +1,42 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Aerial View</title>
-    <link rel="stylesheet" href="style.css">
-    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCH9HT3RMz3G2rJa6Wr49paY_3GY4iPe7Q&libraries=places"></script>
-</head>
-<body>
+    <link rel="stylesheet" href="style.css" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+    <meta name="apple-mobile-web-app-title" content="Riddle App" />
+    <link rel="apple-touch-icon" href="/path/to/apple-touch-icon.png" />
+    <!-- <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCH9HT3RMz3G2rJa6Wr49paY_3GY4iPe7Q&libraries=places"></script> -->
+    <script
+      async
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCH9HT3RMz3G2rJa6Wr49paY_3GY4iPe7Q&libraries=places&callback=initMap"
+    ></script>
+  </head>
+  <body>
     <div class="container">
-        <input type="text" id="addressName" placeholder="Enter a name for this address">
-        <input type="text" id="address" placeholder="Enter a US postal address">
-        <button id="addressSearch"  onclick="checkAndDisplayVideo()">Check Aerial View</button>
-        <select id="addressHistory" onchange="selectAddress()">
-            
+      <div id="shareIcon" class="share-icon">
+        <i class="fa fa-share-alt"></i>
+      </div>
+      <input
+        type="text"
+        id="addressName"
+        placeholder="Enter a name for this address"
+      />
+      <input type="text" id="address" placeholder="Enter a US postal address" />
+      <button id="addressSearch" onclick="checkAndDisplayVideo()">
+        Check Aerial View
+      </button>
+      <select id="addressHistory" onchange="selectAddress()">
+        <!-- Options will be added here by JavaScript -->
+      </select>
+    </div>
 
-            <!-- Options will be added here by JavaScript -->
-        </select></div>
-        
-        <div id="videoContainer"></div>
-    
+    <div id="videoContainer"></div>
+
     <script src="script.js"></script>
-</body>
+  </body>
 </html>
