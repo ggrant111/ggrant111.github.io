@@ -25,7 +25,7 @@ body {
     width: 15%;
     padding: 15px;
     border-radius: 60px;
-    box-shadow: rgba(0, 0, 0, 0.2);
+    box-shadow: 0 0 10px rgba(0,0,0,.20);
     border: none;
 }
 
@@ -56,3 +56,30 @@ body {
     border: none;
     box-shadow:  0 0 10px rgba(0, 0, 0, 0.2);
 }
+
+@media (max-width: 600px) {
+    #address, #addressHistory, #addressSearch, #addressName{
+        margin: 10px;
+        width: 85%;
+        /* border-radius: 60px;
+        box-shadow: 0 0 10px rgba(0,0,0,.20); */
+        padding: 15px;
+        /* border: none; */
+        outline: none;
+    }
+
+    .container {
+        width: 80%;
+        margin: 0 auto;
+        text-align: center;
+        padding-top: 50px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: stretch;
+        align-content: flex-end;
+        flex-wrap: nowrap;
+      }
+  }
+
+  
