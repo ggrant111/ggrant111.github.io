@@ -1,3 +1,10 @@
+// document.getElementById('togglePower').addEventListener('click', function() {
+//     sendRequest({ on: true }, function() {
+        
+//         // Callback function to check the state after toggling
+//         checkState();
+//     });
+// });
 newElement.onclick = function() { 
     var deviceAddress = this.textContent.split(' (')[1].slice(0, -1);
     document.getElementById('deviceAddress').value = deviceAddress;
@@ -77,7 +84,7 @@ function getCurrentStateAndToggle() {
 function sendRequest(data, callback) {
     var xhr = new XMLHttpRequest();
     var deviceAddress = document.getElementById('deviceAddress').value;
-    xhr.open('POST', 'http://' + deviceAddress + '/json/state', true);
+    xhr.open('POST', 'https://' + deviceAddress + '/json/state', true);
     xhr.setRequestHeader('Content-Type', 'application/json');
     xhr.onreadystatechange = function() {
         if (xhr.readyState === 4 && xhr.status === 200) {
