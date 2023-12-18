@@ -1,10 +1,3 @@
-// document.getElementById('togglePower').addEventListener('click', function() {
-//     sendRequest({ on: true }, function() {
-        
-//         // Callback function to check the state after toggling
-//         checkState();
-//     });
-// });
 newElement.onclick = function() { 
     var deviceAddress = this.textContent.split(' (')[1].slice(0, -1);
     document.getElementById('deviceAddress').value = deviceAddress;
