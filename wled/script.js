@@ -70,7 +70,7 @@ document.getElementById('brightness').addEventListener('input', function() {
 function getCurrentStateAndToggle() {
     var deviceAddress = document.getElementById('deviceAddress').value;
     var xhr = new XMLHttpRequest();
-    xhr.open('GET', 'http://' + deviceAddress + '/json/state', true);
+    xhr.open('GET', 'https://' + deviceAddress + '/json/state', true);
     xhr.onreadystatechange = function() {
         if (xhr.readyState === 4 && xhr.status === 200) {
             var currentState = JSON.parse(xhr.responseText);
@@ -103,7 +103,7 @@ function sendRequest(data, callback) {
 function checkState() {
     var deviceAddress = document.getElementById('deviceAddress').value;
     var xhr = new XMLHttpRequest();
-    xhr.open('GET', 'http://' + deviceAddress + '/json/state', true);
+    xhr.open('GET', 'https://' + deviceAddress + '/json/state', true);
     xhr.onreadystatechange = function() {
         if (xhr.readyState === 4 && xhr.status === 200) {
             var response = JSON.parse(xhr.responseText);
@@ -140,7 +140,7 @@ function displayState(state) {
 function fetchDeviceInfo() {
     var deviceAddress = document.getElementById('deviceAddress').value;
     var xhr = new XMLHttpRequest();
-    xhr.open('GET', 'http://' + deviceAddress + '/json/info', true);
+    xhr.open('GET', 'https://' + deviceAddress + '/json/info', true);
     xhr.onreadystatechange = function() {
         if (xhr.readyState === 4 && xhr.status === 200) {
             var info = JSON.parse(xhr.responseText);
@@ -168,7 +168,7 @@ function displayDeviceInfo(info) {
 // function fetchEffects() {
 //     var deviceAddress = document.getElementById('deviceAddress').value;
 //     var xhr = new XMLHttpRequest();
-//     xhr.open('GET', 'http://' + deviceAddress + '/json/effects', true);
+//     xhr.open('GET', 'https://' + deviceAddress + '/json/effects', true);
 //     xhr.onreadystatechange = function() {
 //         if (xhr.readyState === 4 && xhr.status === 200) {
 //             var effects = JSON.parse(xhr.responseText);
@@ -181,7 +181,7 @@ function displayDeviceInfo(info) {
 function fetchAndDisplayEffects() {
     var deviceAddress = document.getElementById('deviceAddress').value;
     var xhr = new XMLHttpRequest();
-    xhr.open('GET', 'http://' + deviceAddress + '/json/effects', true);
+    xhr.open('GET', 'https://' + deviceAddress + '/json/effects', true);
     xhr.onreadystatechange = function() {
         if (xhr.readyState === 4 && xhr.status === 200) {
             var effects = JSON.parse(xhr.responseText);
@@ -193,7 +193,7 @@ function fetchAndDisplayEffects() {
 
 function fetchDataAndUpdateUI(deviceAddress) {
     var xhr = new XMLHttpRequest();
-    xhr.open('GET', 'http://' + deviceAddress + '/json/', true);
+    xhr.open('GET', 'https://' + deviceAddress + '/json/', true);
     xhr.onreadystatechange = function() {
         if (xhr.readyState === 4 && xhr.status === 200) {
             var response = JSON.parse(xhr.responseText);
