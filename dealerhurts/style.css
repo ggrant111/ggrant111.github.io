@@ -1,0 +1,69 @@
+body {
+  font-family: "Arial", sans-serif;
+  background-color: #f4f4f4;
+  color: #333;
+  margin: 0;
+  padding: 20px;
+  height: 96vh;
+}
+
+.horizontal-scroll {
+  overflow-x: auto;
+  white-space: nowrap;
+  padding: 10px;
+  background-color: #efefef;
+  margin-bottom: 20px;
+}
+
+.card {
+ 
+    text-align: center;
+    margin: 3px;
+    min-width: 125px;
+    font-size: 16px;
+    width: 4%;
+    text-wrap: wrap;
+    border: none;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    background-color: #ffffff;
+    color: #333;
+    padding: 3px;
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+.card.selected {
+  background-color: #007bff;
+  color: white;
+}
+
+#dealerHurtContainer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+#selectedProductsContainer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  gap: 20px;
+}
+
+#selectedProductsContainer .card {
+  flex: 0 0 calc(50% - 20px); /* Adjust card width to take half the container width minus gap */
+  margin-bottom: 10px; /* Optional, for spacing between rows */
+  max-width: 400px;
+}
+
+@media screen and (max-width: 600px) {
+  #selectedProductsContainer .card {
+    flex-basis: 100%; /* Full width for smaller screens */
+  }
+}
