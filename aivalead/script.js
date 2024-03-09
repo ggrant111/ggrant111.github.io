@@ -116,7 +116,7 @@ document.getElementById('copyButton').addEventListener('click', async function()
     const xmlContent = document.getElementById('modalXmlOutput').value;
 
     // Check if the Web Share API is supported
-    if (navigator.share) {
+    if (navigator.canShare && navigator.share) {
         try {
             // Use the Web Share API to share the XML content
             await navigator.share({
