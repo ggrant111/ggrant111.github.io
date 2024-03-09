@@ -40,42 +40,41 @@ function generateXML() {
 
     // Constructing the XML string with user input or default values
     const xml = `<?xml version="1.0" encoding="UTF-8"?>
-    <?adf version="1.0"?>
-    <adf>
-    
-  <prospect status="${prospectStatus}">
-    <requestdate>${requestDate}</requestdate>
-    <vehicle interest="buy" status="used">
-      <year>2019</year>
-      <make>Nissan</make>
-      <model>Kicks</model>
-      <vin>3N1CP5BV8LL519113</vin>
-      <stock>L519113</stock>
-      <trim>S</trim>
-      <transmission>Automatic CVT</transmission>
-      </vehicle>
-    <customer>
-      <contact primarycontact="1">
-        <name part="first" type="individual">${firstName}</name>
-        <name part="last" type="individual">${lastName}</name>
-        <email>${email}</email>
-        <phone type="phone" time="${phoneTime}">${phone}</phone>
-        <address type="home">
-          <street line="1">${street}</street>
-          <city>${city}</city>
-          <regioncode>${regionCode}</regioncode>
-          <postalcode>${postalCode}</postalcode>
-          <country>${country}</country> 
-        </address>
-      </contact>
-      <id sequence="0">${customerID}</id>
-      <comments>${comments}</comments>
-    </customer>
-    <provider>
-      <id sequence="0">${providerID}</id>
-      <name part="full" type="business">${providerName}</name>
-    </provider>
-  </prospect>
+<?adf version="1.0"?>
+<adf>
+<prospect status="${prospectStatus}">
+<requestdate>${requestDate}</requestdate>
+<vehicle interest="buy" status="used">
+<year>2019</year>
+<make>Nissan</make>
+<model>Kicks</model>
+<vin>3N1CP5BV8LL519113</vin>
+<stock>L519113</stock>
+<trim>S</trim>
+<transmission>Automatic CVT</transmission>
+</vehicle>
+<customer>
+<contact primarycontact="1">
+<name part="first" type="individual">${firstName}</name>
+<name part="last" type="individual">${lastName}</name>
+<email>${email}</email>
+<phone type="phone" time="${phoneTime}">${phone}</phone>
+<address type="home">
+<street line="1">${street}</street>
+<city>${city}</city>
+<regioncode>${regionCode}</regioncode>
+<postalcode>${postalCode}</postalcode>
+<country>${country}</country> 
+</address>
+</contact>
+<id sequence="0">${customerID}</id>
+<comments>${comments}</comments>
+</customer>
+<provider>
+<id sequence="0">${providerID}</id>
+<name part="full" type="business">${providerName}</name>
+</provider>
+</prospect>
 </adf>`;
 
     // Display the XML string in the modal's textarea instead of the form's textarea
@@ -101,16 +100,30 @@ window.onclick = function(event) {
     }
 }
 
+// document.getElementById('copyButton').addEventListener('click', function() {
+//     const xmlContent = document.getElementById('modalXmlOutput').value;
+//     // Encode the XML content to ensure it's safe to include in a URI
+//     const encodedXml = encodeURIComponent(xmlContent);
+    
+//     // Construct the mailto link with the encoded XML content
+//     const mailtoLink = `mailto:excellencemotors@edealertrack.net?subject=New Lead&body=${encodedXml}`;
+    
+//     // Open the default email application with the prepared link
+//     window.open(mailtoLink, '_blank');
+// });
+
 document.getElementById('copyButton').addEventListener('click', function() {
     const xmlContent = document.getElementById('modalXmlOutput').value;
-    // Encode the XML content to ensure it's safe to include in a URI
     const encodedXml = encodeURIComponent(xmlContent);
-    
-    // Construct the mailto link with the encoded XML content
     const mailtoLink = `mailto:excellencemotors@edealertrack.net?subject=New Lead&body=${encodedXml}`;
-    
-    // Open the default email application with the prepared link
-    window.open(mailtoLink, '_blank');
+
+    // Create a new anchor element and trigger a click on it
+    const link = document.createElement("a");
+    link.href = mailtoLink;
+    link.target = "_blank"; // Optionally open in a new tab/window
+    document.body.appendChild(link); // Add to the page
+    link.click(); // Simulate click
+    document.body.removeChild(link); // Clean up
 });
 
 
