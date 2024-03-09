@@ -1,78 +1,187 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
+  <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>XML Generator</title>
-<link rel="stylesheet" href="style.css">
-</head>
-<body>
-<form id="xmlForm">
-    <h2>Lead Information</h2>
-    <label for="prospectStatus">Prospect Status:</label>
-    <input type="text" id="prospectStatus" name="prospectStatus" required placeholder="new">
-    
-    <label for="requestDate">Request Date:</label>
-    <input type="text" id="requestDate" name="requestDate" required placeholder="2024-03-08T13:26:39-06:00">
-    
-    <h3>Customer Information</h3>
-    <label for="firstName">First Name:</label>
-    <input type="text" id="firstName" name="firstName" required placeholder="Jeremy">
-    
-    <label for="lastName">Last Name:</label>
-    <input type="text" id="lastName" name="lastName" required placeholder="Day">
-    
-    <label for="email">Email:</label>
-    <input type="email" id="email" name="email" required placeholder="drew.doran+jdjd@roadster.com">
-    
-    <label for="phone">Phone:</label>
-    <input type="text" id="phone" name="phone" required placeholder="(760) 889-0428">
-    
-    <label for="phoneTime">Phone Time Preference:</label>
-    <input type="text" id="phoneTime" name="phoneTime" required placeholder="nopreference">
-    
-    <label for="street">Street:</label>
-    <input type="text" id="street" name="street" required placeholder="Not Specified">
-    
-    <label for="city">City:</label>
-    <input type="text" id="city" name="city" required placeholder="MIAMI">
-    
-    <label for="regionCode">Region Code:</label>
-    <input type="text" id="regionCode" name="regionCode" required placeholder="FL">
-    
-    <label for="postalCode">Postal Code:</label>
-    <input type="text" id="postalCode" name="postalCode" required placeholder="33134">
-    
-    <label for="country">Country:</label>
-    <input type="text" id="country" name="country" required placeholder="US">
-    
-    <label for="customerID">Customer ID:</label>
-    <input type="text" id="customerID" name="customerID" required placeholder="157125709">
-    
-    <label for="comments">Comments:</label>
-    <textarea id="comments" name="comments" rows="4" cols="50" placeholder="This is a test lead from the Universal Team"></textarea>
-    
-    <h3>Provider Information</h3>
-    <label for="providerID">Provider ID:</label>
-    <input type="text" id="providerID" name="providerID" required placeholder="-1">
-    
-    <label for="providerName">Provider Name:</label>
-    <input type="text" id="providerName" name="providerName" required placeholder="Roadster Online">
-    
-    <input type="button" value="Generate XML" onclick="generateXML()">
-</form>
-<div id="xmlModal" class="modal">
-    <div class="modal-content">
-        <span class="close-button">&times;</span>
-        
-        <textarea id="modalXmlOutput" rows="10" cols="50" readonly></textarea>
-        <button id="copyButton">Copy XML</button>
-        
-    </div>
-</div>
+    <title>Lead Generator</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <form id="xmlForm">
+      <h2 style="display: none">Lead Information</h2>
+      <label for="prospectStatus" style="display: none">Prospect Status:</label>
+      <input
+        type="text"
+        id="prospectStatus"
+        name="prospectStatus"
+        required
+        placeholder="new"
+        style="display: none"
+      />
 
-<!-- <textarea id="xmlOutput" rows="10" cols="50" readonly></textarea> -->
-<script src="script.js"></script>
-</body>
+      <label for="requestDate" style="display: none">Request Date:</label>
+      <input
+        type="text"
+        id="requestDate"
+        name="requestDate"
+        required
+        placeholder="2024-03-08T13:26:39-06:00"
+        style="display: none"
+      />
+
+      <h3>Lead Information</h3>
+      <div id="name">
+        <label for="firstName">First Name:</label>
+        <input
+          type="text"
+          id="firstName"
+          name="firstName"
+          required
+          placeholder="Jeremy"
+        />
+
+        <label for="lastName">Last Name:</label>
+        <input
+          type="text"
+          id="lastName"
+          name="lastName"
+          required
+          placeholder="Day"
+        />
+      </div>
+      <div id="contact">
+        <label for="email">Email:</label>
+        <input
+          type="email"
+          id="email"
+          name="email"
+          required
+          placeholder="drew.doran+jdjd@roadster.com"
+        />
+
+        <label for="phone">Phone:</label>
+        <input
+          type="text"
+          id="phone"
+          name="phone"
+          required
+          placeholder="(760) 889-0428"
+        />
+      </div>
+      <label for="phoneTime" style="display: none"
+        >Phone Time Preference:</label
+      >
+      <input
+        type="text"
+        id="phoneTime"
+        name="phoneTime"
+        required
+        placeholder="nopreference"
+        style="display: none"
+      />
+      <div id="street">
+        <label for="street">Street:</label>
+        <input
+          type="text"
+          id="street"
+          name="street"
+          required
+          placeholder="Not Specified"
+        />
+      </div>
+      <div id="locale">
+        <label for="city">City:</label>
+        <input type="text" id="city" name="city" required placeholder="MIAMI" />
+
+        <label for="regionCode">Region Code:</label>
+        <input
+          type="text"
+          id="regionCode"
+          name="regionCode"
+          required
+          placeholder="FL"
+        />
+
+        <label for="postalCode">Postal Code:</label>
+        <input
+          type="text"
+          id="postalCode"
+          name="postalCode"
+          required
+          placeholder="33134"
+        />
+      </div>
+      <label for="country" style="display: none;">Country:</label>
+      <input
+        type="text"
+        id="country"
+        name="country"
+        required
+        placeholder="US"
+        style="display:none"
+      />
+
+      <label for="customerID" style="display: none">Customer ID:</label>
+      <input
+        type="text"
+        id="customerID"
+        name="customerID"
+        required
+        placeholder="157125709"
+        style="display: none"
+      />
+
+      <label for="comments">Comments:</label>
+      <textarea
+        id="comments"
+        name="comments"
+        rows="4"
+        cols="50"
+        placeholder="This is a test lead from the Universal Team"
+      ></textarea>
+
+      <h3>Provider Information</h3>
+      <div id="provider">
+        <label for="providerID">Provider ID:</label>
+        <input
+          type="text"
+          id="providerID"
+          name="providerID"
+          required
+          placeholder="-1"
+        />
+
+        <label for="providerName">Provider Name:</label>
+        <input
+          type="text"
+          id="providerName"
+          name="providerName"
+          required
+          placeholder="Roadster Online"
+        />
+      </div>
+      <div id="buttons"><input type="button" value="Generate XML" onclick="generateXML()" />
+      <button type="button" id="fetchRandomLead">Create Random Lead</button>
+</div>
+    </form>
+    <div id="xmlModal" class="modal">
+      <div class="modal-content">
+        <span class="close-button">&times;</span>
+
+        <textarea id="modalXmlOutput" rows="10" cols="50" readonly></textarea>
+       <div id="buttons"> <button id="copyButton">Send to Excellence Motors</button>
+      <button id="universalMotors">Send to Universal Motors</button></div>
+        <div id="button"><!-- Input for lead parsing address -->
+        <input type="text" id="leadParsingAddress" placeholder="Enter lead parsing email address" />
+        <!-- Button to send email using the lead parsing address -->
+        <button id="sendParsedLead">Send Lead</button></div>
+        <button id="copyToClipboard">Copy to Clipboard</button>
+
+      </div>
+    </div>
+
+    <!-- <textarea id="xmlOutput" rows="10" cols="50" readonly></textarea> -->
+    <script src="script.js"></script>
+  </body>
 </html>

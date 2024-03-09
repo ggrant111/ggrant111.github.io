@@ -67,7 +67,6 @@ function generateXML() {
 <country>${country}</country> 
 </address>
 </contact>
-<id sequence="0">${customerID}</id>
 <comments>${comments}</comments>
 </customer>
 <provider>
@@ -100,42 +99,104 @@ window.onclick = function(event) {
     }
 }
 
-// document.getElementById('copyButton').addEventListener('click', function() {
-//     const xmlContent = document.getElementById('modalXmlOutput').value;
-//     // Encode the XML content to ensure it's safe to include in a URI
-//     const encodedXml = encodeURIComponent(xmlContent);
-    
-//     // Construct the mailto link with the encoded XML content
-//     const mailtoLink = `mailto:excellencemotors@edealertrack.net?subject=New Lead&body=${encodedXml}`;
-    
-//     // Open the default email application with the prepared link
-//     window.open(mailtoLink, '_blank');
-// });
-
-document.getElementById('copyButton').addEventListener('click', async function() {
+document.getElementById('copyButton').addEventListener('click', function() {
     const xmlContent = document.getElementById('modalXmlOutput').value;
-
-    // Check if the Web Share API is supported
-    if (navigator.canShare && navigator.share) {
-        try {
-            // Use the Web Share API to share the XML content
-            await navigator.share({
-                title: 'New Lead',
-                text: xmlContent,
-                url: '' // You might not need a URL for sharing XML content directly
-            });
-            console.log('Content shared successfully');
-        } catch (error) {
-            console.error('Error sharing content: ', error);
-        }
-    } else {
-        // Fallback for devices that do not support the Web Share API
-        // For instance, you could select the content for the user to copy manually
-        const encodedXml = encodeURIComponent(xmlContent);
-        const mailtoLink = `mailto:excellencemotors@edealertrack.net?subject=New Lead&body=${encodedXml}`;
-        window.open(mailtoLink, '_blank');
-    }
+    // Encode the XML content to ensure it's safe to include in a URI
+    const encodedXml = encodeURIComponent(xmlContent);
+    
+    // Construct the mailto link with the encoded XML content
+    const mailtoLink = `mailto:excellencemotors@eleadtrack.net?subject=New Lead&body=${encodedXml}`;
+    
+    // Open the default email application with the prepared link
+    window.open(mailtoLink, '_blank');
 });
 
+document.getElementById('universalMotors').addEventListener('click', function() {
+    const xmlContent = document.getElementById('modalXmlOutput').value;
+    // Encode the XML content to ensure it's safe to include in a URI
+    const encodedXml = encodeURIComponent(xmlContent);
+    
+    // Construct the mailto link with the encoded XML content
+    const mailtoLink = `mailto:excellencegm@eleadtrack.net?subject=New Lead&body=${encodedXml}`;
+    
+    // Open the default email application with the prepared link
+    window.open(mailtoLink, '_blank');
+});
+// document.getElementById('copyButton').addEventListener('click', async function() {
+//     const xmlContent = document.getElementById('modalXmlOutput').value;
+
+//     // Check if the Web Share API is supported
+//     if (navigator.canShare && navigator.share) {
+//         try {
+//             // Use the Web Share API to share the XML content
+//             await navigator.share({
+//                 title: 'New Lead',
+//                 text: xmlContent,
+//                 url: '' // You might not need a URL for sharing XML content directly
+//             });
+//             console.log('Content shared successfully');
+//         } catch (error) {
+//             console.error('Error sharing content: ', error);
+//         }
+//     } else {
+//         // Fallback for devices that do not support the Web Share API
+//         // For instance, you could select the content for the user to copy manually
+//         const encodedXml = encodeURIComponent(xmlContent);
+//         const mailtoLink = `mailto:excellencemotors@edealertrack.net?subject=New Lead&body=${encodedXml}`;
+//         window.open(mailtoLink, '_blank');
+//     }
+// });
 
 
+
+document.getElementById('fetchRandomLead').addEventListener('click', function() {
+    fetch('https://randomuser.me/api/?nat=us')
+    .then(response => response.json())
+    .then(data => {
+        const lead = data.results[0];
+        // Populating the form fields with fetched data
+        document.getElementById('firstName').value = lead.name.first;
+        document.getElementById('lastName').value = lead.name.last;
+        document.getElementById('email').value = lead.email;
+        document.getElementById('phone').value = lead.phone;
+        // Assuming you want to combine the street number and name for the address
+        document.getElementById('street').value = `${lead.location.street.number} ${lead.location.street.name}`;
+        document.getElementById('city').value = lead.location.city;
+        document.getElementById('regionCode').value = lead.location.state;
+        document.getElementById('postalCode').value = lead.location.postcode;
+        // Additional fields can be populated similarly based on your form's requirements
+
+        // Since the modal and other elements are part of a larger form, you might need to adjust
+        // or add specific IDs if fields are named differently or require additional handling.
+    })
+    .catch(error => console.error('Error fetching random lead:', error));
+});
+
+document.getElementById('sendParsedLead').addEventListener('click', function() {
+    const leadEmail = document.getElementById('leadParsingAddress').value.trim();
+    if (!leadEmail) {
+        alert('Please enter a lead parsing email address.');
+        return;
+    }
+
+    const xmlContent = document.getElementById('modalXmlOutput').value;
+    const subject = encodeURIComponent('New Lead');
+    const body = encodeURIComponent(xmlContent);
+
+    // Constructing the mailto link with user input for the lead parsing address
+    const mailtoLink = `mailto:${leadEmail}?subject=${subject}&body=${body}`;
+    window.location.href = mailtoLink; // Open the default email client with pre-filled details
+});
+
+document.getElementById('copyToClipboard').addEventListener('click', function() {
+    const xmlContent = document.getElementById('modalXmlOutput').value;
+    navigator.clipboard.writeText(xmlContent).then(() => {
+        console.log('XML content copied to clipboard');
+        // Optionally, notify the user that the content was successfully copied.
+        alert('XML content copied to clipboard!');
+    }).catch(err => {
+        console.error('Error copying text to clipboard', err);
+        // Fallback or notify the user in case of an error
+        alert('Failed to copy XML content. Please try again.');
+    });
+});
