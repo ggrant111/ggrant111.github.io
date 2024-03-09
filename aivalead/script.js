@@ -112,18 +112,30 @@ window.onclick = function(event) {
 //     window.open(mailtoLink, '_blank');
 // });
 
-document.getElementById('copyButton').addEventListener('click', function() {
+document.getElementById('copyButton').addEventListener('click', async function() {
     const xmlContent = document.getElementById('modalXmlOutput').value;
-    const encodedXml = encodeURIComponent(xmlContent);
-    const mailtoLink = `mailto:excellencemotors@edealertrack.net?subject=New Lead&body=${encodedXml}`;
 
-    // Create a new anchor element and trigger a click on it
-    const link = document.createElement("a");
-    link.href = mailtoLink;
-    link.target = "_blank"; // Optionally open in a new tab/window
-    document.body.appendChild(link); // Add to the page
-    link.click(); // Simulate click
-    document.body.removeChild(link); // Clean up
+    // Check if the Web Share API is supported
+    if (navigator.share) {
+        try {
+            // Use the Web Share API to share the XML content
+            await navigator.share({
+                title: 'New Lead',
+                text: xmlContent,
+                url: '' // You might not need a URL for sharing XML content directly
+            });
+            console.log('Content shared successfully');
+        } catch (error) {
+            console.error('Error sharing content: ', error);
+        }
+    } else {
+        // Fallback for devices that do not support the Web Share API
+        // For instance, you could select the content for the user to copy manually
+        const encodedXml = encodeURIComponent(xmlContent);
+        const mailtoLink = `mailto:excellencemotors@edealertrack.net?subject=New Lead&body=${encodedXml}`;
+        window.open(mailtoLink, '_blank');
+    }
 });
+
 
 
