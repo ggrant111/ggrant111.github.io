@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<adf xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <prospect status="new">
+    <requestdate>2024-03-08T13:26:39-06:00</requestdate>
+    <customer>
+      <contact primarycontact="1">
+        <name part="first" type="individual">Jeremy</name>
+        <name part="last" type="individual">Day</name>
+        <email>drew.doran+jdjd@roadster.com</email>
+        <phone type="phone" time="nopreference">(760) 889-0428</phone>
+        <address type="home">
+          <street line="1">Not Specified</street>
+          <city>MIAMI</city>
+          <regioncode>FL</regioncode>
+          <postalcode>33134</postalcode>
+          <country>US</country>
+        </address>
+      </contact>
+      <id sequence="0">157125709</id>
+      <comments>This is a test lead from DR-Online</comments>
+    </customer>
+    <provider>
+      <id sequence="0">-1</id>
+      <name part="full" type="business">Roadster Online</name>
+    </provider>
+  </prospect>
+</adf>
