@@ -4,11 +4,18 @@ body {
   padding: 20px;
   box-sizing: border-box;
   color: #333;
+  background-color: black;
 }
 
-/* form {
-    margin-bottom: 20px;
-} */
+
+
+form {
+    max-width: 600px;
+    margin: auto;
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 8px;
+}
 
 input[type="text"],
 input[type="email"],
@@ -54,6 +61,11 @@ label {
   display: block;
   /* margin: 15px 0 5px; */
 }
+
+#stateAbbreviation {
+    width: 42px;
+}
+
 
 input[type="text"],
 input[type="email"],
@@ -111,7 +123,7 @@ form::after {
 /* Modal Content/Box */
 .modal-content {
   background-color: #fefefe;
-
+margin: 5% auto;
   padding: 20px;
   border: 1px solid #888;
   width: 600px; /* Could be more or less, depending on screen size */
@@ -158,10 +170,16 @@ form::after {
 
   .modal-content {
     background-color: #fefefe;
-    margin: auto; /* 10% from the top and centered */
+    margin: 5% auto; /* 10% from the top and centered */
     padding: 20px;
     border: 1px solid #888;
     width: 80%; /* Could be more or less, depending on screen size */
     border-radius: 5px;
+  }
+
+  #locale {
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
   }
 }

@@ -94,14 +94,18 @@
         <label for="city">City:</label>
         <input type="text" id="city" name="city" required placeholder="MIAMI" />
 
-        <label for="regionCode">State:</label>
+        <label for="regionCode" style="display: none">State:</label>
         <input
           type="text"
           id="regionCode"
           name="regionCode"
           required
           placeholder="FL"
+          style="display:none"
         />
+        <label for="stateAbbreviation">State:</label>
+<input type="text" id="stateAbbreviation" name="stateAbbreviation" required placeholder="FL" />
+
 
         <label for="postalCode">Postal Code:</label>
         <input
@@ -110,6 +114,7 @@
           name="postalCode"
           required
           placeholder="33134"
+          style="width: 70px"
         />
       </div>
       <label for="country" style="display: none;">Country:</label>
@@ -181,7 +186,6 @@
       </div>
     </div>
 
-    <!-- <textarea id="xmlOutput" rows="10" cols="50" readonly></textarea> -->
-    <script src="script.js"></script>
+       <script src="script.js"></script>
   </body>
 </html>
