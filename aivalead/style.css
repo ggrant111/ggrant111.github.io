@@ -107,7 +107,7 @@ form::after {
     border-radius: 5px;
 }
 #modalXmlOutput {
-    height: 450px;
+    height: 25%;
 }
 
 /* The Close Button */
