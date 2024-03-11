@@ -6,7 +6,9 @@ body {
   color: #333;
   background-color: black;
 }
-
+ label{
+    display: none;
+ }
 
 
 form {
@@ -34,14 +36,15 @@ button {
 #contact,
 #streets,
 #buttons,
-#button, #vehicleSelections{
+#button, #vehicleSelections, #dropDowns{
   display: flex;
   justify-content: space-around;
 }
 
-#vehicleSelection {
+#vehicleSelection, #commentsSelect {
     padding: 10px;
     border-radius: 4px;
+    margin: 10px;
 }
 #button {
   flex-direction: column;
@@ -181,9 +184,10 @@ margin: 5% auto;
     border-radius: 5px;
   }
 
-  #locale, #streets {
+  #locale, #streets, #dropDowns{
     display: flex;
     justify-content: space-around;
     flex-direction: column;
+    margin: 5px;
   }
 }

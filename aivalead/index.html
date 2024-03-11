@@ -137,18 +137,31 @@
         style="display: none"
       />
 
-      <label for="comments">Comments:</label>
+      <!-- <label for="comments">Comments:</label>
       <textarea
         id="comments"
         name="comments"
         rows="4"
         cols="50"
         placeholder="This is a test lead from the Universal Team"
-      ></textarea>
-      <h3>Vehicle</h3>
+      ></textarea> -->
+<!-- 
+      <label for="commentsSelect">Comments/Questions:</label> -->
+      <div id="dropDowns">
+      <select id="commentsSelect" name="comments">
+          <option value="">Please select a comment or question</option>
+          <option value="What is the availability of this vehicle?">What is the availability of this vehicle?</option>
+          <option value="Can I get more information on financing?">Can I get more information on financing?</option>
+          <option value="Are there any ongoing promotions?">Are there any ongoing promotions?</option>
+          <option value="Can I schedule a test drive?">Can I schedule a test drive?</option>
+          <option value="What is the warranty coverage?">What is the warranty coverage?</option>
+      </select>
+       
+      <!-- <h3>Vehicle</h3> -->
       <div id="vehicleSelections">
-        <label for="vehicleSelection">Select a Vehicle:</label>
+        <!-- <label for="vehicleSelection">Select a Vehicle:</label> -->
         <select id="vehicleSelection" name="vehicleSelection">
+            <option value="">Please select a vehicle</option>
             <option value='{"year":"2019","make":"Nissan","model":"Kicks","vin":"3N1CP5BV8LL519113","stock":"L519113","trim":"S","transmission":"Automatic CVT"}'>2019 Nissan Kicks</option>
             <option value='{"year":"2023","make":"Toyota","model":"Sienna","vin":"5TDESKFC3PS19A708","stock":"PS19A786","trim":"Platiunum","transmission":"Automatic"}'>2023 Toyota Siena</option>
             <option value='{"year":"2024","make":"Nissan","model":"Altima","vin":"1N4BL4CV0RN307222","stock":"RN307222","trim":"SR","transmission":"Automatic"}'>2024 Nissan Altima</option>
@@ -156,7 +169,7 @@
             <!-- Add more vehicle options as needed -->
         </select>
         
-
+    </div>
       </div>
       <h3>Provider Information</h3>
       <div id="provider">
@@ -175,7 +188,7 @@
           id="providerName"
           name="providerName"
           required
-          placeholder="Roadster Online"
+          placeholder="Other"
         />
       </div>
       <div id="buttons">

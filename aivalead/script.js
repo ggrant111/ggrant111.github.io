@@ -3,9 +3,9 @@ function generateXML() {
   const defaultValues = {
     prospectStatus: "new",
     firstName: "Jeremy",
-    lastName: "Day",
-    email: "drew.doran+jdjd@roadster.com",
-    phone: "(760) 889-0428",
+    lastName: "Johnson",
+    email: "jjohnson@example.com",
+    phone: "(740) 656-8199",
     phoneTime: "nopreference",
     street: "Not Specified",
     city: "MIAMI",
@@ -41,8 +41,8 @@ function generateXML() {
     document.getElementById("country").value || defaultValues.country;
   const customerID =
     document.getElementById("customerID").value || defaultValues.customerID;
-  const comments =
-    document.getElementById("comments").value || defaultValues.comments;
+//   const comments =
+//     document.getElementById("comments").value || defaultValues.comments;
   const providerID =
     document.getElementById("providerID").value || defaultValues.providerID;
   const providerName =
@@ -53,6 +53,8 @@ function generateXML() {
 // Attempt to parse the selected vehicle's information safely
 let selectedVehicle;
 const selectedVehicleJSON = document.getElementById('vehicleSelection').value;
+const comments =
+document.getElementById("commentsSelect").value || "No comment selected.";
 
 // Check if selectedVehicleJSON is not empty and is a valid JSON string
 if (selectedVehicleJSON) {
@@ -91,7 +93,7 @@ ${selectedVehicle ? `<vehicle interest="buy" status="used">
 <email>${email}</email>
 <phone type="home">${phone}</phone>
 <phone type="cellphone">${phone}</phone>
-<phone type="work">${phone}</phone>
+<phone type="workphone">${phone}</phone>
 <address type="home">
 <street line="1">${street}</street>
 <city>${city}</city>
