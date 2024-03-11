@@ -151,7 +151,9 @@ document.getElementById('universalMotors').addEventListener('click', function() 
 
 document.getElementById('fetchRandomLead').addEventListener('click', function() {
     fetch('https://randomuser.me/api/?nat=us')
+   
     .then(response => response.json())
+    
     .then(data => {
         const lead = data.results[0];
         // Populating the form fields with fetched data
@@ -161,6 +163,7 @@ document.getElementById('fetchRandomLead').addEventListener('click', function() 
         document.getElementById('phone').value = lead.phone;
         // Assuming you want to combine the street number and name for the address
         document.getElementById('street').value = `${lead.location.street.number} ${lead.location.street.name}`;
+        console.log(lead.location.street.number)
         document.getElementById('city').value = lead.location.city;
         document.getElementById('regionCode').value = lead.location.state;
         document.getElementById('postalCode').value = lead.location.postcode;
@@ -170,6 +173,7 @@ document.getElementById('fetchRandomLead').addEventListener('click', function() 
         // or add specific IDs if fields are named differently or require additional handling.
     })
     .catch(error => console.error('Error fetching random lead:', error));
+    
 });
 
 document.getElementById('sendParsedLead').addEventListener('click', function() {

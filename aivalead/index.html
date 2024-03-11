@@ -32,7 +32,7 @@
 
       <h3>Lead Information</h3>
       <div id="name">
-        <label for="firstName">First Name:</label>
+        <label for="firstName">First:</label>
         <input
           type="text"
           id="firstName"
@@ -41,13 +41,13 @@
           placeholder="Jeremy"
         />
 
-        <label for="lastName">Last Name:</label>
+        <label for="lastName">Last:</label>
         <input
           type="text"
           id="lastName"
           name="lastName"
           required
-          placeholder="Day"
+          placeholder="Johnson"
         />
       </div>
       <div id="contact">
@@ -57,7 +57,7 @@
           id="email"
           name="email"
           required
-          placeholder="drew.doran+jdjd@roadster.com"
+          placeholder="jeremyj@example.com"
         />
 
         <label for="phone">Phone:</label>
@@ -66,7 +66,7 @@
           id="phone"
           name="phone"
           required
-          placeholder="(760) 889-0428"
+          placeholder="(740) 8199"
         />
       </div>
       <label for="phoneTime" style="display: none"
@@ -80,21 +80,21 @@
         placeholder="nopreference"
         style="display: none"
       />
-      <div id="street">
+      <div id="streets">
         <label for="street">Street:</label>
         <input
           type="text"
           id="street"
           name="street"
           required
-          placeholder="Not Specified"
+          placeholder="123 Main Street"
         />
       </div>
       <div id="locale">
         <label for="city">City:</label>
         <input type="text" id="city" name="city" required placeholder="MIAMI" />
 
-        <label for="regionCode">Region Code:</label>
+        <label for="regionCode">State:</label>
         <input
           type="text"
           id="regionCode"
@@ -172,10 +172,10 @@
         <textarea id="modalXmlOutput" rows="10" cols="50" readonly></textarea>
        <div id="buttons"> <button id="copyButton">Send to Excellence Motors</button>
       <button id="universalMotors">Send to Universal Motors</button></div>
-        <div id="button"><!-- Input for lead parsing address -->
+       
         <input type="text" id="leadParsingAddress" placeholder="Enter lead parsing email address" />
-        <!-- Button to send email using the lead parsing address -->
-        <button id="sendParsedLead">Send Lead</button></div>
+        <div id="buttons"><!-- Input for lead parsing address --><!-- Button to send email using the lead parsing address -->
+        <button id="sendParsedLead">Send Lead</button>
         <button id="copyToClipboard">Copy to Clipboard</button>
 
       </div>
