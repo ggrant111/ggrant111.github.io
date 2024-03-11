@@ -50,28 +50,48 @@ function generateXML() {
 
   // Generating the current timestamp for requestDate
   const requestDate = new Date().toISOString();
+// Attempt to parse the selected vehicle's information safely
+let selectedVehicle;
+const selectedVehicleJSON = document.getElementById('vehicleSelection').value;
 
-  // Constructing the XML string with user input or default values
-  const xml = `<?xml version="1.0" encoding="UTF-8"?>
+// Check if selectedVehicleJSON is not empty and is a valid JSON string
+if (selectedVehicleJSON) {
+    try {
+        selectedVehicle = JSON.parse(selectedVehicleJSON);
+    } catch (error) {
+        console.error('Error parsing selected vehicle data:', error);
+        // Handle the error, e.g., by setting selectedVehicle to a default value or notifying the user
+        selectedVehicle = null; // Example default value, adjust as needed
+    }
+} else {
+    // Handle cases where no vehicle is selected (e.g., the initial dropdown state)
+    selectedVehicle = null; // Adjust based on how you want to handle this scenario
+}
+
+// Continue with XML generation...
+// Ensure you check selectedVehicle is not null before attempting to access its properties
+const xml = `<?xml version="1.0" encoding="UTF-8"?>
 <?adf version="1.0"?>
 <adf>
 <prospect status="${prospectStatus}">
 <requestdate>${requestDate}</requestdate>
-<vehicle interest="buy" status="used">
-<year>2019</year>
-<make>Nissan</make>
-<model>Kicks</model>
-<vin>3N1CP5BV8LL519113</vin>
-<stock>L519113</stock>
-<trim>S</trim>
-<transmission>Automatic CVT</transmission>
-</vehicle>
+${selectedVehicle ? `<vehicle interest="buy" status="used">
+<year>${selectedVehicle.year}</year>
+<make>${selectedVehicle.make}</make>
+<model>${selectedVehicle.model}</model>
+<vin>${selectedVehicle.vin}</vin>
+<stock>${selectedVehicle.stock}</stock>
+<trim>${selectedVehicle.trim}</trim>
+<transmission>${selectedVehicle.transmission}</transmission>
+</vehicle>` : ''}
 <customer>
 <contact primarycontact="1">
 <name part="first" type="individual">${firstName}</name>
 <name part="last" type="individual">${lastName}</name>
 <email>${email}</email>
-<phone type="phone" time="${phoneTime}">${phone}</phone>
+<phone type="home">${phone}</phone>
+<phone type="cellphone">${phone}</phone>
+<phone type="work">${phone}</phone>
 <address type="home">
 <street line="1">${street}</street>
 <city>${city}</city>
