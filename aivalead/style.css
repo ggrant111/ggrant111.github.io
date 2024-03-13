@@ -1,7 +1,7 @@
 body {
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   margin: 0;
-  padding: 20px;
+  padding: 10px;
   box-sizing: border-box;
   color: #333;
   background-color: black;
@@ -30,6 +30,7 @@ button {
   border-radius: 4px;
   border: 1px solid #ccc;
 }
+
 #locale,
 #name,
 #provider,
@@ -39,6 +40,7 @@ button {
 #button, #vehicleSelections, #dropDowns{
   display: flex;
   justify-content: space-around;
+  gap: 20px;
 }
 
 #vehicleSelection, #commentsSelect {
@@ -58,7 +60,7 @@ button {
 h2,
 h3 {
   color: #333;
-  margin: 2px;
+  /* margin: 2px; */
 }
 
 label {
@@ -70,14 +72,14 @@ label {
 }
 
 #stateAbbreviation {
-    width: 42px;
+    width: 57px;
 }
 
 
 input[type="text"],
 input[type="email"],
 textarea {
-  width: calc(100% - 20px);
+  width: calc(100% - 0px);
   padding: 10px;
   margin-bottom: 20px;
   border: 1px solid #ccc;
@@ -137,7 +139,7 @@ margin: 5% auto;
   border-radius: 5px;
 }
 #modalXmlOutput {
-  height: 25%;
+  height: 490px;
 }
 
 /* The Close Button */
@@ -188,6 +190,6 @@ margin: 5% auto;
     display: flex;
     justify-content: space-around;
     flex-direction: column;
-    margin: 5px;
+    /* margin: 5px; */
   }
 }

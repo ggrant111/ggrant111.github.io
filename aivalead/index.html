@@ -4,8 +4,14 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black">
+<meta name="apple-mobile-web-app-title" content="My Web App">
+<link rel="apple-touch-icon" href="icons/icon-192x192.png">
     <title>Lead Generator</title>
     <link rel="stylesheet" href="style.css" />
+    <link rel="manifest" href="/manifest.json">
+
   </head>
   <body>
     <form id="xmlForm">
@@ -32,46 +38,45 @@
 
       <h3>Lead Information</h3>
       <div id="name">
-        <label for="firstName">First:</label>
+        <!-- <label for="firstName">First:</label> -->
         <input
           type="text"
           id="firstName"
           name="firstName"
           required
-          placeholder="Jeremy"
+          placeholder="First Name"
         />
 
-        <label for="lastName">Last:</label>
+        <!-- <label for="lastName">Last:</label> -->
         <input
           type="text"
           id="lastName"
           name="lastName"
           required
-          placeholder="Johnson"
+          placeholder="Last Name"
         />
       </div>
-      <div id="contact">
-        <label for="email">Email:</label>
+      <!-- <div id="contact">
+        <label for="email">Email:</label> -->
         <input
           type="email"
           id="email"
           name="email"
           required
-          placeholder="jeremyj@example.com"
+          placeholder="Email Adress"
         />
 
-        <label for="phone">Phone:</label>
+        <!-- <label for="phone">Phone:</label> -->
         <input
           type="text"
           id="phone"
           name="phone"
           required
-          placeholder="(740) 656-8199"
+          placeholder="Phone Number"
         />
       </div>
       <label for="phoneTime" style="display: none"
-        >Phone Time Preference:</label
-      >
+        >Phone Time Preference:</label>
       <input
         type="text"
         id="phoneTime"
@@ -81,40 +86,40 @@
         style="display: none"
       />
       <div id="streets">
-        <label for="street">Street:</label>
+        <!-- <label for="street">Street:</label> -->
         <input
           type="text"
           id="street"
           name="street"
           required
-          placeholder="123 Main Street"
+          placeholder="Street Address"
         />
       </div>
       <div id="locale">
-        <label for="city">City:</label>
-        <input type="text" id="city" name="city" required placeholder="MIAMI" />
+        <!-- <label for="city">City:</label> -->
+        <input type="text" id="city" name="city" required placeholder="City" />
 
-        <label for="regionCode" style="display: none">State:</label>
+        <!-- <label for="regionCode" style="display: none">State:</label> -->
         <input
           type="text"
           id="regionCode"
           name="regionCode"
           required
-          placeholder="FL"
+          placeholder="State"
           style="display:none"
         />
-        <label for="stateAbbreviation">State:</label>
-<input type="text" id="stateAbbreviation" name="stateAbbreviation" required placeholder="FL" />
+        <!-- <label for="stateAbbreviation">State:</label> -->
+<input type="text" id="stateAbbreviation" name="stateAbbreviation" required placeholder="State" />
 
 
-        <label for="postalCode">Postal Code:</label>
+        <!-- <label for="postalCode">Postal Code:</label> -->
         <input
           type="text"
           id="postalCode"
           name="postalCode"
           required
-          placeholder="33134"
-          style="width: 70px"`
+          placeholder="Zip Code"
+          style="width: 85px"`
         />
       </div>
       <label for="country" style="display: none;">Country:</label>
@@ -179,7 +184,7 @@
           id="providerID"
           name="providerID"
           required
-          placeholder="-1"
+          placeholder="0"
         />
 
         <label for="providerName">Provider Name:</label>
@@ -198,7 +203,8 @@
     </form>
     <div id="xmlModal" class="modal">
       <div class="modal-content">
-        <span class="close-button">&times;</span>
+        <div id="buttons"><h3>ADF/XML Lead Code</h3>
+        <span class="close-button">&times;</span></div>
         <textarea id="modalXmlOutput" rows="10" cols="50" readonly></textarea>
     <div id="buttons"> <button id="copyButton">Send to Excellence Motors / Engage AIVA</button>
       <button id="universalMotors">Send to Universal Motors</button>

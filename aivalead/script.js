@@ -7,14 +7,14 @@ function generateXML() {
     email: "jjohnson@example.com",
     phone: "(740) 656-8199",
     phoneTime: "nopreference",
-    street: "Not Specified",
+    street: "123 Main Street",
     city: "MIAMI",
     regionCode: "FL",
     postalCode: "33134",
     country: "US",
     customerID: "157125709",
     comments: "This is a test lead from the Universal Team",
-    providerID: "-1",
+    providerID: "0",
     providerName: "Roadster Online",
   };
 
@@ -50,11 +50,31 @@ function generateXML() {
 
   // Generating the current timestamp for requestDate
   const requestDate = new Date().toISOString();
-// Attempt to parse the selected vehicle's information safely
+// Attempt to retrieve the selected vehicle's information
+const vehicleSelectionElement = document.getElementById('vehicleSelection');
+const selectedVehicleJSON = vehicleSelectionElement.value;
+
+if (!selectedVehicleJSON) {
+    alert("Please select a vehicle");
+    return; // Exit the function early if no vehicle is selected
+}
+
+// Safely parse the selected vehicle's JSON
 let selectedVehicle;
-const selectedVehicleJSON = document.getElementById('vehicleSelection').value;
-const comments =
-document.getElementById("commentsSelect").value || "No comment selected.";
+try {
+    selectedVehicle = JSON.parse(selectedVehicleJSON);
+} catch (error) {
+    console.error('Error parsing selected vehicle data:', error);
+    alert("There was a problem with the selected vehicle data. Please try again.");
+    return; // Exit the function early if parsing fails
+}
+const commentsSelect = document.getElementById("commentsSelect");
+    const comments = commentsSelect.value;
+
+    if (!comments) {
+        alert("Please select a comment");
+        return; // Exit the function early if no comment is selected
+    }
 
 // Check if selectedVehicleJSON is not empty and is a valid JSON string
 if (selectedVehicleJSON) {
