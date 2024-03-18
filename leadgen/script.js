@@ -196,6 +196,21 @@ document
     window.location.href = mailtoLink;
   });
 
+  document
+  .getElementById("excellenceFord")
+  .addEventListener("click", function () {
+    const xmlContent = document.getElementById("modalXmlOutput").value;
+    // Encode the XML content to ensure it's safe to include in a URI
+    const encodedXml = encodeURIComponent(xmlContent);
+
+    // Construct the mailto link with the encoded XML content
+    const mailtoLink = `mailto:excellenceford@eleadtrack.net?subject=New Lead&body=${encodedXml}`;
+
+    // Open the default email application with the prepared link
+    // window.open(mailtoLink, '_blank');
+    window.location.href = mailtoLink;
+  });
+
 document.addEventListener("DOMContentLoaded", (event) => {
   const generateButton = document.getElementById("generateButton");
   if (generateButton) {
