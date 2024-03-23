@@ -6,9 +6,14 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>ScoreStream</title>
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous">
-  <meta http-equiv="Content-Security-Policy" content="script-src 'self' https://cdn.tailwindcss.com;">
+  <meta http-equiv="Content-Security-Policy" content="script-src 'self' https://cdn.tailwindcss.com; font-src 'self' https://fonts.gstatic.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com;">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+
 
   <style>
+body, div, h1, h2, h3, p { /* Apply to other selectors as needed */
+  font-family: 'Poppins', sans-serif;
+}
 body {
   background-color: rgb(255, 255, 255);
 }
