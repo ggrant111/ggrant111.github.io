@@ -1,0 +1,116 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ScoreStream</title>
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous">
+  <meta http-equiv="Content-Security-Policy" content="script-src 'self' https://cdn.tailwindcss.com;">
+
+  <style>
+body {
+  background-color: rgb(255, 255, 255);
+}
+div{
+  background-color: rgb(255, 255, 255);
+}
+.refresh-btn {
+  cursor: pointer;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-size: 20px; /* Adjust size as needed */
+}
+.close-game { 
+  background-color: lightgreen;
+  border-color: #facc15;
+}
+    /* Represents inline styles for team logos */
+.team-logo {
+  width: 20px;
+}
+
+/* Represents inline styles for live indicator */
+.live-indicator-dot {
+  height: 8px;
+  width: 8px;
+  background-color: red;
+  border-radius: 50%;
+  display: inline-block;
+  margin-right: 1px;
+}
+
+/* Add red text for live indicator if you are simulating Tailwind's text-red-500 */
+.text-red-500 {
+  color: red;
+}
+.p-4 {
+  padding: .33rem;
+  margin: .25rem; /* Tailwind's spacing scale, adjust if your scale differs */
+}
+
+.border {
+  border-width: 1px; /* Adjust based on your default border width */
+}
+
+.border-gray-200 {
+  border-color: #e5e7eb; /* Tailwind's gray-200 color */
+}
+
+.rounded-lg {
+  border-radius: 0.5rem; /* Adjust based on your preferred border-radius */
+}
+
+.flex {
+  display: flex;
+}
+
+.justify-between {
+  justify-content: space-between;
+}
+
+.items-center {
+  align-items: center;
+}
+
+#scoreDifferenceInput {
+  border-radius: 5px;
+    width: 35px;
+    border: 4px solid lightgreen;
+}
+h3 {
+  margin: 2px;
+}
+p {
+  margin: 2px;
+}
+  </style>
+</head>
+<body>
+  <h1>ScoreStream <span id="countdown"></span> <i class="fas fa-sync-alt refresh-btn"></i><span id="countdown"></span>
+</h1>
+<div>
+  <div>
+  <label><input type="radio" name="gender" value="mens-college-basketball" checked> NCAAB</label>
+  <label><input type="radio" name="gender" value="womens-college-basketball"> NCAAW</label>
+  <label><input type="radio" name="gender" value="mlb"> MLB</label>
+  <label><input type="radio" name="gender" value="nhl"> NHL</label>
+  <label><input type="radio" name="gender" value="nfl"> NFL</label>
+</div>
+<div>
+  <label><input type="radio" name="gender" value="nba"> NBA</label>
+  <label><input type="radio" name="gender" value="wnba"> WNBA</label>
+  <label><input type="radio" name="gender" value="ncaaf"> NCAAF</label>
+  <label><input type="radio" name="gender" value="mls"> MLS</label>
+</div>
+</div>
+<div>
+  <label for="scoreDifferenceInput">Close Game Score Difference:</label>
+  <input type="number" id="scoreDifferenceInput" value="10" min="1" max="50" />
+
+</div>  
+  <div id="scores">Loading scores...</div>
+  <script src="sidepanel.js"></script>
+</body>
+</html>
