@@ -5,20 +5,34 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>ScoreStream</title>
-  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous">
-  <meta http-equiv="Content-Security-Policy" content="script-src 'self' https://cdn.tailwindcss.com; font-src 'self' https://fonts.gstatic.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com;">
+
+  <meta http-equiv="Content-Security-Policy" content="font-src 'self' https://fonts.gstatic.com https://use.fontawesome.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com https://use.fontawesome.com;">
+
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
 
 
   <style>
-body, div, h1, h2, h3, p { /* Apply to other selectors as needed */
+body, #scoreDifferenceInput { /* Apply to other selectors as needed */
   font-family: 'Poppins', sans-serif;
+  background-color: rgb(255, 255, 255);
+  color: #333;
 }
+/* Hide scrollbar for Chrome, Safari and Opera */
+body::-webkit-scrollbar {
+    display: none;
+}
+
+/* Hide scrollbar for IE, Edge, and Firefox */
 body {
-  background-color: rgb(255, 255, 255);
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
 }
-div{
+
+/* body {
   background-color: rgb(255, 255, 255);
+} */
+div{
+  background-color: transparent;
 }
 .refresh-btn {
   cursor: pointer;
@@ -28,11 +42,13 @@ div{
   font-size: 20px; /* Adjust size as needed */
 }
 .close-game { 
-  background-color: lightgreen;
+  border: 4px solid lightgreen;
+  /* background-color: lightgreen; */
   border-color: #facc15;
 }
     /* Represents inline styles for team logos */
 .team-logo {
+  background-color: #ccc;
   width: 20px;
 }
 
@@ -60,7 +76,7 @@ div{
 }
 
 .border-gray-200 {
-  border-color: #e5e7eb; /* Tailwind's gray-200 color */
+  border-color: #09d07d; /* Tailwind's gray-200 color */
 }
 
 .rounded-lg {
@@ -82,28 +98,272 @@ div{
 #scoreDifferenceInput {
   border-radius: 5px;
     width: 35px;
-    border: 4px solid lightgreen;
+    border: 1px solid #09d07d;
 }
-h3 {
+
+h3, h1 {
   margin: 2px;
 }
 p {
   margin: 2px;
 }
+/* The switch - the box around the slider */
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 30px; /* Was 60px */
+  height: 17px; /* Was 34px */
+}
+
+/* Hide default checkbox */
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+/* The slider */
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 13px;
+  width: 13px;
+  left: 2px;
+  bottom: 2px;
+  background-color: white;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+input:checked + .slider {
+  background-color: #2196F3;
+}
+
+input:focus + .slider {
+  box-shadow: 0 0 1px #2196F3;
+}
+
+input:checked + .slider:before {
+  -webkit-transform: translateX(13px);
+  -ms-transform: translateX(13px);
+  transform: translateX(13px);
+}
+
+/* Rounded sliders */
+.slider.round {
+  border-radius: 17px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
+}
+.dark-mode {
+  background-color: #333;
+  color: #fff;
+}
+
+.dark-mode .slider {
+  background-color: #555;
+}
+
+#spacer {
+  display: flex;
+    justify-content: space-between;
+}
+#sportSelector {
+  display: flex;
+  justify-content: space-between;
+}
+#darkModeLabel {
+  text-align: right;
+}
+.stat-higher {
+    background-color: lightgreen;
+}
+
+.game-stats-modal {
+    display: flex;
+    flex-direction: column;
+}
+
+.stat-row {
+    display: flex;
+    justify-content: space-between;
+}
+
+.team-stat {
+    margin: 5px;
+    padding: 5px;
+}
+.stat-higher {
+    background-color: #daf7a6; /* Light green, for example */
+}
+
+
+/* Modal basic styles */
+#gameDetailsModal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(255, 255, 255); /* Fallback color */
+    background-color: rgba(255, 255, 255, .95); /* Black w/ opacity */
+}
+
+/* Modal overall styling */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 100; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+/* Modal content box styling */
+.modal-content {
+    background-color: #fefefe;
+    margin: 10% auto; /* 10% from the top and centered */
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%; /* Could be more or less, depending on screen size */
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19); /* 3D effect */
+}
+
+/* Close button */
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/* Previously generic img selector refined to target only modal logos */
+.modal-content .modal-logo {
+    height: 75px; /* Set the height of logos */
+    margin-right: 10px; /* Add some space between the logos */
+}
+
+
+/* Styling for stat and player cards */
+.stat-card, .player-card {
+    background: #f2f2f2;
+    padding: 10px;
+    margin-top: 10px;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.player-card img {
+    width: auto; /* Maintain aspect ratio */
+    height: 75px; /* Height for player photos, adjust as necessary */
+    margin-right: 10px; /* Space next to the photo */
+    border-radius: 50%; /* Circular photos */
+}
+
+.player-card p {
+    margin: 5px 0;
+}
+
+/* Adjusting the header styles for better hierarchy
+h3, h4 {
+    color: #333;
+} */
+
+
+/* The Close Button */
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+.tooltip {
+  cursor: pointer;
+  position: relative;
+  display: inline-block;
+}
+
+.tooltip .tooltiptext {
+  visibility: hidden;
+  width: 120px;
+  background-color: black;
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 5px 0;
+  position: absolute;
+  z-index: 1;
+  bottom: 100%;
+  left: 50%;
+  margin-left: -60px; /* Use half of the width value to align it */
+  opacity: 0;
+  transition: opacity 0.3s;
+  cursor: pointer;
+}
+
+.tooltip:hover .tooltiptext {
+  visibility: visible;
+  opacity: 1;
+}
+
   </style>
 </head>
 <body>
-  <h1>ScoreStream <span id="countdown"></span> <i class="fas fa-sync-alt refresh-btn"></i><span id="countdown"></span>
-</h1>
+ <div> <h1>ScoreStream</h1>
+    <i class="fas fa-sync-alt refresh-btn"></i></div>
+    <div id="spacer"><span id="countdown">               </span><label class="switch">
+      <input type="checkbox" id="darkModeToggle"> 
+      <span class="slider round"></div>
+<!-- Dark Mode Toggle Switch -->
 <div>
-  <div>
+</span><p id="darkModeLabel">Dark Mode</p>
+</label>
+</div>
+<div>
+  <div id="sportSelector">
   <label><input type="radio" name="gender" value="mens-college-basketball" checked> NCAAB</label>
   <label><input type="radio" name="gender" value="womens-college-basketball"> NCAAW</label>
   <label><input type="radio" name="gender" value="mlb"> MLB</label>
   <label><input type="radio" name="gender" value="nhl"> NHL</label>
   <label><input type="radio" name="gender" value="nfl"> NFL</label>
 </div>
-<div>
+<div id="sportSelector">
   <label><input type="radio" name="gender" value="nba"> NBA</label>
   <label><input type="radio" name="gender" value="wnba"> WNBA</label>
   <label><input type="radio" name="gender" value="ncaaf"> NCAAF</label>
@@ -116,6 +376,15 @@ p {
 
 </div>  
   <div id="scores">Loading scores...</div>
+  <!-- The Modal -->
+<div id="gameDetailsModal" class="modal">
+  <!-- Modal content -->
+  <div class="modal-content">
+    <span id="closeButton" class="close">&times;</span>
+    <div id="modal-body"></div>
+  </div>
+</div>
+
   <script src="sidepanel.js"></script>
 </body>
 </html>
