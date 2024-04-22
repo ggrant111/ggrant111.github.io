@@ -1,0 +1,261 @@
+
+/* Hides scrollbar for all elements and any future dynamically created scrollable elements */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scrollbar-width: none; /* For Firefox */
+    -ms-overflow-style: none;  /* For Internet Explorer and Edge */
+}
+
+*::-webkit-scrollbar {
+    display: none; /* For Chrome, Safari, and Opera */
+}
+
+html, body {
+    font-family: 'Poppins', sans-serif; 
+    height: 100%;
+    overflow-y: scroll; /* Ensures the entire page is scrollable */
+    scroll-snap-type: y mandatory; /* Enables vertical snapping */
+    color: #fff;
+}
+/* body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    color: #333;
+} */
+
+header {
+    background-color: white;
+    color: #333;
+    padding: 1rem 0;
+    position: -webkit-sticky; /* For Safari */
+    position: sticky;
+    top: 0;
+    z-index: 1000; /* Ensure the header stays on top of other content */
+}
+
+.hamburger {
+    display: none;
+    font-size: 30px;
+    background: none;
+    border: none;
+    /* color: white; */
+    cursor: pointer;
+}
+.modal.show .modal-dialog {
+    margin-top: 150px;
+}
+.card-body, .modal-body {
+    color: black;
+}
+
+
+.filters {
+    display: flex;
+    flex-wrap: nowrap;  /* Allows items to wrap onto the next line as needed */
+    justify-content: space-between;  /* Distributes space between and around content items */
+    align-items: center;  /* Vertically centers the items in the container */
+    gap: 10px;  /* Adds space between items */
+}
+
+.form-select {
+    flex-grow: 1;  /* Allows select elements to grow and fill the space */
+}
+
+.custom-gap > .col-md-4 { /* Assuming your cards are using col-md-4 */
+    padding: 0 7.5px; /* Half of 15px on each side */
+}
+
+.custom-gap {
+    margin-left: -7.5px; /* Negative margin to counteract the padding on the first and last items */
+    margin-right: -7.5px;
+}
+
+.btn {
+    flex-shrink: 0;  /* Prevents the button from shrinking */
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+}
+
+.nav-links li {
+    padding: 10px;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 10px; /* Ensures content doesn't touch the edges */
+}
+
+nav .logo {
+    height: 70px; /* Adjust height as needed */
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    align-items: center;
+}
+
+nav ul li {
+    margin: 0 10px;
+}
+
+nav ul li a {
+    color: #333;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.logo-link {
+    display: flex;
+    align-items: center; /* This vertically centers the logo and text */
+    text-decoration: none; /* Removes underline from the link */
+    color: #333; /* Set the text color, adjust as needed */
+}
+
+.logo {
+    height: 70px; /* Adjust height as needed */
+    margin-right: 10px; /* Adds some space between the logo and text */
+}
+
+.logo-text {
+    font-size: 20px; /* Adjust the size as needed */
+    font-weight: bold; /* Makes the text bold, adjust according to design */
+}
+
+
+.hero, section {
+    font-size: 1.5rem;
+    height: 100vh; /* Each section occupies the full viewport height */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    scroll-snap-align: start; /* Aligns the start of each section with the start of the viewport */
+}
+/* 
+.hero {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    color: #fff;
+    text-align: center;
+    position: relative;
+    padding: 20px;
+} */
+
+.hero img.hero-image {
+    width: 100%;
+    height: 100vh;
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+}
+
+button {
+    padding: 10px 20px;
+    background-color: #555;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    font-size: 1.5rem;
+}
+
+button:hover {
+    background-color: #666;
+}
+/* 
+section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 50vh;
+    text-align: center;
+} */
+
+section h2 {
+    margin-bottom: 20px;
+}
+
+section p, form {
+    max-width: 600px;
+    margin: 30px;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+input[type="date"],
+select[type="time"],
+textarea {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    display: block;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+textarea {
+    height: 150px;
+}
+
+button[type="submit"] {
+    padding: 10px 20px;
+    background-color: #555;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button[type="submit"]:hover {
+    background-color: #666;
+}
+
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+}
+
+@media (max-width: 768px) {
+    .hamburger {
+        display: block;
+    }
+
+    .nav-links {
+        flex-direction: column;
+        width: 100%;
+        display: none; /* Hide by default */
+        position: absolute;
+        top: 60px; /* Adjust based on your header's height */
+        left: 0;
+        background: #333;
+    }
+
+    .nav-links li {
+        text-align: center;
+        width: 100%;
+    }
+
+nav ul li a {
+color: white;
+}
+}
