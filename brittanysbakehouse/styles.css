@@ -114,6 +114,17 @@ footer {
   width: 100%;
 }
 
+.social-media a {
+  margin: 0 10px;
+  color: white; /* Default icon color */
+  font-size: 24px; /* Icon size */
+}
+
+.social-media a:hover {
+  color: #ff69b4; /* Icon color on hover */
+}
+
+
 input[type="text"],
 input[type="email"],
 input[type="number"],
