@@ -87,7 +87,7 @@ button.prev, button.next {
     border: none;
     padding: 10px 20px;
     cursor: pointer;
-    z-index: 10;
+
 }
 
 button.prev {
