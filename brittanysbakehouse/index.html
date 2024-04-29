@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Brittany's Bakehouse</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+    <script src="scripts.js" defer></script>
+</head>
+<body>
+    <header>
+        <h1>Brittany's Bakehouse</h1>
+        <!-- <div id="hamburger" class="hamburger" onclick="toggleMenu()">&#9776;</div> -->
+        <nav id="navbar">
+            <a href="#home">Home</a>
+            <a href="#gallery">Gallery</a>
+            <a href="#reviews">Reviews</a>
+            <a href="#about">About Us</a>
+        </nav>
+    </header>
+    <div class="container" id="home">
+        <!-- Home and Order Form -->
+        <section class="order-form">
+            <h2>Place Your Order</h2>
+            <form action="/submit-your-order" method="POST">
+                <input type="text" name="name" placeholder="Your Name" required>
+                <input type="email" name="email" placeholder="Your Email" required>
+                <select name="product">
+                    <option value="">Select a Product</option>
+                    <option value="cake">Cake</option>
+                    <option value="cookies">Cookies</option>
+                    <option value="bread">Bread</option>
+                </select>
+                <input type="number" name="quantity" placeholder="Quantity" required>
+                <input type="submit" value="Submit Order">
+            </form>
+        </section>
+        <!-- Gallery -->
+        <section id="gallery">
+            <h2>Gallery</h2>
+            <div id="carousel" class="carousel">
+                <img src="assets/IMG_3838.jpeg" alt="Image 1" class="active">
+                <img src="assets/IMG_3863.jpeg" alt="Image 2">
+                <img src="assets/IMG_3864.jpeg" alt="Image 3">
+                <img src="assets/IMG_3902.jpeg" alt="Image 4">
+                <img src="assets/IMG_3903.jpeg" alt="Image 5">
+                <img src="assets/IMG_3907.jpeg" alt="Image 6">
+                <img src="assets/IMG_3911.jpeg" alt="Image 7">
+                <button class="prev">Prev</button>
+            <button class="next">Next</button>
+            </div>
+            
+        </section>
+        
+        <!-- Reviews -->
+        <section id="reviews">
+            <h2>Customer Reviews</h2>
+            <p>"The best cookies in town! Can't recommend enough!" - Jane Doe</p>
+            <p>"Excellent service and even better bread." - John Smith</p>
+            <form action="/submit-review" method="POST">
+                <textarea name="review" placeholder="Write your review here..." required></textarea>
+                <input type="submit" value="Submit Review">
+            </form>
+        </section>
+        <!-- About Us -->
+        <section id="about">
+            <h2>About Us</h2>
+            <p>Welcome to Brittany's Bakehouse! We are passionate about baking and providing high-quality, fresh products every day. Our team is dedicated to creating delightful experiences for all our customers.</p>
+        </section>
+    </div>
+    <footer>
+        <p>© 2024 Brittany's Bakehouse. All rights reserved.</p>
+    </footer>
+</body>
+</html>

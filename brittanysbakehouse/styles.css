@@ -1,0 +1,173 @@
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background: #ffc0cb; /* Ensure the background is opaque */
+    color: #fff;
+    padding: 10px 20px;
+    text-align: center;
+    position: sticky; /* Keeps the header at the top */
+    top: 0;
+    z-index: 1000; /* Higher index to keep it above other content */
+    width: 100%; /* Ensures it spans the full width */
+}
+
+/* .hamburger {
+    display: none;
+    font-size: 30px;
+    cursor: pointer;
+} */
+
+nav {
+    width: 100%;
+}
+
+nav a {
+    text-decoration: none;
+    color: white;
+    padding: 10px;
+}
+
+nav a:hover {
+  text-decoration: underline;
+}
+
+.container {
+  max-width: 800px;
+  margin: auto;
+  overflow: hidden;
+}
+
+img {
+  max-width: 100%;
+}
+
+section {
+  background: #f0fff0; /* Very light green for sections */
+  padding: 20px;
+  margin-top: 20px;
+  margin-bottom: 75px;
+}
+.carousel {
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center; /* Centers images vertically if desired */
+    height: 500px; /* Adjust based on your design needs */
+}
+
+.carousel img {
+    width: 100%; /* Full width of the carousel */
+    max-height: 100%; /* Limits height to carousel's height */
+    display: none; /* Hide all images by default */
+    position: absolute;
+    top: 0; /* Align top edge of image with top edge of carousel */
+    left: 0; /* Align left edge of image with left edge of carousel */
+    object-fit: cover; /* This will cover the area, cropping if necessary */
+}
+
+.carousel img.active {
+    display: block; /* Only the active image is visible */
+}
+
+button.prev, button.next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: #ff69b4;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    z-index: 10;
+}
+
+button.prev {
+    left: 10px;
+}
+
+button.next {
+    right: 10px;
+}
+
+button.prev:hover,
+button.next:hover {
+  opacity: 1;
+}
+
+footer {
+  background: #ffc0cb;
+  color: white;
+  text-align: center;
+  
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="number"],
+select,
+textarea {
+  width: 90%;
+  padding: 10px;
+  margin: 8px 0;
+  border: 2px solid #ffc0cb; /* Light pink border */
+}
+
+input[type="submit"] {
+  width: 100%;
+  padding: 10px;
+  background: #ff69b4; /* Brighter pink for buttons */
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+input[type="submit"]:hover {
+  background: #ff1493; /* Deep pink for hover state */
+}
+
+@media (min-width: 768px) {
+  .container {
+    width: 90%;
+  }
+  input[type="text"],
+  input[type="email"],
+  input[type="number"],
+  select,
+  textarea {
+    width: calc(50% - 22px);
+  }
+  input[type="submit"] {
+    width: 50%;
+  }
+ 
+    .hamburger {
+        display: block;
+    }
+    nav {
+        position: absolute;
+        /* background: #ffc0cb; */
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        top: 60px;
+        left: 0;
+    }
+    nav a {
+        display: block;
+        text-align: center;
+        width: 100%;
+    }
+}
+
+
