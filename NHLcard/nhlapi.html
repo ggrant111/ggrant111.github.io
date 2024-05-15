@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>NHL Data Display</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        margin: 20px;
+      }
+      .data-section {
+        margin-top: 20px;
+        padding: 10px;
+        border: 1px solid #ccc;
+      }
+      pre {
+        background-color: #f9f9f9;
+        border: 1px solid #eee;
+        padding: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>NHL Data</h1>
+
+    <div id="currentGames" class="data-section">
+      <h2>Current Games</h2>
+      <pre id="currentGamesData">Loading current games data...</pre>
+    </div>
+
+    <div id="teamInfo" class="data-section">
+      <h2>Team Information</h2>
+      <pre id="teamData">Loading team information...</pre>
+    </div>
+
+    <div id="playerStats" class="data-section">
+      <h2>Player Stats</h2>
+      <pre id="playerStatsData">Loading player stats...</pre>
+    </div>
+
+    <script>
+async function fetchCurrentGameData() {
+    const url = 'https://api-web.nhle.com/v1/schedule/now';
+    try {
+        const response = await fetch(url, { mode: 'no-cors' });
+        if (!response.ok) {
+            throw new Error(`HTTP error! status: ${response.status}`);
+        }
+        const data = await response.json();
+        console.log(data);
+        document.getElementById('currentGamesData').textContent = JSON.stringify(data, null, 2);
+    } catch (error) {
+        document.getElementById('currentGamesData').textContent = 'Failed to load data: ' + error.message;
+    }
+}
+
+async function fetchTeamInformation(teamId) {
+    const url = `https://statsapi.web.nhl.com/api/v1/teams/${teamId}`;
+    try {
+        const response = await fetch(url, { mode: 'no-cors' });
+        if (!response.ok) {
+            throw new Error(`HTTP error! status: ${response.status}`);
+        }
+        const data = await response.json();
+        document.getElementById('teamData').textContent = JSON.stringify(data, null, 2);
+    } catch (error) {
+        document.getElementById('teamData').textContent = 'Failed to load data: ' + error.message;
+    }
+}
+
+async function fetchPlayerStats(playerId) {
+    const url = `https://statsapi.web.nhl.com/api/v1/people/${playerId}/stats?stats=statsSingleSeason&season=20202021`;
+    try {
+        const response = await fetch(url, { mode: 'no-cors' });
+        if (!response.ok) {
+            throw new Error(`HTTP error! status: ${response.status}`);
+        }
+        const data = await response.json();
+        document.getElementById('playerStatsData').textContent = JSON.stringify(data, null, 2);
+    } catch (error) {
+        document.getElementById('playerStatsData').textContent = 'Failed to load data: ' + error.message;
+    }
+}
+
+window.onload = () => {
+    fetchCurrentGameData();
+    // fetchTeamInformation(3);
+    // fetchPlayerStats(8478402);
+};
+
+    </script>
+  </body>
+</html>

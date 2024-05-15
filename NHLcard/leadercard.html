@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Player Cards</title>
+    <style>
+        .player-card {
+            border: 1px solid #ccc;
+            border-radius: 10px;
+            padding: 20px;
+            margin: 10px;
+            width: 300px;
+            text-align: center;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .player-card img {
+            width: 100px;
+            height: 100px;
+        }
+    </style>
+</head>
+<body>
+    <div id="player-cards-container"></div>
+
+    <script>
+        const apiUrl = 'https://api.nhle.com/stats/rest/en/leaders/skaters/points';
+
+        async function fetchPlayerData() {
+            try {
+                const response = await fetch(apiUrl);
+                const data = await response.json();
+                return data.data;
+            } catch (error) {
+                console.error('Error fetching player data:', error);
+            }
+        }
+
+        function createPlayerCard(player) {
+            const playerCard = document.createElement('div');
+            playerCard.className = 'player-card';
+
+            const playerName = document.createElement('h2');
+            playerName.textContent = `${player.player.fullName}`;
+
+            const playerTeam = document.createElement('p');
+            playerTeam.textContent = `Team: ${player.team.fullName}`;
+
+            const playerPosition = document.createElement('p');
+            playerPosition.textContent = `Position: ${player.player.positionCode}`;
+
+            const playerPoints = document.createElement('p');
+            playerPoints.textContent = `Points: ${player.points}`;
+
+            const playerImage = document.createElement('img');
+            playerImage.src = player.team.logos.find(logo => logo.endSeason === 20232024).secureUrl;
+            playerImage.alt = `${player.team.fullName} logo`;
+
+            playerCard.appendChild(playerName);
+            playerCard.appendChild(playerTeam);
+            playerCard.appendChild(playerPosition);
+            playerCard.appendChild(playerPoints);
+            playerCard.appendChild(playerImage);
+
+            return playerCard;
+        }
+
+        async function displayPlayerCards() {
+            const playerData = await fetchPlayerData();
+            const playerCardsContainer = document.getElementById('player-cards-container');
+
+            playerData.forEach(player => {
+                const playerCard = createPlayerCard(player);
+                playerCardsContainer.appendChild(playerCard);
+            });
+        }
+
+        displayPlayerCards();
+    </script>
+</body>
+</html>
