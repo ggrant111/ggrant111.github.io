@@ -201,3 +201,16 @@ form input, form textarea, form button {
     display: block;
     margin: 10px 0;
 }
+
+
+/* Media query for smaller screens */
+@media (max-width: 480px) {
+    .form-container {
+        width: 100%;
+        right: -100%; /* Adjust to hide form offscreen */
+    }
+
+    .form-container.show {
+        right: 0; /* Show form on smaller screens */
+    }
+}

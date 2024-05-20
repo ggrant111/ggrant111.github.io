@@ -75,11 +75,13 @@ document.addEventListener('DOMContentLoaded', () => {
                 saveMilestone(milestone);
                 renderMilestones();
                 form.reset();
+                formContainer.classList.remove('show'); // Hide the form container
             });
         } else {
             saveMilestone(milestone);
             renderMilestones();
             form.reset();
+            formContainer.classList.remove('show'); // Hide the form container
         }
     }
 
