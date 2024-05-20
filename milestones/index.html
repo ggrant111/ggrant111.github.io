@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Milestone Timeline</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBB33woMDsBS_Q2AE0wBLneUfZ-F3S-w14&libraries=places"></script>
+</head>
+<body>
+    <nav class="navbar">
+        <ul>
+            <li><a href="#" id="navAccount">Account</a></li>
+            <li><a href="#" id="navAddMilestone">Add Milestone</a></li>
+            <li><a href="#" id="navFriendsFamily">Friends & Family</a></li>
+            <li><a href="#" id="navSlideshow">Slideshow</a></li>
+            <li><a href="#" id="navSettings">Settings</a></li>
+            <li><a href="#" id="navHelp">Help</a></li>
+        </ul>
+    </nav>
+    <div class="container">
+        <h1>Milestone Timeline</h1>
+        <div class="timeline-container">
+            <div id="timeline" class="timeline"></div>
+        </div>
+        <div id="map" class="map"></div>
+    </div>
+
+    <!-- Milestone Form (Hidden initially) -->
+    <div id="milestoneFormContainer" class="form-container">
+        <form id="milestoneForm">
+            <input type="text" id="title" placeholder="Title" required>
+            <textarea id="description" placeholder="Description" required></textarea>
+            <input type="date" id="date" required>
+            <input type="text" id="location" placeholder="Location" required>
+            <input type="file" id="media" accept="image/*,video/*" multiple>
+            <button type="submit">Add Milestone</button>
+        </form>
+    </div>
+
+    <!-- Modal -->
+    <div id="modal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <button id="editButton">Edit</button>
+            <form id="editForm">
+                <input type="text" id="editTitle" required>
+                <textarea id="editDescription" required></textarea>
+                <input type="date" id="editDate" required>
+                <input type="text" id="editLocation" required>
+                <input type="file" id="editMedia" accept="image/*,video/*" multiple>
+                <button type="submit">Update Milestone</button>
+            </form>
+            <h2 id="modalTitle"></h2>
+            <p id="modalDescription"></p>
+            <p id="modalDate"></p>
+            <p id="modalLocation"></p>
+            <div id="modalMedia"></div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
