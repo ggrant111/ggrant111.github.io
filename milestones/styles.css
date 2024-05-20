@@ -206,7 +206,7 @@ form input, form textarea, form button {
 /* Media query for smaller screens */
 @media (max-width: 480px) {
     .form-container {
-        width: 100%;
+        width: 90%;
         right: -115%; /* Adjust to hide form offscreen */
     }
 
