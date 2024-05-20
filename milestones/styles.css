@@ -100,8 +100,8 @@ form input, form textarea, form button {
 .map {
     height: 500px; /* Adjust the height as needed */
     width: 100%;
-    max-width: 800px;
-    margin-top: 20px;
+    
+    margin: auto;
 }
 
 .custom-marker {
