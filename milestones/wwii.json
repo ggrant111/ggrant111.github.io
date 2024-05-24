@@ -1,0 +1,230 @@
+[
+    {
+        "title": "Invasion of Poland",
+        "description": "Germany invades Poland, marking the start of World War II.",
+        "date": "1939-09-01",
+        "location": "Warsaw, Poland",
+        "media": [
+            {
+                "src": "https://example.com/invasion_of_poland.jpg",
+                "type": "image/jpeg"
+            }
+        ]
+    },
+    {
+        "title": "Battle of Britain",
+        "description": "The Royal Air Force defends the United Kingdom against large-scale attacks by Nazi Germany's air force.",
+        "date": "1940-07-10",
+        "location": "London, United Kingdom",
+        "media": [
+            {
+                "src": "https://example.com/battle_of_britain.jpg",
+                "type": "image/jpeg"
+            }
+        ]
+    },
+    {
+        "title": "Pearl Harbor Attack",
+        "description": "Japan launches a surprise military strike on the United States naval base at Pearl Harbor, leading the U.S. to enter World War II.",
+        "date": "1941-12-07",
+        "location": "Pearl Harbor, Hawaii, USA",
+        "media": [
+            {
+                "src": "https://example.com/pearl_harbor_attack.jpg",
+                "type": "image/jpeg"
+            }
+        ]
+    },
+    {
+        "title": "Battle of Midway",
+        "description": "A decisive naval battle in the Pacific Theater, which turned the tide in favor of the Allies.",
+        "date": "1942-06-04",
+        "location": "Midway Atoll, Pacific Ocean",
+        "media": [
+            {
+                "src": "https://example.com/battle_of_midway.jpg",
+                "type": "image/jpeg"
+            }
+        ]
+    },
+    {
+        "title": "Battle of Stalingrad",
+        "description": "One of the deadliest battles in history, where the Soviet Union defeated Nazi Germany's Sixth Army.",
+        "date": "1942-08-23",
+        "location": "Stalingrad, Soviet Union (now Volgograd, Russia)",
+        "media": [
+            {
+                "src": "https://example.com/battle_of_stalingrad.jpg",
+                "type": "image/jpeg"
+            }
+        ]
+    },
+    {
+        "title": "D-Day Invasion",
+        "description": "Allied forces land on the beaches of Normandy, France, marking the start of the liberation of Western Europe.",
+        "date": "1944-06-06",
+        "location": "Normandy, France",
+        "media": [
+            {
+                "src": "https://example.com/d_day.jpg",
+                "type": "image/jpeg"
+            }
+        ]
+    },
+    {
+        "title": "Battle of the Bulge",
+        "description": "The last major German offensive campaign on the Western Front, which ultimately failed and depleted German resources.",
+        "date": "1944-12-16",
+        "location": "Ardennes, Belgium",
+        "media": [
+            {
+                "src": "https://example.com/battle_of_the_bulge.jpg",
+                "type": "image/jpeg"
+            }
+        ]
+    },
+    {
+        "title": "Yalta Conference",
+        "description": "Meeting of the Allied leaders Franklin D. Roosevelt, Winston Churchill, and Joseph Stalin to discuss the post-war reorganization of Europe.",
+        "date": "1945-02-04",
+        "location": "Yalta, Crimea",
+        "media": [
+            {
+                "src": "https://example.com/yalta_conference.jpg",
+                "type": "image/jpeg"
+            }
+        ]
+    },
+    {
+        "title": "VE Day",
+        "description": "Victory in Europe Day, marking the formal acceptance of Nazi Germany's unconditional surrender.",
+        "date": "1945-05-08",
+        "location": "Berlin, Germany",
+        "media": [
+            {
+                "src": "https://example.com/ve_day.jpg",
+                "type": "image/jpeg"
+            }
+        ]
+    },
+    {
+        "title": "Atomic Bombing of Hiroshima",
+        "description": "The United States drops the first atomic bomb on Hiroshima, Japan, leading to the end of World War II.",
+        "date": "1945-08-06",
+        "location": "Hiroshima, Japan",
+        "media": [
+            {
+                "src": "https://example.com/hiroshima.jpg",
+                "type": "image/jpeg"
+            }
+        ]
+    },
+    {
+        "title": "Atomic Bombing of Nagasaki",
+        "description": "The United States drops the second atomic bomb on Nagasaki, Japan, leading to Japan's surrender.",
+        "date": "1945-08-09",
+        "location": "Nagasaki, Japan",
+        "media": [
+            {
+                "src": "https://example.com/nagasaki.jpg",
+                "type": "image/jpeg"
+            }
+        ]
+    },
+    {
+        "title": "VJ Day",
+        "description": "Victory over Japan Day, marking the end of World War II with Japan's formal surrender.",
+        "date": "1945-09-02",
+        "location": "Tokyo Bay, Japan",
+        "media": [
+            {
+                "src": "https://example.com/vj_day.jpg",
+                "type": "image/jpeg"
+            }
+        ]
+    },
+    {
+        "title": "Battle of El Alamein",
+        "description": "A major turning point in the Western Desert Campaign, where Allied forces defeated the Axis powers in North Africa.",
+        "date": "1942-10-23",
+        "location": "El Alamein, Egypt",
+        "media": [
+            {
+                "src": "https://example.com/el_alamein.jpg",
+                "type": "image/jpeg"
+            }
+        ]
+    },
+    {
+        "title": "Battle of Kursk",
+        "description": "The largest tank battle in history, resulting in a decisive Soviet victory over Nazi Germany.",
+        "date": "1943-07-05",
+        "location": "Kursk, Soviet Union (now Russia)",
+        "media": [
+            {
+                "src": "https://example.com/battle_of_kursk.jpg",
+                "type": "image/jpeg"
+            }
+        ]
+    },
+    {
+        "title": "Battle of Iwo Jima",
+        "description": "A major battle in which U.S. Marines captured the island of Iwo Jima from the Imperial Japanese Army.",
+        "date": "1945-02-19",
+        "location": "Iwo Jima, Japan",
+        "media": [
+            {
+                "src": "https://example.com/iwo_jima.jpg",
+                "type": "image/jpeg"
+            }
+        ]
+    },
+    {
+        "title": "Battle of Okinawa",
+        "description": "The largest amphibious assault in the Pacific War during World War II, resulting in an Allied victory.",
+        "date": "1945-04-01",
+        "location": "Okinawa, Japan",
+        "media": [
+            {
+                "src": "https://example.com/okinawa.jpg",
+                "type": "image/jpeg"
+            }
+        ]
+    },
+    {
+        "title": "Liberation of Paris",
+        "description": "The French Resistance, with the help of Allied forces, liberated Paris from German occupation.",
+        "date": "1944-08-25",
+        "location": "Paris, France",
+        "media": [
+            {
+                "src": "https://example.com/liberation_of_paris.jpg",
+                "type": "image/jpeg"
+            }
+        ]
+    },
+    {
+        "title": "Tehran Conference",
+        "description": "Meeting of Joseph Stalin, Franklin D. Roosevelt, and Winston Churchill in Tehran to discuss military strategy and post-war Europe.",
+        "date": "1943-11-28",
+        "location": "Tehran, Iran",
+        "media": [
+            {
+                "src": "https://example.com/tehran_conference.jpg",
+                "type": "image/jpeg"
+            }
+        ]
+    },
+    {
+        "title": "Manhattan Project",
+        "description": "A research and development project during World War II that produced the first nuclear weapons.",
+        "date": "1942-12-02",
+        "location": "Los Alamos, New Mexico, USA",
+        "media": [
+            {
+                "src": "https://example.com/manhattan_project.jpg",
+                "type": "image/jpeg"
+            }
+        ]
+    }
+]

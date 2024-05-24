@@ -8,10 +8,15 @@ document.addEventListener('DOMContentLoaded', () => {
     const editForm = document.getElementById('editForm');
     const navAddMilestone = document.getElementById('navAddMilestone');
     const navSlideshow = document.getElementById('navSlideshow');
+    const navTogglePolyline = document.getElementById('navTogglePolyline');
+    const jsonUpload = document.getElementById('jsonUpload');
+    const navUploadJson = document.getElementById('navUploadJson');
     let map;
     let markers = [];
     let currentEditIndex = null;
     let slideshowInterval = null;
+    let polyline;
+    let polylineVisible = true;
 
     form.addEventListener('submit', addMilestone);
     editForm.addEventListener('submit', updateMilestone);
@@ -24,21 +29,29 @@ document.addEventListener('DOMContentLoaded', () => {
         formContainer.classList.toggle('show');
     });
     navSlideshow.addEventListener('click', startSlideshow);
+    navTogglePolyline.addEventListener('click', togglePolyline);
+    navUploadJson.addEventListener('click', () => jsonUpload.click());
+    jsonUpload.addEventListener('change', handleJsonUpload);
 
     async function initMap() {
         // The default location
         const position = { lat: 0, lng: 0 };
-        // Request needed libraries.
-        //@ts-ignore
-        const { Map } = await google.maps.importLibrary("maps");
-        const { Marker } = await google.maps.importLibrary("marker");
-
+        
         // The map, centered at the default location
-        map = new Map(document.getElementById("map"), {
+        map = new google.maps.Map(document.getElementById("map"), {
             zoom: 2,
-            center: position,
-            mapId: "YOUR_MAP_ID" // Replace with your valid Map ID
+            center: position
         });
+
+        polyline = new google.maps.Polyline({
+            path: [],
+            geodesic: true,
+            strokeColor: '#FF0000',
+            strokeOpacity: 1.0,
+            strokeWeight: 2
+        });
+
+        polyline.setMap(map);
 
         renderMilestones();
     }
@@ -96,6 +109,7 @@ document.addEventListener('DOMContentLoaded', () => {
         const milestones = JSON.parse(localStorage.getItem('milestones')) || [];
         timeline.innerHTML = '';
         clearMarkers();
+        polyline.setPath([]); // Clear existing polyline path
         milestones.forEach((milestone, index) => {
             const milestoneElement = document.createElement('div');
             milestoneElement.classList.add('milestone');
@@ -236,15 +250,13 @@ document.addEventListener('DOMContentLoaded', () => {
         slideshowInterval = setInterval(showNextMilestone, 5000); // Show next milestone every 5 seconds
     }
 
-    async function geocodeLocation(milestone, index) {
+    function geocodeLocation(milestone, index) {
         const geocoder = new google.maps.Geocoder();
-        geocoder.geocode({ address: milestone.location }, async (results, status) => {
+        geocoder.geocode({ address: milestone.location }, (results, status) => {
             if (status === 'OK') {
                 const position = results[0].geometry.location;
-                //@ts-ignore
-                const { Marker } = await google.maps.importLibrary("marker");
 
-                const marker = new Marker({
+                const marker = new google.maps.Marker({
                     map: map,
                     position: position,
                     title: `Milestone ${index + 1}`
@@ -255,6 +267,10 @@ document.addEventListener('DOMContentLoaded', () => {
                 });
 
                 markers.push(marker);
+
+                // Add position to the polyline path
+                const path = polyline.getPath();
+                path.push(position);
 
                 // Adjust map bounds to include the new marker
                 const bounds = new google.maps.LatLngBounds();
@@ -285,6 +301,28 @@ document.addEventListener('DOMContentLoaded', () => {
         markers.forEach(marker => marker.setMap(null));
         markers = [];
     }
+
+    function handleJsonUpload(event) {
+        const file = event.target.files[0];
+        if (file) {
+            const reader = new FileReader();
+            reader.onload = function(e) {
+                const data = JSON.parse(e.target.result);
+                data.forEach(item => {
+                    saveMilestone(item);
+                });
+                renderMilestones();
+            };
+            reader.readAsText(file);
+        }
+    }
+
+    function togglePolyline() {
+        polylineVisible = !polylineVisible;
+        polyline.setMap(polylineVisible ? map : null);
+    }
+
+    window.initMap = initMap; // Ensure the initMap function is in the global scope
 
     initMap();
 });

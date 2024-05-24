@@ -3,9 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Milestone Timeline</title>
+    <title>Milestones</title>
     <link rel="stylesheet" href="styles.css">
-    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBB33woMDsBS_Q2AE0wBLneUfZ-F3S-w14&libraries=places"></script>
+    <script defer src="script.js"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBB33woMDsBS_Q2AE0wBLneUfZ-F3S-w14&callback=initMap" async defer></script>
 </head>
 <body>
     <nav class="navbar">
@@ -16,8 +17,27 @@
             <li><a href="#" id="navSlideshow">Slideshow</a></li>
             <li><a href="#" id="navSettings">Settings</a></li>
             <li><a href="#" id="navHelp">Help</a></li>
+            <input type="file" id="jsonUpload" accept=".json" style="display: none;">
+            <button id="navUploadJson">Upload JSON</button>
+            <button id="navTogglePolyline">Toggle Polyline</button>
         </ul>
     </nav>
+    <div id="milestoneFormContainer" class="form-container">
+        <form id="milestoneForm">
+            <h2>Add Milestone</h2>
+            <label for="title">Title:</label>
+            <input type="text" id="title" required>
+            <label for="description">Description:</label>
+            <textarea id="description" required></textarea>
+            <label for="date">Date:</label>
+            <input type="date" id="date" required>
+            <label for="location">Location:</label>
+            <input type="text" id="location" required>
+            <label for="media">Media:</label>
+            <input type="file" id="media" multiple>
+            <button type="submit">Add Milestone</button>
+        </form>
+    </div>
     <div class="container">
         <h1>Milestone Timeline</h1>
         <div class="timeline-container">
@@ -25,40 +45,29 @@
         </div>
         <div id="map" class="map"></div>
     </div>
-
-    <!-- Milestone Form (Hidden initially) -->
-    <div id="milestoneFormContainer" class="form-container">
-        <form id="milestoneForm">
-            <input type="text" id="title" placeholder="Title" required>
-            <textarea id="description" placeholder="Description" required></textarea>
-            <input type="date" id="date" required>
-            <input type="text" id="location" placeholder="Location" required>
-            <input type="file" id="media" accept="image/*,video/*" multiple>
-            <button type="submit">Add Milestone</button>
-        </form>
-    </div>
-
-    <!-- Modal -->
     <div id="modal" class="modal">
         <div class="modal-content">
             <span class="close">&times;</span>
-            <button id="editButton">Edit</button>
-            <form id="editForm">
-                <input type="text" id="editTitle" required>
-                <textarea id="editDescription" required></textarea>
-                <input type="date" id="editDate" required>
-                <input type="text" id="editLocation" required>
-                <input type="file" id="editMedia" accept="image/*,video/*" multiple>
-                <button type="submit">Update Milestone</button>
-            </form>
             <h2 id="modalTitle"></h2>
             <p id="modalDescription"></p>
             <p id="modalDate"></p>
             <p id="modalLocation"></p>
             <div id="modalMedia"></div>
+            <button id="editButton">Edit</button>
+            <form id="editForm">
+                <label for="editTitle">Title:</label>
+                <input type="text" id="editTitle">
+                <label for="editDescription">Description:</label>
+                <textarea id="editDescription"></textarea>
+                <label for="editDate">Date:</label>
+                <input type="date" id="editDate">
+                <label for="editLocation">Location:</label>
+                <input type="text" id="editLocation">
+                <label for="editMedia">Media:</label>
+                <input type="file" id="editMedia" multiple>
+                <button type="submit">Save Changes</button>
+            </form>
         </div>
     </div>
-
-    <script src="script.js"></script>
 </body>
 </html>

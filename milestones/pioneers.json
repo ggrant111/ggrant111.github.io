@@ -1,0 +1,134 @@
+[
+    {
+        "title": "First Vision",
+        "description": "Joseph Smith reports his First Vision, where he claims to have seen God the Father and Jesus Christ.",
+        "date": "1820-01-01",
+        "location": "Palmyra, New York, USA",
+        "media": [
+            {
+                "src": "https://example.com/first_vision.jpg",
+                "type": "image/jpeg"
+            }
+        ]
+    },
+    {
+        "title": "Organization of the Church",
+        "description": "Joseph Smith officially organizes the Church of Christ, later known as The Church of Jesus Christ of Latter-day Saints.",
+        "date": "1830-04-06",
+        "location": "Fayette, New York, USA",
+        "media": [
+            {
+                "src": "https://example.com/organization_of_church.jpg",
+                "type": "image/jpeg"
+            }
+        ]
+    },
+    {
+        "title": "Kirtland Temple Dedication",
+        "description": "The first temple of The Church of Jesus Christ of Latter-day Saints is dedicated in Kirtland, Ohio.",
+        "date": "1836-03-27",
+        "location": "Kirtland, Ohio, USA",
+        "media": [
+            {
+                "src": "https://example.com/kirtland_temple.jpg",
+                "type": "image/jpeg"
+            }
+        ]
+    },
+    {
+        "title": "Expulsion from Missouri",
+        "description": "Mormon settlers are expelled from Missouri due to the Missouri Executive Order 44, also known as the 'Extermination Order.'",
+        "date": "1838-10-27",
+        "location": "Missouri, USA",
+        "media": [
+            {
+                "src": "https://example.com/expulsion_missouri.jpg",
+                "type": "image/jpeg"
+            }
+        ]
+    },
+    {
+        "title": "Martyrdom of Joseph Smith",
+        "description": "Joseph Smith and his brother Hyrum Smith are killed by a mob in Carthage, Illinois.",
+        "date": "1844-06-27",
+        "location": "Carthage, Illinois, USA",
+        "media": [
+            {
+                "src": "https://example.com/martyrdom.jpg",
+                "type": "image/jpeg"
+            }
+        ]
+    },
+    {
+        "title": "Nauvoo Exodus",
+        "description": "The Mormon pioneers begin their exodus from Nauvoo, Illinois, heading west to find a new home.",
+        "date": "1846-02-04",
+        "location": "Nauvoo, Illinois, USA",
+        "media": [
+            {
+                "src": "https://example.com/nauvoo_exodus.jpg",
+                "type": "image/jpeg"
+            }
+        ]
+    },
+    {
+        "title": "Winter Quarters",
+        "description": "Mormon pioneers establish Winter Quarters as a temporary settlement near Omaha, Nebraska.",
+        "date": "1846-12-01",
+        "location": "Winter Quarters, Nebraska, USA",
+        "media": [
+            {
+                "src": "https://example.com/winter_quarters.jpg",
+                "type": "image/jpeg"
+            }
+        ]
+    },
+    {
+        "title": "Brigham Young Leads Pioneer Company",
+        "description": "Brigham Young leads the first pioneer company, known as the vanguard company, to the Salt Lake Valley.",
+        "date": "1847-04-16",
+        "location": "Winter Quarters, Nebraska, USA",
+        "media": [
+            {
+                "src": "https://example.com/brigham_young.jpg",
+                "type": "image/jpeg"
+            }
+        ]
+    },
+    {
+        "title": "Pioneers Enter Salt Lake Valley",
+        "description": "The first Mormon pioneers enter the Salt Lake Valley, establishing a new home for the Church.",
+        "date": "1847-07-24",
+        "location": "Salt Lake Valley, Utah, USA",
+        "media": [
+            {
+                "src": "https://example.com/salt_lake_valley.jpg",
+                "type": "image/jpeg"
+            }
+        ]
+    },
+    {
+        "title": "Handcart Companies",
+        "description": "Several groups of Mormon pioneers travel to the Salt Lake Valley using handcarts, facing significant hardships along the way.",
+        "date": "1856-07-28",
+        "location": "Iowa City, Iowa, USA",
+        "media": [
+            {
+                "src": "https://example.com/handcart_companies.jpg",
+                "type": "image/jpeg"
+            }
+        ]
+    },
+    {
+        "title": "Utah War",
+        "description": "A confrontation between Mormon settlers in Utah Territory and the United States government, resolved without significant bloodshed.",
+        "date": "1857-05-01",
+        "location": "Utah Territory, USA",
+        "media": [
+            {
+                "src": "https://example.com/utah_war.jpg",
+                "type": "image/jpeg"
+            }
+        ]
+    }
+]

@@ -1,0 +1,254 @@
+[
+    {
+        "title": "First Dinosaur Fossil Identified",
+        "description": "The first dinosaur fossil, later named Megalosaurus, was scientifically described by William Buckland.",
+        "date": "1824-02-01",
+        "location": "Stonesfield, Oxfordshire, England",
+        "media": [
+            {
+                "src": "https://example.com/megalosaurus.jpg",
+                "type": "image/jpeg"
+            }
+        ]
+    },
+    {
+        "title": "Iguanodon Discovery",
+        "description": "Gideon Mantell discovers teeth and bones of the dinosaur Iguanodon.",
+        "date": "1822-01-01",
+        "location": "Sussex, England",
+        "media": [
+            {
+                "src": "https://example.com/iguanodon.jpg",
+                "type": "image/jpeg"
+            }
+        ]
+    },
+    {
+        "title": "Hylaeosaurus Discovery",
+        "description": "Gideon Mantell discovers Hylaeosaurus, one of the first three dinosaurs ever found.",
+        "date": "1832-01-01",
+        "location": "Sussex, England",
+        "media": [
+            {
+                "src": "https://example.com/hylaeosaurus.jpg",
+                "type": "image/jpeg"
+            }
+        ]
+    },
+    {
+        "title": "Hadrosaurus Discovery",
+        "description": "The first nearly complete dinosaur skeleton in North America is discovered and later named Hadrosaurus.",
+        "date": "1858-01-01",
+        "location": "Haddonfield, New Jersey, USA",
+        "media": [
+            {
+                "src": "https://example.com/hadrosaurus.jpg",
+                "type": "image/jpeg"
+            }
+        ]
+    },
+    {
+        "title": "Archaeopteryx Discovery",
+        "description": "A fossil of Archaeopteryx, showing features of both dinosaurs and birds, is discovered.",
+        "date": "1861-01-01",
+        "location": "Solnhofen, Germany",
+        "media": [
+            {
+                "src": "https://example.com/archaeopteryx.jpg",
+                "type": "image/jpeg"
+            }
+        ]
+    },
+    {
+        "title": "Stegosaurus Discovery",
+        "description": "Othniel Charles Marsh describes and names the dinosaur Stegosaurus.",
+        "date": "1877-01-01",
+        "location": "Morrison, Colorado, USA",
+        "media": [
+            {
+                "src": "https://example.com/stegosaurus.jpg",
+                "type": "image/jpeg"
+            }
+        ]
+    },
+    {
+        "title": "Diplodocus Discovery",
+        "description": "The dinosaur Diplodocus is discovered by Samuel Wendell Williston and later named by Othniel Charles Marsh.",
+        "date": "1878-01-01",
+        "location": "Colorado, USA",
+        "media": [
+            {
+                "src": "https://example.com/diplodocus.jpg",
+                "type": "image/jpeg"
+            }
+        ]
+    },
+    {
+        "title": "Triceratops Discovery",
+        "description": "The first fossils of Triceratops are discovered by John Bell Hatcher.",
+        "date": "1887-01-01",
+        "location": "Denver, Colorado, USA",
+        "media": [
+            {
+                "src": "https://example.com/triceratops.jpg",
+                "type": "image/jpeg"
+            }
+        ]
+    },
+    {
+        "title": "Tyrannosaurus Rex Discovery",
+        "description": "The first fossils of Tyrannosaurus Rex are discovered by Barnum Brown.",
+        "date": "1902-01-01",
+        "location": "Hell Creek, Montana, USA",
+        "media": [
+            {
+                "src": "https://example.com/tyrannosaurus_rex.jpg",
+                "type": "image/jpeg"
+            }
+        ]
+    },
+    {
+        "title": "Spinosaurus Discovery",
+        "description": "The first fossils of Spinosaurus are discovered by Richard Markgraf.",
+        "date": "1912-01-01",
+        "location": "Bahariya Oasis, Egypt",
+        "media": [
+            {
+                "src": "https://example.com/spinosaurus.jpg",
+                "type": "image/jpeg"
+            }
+        ]
+    },
+    {
+        "title": "Velociraptor Discovery",
+        "description": "The first fossils of Velociraptor are discovered by Peter Kaisen.",
+        "date": "1923-01-01",
+        "location": "Mongolia",
+        "media": [
+            {
+                "src": "https://example.com/velociraptor.jpg",
+                "type": "image/jpeg"
+            }
+        ]
+    },
+    {
+        "title": "Argentinosaurus Discovery",
+        "description": "The fossils of Argentinosaurus, one of the largest known land animals, are discovered.",
+        "date": "1987-01-01",
+        "location": "Neuquén Province, Argentina",
+        "media": [
+            {
+                "src": "https://example.com/argentinosaurus.jpg",
+                "type": "image/jpeg"
+            }
+        ]
+    },
+    {
+        "title": "Allosaurus Discovery",
+        "description": "The first fossils of Allosaurus are discovered by Ferdinand V. Hayden.",
+        "date": "1877-01-01",
+        "location": "Garden Park, Colorado, USA",
+        "media": [
+            {
+                "src": "https://example.com/allosaurus.jpg",
+                "type": "image/jpeg"
+            }
+        ]
+    },
+    {
+        "title": "Apatosaurus Discovery",
+        "description": "The first fossils of Apatosaurus, initially named Brontosaurus, are discovered by Othniel Charles Marsh.",
+        "date": "1877-01-01",
+        "location": "Morrison, Colorado, USA",
+        "media": [
+            {
+                "src": "https://example.com/apatosaurus.jpg",
+                "type": "image/jpeg"
+            }
+        ]
+    },
+    {
+        "title": "Brachiosaurus Discovery",
+        "description": "The first fossils of Brachiosaurus are discovered by Elmer S. Riggs.",
+        "date": "1900-01-01",
+        "location": "Grand River Canyon, Colorado, USA",
+        "media": [
+            {
+                "src": "https://example.com/brachiosaurus.jpg",
+                "type": "image/jpeg"
+            }
+        ]
+    },
+    {
+        "title": "Deinonychus Discovery",
+        "description": "The first fossils of Deinonychus are discovered by Barnum Brown.",
+        "date": "1931-01-01",
+        "location": "Cloverly Formation, Montana, USA",
+        "media": [
+            {
+                "src": "https://example.com/deinonychus.jpg",
+                "type": "image/jpeg"
+            }
+        ]
+    },
+    {
+        "title": "Giganotosaurus Discovery",
+        "description": "The first fossils of Giganotosaurus, one of the largest known terrestrial carnivores, are discovered.",
+        "date": "1993-01-01",
+        "location": "Patagonia, Argentina",
+        "media": [
+            {
+                "src": "https://example.com/giganotosaurus.jpg",
+                "type": "image/jpeg"
+            }
+        ]
+    },
+    {
+        "title": "Ankylosaurus Discovery",
+        "description": "The first fossils of Ankylosaurus are discovered by Barnum Brown.",
+        "date": "1908-01-01",
+        "location": "Hell Creek, Montana, USA",
+        "media": [
+            {
+                "src": "https://example.com/ankylosaurus.jpg",
+                "type": "image/jpeg"
+            }
+        ]
+    },
+    {
+        "title": "Pachycephalosaurus Discovery",
+        "description": "The first fossils of Pachycephalosaurus are discovered by Charles W. Gilmore.",
+        "date": "1938-01-01",
+        "location": "Lance Formation, Wyoming, USA",
+        "media": [
+            {
+                "src": "https://example.com/pachycephalosaurus.jpg",
+                "type": "image/jpeg"
+            }
+        ]
+    },
+    {
+        "title": "Protoceratops Discovery",
+        "description": "The first fossils of Protoceratops are discovered by Roy Chapman Andrews.",
+        "date": "1922-01-01",
+        "location": "Mongolia",
+        "media": [
+            {
+                "src": "https://example.com/protoceratops.jpg",
+                "type": "image/jpeg"
+            }
+        ]
+    },
+    {
+        "title": "Psittacosaurus Discovery",
+        "description": "The first fossils of Psittacosaurus are discovered by Henry Fairfield Osborn.",
+        "date": "1923-01-01",
+        "location": "Inner Mongolia, China",
+        "media": [
+            {
+                "src": "https://example.com/psittacosaurus.jpg",
+                "type": "image/jpeg"
+            }
+        ]
+    }
+]

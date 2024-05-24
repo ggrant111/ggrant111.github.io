@@ -1,0 +1,182 @@
+[
+    {
+        "title": "Arrival of the Mayflower",
+        "description": "The Mayflower arrived at Cape Cod in November 1620, bringing the first Pilgrims to New England.",
+        "date": "1620-11-21",
+        "location": "Cape Cod, Massachusetts",
+        "media": [
+            {
+                "src": "https://example.com/mayflower.jpg",
+                "type": "image/jpeg"
+            }
+        ]
+    },
+    {
+        "title": "Declaration of Independence",
+        "description": "The Declaration of Independence was adopted by the Continental Congress on July 4, 1776.",
+        "date": "1776-07-04",
+        "location": "Philadelphia, Pennsylvania",
+        "media": [
+            {
+                "src": "https://example.com/declaration_of_independence.jpg",
+                "type": "image/jpeg"
+            }
+        ]
+    },
+    {
+        "title": "Louisiana Purchase",
+        "description": "The United States purchased the Louisiana Territory from France in 1803, doubling the size of the nation.",
+        "date": "1803-04-30",
+        "location": "Louisiana Territory",
+        "media": [
+            {
+                "src": "https://example.com/louisiana_purchase.jpg",
+                "type": "image/jpeg"
+            }
+        ]
+    },
+    {
+        "title": "Emancipation Proclamation",
+        "description": "President Abraham Lincoln issued the Emancipation Proclamation on January 1, 1863, declaring all slaves in Confederate territory free.",
+        "date": "1863-01-01",
+        "location": "Washington, D.C.",
+        "media": [
+            {
+                "src": "https://example.com/emancipation_proclamation.jpg",
+                "type": "image/jpeg"
+            }
+        ]
+    },
+    {
+        "title": "Completion of the Transcontinental Railroad",
+        "description": "The First Transcontinental Railroad was completed in 1869, connecting the Atlantic and Pacific coasts.",
+        "date": "1869-05-10",
+        "location": "Promontory Summit, Utah",
+        "media": [
+            {
+                "src": "https://example.com/transcontinental_railroad.jpg",
+                "type": "image/jpeg"
+            }
+        ]
+    },
+    {
+        "title": "Women's Suffrage",
+        "description": "The 19th Amendment to the U.S. Constitution, granting women the right to vote, was ratified on August 18, 1920.",
+        "date": "1920-08-18",
+        "location": "United States",
+        "media": [
+            {
+                "src": "https://example.com/womens_suffrage.jpg",
+                "type": "image/jpeg"
+            }
+        ]
+    },
+    {
+        "title": "Great Depression",
+        "description": "The Great Depression was the worst economic downturn in the history of the industrialized world, lasting from 1929 to 1939.",
+        "date": "1929-10-29",
+        "location": "United States",
+        "media": [
+            {
+                "src": "https://example.com/great_depression.jpg",
+                "type": "image/jpeg"
+            }
+        ]
+    },
+    {
+        "title": "Attack on Pearl Harbor",
+        "description": "The Japanese attack on Pearl Harbor on December 7, 1941, led the United States to enter World War II.",
+        "date": "1941-12-07",
+        "location": "Pearl Harbor, Hawaii",
+        "media": [
+            {
+                "src": "https://example.com/pearl_harbor.jpg",
+                "type": "image/jpeg"
+            }
+        ]
+    },
+    {
+        "title": "D-Day Invasion",
+        "description": "On June 6, 1944, Allied forces landed on the beaches of Normandy, France, in the largest seaborne invasion in history.",
+        "date": "1944-06-06",
+        "location": "Normandy, France",
+        "media": [
+            {
+                "src": "https://example.com/d_day.jpg",
+                "type": "image/jpeg"
+            }
+        ]
+    },
+    {
+        "title": "Civil Rights Act of 1964",
+        "description": "The Civil Rights Act of 1964 was signed into law, prohibiting discrimination based on race, color, religion, sex, or national origin.",
+        "date": "1964-07-02",
+        "location": "Washington, D.C.",
+        "media": [
+            {
+                "src": "https://example.com/civil_rights_act.jpg",
+                "type": "image/jpeg"
+            }
+        ]
+    },
+    {
+        "title": "Apollo 11 Moon Landing",
+        "description": "Apollo 11 was the first manned mission to land on the Moon, on July 20, 1969.",
+        "date": "1969-07-20",
+        "location": "Moon",
+        "media": [
+            {
+                "src": "https://example.com/apollo_11.jpg",
+                "type": "image/jpeg"
+            }
+        ]
+    },
+    {
+        "title": "Watergate Scandal",
+        "description": "The Watergate scandal led to the resignation of President Richard Nixon on August 8, 1974.",
+        "date": "1974-08-08",
+        "location": "Washington, D.C.",
+        "media": [
+            {
+                "src": "https://example.com/watergate.jpg",
+                "type": "image/jpeg"
+            }
+        ]
+    },
+    {
+        "title": "Fall of the Berlin Wall",
+        "description": "The Berlin Wall fell on November 9, 1989, leading to the reunification of Germany and the end of the Cold War.",
+        "date": "1989-11-09",
+        "location": "Berlin, Germany",
+        "media": [
+            {
+                "src": "https://example.com/berlin_wall.jpg",
+                "type": "image/jpeg"
+            }
+        ]
+    },
+    {
+        "title": "September 11 Attacks",
+        "description": "Terrorist attacks on September 11, 2001, resulted in the destruction of the World Trade Center and significant loss of life.",
+        "date": "2001-09-11",
+        "location": "New York City, New York",
+        "media": [
+            {
+                "src": "https://example.com/september_11.jpg",
+                "type": "image/jpeg"
+            }
+        ]
+    },
+    {
+        "title": "First African-American President",
+        "description": "Barack Obama was inaugurated as the 44th President of the United States on January 20, 2009, becoming the first African-American president.",
+        "date": "2009-01-20",
+        "location": "Washington, D.C.",
+        "media": [
+            {
+                "src": "https://example.com/obama_inauguration.jpg",
+                "type": "image/jpeg"
+            }
+        ]
+    }
+]

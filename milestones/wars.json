@@ -1,0 +1,74 @@
+[
+    {
+        "title": "Napoleonic Wars",
+        "description": "A series of major conflicts pitting the French Empire led by Napoleon Bonaparte against a varying array of European coalitions.",
+        "date": "1803-05-18",
+        "location": "Europe",
+        "media": [
+            {
+                "src": "https://example.com/napoleonic_wars.jpg",
+                "type": "image/jpeg"
+            }
+        ]
+    },
+    {
+        "title": "American Civil War",
+        "description": "A civil war in the United States fought from 1861 to 1865.",
+        "date": "1861-04-12",
+        "location": "United States",
+        "media": [
+            {
+                "src": "https://example.com/american_civil_war.jpg",
+                "type": "image/jpeg"
+            }
+        ]
+    },
+    {
+        "title": "World War I",
+        "description": "A global war originating in Europe that lasted from 28 July 1914 to 11 November 1918.",
+        "date": "1914-07-28",
+        "location": "Europe",
+        "media": [
+            {
+                "src": "https://example.com/world_war_1.jpg",
+                "type": "image/jpeg"
+            }
+        ]
+    },
+    {
+        "title": "World War II",
+        "description": "A global war that lasted from 1939 to 1945, involving most of the world's nations.",
+        "date": "1939-09-01",
+        "location": "Worldwide",
+        "media": [
+            {
+                "src": "https://example.com/world_war_2.jpg",
+                "type": "image/jpeg"
+            }
+        ]
+    },
+    {
+        "title": "Vietnam War",
+        "description": "A conflict in Vietnam, Laos, and Cambodia from 1 November 1955 to the fall of Saigon on 30 April 1975.",
+        "date": "1955-11-01",
+        "location": "Vietnam",
+        "media": [
+            {
+                "src": "https://example.com/vietnam_war.jpg",
+                "type": "image/jpeg"
+            }
+        ]
+    },
+    {
+        "title": "Gulf War",
+        "description": "A war waged by coalition forces from 35 nations led by the United States against Iraq in response to Iraq's invasion and annexation of Kuwait.",
+        "date": "1990-08-02",
+        "location": "Iraq, Kuwait",
+        "media": [
+            {
+                "src": "https://example.com/gulf_war.jpg",
+                "type": "image/jpeg"
+            }
+        ]
+    }
+]
