@@ -1,0 +1,752 @@
+[
+    {
+        "question": "Which method is most effective for teaching vocabulary to ESL students?",
+        "options": {
+            "A": "Direct Translation",
+            "B": "Using Visual Aids",
+            "C": "Reading Aloud",
+            "D": "Grammar Drills"
+        },
+        "answer": "B"
+    },
+    {
+        "question": "What is the main focus of the Communicative Language Teaching (CLT) approach?",
+        "options": {
+            "A": "Grammar Accuracy",
+            "B": "Vocabulary Expansion",
+            "C": "Fluency and Communication",
+            "D": "Pronunciation"
+        },
+        "answer": "C"
+    },
+    {
+        "question": "How can you assess a student's reading comprehension effectively?",
+        "options": {
+            "A": "Multiple Choice Questions",
+            "B": "Oral Questions",
+            "C": "Summarizing the Text",
+            "D": "All of the Above"
+        },
+        "answer": "D"
+    },
+    {
+        "question": "Which activity would best improve listening skills in ESL learners?",
+        "options": {
+            "A": "Listening to Recorded Dialogues",
+            "B": "Silent Reading",
+            "C": "Writing Essays",
+            "D": "Role-Playing Games"
+        },
+        "answer": "A"
+    },
+    {
+        "question": "What should be the primary goal when teaching grammar to ESL students?",
+        "options": {
+            "A": "Memorization of Rules",
+            "B": "Practical Application",
+            "C": "Translation to Native Language",
+            "D": "Formal Writing"
+        },
+        "answer": "B"
+    },
+    {
+        "question": "Which of the following is an effective way to teach pronunciation?",
+        "options": {
+            "A": "Phonetic Transcription",
+            "B": "Silent Reading",
+            "C": "Grammar Translation",
+            "D": "Dictation"
+        },
+        "answer": "A"
+    },
+    {
+        "question": "What is scaffolding in the context of ESL teaching?",
+        "options": {
+            "A": "Building lesson plans",
+            "B": "Providing temporary support",
+            "C": "Assigning homework",
+            "D": "Giving tests"
+        },
+        "answer": "B"
+    },
+    {
+        "question": "Which strategy is best for teaching writing skills?",
+        "options": {
+            "A": "Copying texts",
+            "B": "Free writing exercises",
+            "C": "Reading grammar books",
+            "D": "Oral presentations"
+        },
+        "answer": "B"
+    },
+    {
+        "question": "Why is it important to use authentic materials in ESL teaching?",
+        "options": {
+            "A": "They are easier to understand",
+            "B": "They reflect real language use",
+            "C": "They are cheaper",
+            "D": "They are traditional"
+        },
+        "answer": "B"
+    },
+    {
+        "question": "What is the primary benefit of using role-play activities in ESL classes?",
+        "options": {
+            "A": "Improves memorization",
+            "B": "Encourages speaking",
+            "C": "Teaches grammar rules",
+            "D": "Enhances listening skills"
+        },
+        "answer": "B"
+    },
+    {
+        "question": "What is the Total Physical Response (TPR) method?",
+        "options": {
+            "A": "Using physical movement to respond to language",
+            "B": "Reading silently",
+            "C": "Writing essays",
+            "D": "Listening to audio recordings"
+        },
+        "answer": "A"
+    },
+    {
+        "question": "Which is a key feature of task-based language teaching?",
+        "options": {
+            "A": "Focus on grammar exercises",
+            "B": "Completion of meaningful tasks",
+            "C": "Reading literary texts",
+            "D": "Translation of texts"
+        },
+        "answer": "B"
+    },
+    {
+        "question": "What is a common challenge in teaching large ESL classes?",
+        "options": {
+            "A": "Too much individual attention",
+            "B": "Difficulty in managing activities",
+            "C": "Not enough textbooks",
+            "D": "Lack of interest"
+        },
+        "answer": "B"
+    },
+    {
+        "question": "Which activity helps in developing students' critical thinking skills?",
+        "options": {
+            "A": "Multiple choice quizzes",
+            "B": "Dictation",
+            "C": "Debates and discussions",
+            "D": "Silent reading"
+        },
+        "answer": "C"
+    },
+    {
+        "question": "What is the best approach to correct student errors during a speaking activity?",
+        "options": {
+            "A": "Immediate correction",
+            "B": "Delayed correction",
+            "C": "Ignoring errors",
+            "D": "Using negative reinforcement"
+        },
+        "answer": "B"
+    },
+    {
+        "question": "Which type of assessment is formative?",
+        "options": {
+            "A": "End-of-year exams",
+            "B": "Weekly quizzes",
+            "C": "Mid-term exams",
+            "D": "Diagnostic tests"
+        },
+        "answer": "B"
+    },
+    {
+        "question": "How can visual aids enhance ESL learning?",
+        "options": {
+            "A": "By providing visual context",
+            "B": "By replacing textbooks",
+            "C": "By distracting students",
+            "D": "By simplifying grammar"
+        },
+        "answer": "A"
+    },
+    {
+        "question": "What is the benefit of peer feedback in ESL writing classes?",
+        "options": {
+            "A": "Saves teacher's time",
+            "B": "Encourages collaborative learning",
+            "C": "Reduces workload",
+            "D": "Promotes competition"
+        },
+        "answer": "B"
+    },
+    {
+        "question": "What is the silent period in language learning?",
+        "options": {
+            "A": "A time when students refuse to speak",
+            "B": "A phase of silent observation",
+            "C": "A period of silent reading",
+            "D": "A break from speaking activities"
+        },
+        "answer": "B"
+    },
+    {
+        "question": "How can teachers support ESL students with different learning styles?",
+        "options": {
+            "A": "By using a variety of teaching methods",
+            "B": "By focusing on one method",
+            "C": "By teaching grammar only",
+            "D": "By using only visual aids"
+        },
+        "answer": "A"
+    },
+    {
+        "question": "Which is an example of a productive language skill?",
+        "options": {
+            "A": "Listening",
+            "B": "Reading",
+            "C": "Writing",
+            "D": "Watching"
+        },
+        "answer": "C"
+    },
+    {
+        "question": "Why is cultural awareness important in ESL teaching?",
+        "options": {
+            "A": "It promotes language accuracy",
+            "B": "It prevents misunderstandings",
+            "C": "It simplifies teaching",
+            "D": "It focuses on grammar"
+        },
+        "answer": "B"
+    },
+    {
+        "question": "What is the best way to introduce new vocabulary?",
+        "options": {
+            "A": "Using context and examples",
+            "B": "Providing long lists",
+            "C": "Translation only",
+            "D": "Using dictionary definitions"
+        },
+        "answer": "A"
+    },
+    {
+        "question": "What is the purpose of a warm-up activity in an ESL lesson?",
+        "options": {
+            "A": "To review homework",
+            "B": "To introduce the main topic",
+            "C": "To practice writing",
+            "D": "To get students engaged"
+        },
+        "answer": "D"
+    },
+    {
+        "question": "Which is a receptive language skill?",
+        "options": {
+            "A": "Speaking",
+            "B": "Writing",
+            "C": "Listening",
+            "D": "Presenting"
+        },
+        "answer": "C"
+    },
+    {
+        "question": "What is differentiation in ESL teaching?",
+        "options": {
+            "A": "Teaching the same way to all students",
+            "B": "Adjusting teaching methods to meet individual needs",
+            "C": "Using only visual aids",
+            "D": "Focusing on grammar drills"
+        },
+        "answer": "B"
+    },
+    {
+        "question": "Which approach focuses on real-life communication?",
+        "options": {
+            "A": "Audio-lingual method",
+            "B": "Communicative approach",
+            "C": "Grammar-translation method",
+            "D": "Direct method"
+        },
+        "answer": "B"
+    },
+    {
+        "question": "What is the primary goal of error correction?",
+        "options": {
+            "A": "To embarrass the student",
+            "B": "To help the student improve",
+            "C": "To reduce speaking time",
+            "D": "To increase writing tasks"
+        },
+        "answer": "B"
+    },
+    {
+        "question": "What type of questions are best for promoting higher-order thinking?",
+        "options": {
+            "A": "Yes/No questions",
+            "B": "Multiple-choice questions",
+            "C": "Open-ended questions",
+            "D": "Matching questions"
+        },
+        "answer": "C"
+    },
+    {
+        "question": "Why is classroom management important?",
+        "options": {
+            "A": "To maintain discipline",
+            "B": "To increase teacher control",
+            "C": "To facilitate effective learning",
+            "D": "To reduce teaching time"
+        },
+        "answer": "C"
+    },
+    {
+        "question": "What is the function of a summative assessment?",
+        "options": {
+            "A": "To guide instruction",
+            "B": "To provide ongoing feedback",
+            "C": "To evaluate learning at the end of a period",
+            "D": "To identify student needs"
+        },
+        "answer": "C"
+    },
+    {
+        "question": "Which of the following is a benefit of using technology in ESL classrooms?",
+        "options": {
+            "A": "It replaces the teacher",
+            "B": "It engages students",
+            "C": "It is always reliable",
+            "D": "It requires no preparation"
+        },
+        "answer": "B"
+    },
+    {
+        "question": "What is the benefit of using group work in ESL classes?",
+        "options": {
+            "A": "Reduces speaking time",
+            "B": "Encourages collaborative learning",
+            "C": "Simplifies grading",
+            "D": "Increases teacher talk time"
+        },
+        "answer": "B"
+    },
+    {
+        "question": "Which is an effective strategy for teaching grammar?",
+        "options": {
+            "A": "Isolated drills",
+            "B": "Grammar in context",
+            "C": "Silent reading",
+            "D": "Dictation"
+        },
+        "answer": "B"
+    },
+    {
+        "question": "What is the purpose of a needs analysis?",
+        "options": {
+            "A": "To assess teachers",
+            "B": "To evaluate textbooks",
+            "C": "To identify student learning needs",
+            "D": "To measure language proficiency"
+        },
+        "answer": "C"
+    },
+    {
+        "question": "What is the Lexical Approach in language teaching?",
+        "options": {
+            "A": "Focuses on grammar structures",
+            "B": "Emphasizes vocabulary and chunks of language",
+            "C": "Uses translation extensively",
+            "D": "Prioritizes phonetics"
+        },
+        "answer": "B"
+    },
+    {
+        "question": "Which type of learner benefits most from visual aids?",
+        "options": {
+            "A": "Auditory learners",
+            "B": "Kinesthetic learners",
+            "C": "Visual learners",
+            "D": "Tactile learners"
+        },
+        "answer": "C"
+    },
+    {
+        "question": "What is an effective way to teach pronunciation?",
+        "options": {
+            "A": "Silent reading",
+            "B": "Repetition and drills",
+            "C": "Writing essays",
+            "D": "Listening to music"
+        },
+        "answer": "B"
+    },
+    {
+        "question": "Which method is based on the idea that language learning is similar to the way we learn our first language?",
+        "options": {
+            "A": "Grammar-Translation",
+            "B": "Direct Method",
+            "C": "Audio-Lingual Method",
+            "D": "Communicative Approach"
+        },
+        "answer": "B"
+    },
+    {
+        "question": "What is the benefit of using a flipped classroom model in ESL teaching?",
+        "options": {
+            "A": "Reduces homework",
+            "B": "Increases teacher's lecture time",
+            "C": "Allows for more interactive class time",
+            "D": "Simplifies lesson planning"
+        },
+        "answer": "C"
+    },
+    {
+        "question": "What is one challenge of using technology in the ESL classroom?",
+        "options": {
+            "A": "Increases student engagement",
+            "B": "Requires digital literacy",
+            "C": "Always reliable",
+            "D": "Simplifies teaching"
+        },
+        "answer": "B"
+    },
+    {
+        "question": "Why is it important to set clear learning objectives?",
+        "options": {
+            "A": "To increase teaching time",
+            "B": "To guide student learning",
+            "C": "To simplify assessments",
+            "D": "To improve classroom management"
+        },
+        "answer": "B"
+    },
+    {
+        "question": "What is the focus of the Audio-Lingual Method?",
+        "options": {
+            "A": "Vocabulary acquisition",
+            "B": "Translation exercises",
+            "C": "Listening and speaking drills",
+            "D": "Reading comprehension"
+        },
+        "answer": "C"
+    },
+    {
+        "question": "How can teachers effectively use formative assessment?",
+        "options": {
+            "A": "By giving final exams",
+            "B": "By providing regular feedback",
+            "C": "By ignoring mistakes",
+            "D": "By focusing on grades"
+        },
+        "answer": "B"
+    },
+    {
+        "question": "What is the primary focus of Content-Based Instruction?",
+        "options": {
+            "A": "Teaching grammar rules",
+            "B": "Focusing on language structure",
+            "C": "Integrating language and content learning",
+            "D": "Emphasizing translation"
+        },
+        "answer": "C"
+    },
+    {
+        "question": "Which approach involves learning language through meaningful communication?",
+        "options": {
+            "A": "Grammar-Translation",
+            "B": "Communicative Language Teaching",
+            "C": "Audio-Lingual Method",
+            "D": "Direct Method"
+        },
+        "answer": "B"
+    },
+    {
+        "question": "What is the purpose of using games in the ESL classroom?",
+        "options": {
+            "A": "To fill time",
+            "B": "To punish students",
+            "C": "To make learning fun and engaging",
+            "D": "To avoid teaching"
+        },
+        "answer": "C"
+    },
+    {
+        "question": "How can teachers accommodate students with different proficiency levels?",
+        "options": {
+            "A": "By teaching to the middle level",
+            "B": "By using differentiated instruction",
+            "C": "By focusing on the highest level",
+            "D": "By using only one method"
+        },
+        "answer": "B"
+    },
+    {
+        "question": "What is one benefit of using songs in ESL teaching?",
+        "options": {
+            "A": "Increases speaking time",
+            "B": "Improves listening skills",
+            "C": "Focuses on grammar",
+            "D": "Reduces class time"
+        },
+        "answer": "B"
+    },
+    {
+        "question": "Which of the following is an example of a summative assessment?",
+        "options": {
+            "A": "Mid-term exam",
+            "B": "Class participation",
+            "C": "Homework assignments",
+            "D": "Oral feedback"
+        },
+        "answer": "A"
+    },
+    {
+        "question": "What is the benefit of using portfolios in ESL assessment?",
+        "options": {
+            "A": "Shows student progress over time",
+            "B": "Simplifies grading",
+            "C": "Reduces teacher workload",
+            "D": "Focuses on final exams"
+        },
+        "answer": "A"
+    },
+    {
+        "question": "Which type of activity can help students practice real-life scenarios?",
+        "options": {
+            "A": "Silent reading",
+            "B": "Role-playing",
+            "C": "Writing essays",
+            "D": "Grammar drills"
+        },
+        "answer": "B"
+    },
+    {
+        "question": "What is the best way to address diverse cultural backgrounds in the classroom?",
+        "options": {
+            "A": "Ignore cultural differences",
+            "B": "Highlight and respect cultural differences",
+            "C": "Focus only on the dominant culture",
+            "D": "Use a single teaching method"
+        },
+        "answer": "B"
+    },
+    {
+        "question": "Why is feedback important in the learning process?",
+        "options": {
+            "A": "It corrects all mistakes",
+            "B": "It provides guidance for improvement",
+            "C": "It replaces tests",
+            "D": "It reduces teaching time"
+        },
+        "answer": "B"
+    },
+    {
+        "question": "What is the main purpose of a diagnostic test?",
+        "options": {
+            "A": "To grade students",
+            "B": "To determine students' current proficiency levels",
+            "C": "To evaluate the teacher",
+            "D": "To assign homework"
+        },
+        "answer": "B"
+    },
+    {
+        "question": "How can teachers effectively manage classroom behavior?",
+        "options": {
+            "A": "By using positive reinforcement",
+            "B": "By focusing on negative behavior",
+            "C": "By ignoring disruptions",
+            "D": "By increasing homework"
+        },
+        "answer": "A"
+    },
+    {
+        "question": "Which approach emphasizes the importance of interaction in language learning?",
+        "options": {
+            "A": "Grammar-Translation",
+            "B": "Direct Method",
+            "C": "Communicative Approach",
+            "D": "Audio-Lingual Method"
+        },
+        "answer": "C"
+    },
+    {
+        "question": "What is the benefit of using project-based learning in ESL?",
+        "options": {
+            "A": "Focuses on tests",
+            "B": "Enhances collaborative and practical skills",
+            "C": "Simplifies teaching",
+            "D": "Reduces speaking time"
+        },
+        "answer": "B"
+    },
+    {
+        "question": "What is the best way to help students develop autonomy in language learning?",
+        "options": {
+            "A": "Give clear instructions",
+            "B": "Provide resources for self-study",
+            "C": "Increase homework",
+            "D": "Reduce class time"
+        },
+        "answer": "B"
+    },
+    {
+        "question": "Which of the following activities can help improve students' fluency?",
+        "options": {
+            "A": "Silent reading",
+            "B": "Extensive speaking practice",
+            "C": "Writing essays",
+            "D": "Grammar exercises"
+        },
+        "answer": "B"
+    },
+    {
+        "question": "What is the main focus of a phonics-based approach?",
+        "options": {
+            "A": "Vocabulary development",
+            "B": "Grammar rules",
+            "C": "Sound-letter correspondence",
+            "D": "Listening skills"
+        },
+        "answer": "C"
+    },
+    {
+        "question": "Why is it important to build a positive classroom environment?",
+        "options": {
+            "A": "To increase teacher control",
+            "B": "To promote student engagement and learning",
+            "C": "To reduce class time",
+            "D": "To focus on grading"
+        },
+        "answer": "B"
+    },
+    {
+        "question": "What is the best way to help ESL students improve their writing skills?",
+        "options": {
+            "A": "Encourage regular writing practice",
+            "B": "Focus on grammar only",
+            "C": "Limit writing assignments",
+            "D": "Use only dictation"
+        },
+        "answer": "A"
+    },
+    {
+        "question": "Which type of activity can help students develop listening skills?",
+        "options": {
+            "A": "Watching videos with subtitles",
+            "B": "Silent reading",
+            "C": "Writing essays",
+            "D": "Grammar drills"
+        },
+        "answer": "A"
+    },
+    {
+        "question": "What is one benefit of using collaborative learning in ESL classes?",
+        "options": {
+            "A": "Increases individual work",
+            "B": "Encourages peer interaction and support",
+            "C": "Simplifies teaching",
+            "D": "Focuses on grammar"
+        },
+        "answer": "B"
+    },
+    {
+        "question": "What is the main goal of using realia in the classroom?",
+        "options": {
+            "A": "To simplify teaching",
+            "B": "To bring real-life context to learning",
+            "C": "To reduce class time",
+            "D": "To focus on exams"
+        },
+        "answer": "B"
+    },
+    {
+        "question": "Why is it important to vary teaching techniques?",
+        "options": {
+            "A": "To keep students engaged",
+            "B": "To reduce teacher preparation",
+            "C": "To simplify lessons",
+            "D": "To increase teaching time"
+        },
+        "answer": "A"
+    },
+    {
+        "question": "Which of the following can help develop students' speaking skills?",
+        "options": {
+            "A": "Listening to lectures",
+            "B": "Engaging in conversations and discussions",
+            "C": "Reading silently",
+            "D": "Writing summaries"
+        },
+        "answer": "B"
+    },
+    {
+        "question": "What is the main benefit of using interactive whiteboards in ESL classes?",
+        "options": {
+            "A": "Replaces traditional teaching",
+            "B": "Enhances interactive and visual learning",
+            "C": "Simplifies lesson planning",
+            "D": "Increases teacher's control"
+        },
+        "answer": "B"
+    },
+    {
+        "question": "Why is it important to use authentic materials in ESL teaching?",
+        "options": {
+            "A": "They are easier to understand",
+            "B": "They reflect real language use",
+            "C": "They are cheaper",
+            "D": "They are traditional"
+        },
+        "answer": "B"
+    },
+    {
+        "question": "Which is a key feature of task-based language teaching?",
+        "options": {
+            "A": "Focus on grammar exercises",
+            "B": "Completion of meaningful tasks",
+            "C": "Reading literary texts",
+            "D": "Translation of texts"
+        },
+        "answer": "B"
+    },
+    {
+        "question": "What is the primary benefit of using role-play activities in ESL classes?",
+        "options": {
+            "A": "Improves memorization",
+            "B": "Encourages speaking",
+            "C": "Teaches grammar rules",
+            "D": "Enhances listening skills"
+        },
+        "answer": "B"
+    },
+    {
+        "question": "How can teachers support ESL students with different learning styles?",
+        "options": {
+            "A": "By using a variety of teaching methods",
+            "B": "By focusing on one method",
+            "C": "By teaching grammar only",
+            "D": "By using only visual aids"
+        },
+        "answer": "A"
+    },
+    {
+        "question": "Which approach focuses on real-life communication?",
+        "options": {
+            "A": "Audio-lingual method",
+            "B": "Communicative approach",
+            "C": "Grammar-translation method",
+            "D": "Direct method"
+        },
+        "answer": "B"
+    },
+    {
+        "question": "What is the benefit of peer feedback in ESL writing classes?",
+        "options": {
+            "A": "Saves teacher's time",
+            "B": "Encourages collaborative learning",
+            "C": "Reduces workload",
+            "D": "Promotes competition"
+        },
+        "answer": "B"
+    }
+]
