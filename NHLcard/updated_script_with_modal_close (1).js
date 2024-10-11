@@ -23,7 +23,7 @@ document.addEventListener("DOMContentLoaded", function () {
       });
 
       // Fetch NHL teams
-      fetch("https://statsapi.web.nhl.com/api/v1/teams")
+      fetch("https://api-web.nhle.com/v1//teams")
         .then((response) => response.json())
         .then((data) => {
           data.teams.forEach((team) => {
