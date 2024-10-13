@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Player Data - Jakob Chychrun</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+
+        .player-container {
+            position: relative;
+            width: 100%;
+            height: 400px;
+            background-size: cover;
+            background-position: center;
+            color: white;
+        }
+
+        .player-logo-background {
+            position: absolute;
+            bottom: -40px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 180px;
+            height: 180px;
+            background-size: contain;
+            background-repeat: no-repeat;
+            z-index: 1;
+        }
+
+        .player-mugshot {
+            position: absolute;
+            bottom: -60px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            border: 5px solid white;
+            z-index: 2;
+        }
+
+        .player-info {
+            text-align: center;
+            padding: 20px;
+            background-color: rgba(0, 0, 0, 0.7);
+        }
+
+        .player-info h1 {
+            margin: 0;
+            font-size: 36px;
+            font-weight: 600;
+        }
+
+        .player-info p {
+            margin: 5px 0;
+        }
+
+        .stats-container {
+            margin: 80px auto;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+            width: 90%;
+        }
+
+        .stat-tile {
+            background-color: white;
+            border: 1px solid #ddd;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            text-align: center;
+            width: 150px;
+            border-radius: 10px;
+        }
+
+        .stat-tile h3 {
+            margin: 0;
+            font-size: 18px;
+            color: #333;
+        }
+
+        .stat-tile p {
+            margin: 5px 0;
+            font-size: 16px;
+            font-weight: bold;
+            color: #555;
+        }
+    </style>
+</head>
+<body>
+
+<div class="player-container" id="player-container">
+    <div class="player-logo-background" id="team-logo"></div>
+    <img src="" alt="Player Mugshot" class="player-mugshot" id="player-mugshot">
+</div>
+
+<div class="player-info">
+    <h1 id="player-name"></h1>
+    <p id="player-team"></p>
+    <p>Sweater Number: <span id="sweater-number"></span> | Position: <span id="position"></span></p>
+</div>
+
+<div class="stats-container" id="stats-container">
+    <!-- Stat tiles will be dynamically inserted here -->
+</div>
+
+<script>
+    // Sample JSON data
+    const playerData = {
+        "playerId": 8479345,
+        "isActive": true,
+        "currentTeamId": 15,
+        "currentTeamAbbrev": "WSH",
+        "fullTeamName": {
+            "default": "Washington Capitals",
+            "fr": "Capitals de Washington"
+        },
+        "teamCommonName": {
+            "default": "Capitals"
+        },
+        "teamPlaceNameWithPreposition": {
+            "default": "Washington",
+            "fr": "de Washington"
+        },
+        "firstName": {
+            "default": "Jakob"
+        },
+        "lastName": {
+            "default": "Chychrun"
+        },
+        "teamLogo": "https://assets.nhle.com/logos/nhl/svg/WSH_secondary_light.svg",
+        "sweaterNumber": 6,
+        "position": "D",
+        "headshot": "https://assets.nhle.com/mugs/nhl/20242025/WSH/8479345.png",
+        "heroImage": "https://assets.nhle.com/mugs/actionshots/1296x729/8479345.jpg",
+        "careerTotals": {
+            "regularSeason": {
+                "gamesPlayed": 468,
+                "goals": 76,
+                "assists": 140,
+                "points": 216,
+                "pim": 310,
+                "powerPlayGoals": 28,
+                "plusMinus": -70,
+                "shots": 1121,
+                "shootingPctg": 0.0677
+            }
+        }
+    };
+
+    // Set the background hero image
+    document.getElementById('player-container').style.backgroundImage = `url(${playerData.heroImage})`;
+
+    // Set team logo as the background for the mugshot area
+    document.getElementById('team-logo').style.backgroundImage = `url(${playerData.teamLogo})`;
+
+    // Set player mugshot
+    document.getElementById('player-mugshot').src = playerData.headshot;
+
+    // Set player information
+    document.getElementById('player-name').innerText = `${playerData.firstName.default} ${playerData.lastName.default}`;
+    document.getElementById('player-team').innerText = `${playerData.fullTeamName.default} (${playerData.teamCommonName.default})`;
+    document.getElementById('sweater-number').innerText = playerData.sweaterNumber;
+    document.getElementById('position').innerText = playerData.position;
+
+    // Stats to display as tiles
+    const stats = [
+        { label: 'Games Played', value: playerData.careerTotals.regularSeason.gamesPlayed },
+        { label: 'Goals', value: playerData.careerTotals.regularSeason.goals },
+        { label: 'Assists', value: playerData.careerTotals.regularSeason.assists },
+        { label: 'Points', value: playerData.careerTotals.regularSeason.points },
+        { label: 'Penalty Minutes', value: playerData.careerTotals.regularSeason.pim },
+        { label: 'Power Play Goals', value: playerData.careerTotals.regularSeason.powerPlayGoals },
+        { label: 'Plus/Minus', value: playerData.careerTotals.regularSeason.plusMinus },
+        { label: 'Shots', value: playerData.careerTotals.regularSeason.shots },
+        { label: 'Shooting Percentage', value: (playerData.careerTotals.regularSeason.shootingPctg * 100).toFixed(2) + '%' }
+    ];
+
+    // Dynamically add stat tiles
+    const statsContainer = document.getElementById('stats-container');
+    stats.forEach(stat => {
+        const statTile = document.createElement('div');
+        statTile.classList.add('stat-tile');
+        statTile.innerHTML = `<h3>${stat.label}</h3><p>${stat.value}</p>`;
+        statsContainer.appendChild(statTile);
+    });
+</script>
+
+</body>
+</html>
