@@ -1,0 +1,99 @@
+{
+    "goals": [
+    {
+    "id": 8482699,
+    "firstName": {
+    "default": "Dylan"
+    },
+    "lastName": {
+    "default": "Guenther"
+    },
+    "sweaterNumber": 11,
+    "headshot": "https://assets.nhle.com/mugs/nhl/20242025/UTA/8482699.png",
+    "teamAbbrev": "UTA",
+    "teamName": {
+    "default": "Utah Hockey Club",
+    "fr": "Club de hockey de l'Utah"
+    },
+    "teamLogo": "https://assets.nhle.com/logos/nhl/svg/UTA_light.svg",
+    "position": "R",
+    "value": 5
+    },
+    {
+    "id": 8481032,
+    "firstName": {
+    "default": "Paul"
+    },
+    "lastName": {
+    "default": "Cotter"
+    },
+    "sweaterNumber": 47,
+    "headshot": "https://assets.nhle.com/mugs/nhl/20242025/NJD/8481032.png",
+    "teamAbbrev": "NJD",
+    "teamName": {
+    "default": "Devils"
+    },
+    "teamLogo": "https://assets.nhle.com/logos/nhl/svg/NJD_light.svg",
+    "position": "C",
+    "value": 4
+    },
+    {
+    "id": 8481540,
+    "firstName": {
+    "default": "Cole"
+    },
+    "lastName": {
+    "default": "Caufield"
+    },
+    "sweaterNumber": 13,
+    "headshot": "https://assets.nhle.com/mugs/nhl/20242025/MTL/8481540.png",
+    "teamAbbrev": "MTL",
+    "teamName": {
+    "default": "Canadiens"
+    },
+    "teamLogo": "https://assets.nhle.com/logos/nhl/svg/MTL_light.svg",
+    "position": "R",
+    "value": 4
+    },
+    {
+    "id": 8477964,
+    "firstName": {
+    "default": "Ivan"
+    },
+    "lastName": {
+    "default": "Barbashev",
+    "cs": "Barbašev",
+    "sk": "Barbašev"
+    },
+    "sweaterNumber": 49,
+    "headshot": "https://assets.nhle.com/mugs/nhl/20242025/VGK/8477964.png",
+    "teamAbbrev": "VGK",
+    "teamName": {
+    "default": "Golden Knights"
+    },
+    "teamLogo": "https://assets.nhle.com/logos/nhl/svg/VGK_light.svg",
+    "position": "C",
+    "value": 3
+    },
+    {
+    "id": 8479343,
+    "firstName": {
+    "default": "Clayton"
+    },
+    "lastName": {
+    "default": "Keller"
+    },
+    "sweaterNumber": 9,
+    "headshot": "https://assets.nhle.com/mugs/nhl/20242025/UTA/8479343.png",
+    "teamAbbrev": "UTA",
+    "teamName": {
+    "default": "Utah Hockey Club",
+    "fr": "Club de hockey de l'Utah"
+    },
+    "teamLogo": "https://assets.nhle.com/logos/nhl/svg/UTA_light.svg",
+    "position": "R",
+    "value": 3
+    }
+    ]
+    }
+    

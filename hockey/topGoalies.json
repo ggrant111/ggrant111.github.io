@@ -1,0 +1,99 @@
+{
+    "wins": [
+    {
+    "id": 8478971,
+    "firstName": {
+    "default": "Connor"
+    },
+    "lastName": {
+    "default": "Ingram"
+    },
+    "sweaterNumber": 39,
+    "headshot": "https://assets.nhle.com/mugs/nhl/20242025/UTA/8478971.png",
+    "teamAbbrev": "UTA",
+    "teamName": {
+    "default": "Utah Hockey Club",
+    "fr": "Club de hockey de l'Utah"
+    },
+    "teamLogo": "https://assets.nhle.com/logos/nhl/svg/UTA_light.svg",
+    "position": "G",
+    "value": 3
+    },
+    {
+    "id": 8474593,
+    "firstName": {
+    "default": "Jacob"
+    },
+    "lastName": {
+    "default": "Markstrom",
+    "cs": "Markström",
+    "fi": "Markström",
+    "sk": "Markström"
+    },
+    "sweaterNumber": 25,
+    "headshot": "https://assets.nhle.com/mugs/nhl/20242025/NJD/8474593.png",
+    "teamAbbrev": "NJD",
+    "teamName": {
+    "default": "Devils"
+    },
+    "teamLogo": "https://assets.nhle.com/logos/nhl/svg/NJD_light.svg",
+    "position": "G",
+    "value": 2
+    },
+    {
+    "id": 8478470,
+    "firstName": {
+    "default": "Sam"
+    },
+    "lastName": {
+    "default": "Montembeault"
+    },
+    "sweaterNumber": 35,
+    "headshot": "https://assets.nhle.com/mugs/nhl/20242025/MTL/8478470.png",
+    "teamAbbrev": "MTL",
+    "teamName": {
+    "default": "Canadiens"
+    },
+    "teamLogo": "https://assets.nhle.com/logos/nhl/svg/MTL_light.svg",
+    "position": "G",
+    "value": 2
+    },
+    {
+    "id": 8478499,
+    "firstName": {
+    "default": "Adin"
+    },
+    "lastName": {
+    "default": "Hill"
+    },
+    "sweaterNumber": 33,
+    "headshot": "https://assets.nhle.com/mugs/nhl/20242025/VGK/8478499.png",
+    "teamAbbrev": "VGK",
+    "teamName": {
+    "default": "Golden Knights"
+    },
+    "teamLogo": "https://assets.nhle.com/logos/nhl/svg/VGK_light.svg",
+    "position": "G",
+    "value": 2
+    },
+    {
+    "id": 8476945,
+    "firstName": {
+    "default": "Connor"
+    },
+    "lastName": {
+    "default": "Hellebuyck"
+    },
+    "sweaterNumber": 37,
+    "headshot": "https://assets.nhle.com/mugs/nhl/20242025/WPG/8476945.png",
+    "teamAbbrev": "WPG",
+    "teamName": {
+    "default": "Jets"
+    },
+    "teamLogo": "https://assets.nhle.com/logos/nhl/svg/WPG_light.svg",
+    "position": "G",
+    "value": 2
+    }
+    ]
+    }
+    

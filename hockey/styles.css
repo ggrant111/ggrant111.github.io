@@ -12,6 +12,8 @@ body {
     background-color: #f4f4f4;
     color: #333;
     padding: 20px;
+    max-width: 1200px;
+    margin: auto;
 }
 
 h1, h2, h3 {
@@ -30,22 +32,30 @@ header {
     margin-bottom: 40px;
 }
 
-/* Sections Styling */
+/* Ensure all sections are sized consistently */
 section {
-    margin-bottom: 40px;
+    max-width: 1200px;
+    margin: 0 auto;
 }
 
+/* Apply a common width to all main sections */
 #current-games,
 #goalie-leaders,
+#top-goalie-leaders,
 #skater-leaders,
-#teams {
+#teams,
+#eastern-conference,
+#western-conference {
     background-color: #fff;
     padding: 20px;
     border-radius: 10px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    margin: 0 auto;
 }
 
-.leader-grid {
+/* Flex container for goalies and leaders */
+.leader-grid, .goalie-leader-grid, .skater-leader-grid {
     display: flex;
     flex-wrap: wrap;
     gap: 20px;
@@ -146,6 +156,168 @@ img {
     text-align: center;
 }
 
+/* Team container to align logos and text */
+.team-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: top;
+    margin-bottom: 15px;
+}
+
+/* Styling for individual team sections (away and home) */
+.team {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100px;
+}
+
+.team img {
+    width: 50px;
+    height: 50px;
+    object-fit: contain;
+    margin-bottom: 10px;
+}
+
+/* Optional: Styling for the VS separator */
+.team-container span {
+    font-weight: bold;
+    font-size: 18px;
+}
+
+/* Games list container */
+.games-list {
+    display: flex;
+    overflow-x: auto;
+    white-space: nowrap;
+    padding: 20px;
+    max-width: 100%;
+    box-sizing: border-box;
+}
+
+.game-card {
+    background-color: #f9f9f9;
+    padding: 20px;
+    margin-right: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    min-width: 300px;
+    flex-shrink: 0;
+}
+
+.game-card p {
+    text-wrap: balance;
+    word-wrap: break-word;
+}
+
+/* Leaders section styling */
+.leaders {
+    display: flex;
+    gap: 20px;
+    justify-content: space-around;
+}
+
+.goalie-tile, .skater-tile, .team-tile {
+    background-color: #f9f9f9;
+    padding: 15px;
+    border-radius: 10px;
+    width: 100%;
+    max-width: 400px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+    position: relative;
+    overflow: hidden;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+/* Styling for headshot container */
+.headshot-container {
+    width: 64px;
+    height: 64px;
+    position: relative;
+    z-index: 2; /* Ensure headshot is above the background */
+}
+
+/* Overlay to make player info more readable */
+.goalie-tile::before, .skater-tile::before, .team-tile::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.8); /* Slight white overlay */
+    z-index: 1; /* Make sure it's behind the player details but above the background */
+}
+
+.player-info {
+    flex-grow: 1;
+    margin-left: 10px;
+    position: relative;
+    z-index: 2; /* Ensure player info is above the background */
+}
+
+.player-name {
+    display: flex;
+    flex-direction: column;
+}
+
+.first-name {
+    font-weight: bold;
+    font-size: 14px;
+    color: #333;
+}
+
+.last-name {
+    font-size: 16px;
+    color: #222;
+}
+
+.player-position {
+    font-size: 12px;
+    color: #555;
+    margin-top: 5px;
+}
+
+.player-wins, .player-goals {
+    font-size: 24px;
+    font-weight: bold;
+    color: #0E4431;
+    z-index: 2; /* Ensure the stat is above the background */
+}
+
+
+
+/* Style for the team tile with the logo as background */
+/* Style for the team tile */
+
+
+.team-info {
+    position: relative;
+    z-index: 2; /* Place it above the overlay */
+    text-align: center;
+    color: rgb(0, 0, 0); /* Ensure the text is white for contrast */
+}
+
+.team-info p {
+    margin: 5px 0;
+}
+
+
+/* Grid layout for team sections */
+.team-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+
 /* Responsive Layout */
 @media (min-width: 1024px) {
     body {
@@ -159,31 +331,36 @@ img {
         margin: 0 auto;
     }
 
-    #goalie-leaders, #skater-leaders, #teams {
-        display: inline-block;
+    .leaders > section {
         width: 32%;
         vertical-align: top;
-        margin-right: 1%;
+        margin-top: 1%;
     }
 
     #current-games {
         width: 100%;
         margin-bottom: 40px;
     }
-
-    #teams {
-        margin-right: 0;
-    }
 }
 
 @media (max-width: 768px) {
-    .leader-grid, .player-stats, .team-stats {
+    .leader-grid, .goalie-leader-grid, .player-stats, .team-stats {
         flex-direction: column;
         align-items: center;
     }
 
-    #goalie-leaders, #skater-leaders, #teams {
+    #top-goalie-leaders, #skater-leaders, #teams {
         width: 100%;
         margin-bottom: 30px;
+    }
+
+    .leaders {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .team-grid {
+        flex-direction: column;
+        align-items: center;
     }
 }

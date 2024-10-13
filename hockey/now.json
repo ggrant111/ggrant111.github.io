@@ -1,0 +1,3821 @@
+{
+    "focusedDate": "2024-10-13",
+    "focusedDateCount": 7,
+    "gamesByDate": [
+    {
+    "date": "2024-10-10",
+    "games": [
+    {
+    "id": 2024020011,
+    "season": 20242025,
+    "gameType": 2,
+    "gameDate": "2024-10-10",
+    "gameCenterLink": "/gamecenter/mtl-vs-bos/2024/10/10/2024020011",
+    "venue": {
+    "default": "TD Garden"
+    },
+    "startTimeUTC": "2024-10-10T23:00:00Z",
+    "easternUTCOffset": "-04:00",
+    "venueUTCOffset": "-04:00",
+    "tvBroadcasts": [
+    {
+    "id": 31,
+    "market": "H",
+    "countryCode": "US",
+    "network": "NESN",
+    "sequenceNumber": 78
+    },
+    {
+    "id": 131,
+    "market": "A",
+    "countryCode": "CA",
+    "network": "TSN2",
+    "sequenceNumber": 112
+    },
+    {
+    "id": 33,
+    "market": "A",
+    "countryCode": "CA",
+    "network": "RDS",
+    "sequenceNumber": 132
+    }
+    ],
+    "gameState": "OFF",
+    "gameScheduleState": "OK",
+    "awayTeam": {
+    "id": 8,
+    "name": {
+    "default": "Montréal Canadiens",
+    "fr": "Canadiens de Montréal"
+    },
+    "commonName": {
+    "default": "Canadiens"
+    },
+    "placeNameWithPreposition": {
+    "default": "Montréal",
+    "fr": "de Montréal"
+    },
+    "abbrev": "MTL",
+    "score": 4,
+    "logo": "https://assets.nhle.com/logos/nhl/svg/MTL_light.svg"
+    },
+    "homeTeam": {
+    "id": 6,
+    "name": {
+    "default": "Boston Bruins",
+    "fr": "Bruins de Boston"
+    },
+    "commonName": {
+    "default": "Bruins"
+    },
+    "placeNameWithPreposition": {
+    "default": "Boston",
+    "fr": "de Boston"
+    },
+    "abbrev": "BOS",
+    "score": 6,
+    "logo": "https://assets.nhle.com/logos/nhl/svg/BOS_light.svg"
+    },
+    "ticketsLink": "https://www.ticketmaster.com/event/010060D9D52E7489?brand=nhl&wt.mc_id=NHL_LEAGUE_BOS_HORIZONTAL_SCOREBOARD_GM1&utm_source=NHL.com&utm_medium=client&utm_campaign=NHL_LEAGUE_BOS&utm_content=HORIZONTAL_SCOREBOARD_GM1",
+    "ticketsLinkFr": "https://www.ticketmaster.com/event/010060D9D52E7489?brand=nhl&wt.mc_id=NHL_LEAGUE_BOS_HORIZONTAL_SCOREBOARD_GM1&utm_source=NHL.com&utm_medium=client&utm_campaign=NHL_LEAGUE_BOS&utm_content=HORIZONTAL_SCOREBOARD_GM1",
+    "period": 3,
+    "periodDescriptor": {
+    "number": 3,
+    "periodType": "REG",
+    "maxRegulationPeriods": 3
+    },
+    "threeMinRecap": "/video/mtl-at-bos-recap-6363101384112",
+    "threeMinRecapFr": "/fr/video/mtl-vs-bos-10-october-2024-resume-6363103129112"
+    },
+    {
+    "id": 2024020012,
+    "season": 20242025,
+    "gameType": 2,
+    "gameDate": "2024-10-10",
+    "gameCenterLink": "/gamecenter/lak-vs-buf/2024/10/10/2024020012",
+    "venue": {
+    "default": "KeyBank Center"
+    },
+    "startTimeUTC": "2024-10-10T23:00:00Z",
+    "easternUTCOffset": "-04:00",
+    "venueUTCOffset": "-04:00",
+    "tvBroadcasts": [
+    {
+    "id": 355,
+    "market": "A",
+    "countryCode": "US",
+    "network": "BSW",
+    "sequenceNumber": 57
+    },
+    {
+    "id": 28,
+    "market": "H",
+    "countryCode": "US",
+    "network": "MSG-B",
+    "sequenceNumber": 62
+    }
+    ],
+    "gameState": "OFF",
+    "gameScheduleState": "OK",
+    "awayTeam": {
+    "id": 26,
+    "name": {
+    "default": "Los Angeles Kings",
+    "fr": "Kings de Los Angeles"
+    },
+    "commonName": {
+    "default": "Kings"
+    },
+    "placeNameWithPreposition": {
+    "default": "Los Angeles",
+    "fr": "de Los Angeles"
+    },
+    "abbrev": "LAK",
+    "score": 3,
+    "logo": "https://assets.nhle.com/logos/nhl/svg/LAK_light.svg"
+    },
+    "homeTeam": {
+    "id": 7,
+    "name": {
+    "default": "Buffalo Sabres",
+    "fr": "Sabres de Buffalo"
+    },
+    "commonName": {
+    "default": "Sabres"
+    },
+    "placeNameWithPreposition": {
+    "default": "Buffalo",
+    "fr": "de Buffalo"
+    },
+    "abbrev": "BUF",
+    "score": 1,
+    "logo": "https://assets.nhle.com/logos/nhl/svg/BUF_light.svg"
+    },
+    "ticketsLink": "https://www.ticketmaster.com/event/000060DADA5F8B91?brand=nhl&wt.mc_id=NHL_LEAGUE_BUF_HORIZONTAL_SCOREBOARD_GM2&utm_source=NHL.com&utm_medium=client&utm_campaign=NHL_LEAGUE_BUF&utm_content=HORIZONTAL_SCOREBOARD_GM2",
+    "ticketsLinkFr": "https://www.ticketmaster.com/event/000060DADA5F8B91?brand=nhl&wt.mc_id=NHL_LEAGUE_BUF_HORIZONTAL_SCOREBOARD_GM2&utm_source=NHL.com&utm_medium=client&utm_campaign=NHL_LEAGUE_BUF&utm_content=HORIZONTAL_SCOREBOARD_GM2",
+    "period": 3,
+    "periodDescriptor": {
+    "number": 3,
+    "periodType": "REG",
+    "maxRegulationPeriods": 3
+    },
+    "threeMinRecap": "/video/lak-at-buf-recap-6363102926112"
+    },
+    {
+    "id": 2024020013,
+    "season": 20242025,
+    "gameType": 2,
+    "gameDate": "2024-10-10",
+    "gameCenterLink": "/gamecenter/fla-vs-ott/2024/10/10/2024020013",
+    "venue": {
+    "default": "Canadian Tire Centre"
+    },
+    "startTimeUTC": "2024-10-10T23:00:00Z",
+    "easternUTCOffset": "-04:00",
+    "venueUTCOffset": "-04:00",
+    "tvBroadcasts": [
+    {
+    "id": 521,
+    "market": "A",
+    "countryCode": "US",
+    "network": "SCRIPPS",
+    "sequenceNumber": 87
+    },
+    {
+    "id": 230,
+    "market": "H",
+    "countryCode": "CA",
+    "network": "RDS2",
+    "sequenceNumber": 133
+    },
+    {
+    "id": 294,
+    "market": "H",
+    "countryCode": "CA",
+    "network": "TSN5",
+    "sequenceNumber": 135
+    }
+    ],
+    "gameState": "OFF",
+    "gameScheduleState": "OK",
+    "awayTeam": {
+    "id": 13,
+    "name": {
+    "default": "Florida Panthers",
+    "fr": "Panthers de la Floride"
+    },
+    "commonName": {
+    "default": "Panthers"
+    },
+    "placeNameWithPreposition": {
+    "default": "Florida",
+    "fr": "de la Floride"
+    },
+    "abbrev": "FLA",
+    "score": 1,
+    "logo": "https://assets.nhle.com/logos/nhl/svg/FLA_light.svg"
+    },
+    "homeTeam": {
+    "id": 9,
+    "name": {
+    "default": "Ottawa Senators",
+    "fr": "Sénateurs d'Ottawa"
+    },
+    "commonName": {
+    "default": "Senators",
+    "fr": "Sénateurs"
+    },
+    "placeNameWithPreposition": {
+    "default": "Ottawa",
+    "fr": "d'Ottawa"
+    },
+    "abbrev": "OTT",
+    "score": 3,
+    "logo": "https://assets.nhle.com/logos/nhl/svg/OTT_light.svg"
+    },
+    "ticketsLink": "https://www.ticketmaster.ca/event/31006107F9D75105?brand=nhl&wt.mc_id=NHL_LEAGUE_OTT_HORIZONTAL_SCOREBOARD_GM1&utm_source=NHL.com&utm_medium=client&utm_campaign=NHL_LEAGUE_OTT&utm_content=HORIZONTAL_SCOREBOARD_GM1",
+    "ticketsLinkFr": "https://www.nhl.com/fr/senators/tickets/",
+    "period": 3,
+    "periodDescriptor": {
+    "number": 3,
+    "periodType": "REG",
+    "maxRegulationPeriods": 3
+    },
+    "threeMinRecap": "/video/fla-at-ott-recap-6363102148112",
+    "threeMinRecapFr": "/fr/video/fla-vs-ott-10-october-2024-resume-6363101193112"
+    },
+    {
+    "id": 2024020015,
+    "season": 20242025,
+    "gameType": 2,
+    "gameDate": "2024-10-10",
+    "gameCenterLink": "/gamecenter/tor-vs-njd/2024/10/10/2024020015",
+    "venue": {
+    "default": "Prudential Center"
+    },
+    "startTimeUTC": "2024-10-10T23:00:00Z",
+    "easternUTCOffset": "-04:00",
+    "venueUTCOffset": "-04:00",
+    "tvBroadcasts": [
+    {
+    "id": 27,
+    "market": "H",
+    "countryCode": "US",
+    "network": "MSG",
+    "sequenceNumber": 97
+    },
+    {
+    "id": 293,
+    "market": "A",
+    "countryCode": "CA",
+    "network": "TSN4",
+    "sequenceNumber": 137
+    }
+    ],
+    "gameState": "OFF",
+    "gameScheduleState": "OK",
+    "awayTeam": {
+    "id": 10,
+    "name": {
+    "default": "Toronto Maple Leafs",
+    "fr": "Maple Leafs de Toronto"
+    },
+    "commonName": {
+    "default": "Maple Leafs"
+    },
+    "placeNameWithPreposition": {
+    "default": "Toronto",
+    "fr": "de Toronto"
+    },
+    "abbrev": "TOR",
+    "score": 4,
+    "logo": "https://assets.nhle.com/logos/nhl/svg/TOR_light.svg"
+    },
+    "homeTeam": {
+    "id": 1,
+    "name": {
+    "default": "New Jersey Devils",
+    "fr": "Devils du New Jersey"
+    },
+    "commonName": {
+    "default": "Devils"
+    },
+    "placeNameWithPreposition": {
+    "default": "New Jersey",
+    "fr": "du New Jersey"
+    },
+    "abbrev": "NJD",
+    "score": 2,
+    "logo": "https://assets.nhle.com/logos/nhl/svg/NJD_light.svg"
+    },
+    "ticketsLink": "https://www.ticketmaster.com/event/020060E2991733A8?brand=nhl&wt.mc_id=NHL_LEAGUE_NJD_HORIZONTAL_SCOREBOARD_GM2&utm_source=NHL.com&utm_medium=client&utm_campaign=NHL_LEAGUE_NJD&utm_content=HORIZONTAL_SCOREBOARD_GM2",
+    "ticketsLinkFr": "https://www.ticketmaster.com/event/020060E2991733A8?brand=nhl&wt.mc_id=NHL_LEAGUE_NJD_HORIZONTAL_SCOREBOARD_GM2&utm_source=NHL.com&utm_medium=client&utm_campaign=NHL_LEAGUE_NJD&utm_content=HORIZONTAL_SCOREBOARD_GM2",
+    "period": 3,
+    "periodDescriptor": {
+    "number": 3,
+    "periodType": "REG",
+    "maxRegulationPeriods": 3
+    },
+    "threeMinRecap": "/video/tor-at-njd-recap-6363102235112"
+    },
+    {
+    "id": 2024020016,
+    "season": 20242025,
+    "gameType": 2,
+    "gameDate": "2024-10-10",
+    "gameCenterLink": "/gamecenter/uta-vs-nyi/2024/10/10/2024020016",
+    "venue": {
+    "default": "UBS Arena"
+    },
+    "startTimeUTC": "2024-10-10T23:30:00Z",
+    "easternUTCOffset": "-04:00",
+    "venueUTCOffset": "-04:00",
+    "tvBroadcasts": [
+    {
+    "id": 558,
+    "market": "A",
+    "countryCode": "US",
+    "network": "Utah16",
+    "sequenceNumber": 1
+    },
+    {
+    "id": 409,
+    "market": "H",
+    "countryCode": "US",
+    "network": "MSGSN",
+    "sequenceNumber": 88
+    }
+    ],
+    "gameState": "OFF",
+    "gameScheduleState": "OK",
+    "awayTeam": {
+    "id": 59,
+    "name": {
+    "default": "Utah Hockey Club",
+    "fr": "Club de hockey de l'Utah"
+    },
+    "commonName": {
+    "default": "Utah Hockey Club",
+    "fr": "Club de hockey de l'Utah"
+    },
+    "placeNameWithPreposition": {
+    "default": "Utah",
+    "fr": "de l'Utah"
+    },
+    "abbrev": "UTA",
+    "score": 5,
+    "logo": "https://assets.nhle.com/logos/nhl/svg/UTA_light.svg"
+    },
+    "homeTeam": {
+    "id": 2,
+    "name": {
+    "default": "New York Islanders",
+    "fr": "Islanders de New York"
+    },
+    "commonName": {
+    "default": "Islanders"
+    },
+    "placeNameWithPreposition": {
+    "default": "New York",
+    "fr": "de New York"
+    },
+    "abbrev": "NYI",
+    "score": 4,
+    "logo": "https://assets.nhle.com/logos/nhl/svg/NYI_light.svg"
+    },
+    "ticketsLink": "https://www.ticketmaster.com/event/300060E1EE712974?brand=nhl&wt.mc_id=NHL_LEAGUE_NYI_HORIZONTAL_SCOREBOARD_GM1&utm_source=NHL.com&utm_medium=client&utm_campaign=NHL_LEAGUE_NYI&utm_content=HORIZONTAL_SCOREBOARD_GM1",
+    "ticketsLinkFr": "https://www.ticketmaster.com/event/300060E1EE712974?brand=nhl&wt.mc_id=NHL_LEAGUE_NYI_HORIZONTAL_SCOREBOARD_GM1&utm_source=NHL.com&utm_medium=client&utm_campaign=NHL_LEAGUE_NYI&utm_content=HORIZONTAL_SCOREBOARD_GM1",
+    "period": 4,
+    "periodDescriptor": {
+    "number": 4,
+    "periodType": "OT",
+    "maxRegulationPeriods": 3
+    },
+    "threeMinRecap": "/video/uta-at-nyi-recap-6363102404112"
+    },
+    {
+    "id": 2024020014,
+    "season": 20242025,
+    "gameType": 2,
+    "gameDate": "2024-10-10",
+    "gameCenterLink": "/gamecenter/pit-vs-det/2024/10/10/2024020014",
+    "venue": {
+    "default": "Little Caesars Arena"
+    },
+    "startTimeUTC": "2024-10-11T00:00:00Z",
+    "easternUTCOffset": "-04:00",
+    "venueUTCOffset": "-04:00",
+    "tvBroadcasts": [
+    {
+    "id": 351,
+    "market": "H",
+    "countryCode": "US",
+    "network": "BSDET",
+    "sequenceNumber": 51
+    },
+    {
+    "id": 528,
+    "market": "A",
+    "countryCode": "US",
+    "network": "SN-PIT",
+    "sequenceNumber": 52
+    },
+    {
+    "id": 283,
+    "market": "N",
+    "countryCode": "CA",
+    "network": "SN360",
+    "sequenceNumber": 103
+    }
+    ],
+    "gameState": "OFF",
+    "gameScheduleState": "OK",
+    "awayTeam": {
+    "id": 5,
+    "name": {
+    "default": "Pittsburgh Penguins",
+    "fr": "Penguins de Pittsburgh"
+    },
+    "commonName": {
+    "default": "Penguins"
+    },
+    "placeNameWithPreposition": {
+    "default": "Pittsburgh",
+    "fr": "de Pittsburgh"
+    },
+    "abbrev": "PIT",
+    "score": 6,
+    "logo": "https://assets.nhle.com/logos/nhl/svg/PIT_light.svg"
+    },
+    "homeTeam": {
+    "id": 17,
+    "name": {
+    "default": "Detroit Red Wings",
+    "fr": "Red Wings de Detroit"
+    },
+    "commonName": {
+    "default": "Red Wings"
+    },
+    "placeNameWithPreposition": {
+    "default": "Detroit",
+    "fr": "de Detroit"
+    },
+    "abbrev": "DET",
+    "score": 3,
+    "logo": "https://assets.nhle.com/logos/nhl/svg/DET_light.svg"
+    },
+    "ticketsLink": "https://www.ticketmaster.com/event/080060E2A5E72524?brand=nhl&wt.mc_id=NHL_LEAGUE_DET_HORIZONTAL_SCOREBOARD_GM1&utm_source=NHL.com&utm_medium=client&utm_campaign=NHL_LEAGUE_DET&utm_content=HORIZONTAL_SCOREBOARD_GM1",
+    "ticketsLinkFr": "https://www.ticketmaster.com/event/080060E2A5E72524?brand=nhl&wt.mc_id=NHL_LEAGUE_DET_HORIZONTAL_SCOREBOARD_GM1&utm_source=NHL.com&utm_medium=client&utm_campaign=NHL_LEAGUE_DET&utm_content=HORIZONTAL_SCOREBOARD_GM1",
+    "period": 3,
+    "periodDescriptor": {
+    "number": 3,
+    "periodType": "REG",
+    "maxRegulationPeriods": 3
+    },
+    "threeMinRecap": "/video/pit-at-det-recap-6363104354112"
+    },
+    {
+    "id": 2024020017,
+    "season": 20242025,
+    "gameType": 2,
+    "gameDate": "2024-10-10",
+    "gameCenterLink": "/gamecenter/dal-vs-nsh/2024/10/10/2024020017",
+    "venue": {
+    "default": "Bridgestone Arena"
+    },
+    "startTimeUTC": "2024-10-11T00:00:00Z",
+    "easternUTCOffset": "-04:00",
+    "venueUTCOffset": "-05:00",
+    "tvBroadcasts": [
+    {
+    "id": 329,
+    "market": "N",
+    "countryCode": "US",
+    "network": "ESPN+",
+    "sequenceNumber": 6
+    },
+    {
+    "id": 391,
+    "market": "N",
+    "countryCode": "US",
+    "network": "HULU",
+    "sequenceNumber": 7
+    }
+    ],
+    "gameState": "OFF",
+    "gameScheduleState": "OK",
+    "awayTeam": {
+    "id": 25,
+    "name": {
+    "default": "Dallas Stars",
+    "fr": "Stars de Dallas"
+    },
+    "commonName": {
+    "default": "Stars"
+    },
+    "placeNameWithPreposition": {
+    "default": "Dallas",
+    "fr": "de Dallas"
+    },
+    "abbrev": "DAL",
+    "score": 4,
+    "logo": "https://assets.nhle.com/logos/nhl/svg/DAL_light.svg"
+    },
+    "homeTeam": {
+    "id": 18,
+    "name": {
+    "default": "Nashville Predators",
+    "fr": "Predators de Nashville"
+    },
+    "commonName": {
+    "default": "Predators"
+    },
+    "placeNameWithPreposition": {
+    "default": "Nashville",
+    "fr": "de Nashville"
+    },
+    "abbrev": "NSH",
+    "score": 3,
+    "logo": "https://assets.nhle.com/logos/nhl/svg/NSH_light.svg"
+    },
+    "ticketsLink": "https://www.ticketmaster.com/event/1B0061139AF019F1?brand=nhl&wt.mc_id=NHL_LEAGUE_NSH_HORIZONTAL_SCOREBOARD_GM1&utm_source=NHL.com&utm_medium=client&utm_campaign=NHL_LEAGUE_NSH&utm_content=HORIZONTAL_SCOREBOARD_GM1",
+    "ticketsLinkFr": "https://www.ticketmaster.com/event/1B0061139AF019F1?brand=nhl&wt.mc_id=NHL_LEAGUE_NSH_HORIZONTAL_SCOREBOARD_GM1&utm_source=NHL.com&utm_medium=client&utm_campaign=NHL_LEAGUE_NSH&utm_content=HORIZONTAL_SCOREBOARD_GM1",
+    "period": 3,
+    "periodDescriptor": {
+    "number": 3,
+    "periodType": "REG",
+    "maxRegulationPeriods": 3
+    },
+    "threeMinRecap": "/video/dal-at-nsh-recap-6363103867112"
+    },
+    {
+    "id": 2024020018,
+    "season": 20242025,
+    "gameType": 2,
+    "gameDate": "2024-10-10",
+    "gameCenterLink": "/gamecenter/cbj-vs-min/2024/10/10/2024020018",
+    "venue": {
+    "default": "Xcel Energy Center"
+    },
+    "startTimeUTC": "2024-10-11T00:00:00Z",
+    "easternUTCOffset": "-04:00",
+    "venueUTCOffset": "-05:00",
+    "tvBroadcasts": [
+    {
+    "id": 396,
+    "market": "H",
+    "countryCode": "US",
+    "network": "BSWIX",
+    "sequenceNumber": 55
+    },
+    {
+    "id": 347,
+    "market": "A",
+    "countryCode": "US",
+    "network": "BSOH",
+    "sequenceNumber": 72
+    },
+    {
+    "id": 361,
+    "market": "H",
+    "countryCode": "US",
+    "network": "BSN",
+    "sequenceNumber": 77
+    }
+    ],
+    "gameState": "OFF",
+    "gameScheduleState": "OK",
+    "awayTeam": {
+    "id": 29,
+    "name": {
+    "default": "Columbus Blue Jackets",
+    "fr": "Blue Jackets de Columbus"
+    },
+    "commonName": {
+    "default": "Blue Jackets"
+    },
+    "placeNameWithPreposition": {
+    "default": "Columbus",
+    "fr": "de Columbus"
+    },
+    "abbrev": "CBJ",
+    "score": 2,
+    "logo": "https://assets.nhle.com/logos/nhl/svg/CBJ_light.svg"
+    },
+    "homeTeam": {
+    "id": 30,
+    "name": {
+    "default": "Minnesota Wild",
+    "fr": "Wild du Minnesota"
+    },
+    "commonName": {
+    "default": "Wild"
+    },
+    "placeNameWithPreposition": {
+    "default": "Minnesota",
+    "fr": "du Minnesota"
+    },
+    "abbrev": "MIN",
+    "score": 3,
+    "logo": "https://assets.nhle.com/logos/nhl/svg/MIN_light.svg"
+    },
+    "ticketsLink": "https://www.ticketmaster.com/event/060060EB9C3D6D49?brand=nhl&wt.mc_id=NHL_LEAGUE_MIN_HORIZONTAL_SCOREBOARD_GM1&utm_source=NHL.com&utm_medium=client&utm_campaign=NHL_LEAGUE_MIN&utm_content=HORIZONTAL_SCOREBOARD_GM1",
+    "ticketsLinkFr": "https://www.ticketmaster.com/event/060060EB9C3D6D49?brand=nhl&wt.mc_id=NHL_LEAGUE_MIN_HORIZONTAL_SCOREBOARD_GM1&utm_source=NHL.com&utm_medium=client&utm_campaign=NHL_LEAGUE_MIN&utm_content=HORIZONTAL_SCOREBOARD_GM1",
+    "period": 3,
+    "periodDescriptor": {
+    "number": 3,
+    "periodType": "REG",
+    "maxRegulationPeriods": 3
+    },
+    "threeMinRecap": "/video/cbj-at-min-recap-6363102997112"
+    },
+    {
+    "id": 2024020019,
+    "season": 20242025,
+    "gameType": 2,
+    "gameDate": "2024-10-10",
+    "gameCenterLink": "/gamecenter/stl-vs-sjs/2024/10/10/2024020019",
+    "venue": {
+    "default": "SAP Center at San Jose"
+    },
+    "startTimeUTC": "2024-10-11T02:30:00Z",
+    "easternUTCOffset": "-04:00",
+    "venueUTCOffset": "-07:00",
+    "tvBroadcasts": [
+    {
+    "id": 329,
+    "market": "N",
+    "countryCode": "US",
+    "network": "ESPN+",
+    "sequenceNumber": 6
+    },
+    {
+    "id": 391,
+    "market": "N",
+    "countryCode": "US",
+    "network": "HULU",
+    "sequenceNumber": 7
+    },
+    {
+    "id": 283,
+    "market": "N",
+    "countryCode": "CA",
+    "network": "SN360",
+    "sequenceNumber": 103
+    }
+    ],
+    "gameState": "OFF",
+    "gameScheduleState": "OK",
+    "awayTeam": {
+    "id": 19,
+    "name": {
+    "default": "St. Louis Blues",
+    "fr": "Blues de St. Louis"
+    },
+    "commonName": {
+    "default": "Blues"
+    },
+    "placeNameWithPreposition": {
+    "default": "St. Louis",
+    "fr": "de St. Louis"
+    },
+    "abbrev": "STL",
+    "score": 5,
+    "logo": "https://assets.nhle.com/logos/nhl/svg/STL_light.svg"
+    },
+    "homeTeam": {
+    "id": 28,
+    "name": {
+    "default": "San Jose Sharks",
+    "fr": "Sharks de San Jose"
+    },
+    "commonName": {
+    "default": "Sharks"
+    },
+    "placeNameWithPreposition": {
+    "default": "San Jose",
+    "fr": "de San Jose"
+    },
+    "abbrev": "SJS",
+    "score": 4,
+    "logo": "https://assets.nhle.com/logos/nhl/svg/SJS_light.svg"
+    },
+    "ticketsLink": "https://www.nhl.com/sharks/tickets/",
+    "ticketsLinkFr": "https://www.nhl.com/sharks/tickets/",
+    "period": 4,
+    "periodDescriptor": {
+    "number": 4,
+    "periodType": "OT",
+    "maxRegulationPeriods": 3
+    },
+    "threeMinRecap": "/video/stl-at-sjs-recap-6363108492112"
+    }
+    ]
+    },
+    {
+    "date": "2024-10-11",
+    "games": [
+    {
+    "id": 2024020020,
+    "season": 20242025,
+    "gameType": 2,
+    "gameDate": "2024-10-11",
+    "gameCenterLink": "/gamecenter/tbl-vs-car/2024/10/11/2024020020",
+    "venue": {
+    "default": "Lenovo Center"
+    },
+    "startTimeUTC": "2024-10-11T23:00:00Z",
+    "easternUTCOffset": "-04:00",
+    "venueUTCOffset": "-04:00",
+    "tvBroadcasts": [
+    {
+    "id": 329,
+    "market": "N",
+    "countryCode": "US",
+    "network": "ESPN+",
+    "sequenceNumber": 6
+    },
+    {
+    "id": 391,
+    "market": "N",
+    "countryCode": "US",
+    "network": "HULU",
+    "sequenceNumber": 7
+    },
+    {
+    "id": 290,
+    "market": "N",
+    "countryCode": "CA",
+    "network": "SNP",
+    "sequenceNumber": 33
+    }
+    ],
+    "gameState": "OFF",
+    "gameScheduleState": "OK",
+    "awayTeam": {
+    "id": 14,
+    "name": {
+    "default": "Tampa Bay Lightning",
+    "fr": "Lightning de Tampa Bay"
+    },
+    "commonName": {
+    "default": "Lightning"
+    },
+    "placeNameWithPreposition": {
+    "default": "Tampa Bay",
+    "fr": "de Tampa Bay"
+    },
+    "abbrev": "TBL",
+    "score": 4,
+    "logo": "https://assets.nhle.com/logos/nhl/svg/TBL_light.svg"
+    },
+    "homeTeam": {
+    "id": 12,
+    "name": {
+    "default": "Carolina Hurricanes",
+    "fr": "Hurricanes de la Caroline"
+    },
+    "commonName": {
+    "default": "Hurricanes"
+    },
+    "placeNameWithPreposition": {
+    "default": "Carolina",
+    "fr": "de la Caroline"
+    },
+    "abbrev": "CAR",
+    "score": 1,
+    "logo": "https://assets.nhle.com/logos/nhl/svg/CAR_light.svg"
+    },
+    "ticketsLink": "https://www.ticketmaster.com/event/2D0060F7BAE382DF?brand=nhl&wt.mc_id=NHL_LEAGUE_CAR_HORIZONTAL_SCOREBOARD_GM1&utm_source=NHL.com&utm_medium=client&utm_campaign=NHL_LEAGUE_CAR&utm_content=HORIZONTAL_SCOREBOARD_GM1",
+    "ticketsLinkFr": "https://www.ticketmaster.com/event/2D0060F7BAE382DF?brand=nhl&wt.mc_id=NHL_LEAGUE_CAR_HORIZONTAL_SCOREBOARD_GM1&utm_source=NHL.com&utm_medium=client&utm_campaign=NHL_LEAGUE_CAR&utm_content=HORIZONTAL_SCOREBOARD_GM1",
+    "period": 3,
+    "periodDescriptor": {
+    "number": 3,
+    "periodType": "REG",
+    "maxRegulationPeriods": 3
+    },
+    "threeMinRecap": "/video/tbl-at-car-recap-6363154266112"
+    },
+    {
+    "id": 2024020021,
+    "season": 20242025,
+    "gameType": 2,
+    "gameDate": "2024-10-11",
+    "gameCenterLink": "/gamecenter/chi-vs-wpg/2024/10/11/2024020021",
+    "venue": {
+    "default": "Canada Life Centre"
+    },
+    "startTimeUTC": "2024-10-12T00:00:00Z",
+    "easternUTCOffset": "-04:00",
+    "venueUTCOffset": "-05:00",
+    "tvBroadcasts": [
+    {
+    "id": 551,
+    "market": "A",
+    "countryCode": "US",
+    "network": "CHSN",
+    "sequenceNumber": 1
+    },
+    {
+    "id": 292,
+    "market": "H",
+    "countryCode": "CA",
+    "network": "TSN3",
+    "sequenceNumber": 134
+    }
+    ],
+    "gameState": "OFF",
+    "gameScheduleState": "OK",
+    "awayTeam": {
+    "id": 16,
+    "name": {
+    "default": "Chicago Blackhawks",
+    "fr": "Blackhawks de Chicago"
+    },
+    "commonName": {
+    "default": "Blackhawks"
+    },
+    "placeNameWithPreposition": {
+    "default": "Chicago",
+    "fr": "de Chicago"
+    },
+    "abbrev": "CHI",
+    "score": 1,
+    "logo": "https://assets.nhle.com/logos/nhl/svg/CHI_light.svg"
+    },
+    "homeTeam": {
+    "id": 52,
+    "name": {
+    "default": "Winnipeg Jets",
+    "fr": "Jets de Winnipeg"
+    },
+    "commonName": {
+    "default": "Jets"
+    },
+    "placeNameWithPreposition": {
+    "default": "Winnipeg",
+    "fr": "de Winnipeg"
+    },
+    "abbrev": "WPG",
+    "score": 2,
+    "logo": "https://assets.nhle.com/logos/nhl/svg/WPG_light.svg"
+    },
+    "ticketsLink": "https://www.ticketmaster.ca/event/1100610C7C240DC9?brand=winnipegjets&artistid=1613893&wt.mc_id=NHL_TEAM_WPG_SCORE_TAB_APP_GM1&utm_source=NHL.com&utm_medium=client&utm_campaign=NHL_TEAM_WPG&utm_content=SCORE_TAB_APP_GM1",
+    "ticketsLinkFr": "https://www.ticketmaster.ca/event/1100610C7C240DC9?brand=winnipegjets&artistid=1613893&wt.mc_id=NHL_TEAM_WPG_SCORE_TAB_APP_GM1&utm_source=NHL.com&utm_medium=client&utm_campaign=NHL_TEAM_WPG&utm_content=SCORE_TAB_APP_GM1",
+    "period": 4,
+    "periodDescriptor": {
+    "number": 4,
+    "periodType": "OT",
+    "maxRegulationPeriods": 3
+    },
+    "threeMinRecap": "/video/chi-at-wpg-recap-6363155399112"
+    },
+    {
+    "id": 2024020022,
+    "season": 20242025,
+    "gameType": 2,
+    "gameDate": "2024-10-11",
+    "gameCenterLink": "/gamecenter/phi-vs-van/2024/10/11/2024020022",
+    "venue": {
+    "default": "Rogers Arena"
+    },
+    "startTimeUTC": "2024-10-12T02:00:00Z",
+    "easternUTCOffset": "-04:00",
+    "venueUTCOffset": "-07:00",
+    "tvBroadcasts": [
+    {
+    "id": 290,
+    "market": "H",
+    "countryCode": "CA",
+    "network": "SNP",
+    "sequenceNumber": 33
+    },
+    {
+    "id": 322,
+    "market": "A",
+    "countryCode": "US",
+    "network": "NBCSP",
+    "sequenceNumber": 59
+    }
+    ],
+    "gameState": "OFF",
+    "gameScheduleState": "OK",
+    "awayTeam": {
+    "id": 4,
+    "name": {
+    "default": "Philadelphia Flyers",
+    "fr": "Flyers de Philadelphie"
+    },
+    "commonName": {
+    "default": "Flyers"
+    },
+    "placeNameWithPreposition": {
+    "default": "Philadelphia",
+    "fr": "de Philadelphie"
+    },
+    "abbrev": "PHI",
+    "score": 3,
+    "logo": "https://assets.nhle.com/logos/nhl/svg/PHI_light.svg"
+    },
+    "homeTeam": {
+    "id": 23,
+    "name": {
+    "default": "Vancouver Canucks",
+    "fr": "Canucks de Vancouver"
+    },
+    "commonName": {
+    "default": "Canucks"
+    },
+    "placeNameWithPreposition": {
+    "default": "Vancouver",
+    "fr": "de Vancouver"
+    },
+    "abbrev": "VAN",
+    "score": 2,
+    "logo": "https://assets.nhle.com/logos/nhl/svg/VAN_light.svg"
+    },
+    "ticketsLink": "https://www.nhl.com/canucks/tickets/",
+    "ticketsLinkFr": "https://www.nhl.com/canucks/tickets/",
+    "period": 5,
+    "periodDescriptor": {
+    "number": 5,
+    "periodType": "SO",
+    "maxRegulationPeriods": 3
+    },
+    "threeMinRecap": "/video/phi-at-van-recap-6363161081112"
+    },
+    {
+    "id": 2024020023,
+    "season": 20242025,
+    "gameType": 2,
+    "gameDate": "2024-10-11",
+    "gameCenterLink": "/gamecenter/stl-vs-vgk/2024/10/11/2024020023",
+    "venue": {
+    "default": "T-Mobile Arena"
+    },
+    "startTimeUTC": "2024-10-12T02:00:00Z",
+    "easternUTCOffset": "-04:00",
+    "venueUTCOffset": "-07:00",
+    "tvBroadcasts": [
+    {
+    "id": 521,
+    "market": "H",
+    "countryCode": "US",
+    "network": "SCRIPPS",
+    "sequenceNumber": 87
+    },
+    {
+    "id": 357,
+    "market": "A",
+    "countryCode": "US",
+    "network": "BSMW",
+    "sequenceNumber": 95
+    },
+    {
+    "id": 283,
+    "market": "N",
+    "countryCode": "CA",
+    "network": "SN360",
+    "sequenceNumber": 103
+    }
+    ],
+    "gameState": "OFF",
+    "gameScheduleState": "OK",
+    "awayTeam": {
+    "id": 19,
+    "name": {
+    "default": "St. Louis Blues",
+    "fr": "Blues de St. Louis"
+    },
+    "commonName": {
+    "default": "Blues"
+    },
+    "placeNameWithPreposition": {
+    "default": "St. Louis",
+    "fr": "de St. Louis"
+    },
+    "abbrev": "STL",
+    "score": 3,
+    "logo": "https://assets.nhle.com/logos/nhl/svg/STL_light.svg"
+    },
+    "homeTeam": {
+    "id": 54,
+    "name": {
+    "default": "Vegas Golden Knights",
+    "fr": "Golden Knights de Vegas"
+    },
+    "commonName": {
+    "default": "Golden Knights"
+    },
+    "placeNameWithPreposition": {
+    "default": "Vegas",
+    "fr": "de Vegas"
+    },
+    "abbrev": "VGK",
+    "score": 4,
+    "logo": "https://assets.nhle.com/logos/nhl/svg/VGK_light.svg"
+    },
+    "ticketsLink": "https://www.nhl.com/goldenknights/tickets/",
+    "ticketsLinkFr": "https://www.nhl.com/goldenknights/tickets/",
+    "period": 3,
+    "periodDescriptor": {
+    "number": 3,
+    "periodType": "REG",
+    "maxRegulationPeriods": 3
+    },
+    "threeMinRecap": "/video/stl-at-vgk-recap-6363159758112"
+    }
+    ]
+    },
+    {
+    "date": "2024-10-12",
+    "games": [
+    {
+    "id": 2024020024,
+    "season": 20242025,
+    "gameType": 2,
+    "gameDate": "2024-10-12",
+    "gameCenterLink": "/gamecenter/lak-vs-bos/2024/10/12/2024020024",
+    "venue": {
+    "default": "TD Garden"
+    },
+    "startTimeUTC": "2024-10-12T17:00:00Z",
+    "easternUTCOffset": "-04:00",
+    "venueUTCOffset": "-04:00",
+    "tvBroadcasts": [
+    {
+    "id": 355,
+    "market": "A",
+    "countryCode": "US",
+    "network": "BSW",
+    "sequenceNumber": 57
+    },
+    {
+    "id": 31,
+    "market": "H",
+    "countryCode": "US",
+    "network": "NESN",
+    "sequenceNumber": 78
+    },
+    {
+    "id": 284,
+    "market": "N",
+    "countryCode": "CA",
+    "network": "SN1",
+    "sequenceNumber": 102
+    }
+    ],
+    "gameState": "OFF",
+    "gameScheduleState": "OK",
+    "awayTeam": {
+    "id": 26,
+    "name": {
+    "default": "Los Angeles Kings",
+    "fr": "Kings de Los Angeles"
+    },
+    "commonName": {
+    "default": "Kings"
+    },
+    "placeNameWithPreposition": {
+    "default": "Los Angeles",
+    "fr": "de Los Angeles"
+    },
+    "abbrev": "LAK",
+    "score": 1,
+    "logo": "https://assets.nhle.com/logos/nhl/svg/LAK_light.svg"
+    },
+    "homeTeam": {
+    "id": 6,
+    "name": {
+    "default": "Boston Bruins",
+    "fr": "Bruins de Boston"
+    },
+    "commonName": {
+    "default": "Bruins"
+    },
+    "placeNameWithPreposition": {
+    "default": "Boston",
+    "fr": "de Boston"
+    },
+    "abbrev": "BOS",
+    "score": 2,
+    "logo": "https://assets.nhle.com/logos/nhl/svg/BOS_light.svg"
+    },
+    "ticketsLink": "https://www.ticketmaster.com/event/010060D9D53474AA?brand=nhl&wt.mc_id=NHL_LEAGUE_BOS_HORIZONTAL_SCOREBOARD_GM2&utm_source=NHL.com&utm_medium=client&utm_campaign=NHL_LEAGUE_BOS&utm_content=HORIZONTAL_SCOREBOARD_GM2",
+    "ticketsLinkFr": "https://www.ticketmaster.com/event/010060D9D53474AA?brand=nhl&wt.mc_id=NHL_LEAGUE_BOS_HORIZONTAL_SCOREBOARD_GM2&utm_source=NHL.com&utm_medium=client&utm_campaign=NHL_LEAGUE_BOS&utm_content=HORIZONTAL_SCOREBOARD_GM2",
+    "period": 4,
+    "periodDescriptor": {
+    "number": 4,
+    "periodType": "OT",
+    "maxRegulationPeriods": 3
+    },
+    "threeMinRecap": "/video/lak-at-bos-recap-6363180584112"
+    },
+    {
+    "id": 2024020025,
+    "season": 20242025,
+    "gameType": 2,
+    "gameDate": "2024-10-12",
+    "gameCenterLink": "/gamecenter/fla-vs-buf/2024/10/12/2024020025",
+    "venue": {
+    "default": "KeyBank Center"
+    },
+    "startTimeUTC": "2024-10-12T23:00:00Z",
+    "easternUTCOffset": "-04:00",
+    "venueUTCOffset": "-04:00",
+    "tvBroadcasts": [
+    {
+    "id": 28,
+    "market": "H",
+    "countryCode": "US",
+    "network": "MSG-B",
+    "sequenceNumber": 62
+    },
+    {
+    "id": 521,
+    "market": "A",
+    "countryCode": "US",
+    "network": "SCRIPPS",
+    "sequenceNumber": 87
+    }
+    ],
+    "gameState": "OFF",
+    "gameScheduleState": "OK",
+    "awayTeam": {
+    "id": 13,
+    "name": {
+    "default": "Florida Panthers",
+    "fr": "Panthers de la Floride"
+    },
+    "commonName": {
+    "default": "Panthers"
+    },
+    "placeNameWithPreposition": {
+    "default": "Florida",
+    "fr": "de la Floride"
+    },
+    "abbrev": "FLA",
+    "score": 2,
+    "logo": "https://assets.nhle.com/logos/nhl/svg/FLA_light.svg"
+    },
+    "homeTeam": {
+    "id": 7,
+    "name": {
+    "default": "Buffalo Sabres",
+    "fr": "Sabres de Buffalo"
+    },
+    "commonName": {
+    "default": "Sabres"
+    },
+    "placeNameWithPreposition": {
+    "default": "Buffalo",
+    "fr": "de Buffalo"
+    },
+    "abbrev": "BUF",
+    "score": 5,
+    "logo": "https://assets.nhle.com/logos/nhl/svg/BUF_light.svg"
+    },
+    "ticketsLink": "https://www.ticketmaster.com/event/000060DADA638B93?brand=nhl&wt.mc_id=NHL_LEAGUE_BUF_HORIZONTAL_SCOREBOARD_GM3&utm_source=NHL.com&utm_medium=client&utm_campaign=NHL_LEAGUE_BUF&utm_content=HORIZONTAL_SCOREBOARD_GM3",
+    "ticketsLinkFr": "https://www.ticketmaster.com/event/000060DADA638B93?brand=nhl&wt.mc_id=NHL_LEAGUE_BUF_HORIZONTAL_SCOREBOARD_GM3&utm_source=NHL.com&utm_medium=client&utm_campaign=NHL_LEAGUE_BUF&utm_content=HORIZONTAL_SCOREBOARD_GM3",
+    "period": 3,
+    "periodDescriptor": {
+    "number": 3,
+    "periodType": "REG",
+    "maxRegulationPeriods": 3
+    },
+    "threeMinRecap": "/video/fla-at-buf-recap-6363191924112"
+    },
+    {
+    "id": 2024020026,
+    "season": 20242025,
+    "gameType": 2,
+    "gameDate": "2024-10-12",
+    "gameCenterLink": "/gamecenter/pit-vs-tor/2024/10/12/2024020026",
+    "venue": {
+    "default": "Scotiabank Arena"
+    },
+    "startTimeUTC": "2024-10-12T23:00:00Z",
+    "easternUTCOffset": "-04:00",
+    "venueUTCOffset": "-04:00",
+    "tvBroadcasts": [
+    {
+    "id": 282,
+    "market": "N",
+    "countryCode": "CA",
+    "network": "SN",
+    "sequenceNumber": 21
+    },
+    {
+    "id": 324,
+    "market": "N",
+    "countryCode": "US",
+    "network": "NHLN",
+    "sequenceNumber": 23
+    },
+    {
+    "id": 4,
+    "market": "N",
+    "countryCode": "CA",
+    "network": "CBC",
+    "sequenceNumber": 25
+    },
+    {
+    "id": 528,
+    "market": "A",
+    "countryCode": "US",
+    "network": "SN-PIT",
+    "sequenceNumber": 52
+    }
+    ],
+    "gameState": "OFF",
+    "gameScheduleState": "OK",
+    "awayTeam": {
+    "id": 5,
+    "name": {
+    "default": "Pittsburgh Penguins",
+    "fr": "Penguins de Pittsburgh"
+    },
+    "commonName": {
+    "default": "Penguins"
+    },
+    "placeNameWithPreposition": {
+    "default": "Pittsburgh",
+    "fr": "de Pittsburgh"
+    },
+    "abbrev": "PIT",
+    "score": 2,
+    "logo": "https://assets.nhle.com/logos/nhl/svg/PIT_light.svg"
+    },
+    "homeTeam": {
+    "id": 10,
+    "name": {
+    "default": "Toronto Maple Leafs",
+    "fr": "Maple Leafs de Toronto"
+    },
+    "commonName": {
+    "default": "Maple Leafs"
+    },
+    "placeNameWithPreposition": {
+    "default": "Toronto",
+    "fr": "de Toronto"
+    },
+    "abbrev": "TOR",
+    "score": 4,
+    "logo": "https://assets.nhle.com/logos/nhl/svg/TOR_light.svg"
+    },
+    "ticketsLink": "https://www.nhl.com/mapleleafs/tickets/",
+    "ticketsLinkFr": "https://www.nhl.com/mapleleafs/tickets/",
+    "period": 3,
+    "periodDescriptor": {
+    "number": 3,
+    "periodType": "REG",
+    "maxRegulationPeriods": 3
+    },
+    "threeMinRecap": "/video/pit-at-tor-recap-6363193112112"
+    },
+    {
+    "id": 2024020027,
+    "season": 20242025,
+    "gameType": 2,
+    "gameDate": "2024-10-12",
+    "gameCenterLink": "/gamecenter/ott-vs-mtl/2024/10/12/2024020027",
+    "venue": {
+    "default": "Centre Bell"
+    },
+    "startTimeUTC": "2024-10-12T23:00:00Z",
+    "easternUTCOffset": "-04:00",
+    "venueUTCOffset": "-04:00",
+    "tvBroadcasts": [
+    {
+    "id": 286,
+    "market": "N",
+    "countryCode": "CA",
+    "network": "CITY",
+    "sequenceNumber": 26
+    },
+    {
+    "id": 287,
+    "market": "N",
+    "countryCode": "CA",
+    "network": "SNE",
+    "sequenceNumber": 30
+    },
+    {
+    "id": 284,
+    "market": "N",
+    "countryCode": "CA",
+    "network": "SN1",
+    "sequenceNumber": 102
+    },
+    {
+    "id": 281,
+    "market": "N",
+    "countryCode": "CA",
+    "network": "TVAS",
+    "sequenceNumber": 109
+    }
+    ],
+    "gameState": "OFF",
+    "gameScheduleState": "OK",
+    "awayTeam": {
+    "id": 9,
+    "name": {
+    "default": "Ottawa Senators",
+    "fr": "Sénateurs d'Ottawa"
+    },
+    "commonName": {
+    "default": "Senators",
+    "fr": "Sénateurs"
+    },
+    "placeNameWithPreposition": {
+    "default": "Ottawa",
+    "fr": "d'Ottawa"
+    },
+    "abbrev": "OTT",
+    "score": 1,
+    "logo": "https://assets.nhle.com/logos/nhl/svg/OTT_light.svg"
+    },
+    "homeTeam": {
+    "id": 8,
+    "name": {
+    "default": "Montréal Canadiens",
+    "fr": "Canadiens de Montréal"
+    },
+    "commonName": {
+    "default": "Canadiens"
+    },
+    "placeNameWithPreposition": {
+    "default": "Montréal",
+    "fr": "de Montréal"
+    },
+    "abbrev": "MTL",
+    "score": 4,
+    "logo": "https://assets.nhle.com/logos/nhl/svg/MTL_light.svg"
+    },
+    "ticketsLink": "https://www.ticketmaster.ca/event/310060F97FB91DD8?lang=en-ca&brand=nhl&wt.mc_id=NHL_LEAGUE_MTL_HORIZONTAL_SCOREBOARD_GM2&utm_source=NHL.com&utm_medium=client&utm_campaign=NHL_LEAGUE_MTL&utm_content=HORIZONTAL_SCOREBOARD_GM2",
+    "ticketsLinkFr": "https://www.ticketmaster.ca/event/310060F97FB91DD8?lang=fr-ca&brand=nhl&wt.mc_id=NHL_LEAGUE_MTL_HORIZONTAL_SCOREBOARD_GM2&utm_source=NHL.com&utm_medium=client&utm_campaign=NHL_LEAGUE_MTL&utm_content=HORIZONTAL_SCOREBOARD_GM2",
+    "period": 3,
+    "periodDescriptor": {
+    "number": 3,
+    "periodType": "REG",
+    "maxRegulationPeriods": 3
+    },
+    "threeMinRecap": "/video/ott-at-mtl-recap-6363192720112",
+    "threeMinRecapFr": "/fr/video/ott-vs-mtl-12-october-2024-resume-6363192332112"
+    },
+    {
+    "id": 2024020028,
+    "season": 20242025,
+    "gameType": 2,
+    "gameDate": "2024-10-12",
+    "gameCenterLink": "/gamecenter/nsh-vs-det/2024/10/12/2024020028",
+    "venue": {
+    "default": "Little Caesars Arena"
+    },
+    "startTimeUTC": "2024-10-12T23:00:00Z",
+    "easternUTCOffset": "-04:00",
+    "venueUTCOffset": "-04:00",
+    "tvBroadcasts": [
+    {
+    "id": 351,
+    "market": "H",
+    "countryCode": "US",
+    "network": "BSDET",
+    "sequenceNumber": 51
+    },
+    {
+    "id": 375,
+    "market": "A",
+    "countryCode": "US",
+    "network": "BSSO",
+    "sequenceNumber": 70
+    }
+    ],
+    "gameState": "OFF",
+    "gameScheduleState": "OK",
+    "awayTeam": {
+    "id": 18,
+    "name": {
+    "default": "Nashville Predators",
+    "fr": "Predators de Nashville"
+    },
+    "commonName": {
+    "default": "Predators"
+    },
+    "placeNameWithPreposition": {
+    "default": "Nashville",
+    "fr": "de Nashville"
+    },
+    "abbrev": "NSH",
+    "score": 0,
+    "logo": "https://assets.nhle.com/logos/nhl/svg/NSH_light.svg"
+    },
+    "homeTeam": {
+    "id": 17,
+    "name": {
+    "default": "Detroit Red Wings",
+    "fr": "Red Wings de Detroit"
+    },
+    "commonName": {
+    "default": "Red Wings"
+    },
+    "placeNameWithPreposition": {
+    "default": "Detroit",
+    "fr": "de Detroit"
+    },
+    "abbrev": "DET",
+    "score": 3,
+    "logo": "https://assets.nhle.com/logos/nhl/svg/DET_light.svg"
+    },
+    "ticketsLink": "https://www.ticketmaster.com/event/080060E2A5EC255A?brand=nhl&wt.mc_id=NHL_LEAGUE_DET_HORIZONTAL_SCOREBOARD_GM2&utm_source=NHL.com&utm_medium=client&utm_campaign=NHL_LEAGUE_DET&utm_content=HORIZONTAL_SCOREBOARD_GM2",
+    "ticketsLinkFr": "https://www.ticketmaster.com/event/080060E2A5EC255A?brand=nhl&wt.mc_id=NHL_LEAGUE_DET_HORIZONTAL_SCOREBOARD_GM2&utm_source=NHL.com&utm_medium=client&utm_campaign=NHL_LEAGUE_DET&utm_content=HORIZONTAL_SCOREBOARD_GM2",
+    "period": 3,
+    "periodDescriptor": {
+    "number": 3,
+    "periodType": "REG",
+    "maxRegulationPeriods": 3
+    },
+    "threeMinRecap": "/video/nsh-at-det-recap-6363192625112"
+    },
+    {
+    "id": 2024020029,
+    "season": 20242025,
+    "gameType": 2,
+    "gameDate": "2024-10-12",
+    "gameCenterLink": "/gamecenter/car-vs-tbl/2024/10/12/2024020029",
+    "venue": {
+    "default": "Amalie Arena"
+    },
+    "startTimeUTC": "2024-10-12T23:00:00Z",
+    "easternUTCOffset": "-04:00",
+    "venueUTCOffset": "-04:00",
+    "tvBroadcasts": [],
+    "gameState": "FUT",
+    "gameScheduleState": "PPD",
+    "awayTeam": {
+    "id": 12,
+    "name": {
+    "default": "Carolina Hurricanes",
+    "fr": "Hurricanes de la Caroline"
+    },
+    "commonName": {
+    "default": "Hurricanes"
+    },
+    "placeNameWithPreposition": {
+    "default": "Carolina",
+    "fr": "de la Caroline"
+    },
+    "abbrev": "CAR",
+    "record": "0-1-0",
+    "logo": "https://assets.nhle.com/logos/nhl/svg/CAR_light.svg"
+    },
+    "homeTeam": {
+    "id": 14,
+    "name": {
+    "default": "Tampa Bay Lightning",
+    "fr": "Lightning de Tampa Bay"
+    },
+    "commonName": {
+    "default": "Lightning"
+    },
+    "placeNameWithPreposition": {
+    "default": "Tampa Bay",
+    "fr": "de Tampa Bay"
+    },
+    "abbrev": "TBL",
+    "record": "1-0-0",
+    "logo": "https://assets.nhle.com/logos/nhl/svg/TBL_light.svg"
+    },
+    "ticketsLink": "https://www.ticketmaster.com/event/0D006101A91F2FEF?brand=nhl&wt.mc_id=NHL_LEAGUE_TBL_HORIZONTAL_SCOREBOARD_GM1&utm_source=NHL.com&utm_medium=client&utm_campaign=NHL_LEAGUE_TBL&utm_content=HORIZONTAL_SCOREBOARD_GM1",
+    "ticketsLinkFr": "https://www.ticketmaster.com/event/0D006101A91F2FEF?brand=nhl&wt.mc_id=NHL_LEAGUE_TBL_HORIZONTAL_SCOREBOARD_GM1&utm_source=NHL.com&utm_medium=client&utm_campaign=NHL_LEAGUE_TBL&utm_content=HORIZONTAL_SCOREBOARD_GM1"
+    },
+    {
+    "id": 2024020030,
+    "season": 20242025,
+    "gameType": 2,
+    "gameDate": "2024-10-12",
+    "gameCenterLink": "/gamecenter/uta-vs-nyr/2024/10/12/2024020030",
+    "venue": {
+    "default": "Madison Square Garden"
+    },
+    "startTimeUTC": "2024-10-12T23:00:00Z",
+    "easternUTCOffset": "-04:00",
+    "venueUTCOffset": "-04:00",
+    "tvBroadcasts": [
+    {
+    "id": 558,
+    "market": "A",
+    "countryCode": "US",
+    "network": "Utah16",
+    "sequenceNumber": 1
+    },
+    {
+    "id": 27,
+    "market": "H",
+    "countryCode": "US",
+    "network": "MSG",
+    "sequenceNumber": 97
+    }
+    ],
+    "gameState": "OFF",
+    "gameScheduleState": "OK",
+    "awayTeam": {
+    "id": 59,
+    "name": {
+    "default": "Utah Hockey Club",
+    "fr": "Club de hockey de l'Utah"
+    },
+    "commonName": {
+    "default": "Utah Hockey Club",
+    "fr": "Club de hockey de l'Utah"
+    },
+    "placeNameWithPreposition": {
+    "default": "Utah",
+    "fr": "de l'Utah"
+    },
+    "abbrev": "UTA",
+    "score": 6,
+    "logo": "https://assets.nhle.com/logos/nhl/svg/UTA_light.svg"
+    },
+    "homeTeam": {
+    "id": 3,
+    "name": {
+    "default": "New York Rangers",
+    "fr": "Rangers de New York"
+    },
+    "commonName": {
+    "default": "Rangers"
+    },
+    "placeNameWithPreposition": {
+    "default": "New York",
+    "fr": "de New York"
+    },
+    "abbrev": "NYR",
+    "score": 5,
+    "logo": "https://assets.nhle.com/logos/nhl/svg/NYR_light.svg"
+    },
+    "ticketsLink": "https://www.ticketmaster.com/event/3B0060E3BA63116A?brand=nhl&wt.mc_id=NHL_LEAGUE_NYR_HORIZONTAL_SCOREBOARD_GM1&utm_source=NHL.com&utm_medium=client&utm_campaign=NHL_LEAGUE_NYR&utm_content=HORIZONTAL_SCOREBOARD_GM1&CAMEFROM=CFC_RANGERS_WEB_NHL_HP-SCOREBOX_240730",
+    "ticketsLinkFr": "https://www.ticketmaster.com/event/3B0060E3BA63116A?brand=nhl&wt.mc_id=NHL_LEAGUE_NYR_HORIZONTAL_SCOREBOARD_GM1&utm_source=NHL.com&utm_medium=client&utm_campaign=NHL_LEAGUE_NYR&utm_content=HORIZONTAL_SCOREBOARD_GM1&CAMEFROM=CFC_RANGERS_WEB_NHL_HP-SCOREBOX_240730",
+    "period": 4,
+    "periodDescriptor": {
+    "number": 4,
+    "periodType": "OT",
+    "maxRegulationPeriods": 3
+    },
+    "threeMinRecap": "/video/uta-at-nyr-recap-6363191693112"
+    },
+    {
+    "id": 2024020031,
+    "season": 20242025,
+    "gameType": 2,
+    "gameDate": "2024-10-12",
+    "gameCenterLink": "/gamecenter/njd-vs-wsh/2024/10/12/2024020031",
+    "venue": {
+    "default": "Capital One Arena"
+    },
+    "startTimeUTC": "2024-10-12T23:00:00Z",
+    "easternUTCOffset": "-04:00",
+    "venueUTCOffset": "-04:00",
+    "tvBroadcasts": [
+    {
+    "id": 517,
+    "market": "H",
+    "countryCode": "US",
+    "network": "MNMT",
+    "sequenceNumber": 67
+    },
+    {
+    "id": 409,
+    "market": "A",
+    "countryCode": "US",
+    "network": "MSGSN",
+    "sequenceNumber": 88
+    }
+    ],
+    "gameState": "OFF",
+    "gameScheduleState": "OK",
+    "awayTeam": {
+    "id": 1,
+    "name": {
+    "default": "New Jersey Devils",
+    "fr": "Devils du New Jersey"
+    },
+    "commonName": {
+    "default": "Devils"
+    },
+    "placeNameWithPreposition": {
+    "default": "New Jersey",
+    "fr": "du New Jersey"
+    },
+    "abbrev": "NJD",
+    "score": 5,
+    "logo": "https://assets.nhle.com/logos/nhl/svg/NJD_light.svg"
+    },
+    "homeTeam": {
+    "id": 15,
+    "name": {
+    "default": "Washington Capitals",
+    "fr": "Capitals de Washington"
+    },
+    "commonName": {
+    "default": "Capitals"
+    },
+    "placeNameWithPreposition": {
+    "default": "Washington",
+    "fr": "de Washington"
+    },
+    "abbrev": "WSH",
+    "score": 3,
+    "logo": "https://assets.nhle.com/logos/nhl/svg/WSH_secondary_light.svg"
+    },
+    "ticketsLink": "https://www.ticketmaster.com/event/150060E2C1DF3E34?brand=nhl&wt.mc_id=NHL_LEAGUE_WSH_HORIZONTAL_SCOREBOARD_GM1&utm_source=league_scoreboard&utm_medium=web_organic&utm_campaign=ca1012nd",
+    "ticketsLinkFr": "https://www.ticketmaster.com/event/150060E2C1DF3E34?brand=nhl&wt.mc_id=NHL_LEAGUE_WSH_HORIZONTAL_SCOREBOARD_GM1&utm_source=league_scoreboard&utm_medium=web_organic&utm_campaign=ca1012nd",
+    "period": 3,
+    "periodDescriptor": {
+    "number": 3,
+    "periodType": "REG",
+    "maxRegulationPeriods": 3
+    },
+    "threeMinRecap": "/video/njd-at-wsh-recap-6363193322112"
+    },
+    {
+    "id": 2024020032,
+    "season": 20242025,
+    "gameType": 2,
+    "gameDate": "2024-10-12",
+    "gameCenterLink": "/gamecenter/nyi-vs-dal/2024/10/12/2024020032",
+    "venue": {
+    "default": "American Airlines Center"
+    },
+    "startTimeUTC": "2024-10-13T00:00:00Z",
+    "easternUTCOffset": "-04:00",
+    "venueUTCOffset": "-05:00",
+    "tvBroadcasts": [
+    {
+    "id": 553,
+    "market": "H",
+    "countryCode": "US",
+    "network": "Victory+",
+    "sequenceNumber": 1
+    },
+    {
+    "id": 410,
+    "market": "A",
+    "countryCode": "US",
+    "network": "MSGSN2",
+    "sequenceNumber": 79
+    }
+    ],
+    "gameState": "OFF",
+    "gameScheduleState": "OK",
+    "awayTeam": {
+    "id": 2,
+    "name": {
+    "default": "New York Islanders",
+    "fr": "Islanders de New York"
+    },
+    "commonName": {
+    "default": "Islanders"
+    },
+    "placeNameWithPreposition": {
+    "default": "New York",
+    "fr": "de New York"
+    },
+    "abbrev": "NYI",
+    "score": 0,
+    "logo": "https://assets.nhle.com/logos/nhl/svg/NYI_light.svg"
+    },
+    "homeTeam": {
+    "id": 25,
+    "name": {
+    "default": "Dallas Stars",
+    "fr": "Stars de Dallas"
+    },
+    "commonName": {
+    "default": "Stars"
+    },
+    "placeNameWithPreposition": {
+    "default": "Dallas",
+    "fr": "de Dallas"
+    },
+    "abbrev": "DAL",
+    "score": 3,
+    "logo": "https://assets.nhle.com/logos/nhl/svg/DAL_light.svg"
+    },
+    "ticketsLink": "https://www.ticketmaster.com/event/0C0060DC863B155F?brand=nhl&wt.mc_id=NHL_LEAGUE_DAL_HORIZONTAL_SCOREBOARD_GM1&utm_source=NHL.com&utm_medium=client&utm_campaign=NHL_LEAGUE_DAL&utm_content=HORIZONTAL_SCOREBOARD_GM1",
+    "ticketsLinkFr": "https://www.ticketmaster.com/event/0C0060DC863B155F?brand=nhl&wt.mc_id=NHL_LEAGUE_DAL_HORIZONTAL_SCOREBOARD_GM1&utm_source=NHL.com&utm_medium=client&utm_campaign=NHL_LEAGUE_DAL&utm_content=HORIZONTAL_SCOREBOARD_GM1",
+    "period": 3,
+    "periodDescriptor": {
+    "number": 3,
+    "periodType": "REG",
+    "maxRegulationPeriods": 3
+    },
+    "threeMinRecap": "/video/nyi-at-dal-recap-6363193289112"
+    },
+    {
+    "id": 2024020033,
+    "season": 20242025,
+    "gameType": 2,
+    "gameDate": "2024-10-12",
+    "gameCenterLink": "/gamecenter/sea-vs-min/2024/10/12/2024020033",
+    "venue": {
+    "default": "Xcel Energy Center"
+    },
+    "startTimeUTC": "2024-10-13T00:00:00Z",
+    "easternUTCOffset": "-04:00",
+    "venueUTCOffset": "-05:00",
+    "tvBroadcasts": [
+    {
+    "id": 554,
+    "market": "A",
+    "countryCode": "US",
+    "network": "KHN",
+    "sequenceNumber": 1
+    },
+    {
+    "id": 388,
+    "market": "A",
+    "countryCode": "US",
+    "network": "KONG",
+    "sequenceNumber": 56
+    },
+    {
+    "id": 361,
+    "market": "H",
+    "countryCode": "US",
+    "network": "BSN",
+    "sequenceNumber": 77
+    },
+    {
+    "id": 363,
+    "market": "H",
+    "countryCode": "US",
+    "network": "BSWI",
+    "sequenceNumber": 90
+    }
+    ],
+    "gameState": "OFF",
+    "gameScheduleState": "OK",
+    "awayTeam": {
+    "id": 55,
+    "name": {
+    "default": "Seattle Kraken",
+    "fr": "Kraken de Seattle"
+    },
+    "commonName": {
+    "default": "Kraken"
+    },
+    "placeNameWithPreposition": {
+    "default": "Seattle",
+    "fr": "de Seattle"
+    },
+    "abbrev": "SEA",
+    "score": 5,
+    "logo": "https://assets.nhle.com/logos/nhl/svg/SEA_light.svg"
+    },
+    "homeTeam": {
+    "id": 30,
+    "name": {
+    "default": "Minnesota Wild",
+    "fr": "Wild du Minnesota"
+    },
+    "commonName": {
+    "default": "Wild"
+    },
+    "placeNameWithPreposition": {
+    "default": "Minnesota",
+    "fr": "du Minnesota"
+    },
+    "abbrev": "MIN",
+    "score": 4,
+    "logo": "https://assets.nhle.com/logos/nhl/svg/MIN_light.svg"
+    },
+    "ticketsLink": "https://www.ticketmaster.com/event/060060EB9C426D52?brand=nhl&wt.mc_id=NHL_LEAGUE_MIN_HORIZONTAL_SCOREBOARD_GM2&utm_source=NHL.com&utm_medium=client&utm_campaign=NHL_LEAGUE_MIN&utm_content=HORIZONTAL_SCOREBOARD_GM2",
+    "ticketsLinkFr": "https://www.ticketmaster.com/event/060060EB9C426D52?brand=nhl&wt.mc_id=NHL_LEAGUE_MIN_HORIZONTAL_SCOREBOARD_GM2&utm_source=NHL.com&utm_medium=client&utm_campaign=NHL_LEAGUE_MIN&utm_content=HORIZONTAL_SCOREBOARD_GM2",
+    "period": 5,
+    "periodDescriptor": {
+    "number": 5,
+    "periodType": "SO",
+    "maxRegulationPeriods": 3
+    },
+    "threeMinRecap": "/video/sea-at-min-recap-6363193691112"
+    },
+    {
+    "id": 2024020034,
+    "season": 20242025,
+    "gameType": 2,
+    "gameDate": "2024-10-12",
+    "gameCenterLink": "/gamecenter/cbj-vs-col/2024/10/12/2024020034",
+    "venue": {
+    "default": "Ball Arena"
+    },
+    "startTimeUTC": "2024-10-13T01:00:00Z",
+    "easternUTCOffset": "-04:00",
+    "venueUTCOffset": "-06:00",
+    "tvBroadcasts": [
+    {
+    "id": 2,
+    "market": "H",
+    "countryCode": "US",
+    "network": "ALT",
+    "sequenceNumber": 53
+    },
+    {
+    "id": 347,
+    "market": "A",
+    "countryCode": "US",
+    "network": "BSOH",
+    "sequenceNumber": 72
+    }
+    ],
+    "gameState": "OFF",
+    "gameScheduleState": "OK",
+    "awayTeam": {
+    "id": 29,
+    "name": {
+    "default": "Columbus Blue Jackets",
+    "fr": "Blue Jackets de Columbus"
+    },
+    "commonName": {
+    "default": "Blue Jackets"
+    },
+    "placeNameWithPreposition": {
+    "default": "Columbus",
+    "fr": "de Columbus"
+    },
+    "abbrev": "CBJ",
+    "score": 6,
+    "logo": "https://assets.nhle.com/logos/nhl/svg/CBJ_light.svg"
+    },
+    "homeTeam": {
+    "id": 21,
+    "name": {
+    "default": "Colorado Avalanche",
+    "fr": "Avalanche du Colorado"
+    },
+    "commonName": {
+    "default": "Avalanche"
+    },
+    "placeNameWithPreposition": {
+    "default": "Colorado",
+    "fr": "du Colorado"
+    },
+    "abbrev": "COL",
+    "score": 4,
+    "logo": "https://assets.nhle.com/logos/nhl/svg/COL_light.svg"
+    },
+    "ticketsLink": "https://www.ticketmaster.com/event/1E0060E1BA3D2874?brand=nhl&wt.mc_id=NHL_LEAGUE_COL_HORIZONTAL_SCOREBOARD_GM1&utm_source=NHL.com&utm_medium=client&utm_campaign=NHL_LEAGUE_COL&utm_content=HORIZONTAL_SCOREBOARD_GM1",
+    "ticketsLinkFr": "https://www.ticketmaster.com/event/1E0060E1BA3D2874?brand=nhl&wt.mc_id=NHL_LEAGUE_COL_HORIZONTAL_SCOREBOARD_GM1&utm_source=NHL.com&utm_medium=client&utm_campaign=NHL_LEAGUE_COL&utm_content=HORIZONTAL_SCOREBOARD_GM1",
+    "period": 3,
+    "periodDescriptor": {
+    "number": 3,
+    "periodType": "REG",
+    "maxRegulationPeriods": 3
+    },
+    "threeMinRecap": "/video/cbj-at-col-recap-6363194501112"
+    },
+    {
+    "id": 2024020035,
+    "season": 20242025,
+    "gameType": 2,
+    "gameDate": "2024-10-12",
+    "gameCenterLink": "/gamecenter/phi-vs-cgy/2024/10/12/2024020035",
+    "venue": {
+    "default": "Scotiabank Saddledome"
+    },
+    "startTimeUTC": "2024-10-13T02:00:00Z",
+    "easternUTCOffset": "-04:00",
+    "venueUTCOffset": "-06:00",
+    "tvBroadcasts": [
+    {
+    "id": 286,
+    "market": "N",
+    "countryCode": "CA",
+    "network": "CITY",
+    "sequenceNumber": 26
+    },
+    {
+    "id": 289,
+    "market": "N",
+    "countryCode": "CA",
+    "network": "SNW",
+    "sequenceNumber": 34
+    },
+    {
+    "id": 322,
+    "market": "A",
+    "countryCode": "US",
+    "network": "NBCSP",
+    "sequenceNumber": 59
+    },
+    {
+    "id": 284,
+    "market": "N",
+    "countryCode": "CA",
+    "network": "SN1",
+    "sequenceNumber": 102
+    }
+    ],
+    "gameState": "OFF",
+    "gameScheduleState": "OK",
+    "awayTeam": {
+    "id": 4,
+    "name": {
+    "default": "Philadelphia Flyers",
+    "fr": "Flyers de Philadelphie"
+    },
+    "commonName": {
+    "default": "Flyers"
+    },
+    "placeNameWithPreposition": {
+    "default": "Philadelphia",
+    "fr": "de Philadelphie"
+    },
+    "abbrev": "PHI",
+    "score": 3,
+    "logo": "https://assets.nhle.com/logos/nhl/svg/PHI_light.svg"
+    },
+    "homeTeam": {
+    "id": 20,
+    "name": {
+    "default": "Calgary Flames",
+    "fr": "Flames de Calgary"
+    },
+    "commonName": {
+    "default": "Flames"
+    },
+    "placeNameWithPreposition": {
+    "default": "Calgary",
+    "fr": "de Calgary"
+    },
+    "abbrev": "CGY",
+    "score": 6,
+    "logo": "https://assets.nhle.com/logos/nhl/svg/CGY_light.svg"
+    },
+    "ticketsLink": "https://www.ticketmaster.ca/event/1100610DD0CD3FB4?brand=nhl&wt.mc_id=NHL_LEAGUE_CGY_HORIZONTAL_SCOREBOARD_GM1&utm_source=NHL.com&utm_medium=client&utm_campaign=NHL_LEAGUE_CGY&utm_content=HORIZONTAL_SCOREBOARD_GM1",
+    "ticketsLinkFr": "https://www.ticketmaster.ca/event/1100610DD0CD3FB4?brand=nhl&wt.mc_id=NHL_LEAGUE_CGY_HORIZONTAL_SCOREBOARD_GM1&utm_source=NHL.com&utm_medium=client&utm_campaign=NHL_LEAGUE_CGY&utm_content=HORIZONTAL_SCOREBOARD_GM1",
+    "period": 3,
+    "periodDescriptor": {
+    "number": 3,
+    "periodType": "REG",
+    "maxRegulationPeriods": 3
+    },
+    "threeMinRecap": "/video/phi-at-cgy-recap-6363196599112"
+    },
+    {
+    "id": 2024020036,
+    "season": 20242025,
+    "gameType": 2,
+    "gameDate": "2024-10-12",
+    "gameCenterLink": "/gamecenter/chi-vs-edm/2024/10/12/2024020036",
+    "venue": {
+    "default": "Rogers Place"
+    },
+    "startTimeUTC": "2024-10-13T02:00:00Z",
+    "easternUTCOffset": "-04:00",
+    "venueUTCOffset": "-06:00",
+    "tvBroadcasts": [
+    {
+    "id": 551,
+    "market": "A",
+    "countryCode": "US",
+    "network": "CHSN",
+    "sequenceNumber": 1
+    },
+    {
+    "id": 282,
+    "market": "N",
+    "countryCode": "CA",
+    "network": "SN",
+    "sequenceNumber": 21
+    },
+    {
+    "id": 4,
+    "market": "N",
+    "countryCode": "CA",
+    "network": "CBC",
+    "sequenceNumber": 25
+    }
+    ],
+    "gameState": "OFF",
+    "gameScheduleState": "OK",
+    "awayTeam": {
+    "id": 16,
+    "name": {
+    "default": "Chicago Blackhawks",
+    "fr": "Blackhawks de Chicago"
+    },
+    "commonName": {
+    "default": "Blackhawks"
+    },
+    "placeNameWithPreposition": {
+    "default": "Chicago",
+    "fr": "de Chicago"
+    },
+    "abbrev": "CHI",
+    "score": 5,
+    "logo": "https://assets.nhle.com/logos/nhl/svg/CHI_light.svg"
+    },
+    "homeTeam": {
+    "id": 22,
+    "name": {
+    "default": "Edmonton Oilers",
+    "fr": "Oilers d'Edmonton"
+    },
+    "commonName": {
+    "default": "Oilers"
+    },
+    "placeNameWithPreposition": {
+    "default": "Edmonton",
+    "fr": "d'Edmonton"
+    },
+    "abbrev": "EDM",
+    "score": 2,
+    "logo": "https://assets.nhle.com/logos/nhl/svg/EDM_light.svg"
+    },
+    "ticketsLink": "https://www.ticketmaster.ca/event/110061138A843532?brand=nhl&wt.mc_id=NHL_LEAGUE_EDM_HORIZONTAL_SCOREBOARD_GM2&utm_source=NHL.com&utm_medium=client&utm_campaign=NHL_LEAGUE_EDM&utm_content=HORIZONTAL_SCOREBOARD_GM2",
+    "ticketsLinkFr": "https://www.ticketmaster.ca/event/110061138A843532?brand=nhl&wt.mc_id=NHL_LEAGUE_EDM_HORIZONTAL_SCOREBOARD_GM2&utm_source=NHL.com&utm_medium=client&utm_campaign=NHL_LEAGUE_EDM&utm_content=HORIZONTAL_SCOREBOARD_GM2",
+    "period": 3,
+    "periodDescriptor": {
+    "number": 3,
+    "periodType": "REG",
+    "maxRegulationPeriods": 3
+    },
+    "threeMinRecap": "/video/chi-at-edm-recap-6363195428112"
+    },
+    {
+    "id": 2024020037,
+    "season": 20242025,
+    "gameType": 2,
+    "gameDate": "2024-10-12",
+    "gameCenterLink": "/gamecenter/ana-vs-sjs/2024/10/12/2024020037",
+    "venue": {
+    "default": "SAP Center at San Jose"
+    },
+    "startTimeUTC": "2024-10-13T02:00:00Z",
+    "easternUTCOffset": "-04:00",
+    "venueUTCOffset": "-07:00",
+    "tvBroadcasts": [
+    {
+    "id": 553,
+    "market": "A",
+    "countryCode": "US",
+    "network": "Victory+",
+    "sequenceNumber": 1
+    },
+    {
+    "id": 314,
+    "market": "H",
+    "countryCode": "US",
+    "network": "NBCSCA",
+    "sequenceNumber": 63
+    },
+    {
+    "id": 219,
+    "market": "A",
+    "countryCode": "US",
+    "network": "KCOP-13",
+    "sequenceNumber": 82
+    }
+    ],
+    "gameState": "OFF",
+    "gameScheduleState": "OK",
+    "awayTeam": {
+    "id": 24,
+    "name": {
+    "default": "Anaheim Ducks",
+    "fr": "Ducks d'Anaheim"
+    },
+    "commonName": {
+    "default": "Ducks"
+    },
+    "placeNameWithPreposition": {
+    "default": "Anaheim",
+    "fr": "d'Anaheim"
+    },
+    "abbrev": "ANA",
+    "score": 2,
+    "logo": "https://assets.nhle.com/logos/nhl/svg/ANA_light.svg"
+    },
+    "homeTeam": {
+    "id": 28,
+    "name": {
+    "default": "San Jose Sharks",
+    "fr": "Sharks de San Jose"
+    },
+    "commonName": {
+    "default": "Sharks"
+    },
+    "placeNameWithPreposition": {
+    "default": "San Jose",
+    "fr": "de San Jose"
+    },
+    "abbrev": "SJS",
+    "score": 0,
+    "logo": "https://assets.nhle.com/logos/nhl/svg/SJS_light.svg"
+    },
+    "ticketsLink": "https://www.nhl.com/sharks/tickets/",
+    "ticketsLinkFr": "https://www.nhl.com/sharks/tickets/",
+    "period": 3,
+    "periodDescriptor": {
+    "number": 3,
+    "periodType": "REG",
+    "maxRegulationPeriods": 3
+    },
+    "threeMinRecap": "/video/ana-at-sjs-recap-6363196269112"
+    }
+    ]
+    },
+    {
+    "date": "2024-10-13",
+    "games": [
+    {
+    "id": 2024020038,
+    "season": 20242025,
+    "gameType": 2,
+    "gameDate": "2024-10-13",
+    "gameCenterLink": "/gamecenter/min-vs-wpg/2024/10/13/2024020038",
+    "venue": {
+    "default": "Canada Life Centre"
+    },
+    "startTimeUTC": "2024-10-13T22:00:00Z",
+    "easternUTCOffset": "-04:00",
+    "venueUTCOffset": "-05:00",
+    "tvBroadcasts": [
+    {
+    "id": 361,
+    "market": "A",
+    "countryCode": "US",
+    "network": "BSN",
+    "sequenceNumber": 77
+    },
+    {
+    "id": 363,
+    "market": "A",
+    "countryCode": "US",
+    "network": "BSWI",
+    "sequenceNumber": 90
+    },
+    {
+    "id": 292,
+    "market": "H",
+    "countryCode": "CA",
+    "network": "TSN3",
+    "sequenceNumber": 134
+    }
+    ],
+    "gameState": "FUT",
+    "gameScheduleState": "OK",
+    "awayTeam": {
+    "id": 30,
+    "name": {
+    "default": "Minnesota Wild",
+    "fr": "Wild du Minnesota"
+    },
+    "commonName": {
+    "default": "Wild"
+    },
+    "placeNameWithPreposition": {
+    "default": "Minnesota",
+    "fr": "du Minnesota"
+    },
+    "abbrev": "MIN",
+    "record": "1-0-1",
+    "logo": "https://assets.nhle.com/logos/nhl/svg/MIN_light.svg"
+    },
+    "homeTeam": {
+    "id": 52,
+    "name": {
+    "default": "Winnipeg Jets",
+    "fr": "Jets de Winnipeg"
+    },
+    "commonName": {
+    "default": "Jets"
+    },
+    "placeNameWithPreposition": {
+    "default": "Winnipeg",
+    "fr": "de Winnipeg"
+    },
+    "abbrev": "WPG",
+    "record": "2-0-0",
+    "logo": "https://assets.nhle.com/logos/nhl/svg/WPG_light.svg"
+    },
+    "ticketsLink": "https://www.ticketmaster.ca/event/1100610C7D1A0FE0?brand=winnipegjets&artistid=1613893&wt.mc_id=NHL_TEAM_WPG_SCORE_TAB_APP_GM2&utm_source=NHL.com&utm_medium=client&utm_campaign=NHL_TEAM_WPG&utm_content=SCORE_TAB_APP_GM2",
+    "ticketsLinkFr": "https://www.ticketmaster.ca/event/1100610C7D1A0FE0?brand=winnipegjets&artistid=1613893&wt.mc_id=NHL_TEAM_WPG_SCORE_TAB_APP_GM2&utm_source=NHL.com&utm_medium=client&utm_campaign=NHL_TEAM_WPG&utm_content=SCORE_TAB_APP_GM2"
+    },
+    {
+    "id": 2024020039,
+    "season": 20242025,
+    "gameType": 2,
+    "gameDate": "2024-10-13",
+    "gameCenterLink": "/gamecenter/sea-vs-dal/2024/10/13/2024020039",
+    "venue": {
+    "default": "American Airlines Center"
+    },
+    "startTimeUTC": "2024-10-14T00:00:00Z",
+    "easternUTCOffset": "-04:00",
+    "venueUTCOffset": "-05:00",
+    "tvBroadcasts": [
+    {
+    "id": 553,
+    "market": "H",
+    "countryCode": "US",
+    "network": "Victory+",
+    "sequenceNumber": 1
+    },
+    {
+    "id": 554,
+    "market": "A",
+    "countryCode": "US",
+    "network": "KHN",
+    "sequenceNumber": 1
+    },
+    {
+    "id": 388,
+    "market": "A",
+    "countryCode": "US",
+    "network": "KONG",
+    "sequenceNumber": 56
+    }
+    ],
+    "gameState": "FUT",
+    "gameScheduleState": "OK",
+    "awayTeam": {
+    "id": 55,
+    "name": {
+    "default": "Seattle Kraken",
+    "fr": "Kraken de Seattle"
+    },
+    "commonName": {
+    "default": "Kraken"
+    },
+    "placeNameWithPreposition": {
+    "default": "Seattle",
+    "fr": "de Seattle"
+    },
+    "abbrev": "SEA",
+    "record": "1-1-0",
+    "logo": "https://assets.nhle.com/logos/nhl/svg/SEA_light.svg"
+    },
+    "homeTeam": {
+    "id": 25,
+    "name": {
+    "default": "Dallas Stars",
+    "fr": "Stars de Dallas"
+    },
+    "commonName": {
+    "default": "Stars"
+    },
+    "placeNameWithPreposition": {
+    "default": "Dallas",
+    "fr": "de Dallas"
+    },
+    "abbrev": "DAL",
+    "record": "2-0-0",
+    "logo": "https://assets.nhle.com/logos/nhl/svg/DAL_light.svg"
+    },
+    "ticketsLink": "https://www.ticketmaster.com/event/0C0060DC8F861D70?brand=nhl&wt.mc_id=NHL_LEAGUE_DAL_HORIZONTAL_SCOREBOARD_GM2&utm_source=NHL.com&utm_medium=client&utm_campaign=NHL_LEAGUE_DAL&utm_content=HORIZONTAL_SCOREBOARD_GM2",
+    "ticketsLinkFr": "https://www.ticketmaster.com/event/0C0060DC8F861D70?brand=nhl&wt.mc_id=NHL_LEAGUE_DAL_HORIZONTAL_SCOREBOARD_GM2&utm_source=NHL.com&utm_medium=client&utm_campaign=NHL_LEAGUE_DAL&utm_content=HORIZONTAL_SCOREBOARD_GM2"
+    },
+    {
+    "id": 2024020040,
+    "season": 20242025,
+    "gameType": 2,
+    "gameDate": "2024-10-13",
+    "gameCenterLink": "/gamecenter/cgy-vs-edm/2024/10/13/2024020040",
+    "venue": {
+    "default": "Rogers Place"
+    },
+    "startTimeUTC": "2024-10-14T00:00:00Z",
+    "easternUTCOffset": "-04:00",
+    "venueUTCOffset": "-06:00",
+    "tvBroadcasts": [
+    {
+    "id": 324,
+    "market": "N",
+    "countryCode": "US",
+    "network": "NHLN",
+    "sequenceNumber": 23
+    },
+    {
+    "id": 282,
+    "market": "N",
+    "countryCode": "CA",
+    "network": "SN",
+    "sequenceNumber": 101
+    },
+    {
+    "id": 281,
+    "market": "N",
+    "countryCode": "CA",
+    "network": "TVAS",
+    "sequenceNumber": 109
+    }
+    ],
+    "gameState": "FUT",
+    "gameScheduleState": "OK",
+    "awayTeam": {
+    "id": 20,
+    "name": {
+    "default": "Calgary Flames",
+    "fr": "Flames de Calgary"
+    },
+    "commonName": {
+    "default": "Flames"
+    },
+    "placeNameWithPreposition": {
+    "default": "Calgary",
+    "fr": "de Calgary"
+    },
+    "abbrev": "CGY",
+    "record": "2-0-0",
+    "logo": "https://assets.nhle.com/logos/nhl/svg/CGY_light.svg"
+    },
+    "homeTeam": {
+    "id": 22,
+    "name": {
+    "default": "Edmonton Oilers",
+    "fr": "Oilers d'Edmonton"
+    },
+    "commonName": {
+    "default": "Oilers"
+    },
+    "placeNameWithPreposition": {
+    "default": "Edmonton",
+    "fr": "d'Edmonton"
+    },
+    "abbrev": "EDM",
+    "record": "0-2-0",
+    "logo": "https://assets.nhle.com/logos/nhl/svg/EDM_light.svg"
+    },
+    "ticketsLink": "https://www.ticketmaster.ca/event/110061138A883538?brand=nhl&wt.mc_id=NHL_LEAGUE_EDM_HORIZONTAL_SCOREBOARD_GM3&utm_source=NHL.com&utm_medium=client&utm_campaign=NHL_LEAGUE_EDM&utm_content=HORIZONTAL_SCOREBOARD_GM3",
+    "ticketsLinkFr": "https://www.ticketmaster.ca/event/110061138A883538?brand=nhl&wt.mc_id=NHL_LEAGUE_EDM_HORIZONTAL_SCOREBOARD_GM3&utm_source=NHL.com&utm_medium=client&utm_campaign=NHL_LEAGUE_EDM&utm_content=HORIZONTAL_SCOREBOARD_GM3"
+    },
+    {
+    "id": 2024020041,
+    "season": 20242025,
+    "gameType": 2,
+    "gameDate": "2024-10-13",
+    "gameCenterLink": "/gamecenter/ana-vs-vgk/2024/10/13/2024020041",
+    "venue": {
+    "default": "T-Mobile Arena"
+    },
+    "startTimeUTC": "2024-10-14T02:00:00Z",
+    "easternUTCOffset": "-04:00",
+    "venueUTCOffset": "-07:00",
+    "tvBroadcasts": [
+    {
+    "id": 553,
+    "market": "A",
+    "countryCode": "US",
+    "network": "Victory+",
+    "sequenceNumber": 1
+    },
+    {
+    "id": 219,
+    "market": "A",
+    "countryCode": "US",
+    "network": "KCOP-13",
+    "sequenceNumber": 82
+    },
+    {
+    "id": 521,
+    "market": "H",
+    "countryCode": "US",
+    "network": "SCRIPPS",
+    "sequenceNumber": 87
+    }
+    ],
+    "gameState": "FUT",
+    "gameScheduleState": "OK",
+    "awayTeam": {
+    "id": 24,
+    "name": {
+    "default": "Anaheim Ducks",
+    "fr": "Ducks d'Anaheim"
+    },
+    "commonName": {
+    "default": "Ducks"
+    },
+    "placeNameWithPreposition": {
+    "default": "Anaheim",
+    "fr": "d'Anaheim"
+    },
+    "abbrev": "ANA",
+    "record": "1-0-0",
+    "logo": "https://assets.nhle.com/logos/nhl/svg/ANA_light.svg"
+    },
+    "homeTeam": {
+    "id": 54,
+    "name": {
+    "default": "Vegas Golden Knights",
+    "fr": "Golden Knights de Vegas"
+    },
+    "commonName": {
+    "default": "Golden Knights"
+    },
+    "placeNameWithPreposition": {
+    "default": "Vegas",
+    "fr": "de Vegas"
+    },
+    "abbrev": "VGK",
+    "record": "2-0-0",
+    "logo": "https://assets.nhle.com/logos/nhl/svg/VGK_light.svg"
+    },
+    "ticketsLink": "https://www.nhl.com/goldenknights/tickets/",
+    "ticketsLinkFr": "https://www.nhl.com/goldenknights/tickets/"
+    }
+    ]
+    },
+    {
+    "date": "2024-10-14",
+    "games": [
+    {
+    "id": 2024020042,
+    "season": 20242025,
+    "gameType": 2,
+    "gameDate": "2024-10-14",
+    "gameCenterLink": "/gamecenter/fla-vs-bos/2024/10/14/2024020042",
+    "venue": {
+    "default": "TD Garden"
+    },
+    "startTimeUTC": "2024-10-14T17:00:00Z",
+    "easternUTCOffset": "-04:00",
+    "venueUTCOffset": "-04:00",
+    "tvBroadcasts": [
+    {
+    "id": 31,
+    "market": "H",
+    "countryCode": "US",
+    "network": "NESN",
+    "sequenceNumber": 78
+    },
+    {
+    "id": 521,
+    "market": "A",
+    "countryCode": "US",
+    "network": "SCRIPPS",
+    "sequenceNumber": 87
+    },
+    {
+    "id": 281,
+    "market": "N",
+    "countryCode": "CA",
+    "network": "TVAS",
+    "sequenceNumber": 109
+    }
+    ],
+    "gameState": "FUT",
+    "gameScheduleState": "OK",
+    "awayTeam": {
+    "id": 13,
+    "name": {
+    "default": "Florida Panthers",
+    "fr": "Panthers de la Floride"
+    },
+    "commonName": {
+    "default": "Panthers"
+    },
+    "placeNameWithPreposition": {
+    "default": "Florida",
+    "fr": "de la Floride"
+    },
+    "abbrev": "FLA",
+    "record": "1-2-0",
+    "logo": "https://assets.nhle.com/logos/nhl/svg/FLA_light.svg"
+    },
+    "homeTeam": {
+    "id": 6,
+    "name": {
+    "default": "Boston Bruins",
+    "fr": "Bruins de Boston"
+    },
+    "commonName": {
+    "default": "Bruins"
+    },
+    "placeNameWithPreposition": {
+    "default": "Boston",
+    "fr": "de Boston"
+    },
+    "abbrev": "BOS",
+    "record": "2-1-0",
+    "logo": "https://assets.nhle.com/logos/nhl/svg/BOS_light.svg"
+    },
+    "ticketsLink": "https://www.ticketmaster.com/event/010060D9D53974AE?brand=nhl&wt.mc_id=NHL_LEAGUE_BOS_HORIZONTAL_SCOREBOARD_GM3&utm_source=NHL.com&utm_medium=client&utm_campaign=NHL_LEAGUE_BOS&utm_content=HORIZONTAL_SCOREBOARD_GM3",
+    "ticketsLinkFr": "https://www.ticketmaster.com/event/010060D9D53974AE?brand=nhl&wt.mc_id=NHL_LEAGUE_BOS_HORIZONTAL_SCOREBOARD_GM3&utm_source=NHL.com&utm_medium=client&utm_campaign=NHL_LEAGUE_BOS&utm_content=HORIZONTAL_SCOREBOARD_GM3"
+    },
+    {
+    "id": 2024020043,
+    "season": 20242025,
+    "gameType": 2,
+    "gameDate": "2024-10-14",
+    "gameCenterLink": "/gamecenter/lak-vs-ott/2024/10/14/2024020043",
+    "venue": {
+    "default": "Canadian Tire Centre"
+    },
+    "startTimeUTC": "2024-10-14T17:00:00Z",
+    "easternUTCOffset": "-04:00",
+    "venueUTCOffset": "-04:00",
+    "tvBroadcasts": [
+    {
+    "id": 355,
+    "market": "A",
+    "countryCode": "US",
+    "network": "BSW",
+    "sequenceNumber": 57
+    },
+    {
+    "id": 230,
+    "market": "H",
+    "countryCode": "CA",
+    "network": "RDS2",
+    "sequenceNumber": 133
+    },
+    {
+    "id": 294,
+    "market": "H",
+    "countryCode": "CA",
+    "network": "TSN5",
+    "sequenceNumber": 135
+    }
+    ],
+    "gameState": "FUT",
+    "gameScheduleState": "OK",
+    "awayTeam": {
+    "id": 26,
+    "name": {
+    "default": "Los Angeles Kings",
+    "fr": "Kings de Los Angeles"
+    },
+    "commonName": {
+    "default": "Kings"
+    },
+    "placeNameWithPreposition": {
+    "default": "Los Angeles",
+    "fr": "de Los Angeles"
+    },
+    "abbrev": "LAK",
+    "record": "1-0-1",
+    "logo": "https://assets.nhle.com/logos/nhl/svg/LAK_light.svg"
+    },
+    "homeTeam": {
+    "id": 9,
+    "name": {
+    "default": "Ottawa Senators",
+    "fr": "Sénateurs d'Ottawa"
+    },
+    "commonName": {
+    "default": "Senators",
+    "fr": "Sénateurs"
+    },
+    "placeNameWithPreposition": {
+    "default": "Ottawa",
+    "fr": "d'Ottawa"
+    },
+    "abbrev": "OTT",
+    "record": "1-1-0",
+    "logo": "https://assets.nhle.com/logos/nhl/svg/OTT_light.svg"
+    },
+    "ticketsLink": "https://www.ticketmaster.ca/event/31006107F9535061?brand=nhl&wt.mc_id=NHL_LEAGUE_OTT_HORIZONTAL_SCOREBOARD_GM2&utm_source=NHL.com&utm_medium=client&utm_campaign=NHL_LEAGUE_OTT&utm_content=HORIZONTAL_SCOREBOARD_GM2",
+    "ticketsLinkFr": "https://www.nhl.com/fr/senators/tickets/"
+    },
+    {
+    "id": 2024020044,
+    "season": 20242025,
+    "gameType": 2,
+    "gameDate": "2024-10-14",
+    "gameCenterLink": "/gamecenter/uta-vs-njd/2024/10/14/2024020044",
+    "venue": {
+    "default": "Prudential Center"
+    },
+    "startTimeUTC": "2024-10-14T17:00:00Z",
+    "easternUTCOffset": "-04:00",
+    "venueUTCOffset": "-04:00",
+    "tvBroadcasts": [
+    {
+    "id": 558,
+    "market": "A",
+    "countryCode": "US",
+    "network": "Utah16",
+    "sequenceNumber": 1
+    },
+    {
+    "id": 409,
+    "market": "H",
+    "countryCode": "US",
+    "network": "MSGSN",
+    "sequenceNumber": 88
+    }
+    ],
+    "gameState": "FUT",
+    "gameScheduleState": "OK",
+    "awayTeam": {
+    "id": 59,
+    "name": {
+    "default": "Utah Hockey Club",
+    "fr": "Club de hockey de l'Utah"
+    },
+    "commonName": {
+    "default": "Utah Hockey Club",
+    "fr": "Club de hockey de l'Utah"
+    },
+    "placeNameWithPreposition": {
+    "default": "Utah",
+    "fr": "de l'Utah"
+    },
+    "abbrev": "UTA",
+    "record": "3-0-0",
+    "logo": "https://assets.nhle.com/logos/nhl/svg/UTA_light.svg"
+    },
+    "homeTeam": {
+    "id": 1,
+    "name": {
+    "default": "New Jersey Devils",
+    "fr": "Devils du New Jersey"
+    },
+    "commonName": {
+    "default": "Devils"
+    },
+    "placeNameWithPreposition": {
+    "default": "New Jersey",
+    "fr": "du New Jersey"
+    },
+    "abbrev": "NJD",
+    "record": "3-1-0",
+    "logo": "https://assets.nhle.com/logos/nhl/svg/NJD_light.svg"
+    },
+    "ticketsLink": "https://www.ticketmaster.com/event/020060E2991D33AA?brand=nhl&wt.mc_id=NHL_LEAGUE_NJD_HORIZONTAL_SCOREBOARD_GM3&utm_source=NHL.com&utm_medium=client&utm_campaign=NHL_LEAGUE_NJD&utm_content=HORIZONTAL_SCOREBOARD_GM3",
+    "ticketsLinkFr": "https://www.ticketmaster.com/event/020060E2991D33AA?brand=nhl&wt.mc_id=NHL_LEAGUE_NJD_HORIZONTAL_SCOREBOARD_GM3&utm_source=NHL.com&utm_medium=client&utm_campaign=NHL_LEAGUE_NJD&utm_content=HORIZONTAL_SCOREBOARD_GM3"
+    },
+    {
+    "id": 2024020045,
+    "season": 20242025,
+    "gameType": 2,
+    "gameDate": "2024-10-14",
+    "gameCenterLink": "/gamecenter/det-vs-nyr/2024/10/14/2024020045",
+    "venue": {
+    "default": "Madison Square Garden"
+    },
+    "startTimeUTC": "2024-10-14T23:00:00Z",
+    "easternUTCOffset": "-04:00",
+    "venueUTCOffset": "-04:00",
+    "tvBroadcasts": [
+    {
+    "id": 324,
+    "market": "N",
+    "countryCode": "US",
+    "network": "NHLN",
+    "sequenceNumber": 23
+    },
+    {
+    "id": 351,
+    "market": "A",
+    "countryCode": "US",
+    "network": "BSDET",
+    "sequenceNumber": 51
+    },
+    {
+    "id": 27,
+    "market": "H",
+    "countryCode": "US",
+    "network": "MSG",
+    "sequenceNumber": 97
+    }
+    ],
+    "gameState": "FUT",
+    "gameScheduleState": "OK",
+    "awayTeam": {
+    "id": 17,
+    "name": {
+    "default": "Detroit Red Wings",
+    "fr": "Red Wings de Detroit"
+    },
+    "commonName": {
+    "default": "Red Wings"
+    },
+    "placeNameWithPreposition": {
+    "default": "Detroit",
+    "fr": "de Detroit"
+    },
+    "abbrev": "DET",
+    "record": "1-1-0",
+    "logo": "https://assets.nhle.com/logos/nhl/svg/DET_light.svg"
+    },
+    "homeTeam": {
+    "id": 3,
+    "name": {
+    "default": "New York Rangers",
+    "fr": "Rangers de New York"
+    },
+    "commonName": {
+    "default": "Rangers"
+    },
+    "placeNameWithPreposition": {
+    "default": "New York",
+    "fr": "de New York"
+    },
+    "abbrev": "NYR",
+    "record": "1-0-1",
+    "logo": "https://assets.nhle.com/logos/nhl/svg/NYR_light.svg"
+    },
+    "ticketsLink": "https://www.ticketmaster.com/event/3B0060E3BA65116C?brand=nhl&wt.mc_id=NHL_LEAGUE_NYR_HORIZONTAL_SCOREBOARD_GM2&utm_source=NHL.com&utm_medium=client&utm_campaign=NHL_LEAGUE_NYR&utm_content=HORIZONTAL_SCOREBOARD_GM2&CAMEFROM=CFC_RANGERS_WEB_NHL_HP-SCOREBOX_240730",
+    "ticketsLinkFr": "https://www.ticketmaster.com/event/3B0060E3BA65116C?brand=nhl&wt.mc_id=NHL_LEAGUE_NYR_HORIZONTAL_SCOREBOARD_GM2&utm_source=NHL.com&utm_medium=client&utm_campaign=NHL_LEAGUE_NYR&utm_content=HORIZONTAL_SCOREBOARD_GM2&CAMEFROM=CFC_RANGERS_WEB_NHL_HP-SCOREBOX_240730"
+    },
+    {
+    "id": 2024020046,
+    "season": 20242025,
+    "gameType": 2,
+    "gameDate": "2024-10-14",
+    "gameCenterLink": "/gamecenter/pit-vs-mtl/2024/10/14/2024020046",
+    "venue": {
+    "default": "Centre Bell"
+    },
+    "startTimeUTC": "2024-10-14T23:30:00Z",
+    "easternUTCOffset": "-04:00",
+    "venueUTCOffset": "-04:00",
+    "tvBroadcasts": [
+    {
+    "id": 528,
+    "market": "A",
+    "countryCode": "US",
+    "network": "SN-PIT",
+    "sequenceNumber": 52
+    },
+    {
+    "id": 548,
+    "market": "N",
+    "countryCode": "CA",
+    "network": "Prime",
+    "sequenceNumber": 105
+    },
+    {
+    "id": 33,
+    "market": "H",
+    "countryCode": "CA",
+    "network": "RDS",
+    "sequenceNumber": 132
+    }
+    ],
+    "gameState": "FUT",
+    "gameScheduleState": "OK",
+    "awayTeam": {
+    "id": 5,
+    "name": {
+    "default": "Pittsburgh Penguins",
+    "fr": "Penguins de Pittsburgh"
+    },
+    "commonName": {
+    "default": "Penguins"
+    },
+    "placeNameWithPreposition": {
+    "default": "Pittsburgh",
+    "fr": "de Pittsburgh"
+    },
+    "abbrev": "PIT",
+    "record": "1-2-0",
+    "logo": "https://assets.nhle.com/logos/nhl/svg/PIT_light.svg"
+    },
+    "homeTeam": {
+    "id": 8,
+    "name": {
+    "default": "Montréal Canadiens",
+    "fr": "Canadiens de Montréal"
+    },
+    "commonName": {
+    "default": "Canadiens"
+    },
+    "placeNameWithPreposition": {
+    "default": "Montréal",
+    "fr": "de Montréal"
+    },
+    "abbrev": "MTL",
+    "record": "2-1-0",
+    "logo": "https://assets.nhle.com/logos/nhl/svg/MTL_light.svg"
+    },
+    "ticketsLink": "https://www.ticketmaster.ca/event/310060F97FC71DE0?lang=en-ca&brand=nhl&wt.mc_id=NHL_LEAGUE_MTL_HORIZONTAL_SCOREBOARD_GM3&utm_source=NHL.com&utm_medium=client&utm_campaign=NHL_LEAGUE_MTL&utm_content=HORIZONTAL_SCOREBOARD_GM3",
+    "ticketsLinkFr": "https://www.ticketmaster.ca/event/310060F97FC71DE0?lang=fr-ca&brand=nhl&wt.mc_id=NHL_LEAGUE_MTL_HORIZONTAL_SCOREBOARD_GM3&utm_source=NHL.com&utm_medium=client&utm_campaign=NHL_LEAGUE_MTL&utm_content=HORIZONTAL_SCOREBOARD_GM3"
+    },
+    {
+    "id": 2024020047,
+    "season": 20242025,
+    "gameType": 2,
+    "gameDate": "2024-10-14",
+    "gameCenterLink": "/gamecenter/nyi-vs-col/2024/10/14/2024020047",
+    "venue": {
+    "default": "Ball Arena"
+    },
+    "startTimeUTC": "2024-10-15T01:00:00Z",
+    "easternUTCOffset": "-04:00",
+    "venueUTCOffset": "-06:00",
+    "tvBroadcasts": [
+    {
+    "id": 2,
+    "market": "H",
+    "countryCode": "US",
+    "network": "ALT",
+    "sequenceNumber": 53
+    },
+    {
+    "id": 409,
+    "market": "A",
+    "countryCode": "US",
+    "network": "MSGSN",
+    "sequenceNumber": 88
+    },
+    {
+    "id": 281,
+    "market": "N",
+    "countryCode": "CA",
+    "network": "TVAS",
+    "sequenceNumber": 109
+    }
+    ],
+    "gameState": "FUT",
+    "gameScheduleState": "OK",
+    "awayTeam": {
+    "id": 2,
+    "name": {
+    "default": "New York Islanders",
+    "fr": "Islanders de New York"
+    },
+    "commonName": {
+    "default": "Islanders"
+    },
+    "placeNameWithPreposition": {
+    "default": "New York",
+    "fr": "de New York"
+    },
+    "abbrev": "NYI",
+    "record": "0-1-1",
+    "logo": "https://assets.nhle.com/logos/nhl/svg/NYI_light.svg"
+    },
+    "homeTeam": {
+    "id": 21,
+    "name": {
+    "default": "Colorado Avalanche",
+    "fr": "Avalanche du Colorado"
+    },
+    "commonName": {
+    "default": "Avalanche"
+    },
+    "placeNameWithPreposition": {
+    "default": "Colorado",
+    "fr": "du Colorado"
+    },
+    "abbrev": "COL",
+    "record": "0-2-0",
+    "logo": "https://assets.nhle.com/logos/nhl/svg/COL_light.svg"
+    },
+    "ticketsLink": "https://www.ticketmaster.com/event/1E0060E1BA4628E7?brand=nhl&wt.mc_id=NHL_LEAGUE_COL_HORIZONTAL_SCOREBOARD_GM2&utm_source=NHL.com&utm_medium=client&utm_campaign=NHL_LEAGUE_COL&utm_content=HORIZONTAL_SCOREBOARD_GM2",
+    "ticketsLinkFr": "https://www.ticketmaster.com/event/1E0060E1BA4628E7?brand=nhl&wt.mc_id=NHL_LEAGUE_COL_HORIZONTAL_SCOREBOARD_GM2&utm_source=NHL.com&utm_medium=client&utm_campaign=NHL_LEAGUE_COL&utm_content=HORIZONTAL_SCOREBOARD_GM2"
+    }
+    ]
+    },
+    {
+    "date": "2024-10-15",
+    "games": [
+    {
+    "id": 2024020048,
+    "season": 20242025,
+    "gameType": 2,
+    "gameDate": "2024-10-15",
+    "gameCenterLink": "/gamecenter/van-vs-tbl/2024/10/15/2024020048",
+    "venue": {
+    "default": "Amalie Arena"
+    },
+    "startTimeUTC": "2024-10-15T23:00:00Z",
+    "easternUTCOffset": "-04:00",
+    "venueUTCOffset": "-04:00",
+    "tvBroadcasts": [
+    {
+    "id": 290,
+    "market": "A",
+    "countryCode": "CA",
+    "network": "SNP",
+    "sequenceNumber": 33
+    },
+    {
+    "id": 359,
+    "market": "H",
+    "countryCode": "US",
+    "network": "BSSUN",
+    "sequenceNumber": 86
+    }
+    ],
+    "gameState": "FUT",
+    "gameScheduleState": "OK",
+    "awayTeam": {
+    "id": 23,
+    "name": {
+    "default": "Vancouver Canucks",
+    "fr": "Canucks de Vancouver"
+    },
+    "commonName": {
+    "default": "Canucks"
+    },
+    "placeNameWithPreposition": {
+    "default": "Vancouver",
+    "fr": "de Vancouver"
+    },
+    "abbrev": "VAN",
+    "record": "0-0-2",
+    "logo": "https://assets.nhle.com/logos/nhl/svg/VAN_light.svg"
+    },
+    "homeTeam": {
+    "id": 14,
+    "name": {
+    "default": "Tampa Bay Lightning",
+    "fr": "Lightning de Tampa Bay"
+    },
+    "commonName": {
+    "default": "Lightning"
+    },
+    "placeNameWithPreposition": {
+    "default": "Tampa Bay",
+    "fr": "de Tampa Bay"
+    },
+    "abbrev": "TBL",
+    "record": "1-0-0",
+    "logo": "https://assets.nhle.com/logos/nhl/svg/TBL_light.svg"
+    },
+    "ticketsLink": "https://www.ticketmaster.com/event/0D006101A9242FF3?brand=nhl&wt.mc_id=NHL_LEAGUE_TBL_HORIZONTAL_SCOREBOARD_GM2&utm_source=NHL.com&utm_medium=client&utm_campaign=NHL_LEAGUE_TBL&utm_content=HORIZONTAL_SCOREBOARD_GM2",
+    "ticketsLinkFr": "https://www.ticketmaster.com/event/0D006101A9242FF3?brand=nhl&wt.mc_id=NHL_LEAGUE_TBL_HORIZONTAL_SCOREBOARD_GM2&utm_source=NHL.com&utm_medium=client&utm_campaign=NHL_LEAGUE_TBL&utm_content=HORIZONTAL_SCOREBOARD_GM2"
+    },
+    {
+    "id": 2024020049,
+    "season": 20242025,
+    "gameType": 2,
+    "gameDate": "2024-10-15",
+    "gameCenterLink": "/gamecenter/vgk-vs-wsh/2024/10/15/2024020049",
+    "venue": {
+    "default": "Capital One Arena"
+    },
+    "startTimeUTC": "2024-10-15T23:00:00Z",
+    "easternUTCOffset": "-04:00",
+    "venueUTCOffset": "-04:00",
+    "tvBroadcasts": [
+    {
+    "id": 517,
+    "market": "H",
+    "countryCode": "US",
+    "network": "MNMT",
+    "sequenceNumber": 67
+    },
+    {
+    "id": 521,
+    "market": "A",
+    "countryCode": "US",
+    "network": "SCRIPPS",
+    "sequenceNumber": 87
+    }
+    ],
+    "gameState": "FUT",
+    "gameScheduleState": "OK",
+    "awayTeam": {
+    "id": 54,
+    "name": {
+    "default": "Vegas Golden Knights",
+    "fr": "Golden Knights de Vegas"
+    },
+    "commonName": {
+    "default": "Golden Knights"
+    },
+    "placeNameWithPreposition": {
+    "default": "Vegas",
+    "fr": "de Vegas"
+    },
+    "abbrev": "VGK",
+    "record": "2-0-0",
+    "logo": "https://assets.nhle.com/logos/nhl/svg/VGK_light.svg"
+    },
+    "homeTeam": {
+    "id": 15,
+    "name": {
+    "default": "Washington Capitals",
+    "fr": "Capitals de Washington"
+    },
+    "commonName": {
+    "default": "Capitals"
+    },
+    "placeNameWithPreposition": {
+    "default": "Washington",
+    "fr": "de Washington"
+    },
+    "abbrev": "WSH",
+    "record": "0-1-0",
+    "logo": "https://assets.nhle.com/logos/nhl/svg/WSH_secondary_light.svg"
+    },
+    "ticketsLink": "https://www.ticketmaster.com/event/150060E2C1E33E38?brand=nhl&wt.mc_id=NHL_LEAGUE_WSH_HORIZONTAL_SCOREBOARD_GM2&utm_source=league_scoreboard&utm_medium=web_organic&utm_campaign=ca1015vg",
+    "ticketsLinkFr": "https://www.ticketmaster.com/event/150060E2C1E33E38?brand=nhl&wt.mc_id=NHL_LEAGUE_WSH_HORIZONTAL_SCOREBOARD_GM2&utm_source=league_scoreboard&utm_medium=web_organic&utm_campaign=ca1015vg"
+    },
+    {
+    "id": 2024020050,
+    "season": 20242025,
+    "gameType": 2,
+    "gameDate": "2024-10-15",
+    "gameCenterLink": "/gamecenter/njd-vs-car/2024/10/15/2024020050",
+    "venue": {
+    "default": "Lenovo Center"
+    },
+    "startTimeUTC": "2024-10-15T23:00:00Z",
+    "easternUTCOffset": "-04:00",
+    "venueUTCOffset": "-04:00",
+    "tvBroadcasts": [
+    {
+    "id": 375,
+    "market": "H",
+    "countryCode": "US",
+    "network": "BSSO",
+    "sequenceNumber": 70
+    },
+    {
+    "id": 409,
+    "market": "A",
+    "countryCode": "US",
+    "network": "MSGSN",
+    "sequenceNumber": 88
+    }
+    ],
+    "gameState": "FUT",
+    "gameScheduleState": "OK",
+    "awayTeam": {
+    "id": 1,
+    "name": {
+    "default": "New Jersey Devils",
+    "fr": "Devils du New Jersey"
+    },
+    "commonName": {
+    "default": "Devils"
+    },
+    "placeNameWithPreposition": {
+    "default": "New Jersey",
+    "fr": "du New Jersey"
+    },
+    "abbrev": "NJD",
+    "record": "3-1-0",
+    "logo": "https://assets.nhle.com/logos/nhl/svg/NJD_light.svg"
+    },
+    "homeTeam": {
+    "id": 12,
+    "name": {
+    "default": "Carolina Hurricanes",
+    "fr": "Hurricanes de la Caroline"
+    },
+    "commonName": {
+    "default": "Hurricanes"
+    },
+    "placeNameWithPreposition": {
+    "default": "Carolina",
+    "fr": "de la Caroline"
+    },
+    "abbrev": "CAR",
+    "record": "0-1-0",
+    "logo": "https://assets.nhle.com/logos/nhl/svg/CAR_light.svg"
+    },
+    "ticketsLink": "https://www.ticketmaster.com/event/2D0060F7BAE782E6?brand=nhl&wt.mc_id=NHL_LEAGUE_CAR_HORIZONTAL_SCOREBOARD_GM2&utm_source=NHL.com&utm_medium=client&utm_campaign=NHL_LEAGUE_CAR&utm_content=HORIZONTAL_SCOREBOARD_GM2",
+    "ticketsLinkFr": "https://www.ticketmaster.com/event/2D0060F7BAE782E6?brand=nhl&wt.mc_id=NHL_LEAGUE_CAR_HORIZONTAL_SCOREBOARD_GM2&utm_source=NHL.com&utm_medium=client&utm_campaign=NHL_LEAGUE_CAR&utm_content=HORIZONTAL_SCOREBOARD_GM2"
+    },
+    {
+    "id": 2024020051,
+    "season": 20242025,
+    "gameType": 2,
+    "gameDate": "2024-10-15",
+    "gameCenterLink": "/gamecenter/fla-vs-cbj/2024/10/15/2024020051",
+    "venue": {
+    "default": "Nationwide Arena"
+    },
+    "startTimeUTC": "2024-10-15T23:00:00Z",
+    "easternUTCOffset": "-04:00",
+    "venueUTCOffset": "-04:00",
+    "tvBroadcasts": [
+    {
+    "id": 324,
+    "market": "N",
+    "countryCode": "US",
+    "network": "NHLN",
+    "sequenceNumber": 23
+    },
+    {
+    "id": 347,
+    "market": "H",
+    "countryCode": "US",
+    "network": "BSOH",
+    "sequenceNumber": 72
+    },
+    {
+    "id": 521,
+    "market": "A",
+    "countryCode": "US",
+    "network": "SCRIPPS",
+    "sequenceNumber": 87
+    },
+    {
+    "id": 281,
+    "market": "N",
+    "countryCode": "CA",
+    "network": "TVAS",
+    "sequenceNumber": 109
+    }
+    ],
+    "gameState": "FUT",
+    "gameScheduleState": "OK",
+    "awayTeam": {
+    "id": 13,
+    "name": {
+    "default": "Florida Panthers",
+    "fr": "Panthers de la Floride"
+    },
+    "commonName": {
+    "default": "Panthers"
+    },
+    "placeNameWithPreposition": {
+    "default": "Florida",
+    "fr": "de la Floride"
+    },
+    "abbrev": "FLA",
+    "record": "1-2-0",
+    "logo": "https://assets.nhle.com/logos/nhl/svg/FLA_light.svg"
+    },
+    "homeTeam": {
+    "id": 29,
+    "name": {
+    "default": "Columbus Blue Jackets",
+    "fr": "Blue Jackets de Columbus"
+    },
+    "commonName": {
+    "default": "Blue Jackets"
+    },
+    "placeNameWithPreposition": {
+    "default": "Columbus",
+    "fr": "de Columbus"
+    },
+    "abbrev": "CBJ",
+    "record": "1-1-0",
+    "logo": "https://assets.nhle.com/logos/nhl/svg/CBJ_light.svg"
+    },
+    "ticketsLink": "https://www.ticketmaster.com/event/050060DCC7A07A2C?brand=nhl&wt.mc_id=NHL_LEAGUE_CBJ_HORIZONTAL_SCOREBOARD_GM1&utm_source=NHL.com&utm_medium=client&utm_campaign=NHL_LEAGUE_CBJ&utm_content=HORIZONTAL_SCOREBOARD_GM1",
+    "ticketsLinkFr": "https://www.ticketmaster.com/event/050060DCC7A07A2C?brand=nhl&wt.mc_id=NHL_LEAGUE_CBJ_HORIZONTAL_SCOREBOARD_GM1&utm_source=NHL.com&utm_medium=client&utm_campaign=NHL_LEAGUE_CBJ&utm_content=HORIZONTAL_SCOREBOARD_GM1"
+    },
+    {
+    "id": 2024020052,
+    "season": 20242025,
+    "gameType": 2,
+    "gameDate": "2024-10-15",
+    "gameCenterLink": "/gamecenter/min-vs-stl/2024/10/15/2024020052",
+    "venue": {
+    "default": "Enterprise Center"
+    },
+    "startTimeUTC": "2024-10-15T23:30:00Z",
+    "easternUTCOffset": "-04:00",
+    "venueUTCOffset": "-05:00",
+    "tvBroadcasts": [
+    {
+    "id": 309,
+    "market": "N",
+    "countryCode": "US",
+    "network": "ESPN",
+    "sequenceNumber": 2
+    }
+    ],
+    "gameState": "FUT",
+    "gameScheduleState": "OK",
+    "awayTeam": {
+    "id": 30,
+    "name": {
+    "default": "Minnesota Wild",
+    "fr": "Wild du Minnesota"
+    },
+    "commonName": {
+    "default": "Wild"
+    },
+    "placeNameWithPreposition": {
+    "default": "Minnesota",
+    "fr": "du Minnesota"
+    },
+    "abbrev": "MIN",
+    "record": "1-0-1",
+    "logo": "https://assets.nhle.com/logos/nhl/svg/MIN_light.svg"
+    },
+    "homeTeam": {
+    "id": 19,
+    "name": {
+    "default": "St. Louis Blues",
+    "fr": "Blues de St. Louis"
+    },
+    "commonName": {
+    "default": "Blues"
+    },
+    "placeNameWithPreposition": {
+    "default": "St. Louis",
+    "fr": "de St. Louis"
+    },
+    "abbrev": "STL",
+    "record": "2-1-0",
+    "logo": "https://assets.nhle.com/logos/nhl/svg/STL_light.svg"
+    },
+    "ticketsLink": "https://www.ticketmaster.com/event/060060E9EC2F495F?brand=nhl&wt.mc_id=NHL_LEAGUE_STL_HORIZONTAL_SCOREBOARD_GM1&utm_source=NHL.com&utm_medium=client&utm_campaign=NHL_LEAGUE_STL&utm_content=HORIZONTAL_SCOREBOARD_GM1",
+    "ticketsLinkFr": "https://www.ticketmaster.com/event/060060E9EC2F495F?brand=nhl&wt.mc_id=NHL_LEAGUE_STL_HORIZONTAL_SCOREBOARD_GM1&utm_source=NHL.com&utm_medium=client&utm_campaign=NHL_LEAGUE_STL&utm_content=HORIZONTAL_SCOREBOARD_GM1"
+    },
+    {
+    "id": 2024020053,
+    "season": 20242025,
+    "gameType": 2,
+    "gameDate": "2024-10-15",
+    "gameCenterLink": "/gamecenter/sea-vs-nsh/2024/10/15/2024020053",
+    "venue": {
+    "default": "Bridgestone Arena"
+    },
+    "startTimeUTC": "2024-10-16T00:00:00Z",
+    "easternUTCOffset": "-04:00",
+    "venueUTCOffset": "-05:00",
+    "tvBroadcasts": [
+    {
+    "id": 554,
+    "market": "A",
+    "countryCode": "US",
+    "network": "KHN",
+    "sequenceNumber": 1
+    },
+    {
+    "id": 388,
+    "market": "A",
+    "countryCode": "US",
+    "network": "KONG",
+    "sequenceNumber": 56
+    },
+    {
+    "id": 375,
+    "market": "H",
+    "countryCode": "US",
+    "network": "BSSO",
+    "sequenceNumber": 70
+    }
+    ],
+    "gameState": "FUT",
+    "gameScheduleState": "OK",
+    "awayTeam": {
+    "id": 55,
+    "name": {
+    "default": "Seattle Kraken",
+    "fr": "Kraken de Seattle"
+    },
+    "commonName": {
+    "default": "Kraken"
+    },
+    "placeNameWithPreposition": {
+    "default": "Seattle",
+    "fr": "de Seattle"
+    },
+    "abbrev": "SEA",
+    "record": "1-1-0",
+    "logo": "https://assets.nhle.com/logos/nhl/svg/SEA_light.svg"
+    },
+    "homeTeam": {
+    "id": 18,
+    "name": {
+    "default": "Nashville Predators",
+    "fr": "Predators de Nashville"
+    },
+    "commonName": {
+    "default": "Predators"
+    },
+    "placeNameWithPreposition": {
+    "default": "Nashville",
+    "fr": "de Nashville"
+    },
+    "abbrev": "NSH",
+    "record": "0-2-0",
+    "logo": "https://assets.nhle.com/logos/nhl/svg/NSH_light.svg"
+    },
+    "ticketsLink": "https://www.ticketmaster.com/event/1B0061139AF41A00?brand=nhl&wt.mc_id=NHL_LEAGUE_NSH_HORIZONTAL_SCOREBOARD_GM2&utm_source=NHL.com&utm_medium=client&utm_campaign=NHL_LEAGUE_NSH&utm_content=HORIZONTAL_SCOREBOARD_GM2",
+    "ticketsLinkFr": "https://www.ticketmaster.com/event/1B0061139AF41A00?brand=nhl&wt.mc_id=NHL_LEAGUE_NSH_HORIZONTAL_SCOREBOARD_GM2&utm_source=NHL.com&utm_medium=client&utm_campaign=NHL_LEAGUE_NSH&utm_content=HORIZONTAL_SCOREBOARD_GM2"
+    },
+    {
+    "id": 2024020054,
+    "season": 20242025,
+    "gameType": 2,
+    "gameDate": "2024-10-15",
+    "gameCenterLink": "/gamecenter/sjs-vs-dal/2024/10/15/2024020054",
+    "venue": {
+    "default": "American Airlines Center"
+    },
+    "startTimeUTC": "2024-10-16T00:00:00Z",
+    "easternUTCOffset": "-04:00",
+    "venueUTCOffset": "-05:00",
+    "tvBroadcasts": [
+    {
+    "id": 553,
+    "market": "H",
+    "countryCode": "US",
+    "network": "Victory+",
+    "sequenceNumber": 1
+    },
+    {
+    "id": 314,
+    "market": "A",
+    "countryCode": "US",
+    "network": "NBCSCA",
+    "sequenceNumber": 63
+    }
+    ],
+    "gameState": "FUT",
+    "gameScheduleState": "OK",
+    "awayTeam": {
+    "id": 28,
+    "name": {
+    "default": "San Jose Sharks",
+    "fr": "Sharks de San Jose"
+    },
+    "commonName": {
+    "default": "Sharks"
+    },
+    "placeNameWithPreposition": {
+    "default": "San Jose",
+    "fr": "de San Jose"
+    },
+    "abbrev": "SJS",
+    "record": "0-1-1",
+    "logo": "https://assets.nhle.com/logos/nhl/svg/SJS_light.svg"
+    },
+    "homeTeam": {
+    "id": 25,
+    "name": {
+    "default": "Dallas Stars",
+    "fr": "Stars de Dallas"
+    },
+    "commonName": {
+    "default": "Stars"
+    },
+    "placeNameWithPreposition": {
+    "default": "Dallas",
+    "fr": "de Dallas"
+    },
+    "abbrev": "DAL",
+    "record": "2-0-0",
+    "logo": "https://assets.nhle.com/logos/nhl/svg/DAL_light.svg"
+    },
+    "ticketsLink": "https://www.ticketmaster.com/event/0C0060DC954F1FF5?brand=nhl&wt.mc_id=NHL_LEAGUE_DAL_HORIZONTAL_SCOREBOARD_GM3&utm_source=NHL.com&utm_medium=client&utm_campaign=NHL_LEAGUE_DAL&utm_content=HORIZONTAL_SCOREBOARD_GM3",
+    "ticketsLinkFr": "https://www.ticketmaster.com/event/0C0060DC954F1FF5?brand=nhl&wt.mc_id=NHL_LEAGUE_DAL_HORIZONTAL_SCOREBOARD_GM3&utm_source=NHL.com&utm_medium=client&utm_campaign=NHL_LEAGUE_DAL&utm_content=HORIZONTAL_SCOREBOARD_GM3"
+    },
+    {
+    "id": 2024020055,
+    "season": 20242025,
+    "gameType": 2,
+    "gameDate": "2024-10-15",
+    "gameCenterLink": "/gamecenter/chi-vs-cgy/2024/10/15/2024020055",
+    "venue": {
+    "default": "Scotiabank Saddledome"
+    },
+    "startTimeUTC": "2024-10-16T01:00:00Z",
+    "easternUTCOffset": "-04:00",
+    "venueUTCOffset": "-06:00",
+    "tvBroadcasts": [
+    {
+    "id": 551,
+    "market": "A",
+    "countryCode": "US",
+    "network": "CHSN",
+    "sequenceNumber": 1
+    },
+    {
+    "id": 289,
+    "market": "H",
+    "countryCode": "CA",
+    "network": "SNW",
+    "sequenceNumber": 34
+    }
+    ],
+    "gameState": "FUT",
+    "gameScheduleState": "OK",
+    "awayTeam": {
+    "id": 16,
+    "name": {
+    "default": "Chicago Blackhawks",
+    "fr": "Blackhawks de Chicago"
+    },
+    "commonName": {
+    "default": "Blackhawks"
+    },
+    "placeNameWithPreposition": {
+    "default": "Chicago",
+    "fr": "de Chicago"
+    },
+    "abbrev": "CHI",
+    "record": "1-1-1",
+    "logo": "https://assets.nhle.com/logos/nhl/svg/CHI_light.svg"
+    },
+    "homeTeam": {
+    "id": 20,
+    "name": {
+    "default": "Calgary Flames",
+    "fr": "Flames de Calgary"
+    },
+    "commonName": {
+    "default": "Flames"
+    },
+    "placeNameWithPreposition": {
+    "default": "Calgary",
+    "fr": "de Calgary"
+    },
+    "abbrev": "CGY",
+    "record": "2-0-0",
+    "logo": "https://assets.nhle.com/logos/nhl/svg/CGY_light.svg"
+    },
+    "ticketsLink": "https://www.ticketmaster.ca/event/1100610DD0D03FB8?brand=nhl&wt.mc_id=NHL_LEAGUE_CGY_HORIZONTAL_SCOREBOARD_GM2&utm_source=NHL.com&utm_medium=client&utm_campaign=NHL_LEAGUE_CGY&utm_content=HORIZONTAL_SCOREBOARD_GM2",
+    "ticketsLinkFr": "https://www.ticketmaster.ca/event/1100610DD0D03FB8?brand=nhl&wt.mc_id=NHL_LEAGUE_CGY_HORIZONTAL_SCOREBOARD_GM2&utm_source=NHL.com&utm_medium=client&utm_campaign=NHL_LEAGUE_CGY&utm_content=HORIZONTAL_SCOREBOARD_GM2"
+    },
+    {
+    "id": 2024020056,
+    "season": 20242025,
+    "gameType": 2,
+    "gameDate": "2024-10-15",
+    "gameCenterLink": "/gamecenter/phi-vs-edm/2024/10/15/2024020056",
+    "venue": {
+    "default": "Rogers Place"
+    },
+    "startTimeUTC": "2024-10-16T02:00:00Z",
+    "easternUTCOffset": "-04:00",
+    "venueUTCOffset": "-06:00",
+    "tvBroadcasts": [
+    {
+    "id": 309,
+    "market": "N",
+    "countryCode": "US",
+    "network": "ESPN",
+    "sequenceNumber": 2
+    },
+    {
+    "id": 284,
+    "market": "N",
+    "countryCode": "CA",
+    "network": "SN1",
+    "sequenceNumber": 102
+    },
+    {
+    "id": 281,
+    "market": "N",
+    "countryCode": "CA",
+    "network": "TVAS",
+    "sequenceNumber": 109
+    }
+    ],
+    "gameState": "FUT",
+    "gameScheduleState": "OK",
+    "awayTeam": {
+    "id": 4,
+    "name": {
+    "default": "Philadelphia Flyers",
+    "fr": "Flyers de Philadelphie"
+    },
+    "commonName": {
+    "default": "Flyers"
+    },
+    "placeNameWithPreposition": {
+    "default": "Philadelphia",
+    "fr": "de Philadelphie"
+    },
+    "abbrev": "PHI",
+    "record": "1-1-0",
+    "logo": "https://assets.nhle.com/logos/nhl/svg/PHI_light.svg"
+    },
+    "homeTeam": {
+    "id": 22,
+    "name": {
+    "default": "Edmonton Oilers",
+    "fr": "Oilers d'Edmonton"
+    },
+    "commonName": {
+    "default": "Oilers"
+    },
+    "placeNameWithPreposition": {
+    "default": "Edmonton",
+    "fr": "d'Edmonton"
+    },
+    "abbrev": "EDM",
+    "record": "0-2-0",
+    "logo": "https://assets.nhle.com/logos/nhl/svg/EDM_light.svg"
+    },
+    "ticketsLink": "https://www.ticketmaster.ca/event/110061138A8D3540?brand=nhl&wt.mc_id=NHL_LEAGUE_EDM_HORIZONTAL_SCOREBOARD_GM4&utm_source=NHL.com&utm_medium=client&utm_campaign=NHL_LEAGUE_EDM&utm_content=HORIZONTAL_SCOREBOARD_GM4",
+    "ticketsLinkFr": "https://www.ticketmaster.ca/event/110061138A8D3540?brand=nhl&wt.mc_id=NHL_LEAGUE_EDM_HORIZONTAL_SCOREBOARD_GM4&utm_source=NHL.com&utm_medium=client&utm_campaign=NHL_LEAGUE_EDM&utm_content=HORIZONTAL_SCOREBOARD_GM4"
+    }
+    ]
+    },
+    {
+    "date": "2024-10-16",
+    "games": [
+    {
+    "id": 2024020057,
+    "season": 20242025,
+    "gameType": 2,
+    "gameDate": "2024-10-16",
+    "gameCenterLink": "/gamecenter/buf-vs-pit/2024/10/16/2024020057",
+    "venue": {
+    "default": "PPG Paints Arena"
+    },
+    "startTimeUTC": "2024-10-16T23:00:00Z",
+    "easternUTCOffset": "-04:00",
+    "venueUTCOffset": "-04:00",
+    "tvBroadcasts": [
+    {
+    "id": 385,
+    "market": "N",
+    "countryCode": "US",
+    "network": "TNT",
+    "sequenceNumber": 2
+    },
+    {
+    "id": 501,
+    "market": "N",
+    "countryCode": "US",
+    "network": "truTV",
+    "sequenceNumber": 4
+    },
+    {
+    "id": 519,
+    "market": "N",
+    "countryCode": "US",
+    "network": "MAX",
+    "sequenceNumber": 8
+    }
+    ],
+    "gameState": "FUT",
+    "gameScheduleState": "OK",
+    "awayTeam": {
+    "id": 7,
+    "name": {
+    "default": "Buffalo Sabres",
+    "fr": "Sabres de Buffalo"
+    },
+    "commonName": {
+    "default": "Sabres"
+    },
+    "placeNameWithPreposition": {
+    "default": "Buffalo",
+    "fr": "de Buffalo"
+    },
+    "abbrev": "BUF",
+    "record": "1-3-0",
+    "logo": "https://assets.nhle.com/logos/nhl/svg/BUF_light.svg"
+    },
+    "homeTeam": {
+    "id": 5,
+    "name": {
+    "default": "Pittsburgh Penguins",
+    "fr": "Penguins de Pittsburgh"
+    },
+    "commonName": {
+    "default": "Penguins"
+    },
+    "placeNameWithPreposition": {
+    "default": "Pittsburgh",
+    "fr": "de Pittsburgh"
+    },
+    "abbrev": "PIT",
+    "record": "1-2-0",
+    "logo": "https://assets.nhle.com/logos/nhl/svg/PIT_light.svg"
+    },
+    "ticketsLink": "https://www.ticketmaster.com/event/160060DAD9A65ABE?brand=nhl&wt.mc_id=NHL_LEAGUE_PIT_HORIZONTAL_SCOREBOARD_GM2&utm_source=NHL.com&utm_medium=client&utm_campaign=NHL_LEAGUE_PIT&utm_content=HORIZONTAL_SCOREBOARD_GM2&CAMEFROM=NHLPENGUINS_NHL_HORIZONTAL_SCOREBOARD",
+    "ticketsLinkFr": "https://www.ticketmaster.com/event/160060DAD9A65ABE?brand=nhl&wt.mc_id=NHL_LEAGUE_PIT_HORIZONTAL_SCOREBOARD_GM2&utm_source=NHL.com&utm_medium=client&utm_campaign=NHL_LEAGUE_PIT&utm_content=HORIZONTAL_SCOREBOARD_GM2&CAMEFROM=NHLPENGUINS_NHL_HORIZONTAL_SCOREBOARD"
+    },
+    {
+    "id": 2024020058,
+    "season": 20242025,
+    "gameType": 2,
+    "gameDate": "2024-10-16",
+    "gameCenterLink": "/gamecenter/lak-vs-tor/2024/10/16/2024020058",
+    "venue": {
+    "default": "Scotiabank Arena"
+    },
+    "startTimeUTC": "2024-10-16T23:30:00Z",
+    "easternUTCOffset": "-04:00",
+    "venueUTCOffset": "-04:00",
+    "tvBroadcasts": [
+    {
+    "id": 355,
+    "market": "A",
+    "countryCode": "US",
+    "network": "BSW",
+    "sequenceNumber": 57
+    },
+    {
+    "id": 282,
+    "market": "N",
+    "countryCode": "CA",
+    "network": "SN",
+    "sequenceNumber": 101
+    },
+    {
+    "id": 281,
+    "market": "N",
+    "countryCode": "CA",
+    "network": "TVAS",
+    "sequenceNumber": 109
+    }
+    ],
+    "gameState": "FUT",
+    "gameScheduleState": "OK",
+    "awayTeam": {
+    "id": 26,
+    "name": {
+    "default": "Los Angeles Kings",
+    "fr": "Kings de Los Angeles"
+    },
+    "commonName": {
+    "default": "Kings"
+    },
+    "placeNameWithPreposition": {
+    "default": "Los Angeles",
+    "fr": "de Los Angeles"
+    },
+    "abbrev": "LAK",
+    "record": "1-0-1",
+    "logo": "https://assets.nhle.com/logos/nhl/svg/LAK_light.svg"
+    },
+    "homeTeam": {
+    "id": 10,
+    "name": {
+    "default": "Toronto Maple Leafs",
+    "fr": "Maple Leafs de Toronto"
+    },
+    "commonName": {
+    "default": "Maple Leafs"
+    },
+    "placeNameWithPreposition": {
+    "default": "Toronto",
+    "fr": "de Toronto"
+    },
+    "abbrev": "TOR",
+    "record": "2-1-0",
+    "logo": "https://assets.nhle.com/logos/nhl/svg/TOR_light.svg"
+    },
+    "ticketsLink": "https://www.nhl.com/mapleleafs/tickets/",
+    "ticketsLinkFr": "https://www.nhl.com/mapleleafs/tickets/"
+    },
+    {
+    "id": 2024020059,
+    "season": 20242025,
+    "gameType": 2,
+    "gameDate": "2024-10-16",
+    "gameCenterLink": "/gamecenter/bos-vs-col/2024/10/16/2024020059",
+    "venue": {
+    "default": "Ball Arena"
+    },
+    "startTimeUTC": "2024-10-17T01:30:00Z",
+    "easternUTCOffset": "-04:00",
+    "venueUTCOffset": "-06:00",
+    "tvBroadcasts": [
+    {
+    "id": 385,
+    "market": "N",
+    "countryCode": "US",
+    "network": "TNT",
+    "sequenceNumber": 2
+    },
+    {
+    "id": 501,
+    "market": "N",
+    "countryCode": "US",
+    "network": "truTV",
+    "sequenceNumber": 4
+    },
+    {
+    "id": 519,
+    "market": "N",
+    "countryCode": "US",
+    "network": "MAX",
+    "sequenceNumber": 8
+    },
+    {
+    "id": 283,
+    "market": "N",
+    "countryCode": "CA",
+    "network": "SN360",
+    "sequenceNumber": 103
+    },
+    {
+    "id": 281,
+    "market": "N",
+    "countryCode": "CA",
+    "network": "TVAS",
+    "sequenceNumber": 109
+    }
+    ],
+    "gameState": "FUT",
+    "gameScheduleState": "OK",
+    "awayTeam": {
+    "id": 6,
+    "name": {
+    "default": "Boston Bruins",
+    "fr": "Bruins de Boston"
+    },
+    "commonName": {
+    "default": "Bruins"
+    },
+    "placeNameWithPreposition": {
+    "default": "Boston",
+    "fr": "de Boston"
+    },
+    "abbrev": "BOS",
+    "record": "2-1-0",
+    "logo": "https://assets.nhle.com/logos/nhl/svg/BOS_light.svg"
+    },
+    "homeTeam": {
+    "id": 21,
+    "name": {
+    "default": "Colorado Avalanche",
+    "fr": "Avalanche du Colorado"
+    },
+    "commonName": {
+    "default": "Avalanche"
+    },
+    "placeNameWithPreposition": {
+    "default": "Colorado",
+    "fr": "du Colorado"
+    },
+    "abbrev": "COL",
+    "record": "0-2-0",
+    "logo": "https://assets.nhle.com/logos/nhl/svg/COL_light.svg"
+    },
+    "ticketsLink": "https://www.ticketmaster.com/event/1E0060E1BA5128FD?brand=nhl&wt.mc_id=NHL_LEAGUE_COL_HORIZONTAL_SCOREBOARD_GM3&utm_source=NHL.com&utm_medium=client&utm_campaign=NHL_LEAGUE_COL&utm_content=HORIZONTAL_SCOREBOARD_GM3",
+    "ticketsLinkFr": "https://www.ticketmaster.com/event/1E0060E1BA5128FD?brand=nhl&wt.mc_id=NHL_LEAGUE_COL_HORIZONTAL_SCOREBOARD_GM3&utm_source=NHL.com&utm_medium=client&utm_campaign=NHL_LEAGUE_COL&utm_content=HORIZONTAL_SCOREBOARD_GM3"
+    },
+    {
+    "id": 2024020060,
+    "season": 20242025,
+    "gameType": 2,
+    "gameDate": "2024-10-16",
+    "gameCenterLink": "/gamecenter/uta-vs-ana/2024/10/16/2024020060",
+    "venue": {
+    "default": "Honda Center"
+    },
+    "startTimeUTC": "2024-10-17T02:00:00Z",
+    "easternUTCOffset": "-04:00",
+    "venueUTCOffset": "-07:00",
+    "tvBroadcasts": [
+    {
+    "id": 553,
+    "market": "H",
+    "countryCode": "US",
+    "network": "Victory+",
+    "sequenceNumber": 1
+    },
+    {
+    "id": 558,
+    "market": "A",
+    "countryCode": "US",
+    "network": "Utah16",
+    "sequenceNumber": 1
+    },
+    {
+    "id": 219,
+    "market": "H",
+    "countryCode": "US",
+    "network": "KCOP-13",
+    "sequenceNumber": 82
+    }
+    ],
+    "gameState": "FUT",
+    "gameScheduleState": "OK",
+    "awayTeam": {
+    "id": 59,
+    "name": {
+    "default": "Utah Hockey Club",
+    "fr": "Club de hockey de l'Utah"
+    },
+    "commonName": {
+    "default": "Utah Hockey Club",
+    "fr": "Club de hockey de l'Utah"
+    },
+    "placeNameWithPreposition": {
+    "default": "Utah",
+    "fr": "de l'Utah"
+    },
+    "abbrev": "UTA",
+    "record": "3-0-0",
+    "logo": "https://assets.nhle.com/logos/nhl/svg/UTA_light.svg"
+    },
+    "homeTeam": {
+    "id": 24,
+    "name": {
+    "default": "Anaheim Ducks",
+    "fr": "Ducks d'Anaheim"
+    },
+    "commonName": {
+    "default": "Ducks"
+    },
+    "placeNameWithPreposition": {
+    "default": "Anaheim",
+    "fr": "d'Anaheim"
+    },
+    "abbrev": "ANA",
+    "record": "1-0-0",
+    "logo": "https://assets.nhle.com/logos/nhl/svg/ANA_light.svg"
+    },
+    "ticketsLink": "https://www.ticketmaster.com/event/090060DABB1449E4?brand=ducks&wt.mc_id=NHL_LEAGUE_ANA_HORIZONTAL_SCOREBOARD_GM1&camefrom=cfc_ducks_2425_web_scoreboard-league&utm_source=NHL.com&utm_medium=client&utm_campaign=NHL_LEAGUE_ANA&utm_content=HORIZONTAL_SCOREBOARD_GM1",
+    "ticketsLinkFr": "https://www.ticketmaster.com/event/090060DABB1449E4?brand=ducks&wt.mc_id=NHL_LEAGUE_ANA_HORIZONTAL_SCOREBOARD_GM1&camefrom=cfc_ducks_2425_web_scoreboard-league&utm_source=NHL.com&utm_medium=client&utm_campaign=NHL_LEAGUE_ANA&utm_content=HORIZONTAL_SCOREBOARD_GM1"
+    }
+    ]
+    }
+    ]
+    }
+    

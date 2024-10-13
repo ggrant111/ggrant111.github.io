@@ -13,64 +13,56 @@
 
     <!-- Current Games Section -->
     <section id="current-games">
-        <h2>Current Games</h2>
+        <h3>Today's Games</h3>
         <div class="games-list">
             <!-- Current games will be dynamically inserted here -->
         </div>
     </section>
 
-    <!-- Goalie Leaders Section -->
-    <section id="goalie-leaders">
-        <h2>Goalie Leaders</h2>
-        <div class="leader-grid">
-            <!-- Goalie leaders will be dynamically inserted here -->
-            <!-- Example card structure -->
-            <div class="goalie-card" data-player-id="1" onclick="openPlayerModal(this)">
-                <img src="goalie-headshot.jpg" alt="Goalie Headshot">
-                <img src="team-logo.jpg" alt="Team Logo" class="team-logo">
-                <p>Player Name</p>
+    <div class="leaders">
+        <!-- Top 5 Goalie Leaders Section -->
+        <section id="top-goalie-leaders">
+            <h3>Top 5 Goalies</h3>
+            <div class="goalie-leader-grid">
+                <!-- Goalie cards will be dynamically inserted here -->
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- Skater Leaders Section -->
-    <section id="skater-leaders">
-        <h2>Skater Leaders</h2>
-        <div class="leader-grid">
-            <!-- Skater leaders will be dynamically inserted here -->
-            <!-- Example card structure -->
-            <div class="skater-card" data-player-id="2" onclick="openPlayerModal(this)">
-                <img src="skater-headshot.jpg" alt="Skater Headshot">
-                <img src="team-logo.jpg" alt="Team Logo" class="team-logo">
-                <p>Player Name</p>
+        <!-- Top 5 Skaters Section -->
+        <section id="skater-leaders">
+            <h3>Top 5 Skaters</h3>
+            <div class="skater-leader-grid">
+                <!-- Skater cards will be dynamically inserted here -->
             </div>
-        </div>
-    </section>
+        </section>
+    
 
-    <!-- Teams Section -->
-    <section id="teams">
-        <h2>Teams</h2>
-        <div class="conference" id="eastern-conference">
-            <h3>Eastern Conference</h3>
-            <ul class="team-list">
-                <!-- Eastern Conference teams will be dynamically inserted here -->
-                <li class="team" data-team-id="1" onclick="openTeamModal(this)">Team Name</li>
-            </ul>
+        
+           <!-- Eastern Conference Section -->
+<section id="eastern-conference">
+    <h3>Eastern Conference</h3>
+    <div class="team-grid">
+        <!-- Team tiles will be dynamically inserted here -->
+    </div>
+</section>
+
+<!-- Western Conference Section -->
+<section id="western-conference">
+    <h3>Western Conference</h3>
+    <div class="team-grid">
+        <!-- Team tiles will be dynamically inserted here -->
+    </div>
+</section>
+
         </div>
-        <div class="conference" id="western-conference">
-            <h3>Western Conference</h3>
-            <ul class="team-list">
-                <!-- Western Conference teams will be dynamically inserted here -->
-                <li class="team" data-team-id="2" onclick="openTeamModal(this)">Team Name</li>
-            </ul>
-        </div>
-    </section>
+    </div>
+   
 
     <!-- Modal for Player Stats -->
     <div id="player-modal" class="modal">
         <div class="modal-content">
             <span class="close" onclick="closeModal()">&times;</span>
-            <h2>Player Name</h2>
+            <h3>Player Name</h3>
             <div class="player-stats">
                 <div class="stat-tile">Year Stats</div>
                 <div class="stat-tile">Career Stats</div>
@@ -83,7 +75,7 @@
     <div id="team-modal" class="modal">
         <div class="modal-content">
             <span class="close" onclick="closeModal()">&times;</span>
-            <h2>Team Name</h2>
+            <h3>Team Name</h3>
             <div class="team-stats">
                 <div class="stat-tile">Season Stats</div>
                 <div class="stat-tile">Roster</div>
