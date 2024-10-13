@@ -1,0 +1,189 @@
+/* Importing the Poppins font */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+    padding: 20px;
+}
+
+h1, h2, h3 {
+    font-weight: 600;
+    color: #222;
+}
+
+h2 {
+    border-bottom: 2px solid #ccc;
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+}
+
+header {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+/* Sections Styling */
+section {
+    margin-bottom: 40px;
+}
+
+#current-games,
+#goalie-leaders,
+#skater-leaders,
+#teams {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.leader-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+.goalie-card, .skater-card {
+    background-color: #e9e9e9;
+    padding: 15px;
+    border-radius: 10px;
+    text-align: center;
+    width: 150px;
+    cursor: pointer;
+    transition: transform 0.2s ease-in-out;
+}
+
+.goalie-card:hover, .skater-card:hover {
+    transform: scale(1.05);
+}
+
+img {
+    max-width: 100%;
+    border-radius: 50%;
+}
+
+.team-logo {
+    width: 50px;
+    height: 50px;
+    margin-top: 10px;
+}
+
+.team-list {
+    list-style: none;
+    padding: 0;
+}
+
+.team-list li {
+    padding: 10px;
+    background-color: #e9e9e9;
+    border-radius: 10px;
+    margin: 10px 0;
+    cursor: pointer;
+    text-align: center;
+    transition: background-color 0.2s ease-in-out;
+}
+
+.team-list li:hover {
+    background-color: #d9d9d9;
+}
+
+/* Conference section */
+.conference {
+    margin-bottom: 30px;
+}
+
+/* Modal Styling */
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-content {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    width: 80%;
+    max-width: 600px;
+    position: relative;
+}
+
+.close {
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+.player-stats, .team-stats {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center;
+}
+
+.stat-tile {
+    background-color: #f0f0f0;
+    padding: 20px;
+    border-radius: 10px;
+    flex: 1 1 100px;
+    text-align: center;
+}
+
+/* Responsive Layout */
+@media (min-width: 1024px) {
+    body {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    section {
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+
+    #goalie-leaders, #skater-leaders, #teams {
+        display: inline-block;
+        width: 32%;
+        vertical-align: top;
+        margin-right: 1%;
+    }
+
+    #current-games {
+        width: 100%;
+        margin-bottom: 40px;
+    }
+
+    #teams {
+        margin-right: 0;
+    }
+}
+
+@media (max-width: 768px) {
+    .leader-grid, .player-stats, .team-stats {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #goalie-leaders, #skater-leaders, #teams {
+        width: 100%;
+        margin-bottom: 30px;
+    }
+}

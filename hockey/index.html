@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NHL Info Dashboard</title>
+    <link rel="stylesheet" href="styles.css"> <!-- Add your custom CSS -->
+</head>
+<body>
+    <header>
+        <h1>NHL Information Dashboard</h1>
+    </header>
+
+    <!-- Current Games Section -->
+    <section id="current-games">
+        <h2>Current Games</h2>
+        <div class="games-list">
+            <!-- Current games will be dynamically inserted here -->
+        </div>
+    </section>
+
+    <!-- Goalie Leaders Section -->
+    <section id="goalie-leaders">
+        <h2>Goalie Leaders</h2>
+        <div class="leader-grid">
+            <!-- Goalie leaders will be dynamically inserted here -->
+            <!-- Example card structure -->
+            <div class="goalie-card" data-player-id="1" onclick="openPlayerModal(this)">
+                <img src="goalie-headshot.jpg" alt="Goalie Headshot">
+                <img src="team-logo.jpg" alt="Team Logo" class="team-logo">
+                <p>Player Name</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skater Leaders Section -->
+    <section id="skater-leaders">
+        <h2>Skater Leaders</h2>
+        <div class="leader-grid">
+            <!-- Skater leaders will be dynamically inserted here -->
+            <!-- Example card structure -->
+            <div class="skater-card" data-player-id="2" onclick="openPlayerModal(this)">
+                <img src="skater-headshot.jpg" alt="Skater Headshot">
+                <img src="team-logo.jpg" alt="Team Logo" class="team-logo">
+                <p>Player Name</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Teams Section -->
+    <section id="teams">
+        <h2>Teams</h2>
+        <div class="conference" id="eastern-conference">
+            <h3>Eastern Conference</h3>
+            <ul class="team-list">
+                <!-- Eastern Conference teams will be dynamically inserted here -->
+                <li class="team" data-team-id="1" onclick="openTeamModal(this)">Team Name</li>
+            </ul>
+        </div>
+        <div class="conference" id="western-conference">
+            <h3>Western Conference</h3>
+            <ul class="team-list">
+                <!-- Western Conference teams will be dynamically inserted here -->
+                <li class="team" data-team-id="2" onclick="openTeamModal(this)">Team Name</li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- Modal for Player Stats -->
+    <div id="player-modal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal()">&times;</span>
+            <h2>Player Name</h2>
+            <div class="player-stats">
+                <div class="stat-tile">Year Stats</div>
+                <div class="stat-tile">Career Stats</div>
+                <!-- More stat tiles here -->
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal for Team Stats -->
+    <div id="team-modal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal()">&times;</span>
+            <h2>Team Name</h2>
+            <div class="team-stats">
+                <div class="stat-tile">Season Stats</div>
+                <div class="stat-tile">Roster</div>
+                <!-- More stat tiles here -->
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script> <!-- Add your custom JavaScript -->
+</body>
+</html>
