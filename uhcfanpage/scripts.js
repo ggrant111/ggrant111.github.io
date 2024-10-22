@@ -37,6 +37,16 @@ function displayTeamSchedule(games) {
   });
 }
 
+async function fetchPlaers() {
+  try {
+    const response = await fetch(
+      `https://api-web.nhle.com/v1/club-stats/uta/20242025/2`
+    );
+    const data = await response.json();
+    displayPlayers(data.skaters);
+  }
+}
+
 // Fetch current standings
 async function fetchStandings() {
   try {
@@ -144,6 +154,7 @@ async function fetchHeroImage() {
 // Initialize all data fetching functions when the page loads
 function init() {
   fetchTeamSchedule();
+  fetchPlayerStats();
   fetchStandings();
   fetchPlayerStats();
   fetchHeroImage();
