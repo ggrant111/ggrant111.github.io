@@ -21,7 +21,7 @@ document.addEventListener('DOMContentLoaded', () => {
   };
 });
 
-const teamAbbreviation = "SEA";
+const teamAbbreviation = "UTA";
 
 async function fetchRoster() {
   try {
@@ -377,12 +377,15 @@ function displaySchedule(games) {
 
     const homeTeam = game.homeTeam.placeName?.default || 'Unknown Home Team';
     const awayTeam = game.awayTeam.placeName?.default || 'Unknown Away Team';
-    const gameDate = new Date(game.gameDate).toLocaleDateString();
+    const gameDate = new Date(game.gameDate).toLocaleDateString('en-US', { timeZone: 'UTC' });
+
     const startTime = new Date(game.startTimeUTC).toLocaleTimeString('en-US', { hour: '2-digit', minute: '2-digit' });
 
     gameDiv.innerHTML = `
       <img src="${game.awayTeam.logo}" alt="${awayTeam} logo" class="team-logo">
+      <h2>${game.awayTeam.score !== undefined ? game.awayTeam.score : ""}</h2>
       <p>${awayTeam} vs ${homeTeam}</p>
+      <h2>${game.homeTeam.score !== undefined ? game.homeTeam.score : ""}</h2>
       <img src="${game.homeTeam.logo}" alt="${homeTeam} logo" class="team-logo">
       <p>Date: ${gameDate}</p>
       <p>Time: ${startTime}</p>
@@ -419,16 +422,16 @@ async function openGameModal(gameId) {
     const startTime = new Date(game.startTimeUTC).toLocaleTimeString('en-US', { hour: '2-digit', minute: '2-digit' });
     const venue = game.venue?.default || 'Unknown Venue';
     const broadcasts = game.tvBroadcasts?.map(b => b.network).join(', ') || 'No Broadcast';
-    const score = `${game.awayTeam.score} - ${game.homeTeam.score}`;
+    const score = `${game.awayTeam.score || ''} - ${game.homeTeam.score || ''}`;
     
     // Display the team logos
     const homeLogo = game.homeTeam.logo;
     const awayLogo = game.awayTeam.logo;
 
     // Game links
-    const threeMinRecapLink = game.threeMinRecap ? `https://nhl.com${game.threeMinRecap}` : null;
-    const condensedGameLink = game.condensedGame ? `https://nhl.com${game.condensedGame}` : null;
-    const gameCenterLink = game.gameCenterLink ? `https://nhl.com${game.gameCenterLink}` : null;
+    const threeMinRecapLink = game?.threeMinRecap ? `https://nhl.com${game.threeMinRecap}` : null;
+    const condensedGameLink = game?.condensedGame ? `https://nhl.com${game.condensedGame}` : null;
+    const gameCenterLink = game?.gameCenterLink ? `https://nhl.com${game.gameCenterLink}` : null;
 
     const recapLinksHTML = `
       <h3>Game Links</h3>
@@ -439,49 +442,32 @@ async function openGameModal(gameId) {
       </div>
     `;
 
-    // Check if teamGameStats exists and is an array before using .find()
-    const sogStat = Array.isArray(game.teamGameStats) ? game.teamGameStats.find(stat => stat.category === 'sog') : null;
-    const faceoffPctgStat = Array.isArray(game.teamGameStats) ? game.teamGameStats.find(stat => stat.category === 'faceoffWinningPctg') : null;
-    const powerPlayStat = Array.isArray(game.teamGameStats) ? game.teamGameStats.find(stat => stat.category === 'powerPlay') : null;
-    const pimStat = Array.isArray(game.teamGameStats) ? game.teamGameStats.find(stat => stat.category === 'pim') : null;
-    const hitsStat = Array.isArray(game.teamGameStats) ? game.teamGameStats.find(stat => stat.category === 'hits') : null;
-    const blockedShotsStat = Array.isArray(game.teamGameStats) ? game.teamGameStats.find(stat => stat.category === 'blockedShots') : null;
+    // Friendly names mapping
+    const statNamesMap = {
+      sog: 'SOG',
+      faceoffWinningPctg: 'Faceoff %',
+      powerPlay: 'Power Play',
+      powerPlayPctg: 'Power Play %',
+      pim: 'PIM',
+      hits: 'Hits',
+      blockedShots: 'Blocked Shots',
+      giveaways: 'Giveaways',
+      takeaways: 'Takeaways'
+    };
 
-    // Generate tiles for team stats
-    const teamStatsHTML = `
-      <div class="stat-tile-container">
+    // Log teamGameStats to check its structure
+    console.log('teamGameStats:', game.teamGameStats);
+
+    // Generate the team stats section if available
+    const teamStatsHTML = Array.isArray(game.summary.teamGameStats)
+      ? game.summary.teamGameStats.map(stat => `
         <div class="stat-tile">
-          <p class="stat-abbr">SOG</p>
+          <p class="stat-abbr">${statNamesMap[stat.category] || stat.category?.toUpperCase()}</p>
           <hr>
-          <p class="stat-number">${sogStat ? `${sogStat.awayValue} - ${sogStat.homeValue}` : 'N/A'}</p>
+          <p class="stat-number">${stat.awayValue ?? 'N/A'} - ${stat.homeValue ?? 'N/A'}</p>
         </div>
-        <div class="stat-tile">
-          <p class="stat-abbr">FO%</p>
-          <hr>
-          <p class="stat-number">${faceoffPctgStat ? `${(faceoffPctgStat.awayValue * 100).toFixed(2)}% - ${(faceoffPctgStat.homeValue * 100).toFixed(2)}%` : 'N/A'}</p>
-        </div>
-        <div class="stat-tile">
-          <p class="stat-abbr">PP</p>
-          <hr>
-          <p class="stat-number">${powerPlayStat ? `${powerPlayStat.awayValue} - ${powerPlayStat.homeValue}` : 'N/A'}</p>
-        </div>
-        <div class="stat-tile">
-          <p class="stat-abbr">PIM</p>
-          <hr>
-          <p class="stat-number">${pimStat ? `${pimStat.awayValue} - ${pimStat.homeValue}` : 'N/A'}</p>
-        </div>
-        <div class="stat-tile">
-          <p class="stat-abbr">Hits</p>
-          <hr>
-          <p class="stat-number">${hitsStat ? `${hitsStat.awayValue} - ${hitsStat.homeValue}` : 'N/A'}</p>
-        </div>
-        <div class="stat-tile">
-          <p class="stat-abbr">Blocked</p>
-          <hr>
-          <p class="stat-number">${blockedShotsStat ? `${blockedShotsStat.awayValue} - ${blockedShotsStat.homeValue}` : 'N/A'}</p>
-        </div>
-      </div>
-    `;
+      `).join('')
+      : '<p>No team stats available.</p>';
 
     // Generate scoring information
     const scoringHTML = game.summary?.scoring?.map(period => `
@@ -502,7 +488,10 @@ async function openGameModal(gameId) {
       <div class="game-details">
         <div class="team-info">
           <img src="${awayLogo}" alt="${awayTeam} logo" class="team-logo">
-          <h2>${awayTeam} vs ${homeTeam}</h2>
+          <div>
+          <h2>${game.awayTeam.score} - ${awayTeam} vs ${homeTeam} - ${game.homeTeam.score}</h2>
+
+          </div>
           <img src="${homeLogo}" alt="${homeTeam} logo" class="team-logo">
         </div>
         <p>Date: ${gameDate}</p>
@@ -513,7 +502,7 @@ async function openGameModal(gameId) {
 
         ${recapLinksHTML}
 
-        <h3>Team Stats</h3>
+        <h3>Team Stats (Away Team - left side / Home Team - right side)</h3>
         <div class="team-stats">
           ${teamStatsHTML}
         </div>
@@ -542,6 +531,9 @@ async function openGameModal(gameId) {
     console.error("Error fetching game details:", error);
   }
 }
+
+
+
 
 async function fetchTeamStats() {
   try {
