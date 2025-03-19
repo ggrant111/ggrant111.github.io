@@ -1,24 +1,18 @@
 {
-    "manifest_version": 3,
-    "name": "Lead Generator",
-    "version": "1.0",
-    "description": "A Chrome extension to generate and manage leads.",
-    "permissions": ["storage", "activeTab"],
-    "host_permissions": [
-      "<all_urls>"
-    ],
-    "action": {
-      "default_popup": "index.html"
-    },
-
-    "background": {
+  "manifest_version": 3,
+  "name": "Lead Generator",
+  "version": "1.1",
+  "description": "Lead Generator Chrome extension.",
+  "manifest_version": 3,
+  "background": {
       "service_worker": "background.js"
-    },
-    "content_scripts": [
+  },
+  "content_scripts": [
       {
-        "matches": ["<all_urls>"],
-        "js": ["script.js"]
+          "matches": ["<all_urls>"],
+          "js": ["script.js"]
       }
-    ]
-  }
-  
+  ],
+  "permissions": ["storage", "activeTab", "scripting"],
+  "host_permissions": ["<all_urls>"]
+}
