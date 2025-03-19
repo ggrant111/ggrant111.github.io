@@ -387,8 +387,8 @@ function displaySchedule(games) {
       <p>${awayTeam} vs ${homeTeam}</p>
       <h2>${game.homeTeam.score !== undefined ? game.homeTeam.score : ""}</h2>
       <img src="${game.homeTeam.logo}" alt="${homeTeam} logo" class="team-logo">
-      <p>Date: ${gameDate}</p>
-      <p>Time: ${startTime}</p>
+      <p>${gameDate}</p>
+      <p>${startTime}</p>
     `;
 
     scheduleContainer.appendChild(gameDiv);
@@ -494,12 +494,13 @@ async function openGameModal(gameId) {
           </div>
           <img src="${homeLogo}" alt="${homeTeam} logo" class="team-logo">
         </div>
+        <div id="gameInfo">
         <p>Date: ${gameDate}</p>
         <p>Time: ${startTime}</p>
         <p>Venue: ${venue}</p>
         <p>Score: ${score}</p>
         <p>Broadcast: ${broadcasts}</p>
-
+</div>
         ${recapLinksHTML}
 
         <h3>Team Stats (Away Team - left side / Home Team - right side)</h3>
@@ -630,165 +631,350 @@ async function fetchAndDisplayStandings() {
   const standingsUrl = `https://api-web.nhle.com/v1/standings/${date}`; // Use dynamic date
 
   try {
-      const response = await fetch(standingsUrl);
-      if (!response.ok) {
-          throw new Error(`Error: ${response.status}`);
+    const response = await fetch(standingsUrl);
+    if (!response.ok) {
+      throw new Error(`Error: ${response.status}`);
+    }
+    const data = await response.json();
+    
+    const teams = data.standings;
+
+    // Group teams by conference and division
+    const conferences = {
+      'Eastern': {},
+      'Western': {}
+    };
+
+    teams.forEach(team => {
+      const conference = team.conferenceName;
+      const division = team.divisionName;
+
+      if (!conferences[conference][division]) {
+        conferences[conference][division] = [];
       }
-      const data = await response.json();
-      
-      const teams = data.standings;
 
-      // Group teams by conference and division
-      const conferences = {
-          'Eastern': {},
-          'Western': {}
-      };
+      conferences[conference][division].push(team);
+    });
 
-      teams.forEach(team => {
-          const conference = team.conferenceName;
-          const division = team.divisionName;
+    // Clear previous standings
+    const standingsContainer = document.querySelector('#standings-container');
+    standingsContainer.innerHTML = '';
 
-          if (!conferences[conference][division]) {
-              conferences[conference][division] = [];
-          }
+    // Generate standings by conference and division
+    Object.keys(conferences).forEach(conferenceName => {
+      const conferenceDiv = document.createElement('div');
+      conferenceDiv.classList.add('conference');
 
-          conferences[conference][division].push(team);
-      });
+      const conferenceHeader = document.createElement('h2');
+      conferenceHeader.textContent = `${conferenceName} Conference`;
+      conferenceDiv.appendChild(conferenceHeader);
 
-      // Clear previous standings
-      const standingsContainer = document.querySelector('#standings-container');
-      standingsContainer.innerHTML = '';
+      const divisions = conferences[conferenceName];
 
-      // Generate standings by conference and division
-      Object.keys(conferences).forEach(conferenceName => {
-          const conferenceDiv = document.createElement('div');
-          conferenceDiv.classList.add('conference');
+      Object.keys(divisions).forEach(divisionName => {
+        const divisionDiv = document.createElement('div');
+        divisionDiv.classList.add('division');
 
-          const conferenceHeader = document.createElement('h2');
-          conferenceHeader.textContent = `${conferenceName} Conference`;
-          conferenceDiv.appendChild(conferenceHeader);
+        const divisionHeader = document.createElement('h3');
+        divisionHeader.textContent = `${divisionName} Division`;
+        divisionDiv.appendChild(divisionHeader);
 
-          const divisions = conferences[conferenceName];
+        const teamGrid = document.createElement('div');
+        teamGrid.classList.add('team-grid');
 
-          Object.keys(divisions).forEach(divisionName => {
-              const divisionDiv = document.createElement('div');
-              divisionDiv.classList.add('division');
+        divisions[divisionName].forEach((team, index) => {
+          const teamTile = document.createElement('div');
+          teamTile.classList.add('team-tile');
 
-              const divisionHeader = document.createElement('h3');
-              divisionHeader.textContent = `${divisionName} Division`;
-              divisionDiv.appendChild(divisionHeader);
+          console.log(`Team: ${team.teamName.default}, Abbreviation: ${team.teamAbbrev.default}`); // Debug log
 
-              const teamGrid = document.createElement('div');
-              teamGrid.classList.add('team-grid');
+          // Add data attribute for team abbreviation (from teamAbbrev.default)
+          teamTile.setAttribute('data-team-abbreviation', team.teamAbbrev.default);
 
-              divisions[divisionName].forEach((team, index) => {
-                  const teamTile = document.createElement('div');
-                  teamTile.classList.add('team-tile');
-                  
-                  // Set team logo as background image
-                  teamTile.style.backgroundImage = `url(${team.teamLogo})`;
+          // Include the rank in the layout (1-based index)
+          const teamRank = document.createElement('div');
+          teamRank.classList.add('team-rank');
+          teamRank.textContent = `#${index + 1}`;
 
-                  // Include the rank in the layout (1-based index)
-                  const teamRank = document.createElement('div');
-                  teamRank.classList.add('team-rank');
-                  teamRank.textContent = `#${index + 1}`;
+          const teamLogo = document.createElement('img');
+          teamLogo.src = team.teamLogo;
+          teamLogo.alt = `${team.teamName.default} logo`;
+          teamLogo.classList.add('team-logo');
 
-                  const teamLogo = document.createElement('img');
-                  teamLogo.src = team.teamLogo;
-                  teamLogo.alt = `${team.teamName.default} logo`;
-                  teamLogo.classList.add('team-logo');
+          const teamInfo = document.createElement('div');
+          teamInfo.classList.add('team-info');
+          teamInfo.innerHTML = `
+            <p>${team.teamName.default}</p>
+            <p>Games Played: ${team.gamesPlayed}</p>
+            <p>Points: ${team.points}</p>
+            <p>Wins: ${team.wins}</p>
+            <p>Goal Differential: ${team.goalDifferential}</p>
+          `;
 
-                  const teamInfo = document.createElement('div');
-                  teamInfo.classList.add('team-info');
-                  teamInfo.innerHTML = `
-                      <p>${team.teamName.default}</p>
-                      <p>Games Played: ${team.gamesPlayed}</p>
-                      <p>Points: ${team.points}</p>
-                      <p>Wins: ${team.wins}</p>
-                      <p>Goal Differential: ${team.goalDifferential}</p>
-                  `;
+          // Append the rank, logo, and team info
+          teamTile.appendChild(teamRank);
+          teamTile.appendChild(teamLogo); // Append logo to the tile
+          teamTile.appendChild(teamInfo);
 
-                  // Append the rank, logo, and team info
-                  teamTile.appendChild(teamRank);
-                  // teamTile.appendChild(teamLogo);
-                  teamTile.appendChild(teamInfo);
-
-                  teamGrid.appendChild(teamTile);
-              });
-
-              divisionDiv.appendChild(teamGrid);
-              conferenceDiv.appendChild(divisionDiv);
+          // Add event listener for each tile to show team stats directly
+          teamTile.addEventListener('click', () => {
+            const teamCode = team.teamAbbrev.default;
+            console.log(`Clicked on team: ${team.teamName.default}, Code: ${teamCode}`); // Debug log
+            handleTeamTileClick(teamCode, team); // Pass the team abbreviation to fetch both team and player stats
           });
 
-          standingsContainer.appendChild(conferenceDiv);
+          teamGrid.appendChild(teamTile);
+        });
+
+        divisionDiv.appendChild(teamGrid);
+        conferenceDiv.appendChild(divisionDiv);
       });
 
+      standingsContainer.appendChild(conferenceDiv);
+    });
+
   } catch (error) {
-      console.error('Error fetching standings:', error);
-      const standingsContainer = document.querySelector('#standings-container');
-      standingsContainer.innerHTML = '<p>Error loading standings data.</p>';
+    console.error('Error fetching standings:', error);
+    const standingsContainer = document.querySelector('#standings-container');
+    standingsContainer.innerHTML = '<p>Error loading standings data.</p>';
   }
 }
 
-// async function fetchTeamStats(teamCode) {
-//   const statsUrl = `https://api-web.nhle.com/v1/club-stats/${teamCode}/20242025/2`; // Example for fetching team stats
+// Function to handle when a team tile is clicked
+function handleTeamTileClick(teamCode, teamName) {
+  fetchTeamInfo(teamCode).then(data => {
+    if (data) {
+      console.log("Team data after clicking:", data); // Log the full team data for inspection
+      showModal(teamName, data);  // Pass the data to showModal function
+    }
+  });
+}
 
-//   try {
-//       const response = await fetch(statsUrl);
-//       if (!response.ok) {
-//           throw new Error(`Error fetching stats for team ${teamCode}: ${response.status}`);
-//       }
-//       const data = await response.json();
-//       return data;
-//   } catch (error) {
-//       console.error('Error fetching team stats:', error);
-//       return null;
-//   }
-// }
 
-// function showModal(teamName, statsData) {
-//   // Display team name
-//   const modal = document.getElementById('teamStatsModal');
-//   document.getElementById('teamName').textContent = teamName;
+async function fetchTeamInfo(teamCode) {
+  const statsUrl = `https://api-web.nhle.com/v1/club-stats/${teamCode}/20242025/2`;
+  const rosterUrl = `https://api-web.nhle.com/v1/roster/${teamCode}/20242025`;
 
-//   const teamStatsDiv = document.getElementById('teamStats');
-//   teamStatsDiv.innerHTML = '';  // Clear previous stats
+  try {
+    // Fetch team stats
+    const teamResponse = await fetch(statsUrl);
+    if (!teamResponse.ok) {
+      throw new Error(`Error fetching stats for team ${teamCode}: ${teamResponse.status}`);
+    }
+    const teamStatsData = await teamResponse.json();
 
-//   // Populate stats for skaters
-//   const skaters = statsData.skaters;
-//   skaters.forEach(skaters => {
-//       const skaterDiv = document.createElement('div');
-//       skaterDiv.classList.add('player-stat');
-//       skaterDiv.innerHTML = `
-//           <img src="${skaters.headshot}" alt="${skaters.firstName.default} ${skaters.lastName.default}" class="player-headshot">
-//           <p>${skaters.firstName.default} ${skaters.lastName.default} - ${skaters.positionCode}</p>
-//           <p>Games Played: ${skaters.gamesPlayed}</p>
-//           <p>Points: ${skaters.points}</p>
-//           <p>Goals: ${skaters.goals}</p>
-//           <p>Assists: ${skaters.assists}</p>
-//           <p>Plus/Minus: ${skaters.plusMinus}</p>
-//           <p>Shooting Percentage: ${(skaters.shootingPctg * 100).toFixed(2)}%</p>
-//       `;
-//       teamStatsDiv.appendChild(skaterDiv);
-//   });
+    // Fetch player stats (roster)
+    const rosterResponse = await fetch(rosterUrl);
+    if (!rosterResponse.ok) {
+      throw new Error(`Error fetching roster for team ${teamCode}: ${rosterResponse.status}`);
+    }
+    const rosterData = await rosterResponse.json();
 
-//   // Display modal
-//   modal.style.display = "block";
-// }
+    // Return both team and player data
+    return {
+      teamStats: teamStatsData,  // Ensure this structure matches what you need
+      roster: rosterData // Ensure this structure is being used correctly
+    };
+  } catch (error) {
+    console.error('Error fetching team or roster data:', error);
+    return null;
+  }
+}
 
-// // Event listener for closing the modal
-// document.querySelector('.close').onclick = function() {
-//   document.getElementById('teamStatsModal').style.display = "none";
-// };
+function showModal(teamName, teamData) {
+  const modal = document.getElementById('teamStatsModal');
+  const teamStatsDiv = document.getElementById('teamStats');
+  const playerStatsDiv = document.getElementById('teamPlayers'); // Add a container for player stats
+  
+  document.getElementById('teamName').textContent = teamName;
+  teamStatsDiv.innerHTML = '';  // Clear previous team stats
+  playerStatsDiv.innerHTML = '';  // Clear previous player stats
 
-// // Function to handle when a team tile is clicked
-// function handleTeamTileClick(teamCode, teamName) {
-//   fetchTeamStats(teamCode).then(data => {
-//       if (data) {
-//           showModal(teamName, data);
-//       }
-//   });
-// }
+  // Display team stats directly
+  const teamStats = teamData.teamStats;
+  const statsHTML = `
+    <div class="team-stat">
+      <p>Games Played: ${teamStats.skaters?.length || 'N/A'}</p>
+      <p>Wins: ${teamStats.goalies?.reduce((sum, goalie) => sum + (goalie.wins || 0), 0) || 'N/A'}</p>
+      <p>Losses: ${teamStats.goalies?.reduce((sum, goalie) => sum + (goalie.losses || 0), 0) || 'N/A'}</p>
+      <p>Goals For: ${teamStats.skaters?.reduce((sum, skater) => sum + (skater.goals || 0), 0) || 'N/A'}</p>
+      <p>Goals Against: ${teamStats.goalies?.reduce((sum, goalie) => sum + (goalie.goalsAgainst || 0), 0) || 'N/A'}</p>
+      <p>Points: ${teamStats.skaters?.reduce((sum, skater) => sum + (skater.points || 0), 0) || 'N/A'}</p>
+    </div>
+  `;
+  teamStatsDiv.innerHTML = statsHTML;
+
+  // Display player stats (roster: forwards, defensemen, goalies)
+  const players = [...teamData.roster.forwards, ...teamData.roster.defensemen, ...teamData.roster.goalies];
+  players.forEach(player => {
+    const playerName = `${player.firstName?.default || 'Unknown'} ${player.lastName?.default || 'Unknown'}`;
+    const playerDiv = document.createElement('div');
+    playerDiv.classList.add('player-stat');
+
+    // Safely access teamAbbreviation and playerId
+    const teamAbbreviation = teamData.roster.teamAbbreviation?.default || 'UNKNOWN';
+    const playerId = player.playerId || 'N/A';
+
+    // Construct the headshot URL
+    const headshotUrl = `https://assets.nhle.com/mugs/nhl/20242025/${teamAbbreviation}/${playerId}.png`;
+
+    playerDiv.innerHTML = `
+      <img src="${headshotUrl}" alt="${playerName}" class="player-headshot">
+      <h4>${playerName} (${player.positionCode || 'N/A'})</h4>
+      <p>GP: ${player.gamesPlayed || 'N/A'}</p>
+      <p>G: ${player.goals || 'N/A'}</p>
+      <p>A: ${player.assists || 'N/A'}</p>
+      <p>P: ${player.points || 'N/A'}</p>
+      <p>+/-: ${player.plusMinus || 'N/A'}</p>
+      <p>PIM: ${player.penaltyMinutes || 'N/A'}</p>
+      <p>Shots: ${player.shots || 'N/A'}</p>
+      <p>Shooting %: ${(player.shootingPctg * 100 || 0).toFixed(2)}%</p>
+    `;
+
+    playerStatsDiv.appendChild(playerDiv);
+  });
+
+  // Display the modal
+  modal.style.display = "block";
+}
+
+
+
+// Event listener for closing the modal
+document.querySelector('.close').onclick = function () {
+  document.getElementById('teamStatsModal').style.display = "none";
+};
+
+// Async function to fetch and display today's games
+// Function to format the game start time
+// Function to format the game start time
+function formatGameStartTime(utcTime, venueUTCOffset) {
+  const gameStartTime = new Date(utcTime);
+  const localTimeOffset = parseInt(venueUTCOffset.split(':')[0]);
+  gameStartTime.setHours(gameStartTime.getUTCHours() + localTimeOffset); // Convert UTC to venue local time
+
+  const currentDate = new Date();
+  const gameDate = gameStartTime.getDate();
+  const currentMonth = currentDate.getMonth();
+  const gameMonth = gameStartTime.getMonth();
+
+  if (currentDate.getFullYear() === gameStartTime.getFullYear() && currentMonth === gameMonth && currentDate.getDate() === gameDate) {
+      // If the game starts today, just show the time
+      return gameStartTime.toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' });
+  } else {
+      // If the game starts in the future, show the month, day, and time
+      const options = { month: 'short', day: 'numeric', hour: '2-digit', minute: '2-digit' };
+      return gameStartTime.toLocaleDateString([], options);
+  }
+}
+
+// Function to get the TV providers from the game object
+function getTVProviders(tvBroadcasts) {
+  if (tvBroadcasts && tvBroadcasts.length > 0) {
+      // Join all networks by a comma
+      return tvBroadcasts.map(broadcast => broadcast.network).join(', ');
+  } else {
+      return 'No TV broadcast available';
+  }
+}
+
+// Async function to fetch and display games
+async function displayGames() {
+  try {
+      // Fetch the current day's scoreboard data
+      const response = await fetch('https://api-web.nhle.com/v1/scoreboard/now');
+      const data = await response.json();
+
+      const scoreboard = document.getElementById('scoreboard');
+      scoreboard.innerHTML = ''; // Clear previous content
+
+      if (data.gamesByDate.length > 0) {
+          // Loop through all games by date
+          data.gamesByDate.forEach(gameDateObj => {
+              gameDateObj.games.forEach(game => {
+                  const gameElement = document.createElement('div');
+                  gameElement.className = 'game';
+
+                  // Add the 'live-game' class if the game is live
+                  if (game.gameState === 'LIVE') {
+                      gameElement.classList.add('live-game');
+                  }
+
+                  // Determine what to display based on game state
+                  let gameStatusText = '';
+                  let awayTeamScore = '';
+                  let homeTeamScore = '';
+                  let awayTeamSOG = ''; // SOG for away team
+                  let homeTeamSOG = ''; // SOG for home team
+
+                  if (game.gameState === 'FUT') {
+                      // Future game, display start time, no score
+                      const startTimeFormatted = formatGameStartTime(game.startTimeUTC, game.venueUTCOffset);
+                      gameStatusText = `${startTimeFormatted}`;
+                  } else if (game.gameState === 'OFF') {
+                      // Finished game, display "Final"
+                      gameStatusText = 'Final';
+                      awayTeamScore = `<span class="score">${game.awayTeam.score}</span>`;
+                      homeTeamScore = `<span class="score">${game.homeTeam.score}</span>`;
+                  } else if (game.gameState === 'LIVE') {
+                      // Ongoing game, display current period and time left
+                      const period = game.periodDescriptor.number;
+                      const timeRemaining = game.clock.timeRemaining;
+                      gameStatusText = `Period: ${period}, Time left: ${timeRemaining}`;
+                      awayTeamScore = `<span class="score">${game.awayTeam.score}</span>`;
+                      homeTeamScore = `<span class="score">${game.homeTeam.score}</span>`;
+
+                      // Display SOG only for live games
+                      awayTeamSOG = `<div>SOG: ${game.awayTeam.sog}</div>`;
+                      homeTeamSOG = `<div>SOG: ${game.homeTeam.sog}</div>`;
+                  }
+
+                  // Get TV providers
+                  const tvProviders = getTVProviders(game.tvBroadcasts);
+
+                  // Create the HTML structure for each game
+                  gameElement.innerHTML = `
+                      <div class="team">
+                          <img src="${game.awayTeam.logo}" alt="${game.awayTeam.abbrev} logo" class="team-logo"/>
+                          <span>${game.awayTeam.abbrev}</span>
+                          <div class="team-record">Record: ${game.awayTeam.record}</div>
+                          ${awayTeamScore} <!-- Show score for ongoing or finished games -->
+                          ${awayTeamSOG} <!-- Show SOG for live games -->
+                      </div>
+                      <span>vs</span>
+                      <div class="team">
+                          <img src="${game.homeTeam.logo}" alt="${game.homeTeam.abbrev} logo" class="team-logo"/>
+                          <span>${game.homeTeam.abbrev}</span>
+                          <div class="team-record">${game.homeTeam.record}</div>
+                          ${homeTeamScore} <!-- Show score for ongoing or finished games -->
+                          ${homeTeamSOG} <!-- Show SOG for live games -->
+                      </div>
+                      <div class="game-status">${gameStatusText}</div>
+                      <div class="tv-providers">${tvProviders}</div> <!-- Display the TV providers -->
+                      <div class="game-center-link">
+                          <a href="https://nhl.com${game.gameCenterLink}" target="_blank">Game Center</a>
+                      </div>
+                  `;
+                  // Append the game to the scoreboard
+                  scoreboard.appendChild(gameElement);
+              });
+          });
+      } else {
+          // Display message if no games are found
+          scoreboard.innerHTML = '<p>No games found</p>';
+      }
+  } catch (error) {
+      console.error('Error fetching scoreboard data:', error);
+  }
+}
+
+
+
+
+
+
+// Call the function to display games
+displayGames();
 
 
 

@@ -17,6 +17,10 @@
         </ul>
       </nav>
     </header>
+    <div id="scoreboard">
+      <h1>Today's NHL Games</h1>
+      <!-- Scoreboard will be populated here -->
+    </div>
 <!-- 
     <section id="hero">
       <div class="hero-text">
@@ -27,7 +31,7 @@
     </section> -->
 <div id="main">
   <section id="schedule">
-    <h2>Game Schedule</h2>
+    <h2 class="sectionTitle">Game Schedule</h2>
     <div id="schedule-container"></div>
   </section>
   <!-- Game Modal -->
@@ -53,17 +57,17 @@
     </section> -->
 
     <section id="stats">
-      <h2>Team Stats</h2>
+      <h2 class="sectionTitle">Team Stats</h2>
       <div id="stats-container"></div>
     </section>
 
     <section id="players">
-      <h2>Roster</h2>
+      <h2 class="sectionTitle">Roster</h2>
       <div id="players-container"></div>
     </section>
 
     <section id="standings">
-      <h2>League Standings</h2>
+      <h2 class="sectionTitle">League Standings</h2>
     <div id="standings-container"></div>
   </section>
 
@@ -77,7 +81,13 @@
   <div class="modal-content">
     <span class="close">&times;</span>
     <h2 id="teamName"></h2>
+    
     <div id="teamStats">
+      <!-- Team stats will be dynamically added here -->
+    </div>
+
+    <h3>Player Stats</h3>
+    <div id="teamPlayers">
       <!-- Player stats will be dynamically added here -->
     </div>
   </div>
