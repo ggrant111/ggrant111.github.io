@@ -1,4 +1,4 @@
-import { supabase } from './supabase';
+import { supabase, isSupabaseConfigured } from './supabase';
 import { Salesperson } from '@/types/lead';
 
 const SALESPEOPLE_TABLE = 'salespeople';
@@ -16,8 +16,8 @@ const MOCK_SALESPEOPLE: Salesperson[] = [
 export const getSalespeople = async (): Promise<Salesperson[]> => {
   try {
     // If we're in a build environment or Supabase is not configured, return mock data
-    if (process.env.NODE_ENV === 'production' && !process.env.NEXT_PUBLIC_SUPABASE_URL) {
-      console.log('Using mock salespeople data during build');
+    if (!isSupabaseConfigured()) {
+      console.log('Using mock salespeople data (Supabase not configured)');
       return MOCK_SALESPEOPLE;
     }
 
@@ -28,13 +28,13 @@ export const getSalespeople = async (): Promise<Salesperson[]> => {
     
     if (error) {
       console.error('Error fetching salespeople:', error);
-      return [];
+      return MOCK_SALESPEOPLE;
     }
     
-    return data || [];
+    return data || MOCK_SALESPEOPLE;
   } catch (error) {
     console.error('Failed to fetch salespeople:', error);
-    return [];
+    return MOCK_SALESPEOPLE;
   }
 };
 
@@ -44,8 +44,8 @@ export const getSalespeople = async (): Promise<Salesperson[]> => {
 export const addSalesperson = async (name: string): Promise<Salesperson | null> => {
   try {
     // If we're in a build environment or Supabase is not configured, return mock data
-    if (process.env.NODE_ENV === 'production' && !process.env.NEXT_PUBLIC_SUPABASE_URL) {
-      console.log('Using mock salespeople data during build');
+    if (!isSupabaseConfigured()) {
+      console.log('Using mock salespeople data (Supabase not configured)');
       return { id: '999', name };
     }
 

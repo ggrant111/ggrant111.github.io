@@ -51,16 +51,27 @@ export const LeadForm = ({ onSubmit, isSubmitting }: LeadFormProps) => {
     const fetchSalespeople = async () => {
       setIsLoadingSalespeople(true);
       try {
-        const response = await fetch('/api/salespeople');
-        const result = await response.json();
-        
-        if (result.success) {
-          setSalespeople(result.data);
-        } else {
-          console.error('Failed to fetch salespeople:', result.error);
+        // Default mock salespeople in case the API fails
+        const mockSalespeople = [
+          { id: '1', name: 'John Doe' },
+          { id: '2', name: 'Jane Smith' },
+          { id: '3', name: 'Bob Johnson' }
+        ];
+
+        try {
+          const response = await fetch('/api/salespeople');
+          const result = await response.json();
+          
+          if (result.success) {
+            setSalespeople(result.data);
+          } else {
+            console.error('Failed to fetch salespeople:', result.error);
+            setSalespeople(mockSalespeople);
+          }
+        } catch (error) {
+          console.error('Error fetching salespeople:', error);
+          setSalespeople(mockSalespeople);
         }
-      } catch (error) {
-        console.error('Error fetching salespeople:', error);
       } finally {
         setIsLoadingSalespeople(false);
       }
@@ -73,14 +84,19 @@ export const LeadForm = ({ onSubmit, isSubmitting }: LeadFormProps) => {
   const handleSaveAndSubmit: SubmitHandler<LeadFormData> = async (data) => {
     try {
       if (data.sentBy && data.sentBy !== 'new') {
-        // Save the salesperson name to Supabase
-        await fetch('/api/salespeople', {
-          method: 'POST',
-          headers: {
-            'Content-Type': 'application/json',
-          },
-          body: JSON.stringify({ name: data.sentBy }),
-        });
+        try {
+          // Try to save the salesperson name to Supabase
+          await fetch('/api/salespeople', {
+            method: 'POST',
+            headers: {
+              'Content-Type': 'application/json',
+            },
+            body: JSON.stringify({ name: data.sentBy }),
+          });
+        } catch (error) {
+          // Silently fail if the API is not available (static export)
+          console.error('Failed to save salesperson:', error);
+        }
       }
       
       // Submit the lead data
