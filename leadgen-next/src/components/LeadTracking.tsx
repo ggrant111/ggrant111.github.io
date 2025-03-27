@@ -258,12 +258,13 @@ export const LeadTracking = ({ salesPerson }: LeadTrackingProps) => {
           },
         ],
       },
-      statusCounts
+      statusCounts,
+      commonChartOptions
     };
   };
   
   const chartData = prepareChartData();
-  const { statusCounts } = chartData;
+  const { statusCounts, commonChartOptions } = chartData;
   
   return (
     <div className="w-full max-w-5xl mx-auto bg-white rounded-xl shadow-md overflow-hidden">
