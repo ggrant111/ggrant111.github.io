@@ -1,3 +1,8 @@
+// This file is no longer needed with standalone output mode
+console.log(
+  "Skipping routes-manifest creation - using Next.js built-in process"
+);
+
 const fs = require("fs");
 const path = require("path");
 
