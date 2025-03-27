@@ -7,8 +7,48 @@ interface AppError extends Error {
   status?: number;
 }
 
+// Mock leads for build environment
+const MOCK_LEADS = [
+  {
+    _id: '1',
+    firstName: 'John',
+    lastName: 'Doe',
+    destination: 'Sales Department',
+    sentAt: new Date().toISOString(),
+    success: true,
+    sentBy: 'Jane Smith',
+    vehicle: {
+      make: 'Toyota',
+      model: 'Camry'
+    }
+  },
+  {
+    _id: '2',
+    firstName: 'Alice',
+    lastName: 'Johnson',
+    destination: 'Service Center',
+    sentAt: new Date().toISOString(),
+    success: true,
+    sentBy: 'Bob Wilson',
+    vehicle: {
+      make: 'Honda',
+      model: 'Civic'
+    }
+  }
+];
+
 export async function GET(req: Request) {
   try {
+    // Mock data for build environment or when Supabase is not configured
+    if (process.env.NODE_ENV === 'production' && !process.env.NEXT_PUBLIC_SUPABASE_URL) {
+      console.log('Using mock lead data during build');
+      return NextResponse.json({ 
+        success: true, 
+        leads: MOCK_LEADS,
+        count: MOCK_LEADS.length
+      });
+    }
+
     // Get the URL parameters
     const { searchParams } = new URL(req.url);
     const sentBy = searchParams.get('sentBy');

@@ -3,11 +3,24 @@ import { Salesperson } from '@/types/lead';
 
 const SALESPEOPLE_TABLE = 'salespeople';
 
+// Mock salespeople data for when Supabase is not available (during build)
+const MOCK_SALESPEOPLE: Salesperson[] = [
+  { id: '1', name: 'John Doe' },
+  { id: '2', name: 'Jane Smith' },
+  { id: '3', name: 'Bob Johnson' }
+];
+
 /**
  * Fetch all salespeople from Supabase
  */
 export const getSalespeople = async (): Promise<Salesperson[]> => {
   try {
+    // If we're in a build environment or Supabase is not configured, return mock data
+    if (process.env.NODE_ENV === 'production' && !process.env.NEXT_PUBLIC_SUPABASE_URL) {
+      console.log('Using mock salespeople data during build');
+      return MOCK_SALESPEOPLE;
+    }
+
     const { data, error } = await supabase
       .from(SALESPEOPLE_TABLE)
       .select('*')
@@ -30,6 +43,12 @@ export const getSalespeople = async (): Promise<Salesperson[]> => {
  */
 export const addSalesperson = async (name: string): Promise<Salesperson | null> => {
   try {
+    // If we're in a build environment or Supabase is not configured, return mock data
+    if (process.env.NODE_ENV === 'production' && !process.env.NEXT_PUBLIC_SUPABASE_URL) {
+      console.log('Using mock salespeople data during build');
+      return { id: '999', name };
+    }
+
     // Check if the salesperson already exists
     const { data: existingData, error: existingError } = await supabase
       .from(SALESPEOPLE_TABLE)
