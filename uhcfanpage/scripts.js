@@ -42,7 +42,7 @@ async function fetchStandings() {
   try {
     const response = await fetch("https://api-web.nhle.com/v1/standings/now");
     const data = await response.json();
-    displayStandings(data);
+    displayStandings(data.standings); // Pass the standings array to display function
   } catch (error) {
     console.error("Error fetching standings:", error);
   }
@@ -53,15 +53,27 @@ function displayStandings(standings) {
   standingsContainer.innerHTML = ""; // Clear previous standings
 
   standings.forEach((team) => {
+    // Map the correct fields from the JSON structure
     const teamInfo = `
-            <div class="team-standing">
-                <h3>${team.team.city} (${team.team.abbrev})</h3>
-                <p>Wins: ${team.stats.wins} | Losses: ${team.stats.losses} | Points: ${team.stats.points}</p>
-            </div>
-        `;
+      <div class="team-standing">
+        <h3>${team.teamName.default} (${team.teamAbbrev.default})</h3>
+        <img src="${team.teamLogo}" alt="${team.teamName.default} logo" width="50" />
+        <p>Conference: ${team.conferenceName}</p>
+        <p>Division: ${team.divisionName}</p>
+        <p>Games Played: ${team.gamesPlayed}</p>
+        <p>Wins: ${team.wins} | Losses: ${team.losses} | OT Losses: ${team.otLosses}</p>
+        <p>Points: ${team.points}</p>
+        <p>Goal Differential: ${team.goalDifferential}</p>
+        <p>Streak: ${team.streakCode} ${team.streakCount}</p>
+      </div>
+    `;
+
     standingsContainer.innerHTML += teamInfo;
   });
 }
+
+// Call the function to fetch and display the standings
+fetchStandings();
 
 // Fetch player stats for the current season
 async function fetchPlayerStats() {
@@ -141,8 +153,104 @@ async function fetchHeroImage() {
   }
 }
 
+// Fetch roster data for the team
+async function fetchRoster() {
+  try {
+    const response = await fetch("https://api-web.nhle.com/v1/roster/uta/now");
+    const data = await response.json();
+    displayRoster(data);
+  } catch (error) {
+    console.error("Error fetching roster:", error);
+  }
+}
+
+// Display skaters and goalies on the page as cards
+function displayRoster(roster) {
+  const playersContainer = document.getElementById("players-container");
+  playersContainer.innerHTML = ""; // Clear previous roster
+
+  const allPlayers = [
+    ...roster.forwards,
+    ...roster.defensemen,
+    ...roster.goalies,
+  ];
+
+  allPlayers.forEach((player) => {
+    const playerCard = `
+      <div class="player-card" data-player-id="${
+        player.id
+      }" onclick="openModal(${player.id})">
+        <img src="${player.headshot}" alt="${player.firstName.default} ${
+      player.lastName.default
+    }" />
+        <h3>${player.firstName.default} ${player.lastName.default}</h3>
+        <p>Position: ${getPosition(player)}</p>
+        <p>Number: ${player.sweaterNumber}</p>
+      </div>
+    `;
+    playersContainer.innerHTML += playerCard;
+  });
+}
+
+// Get the full position name for players
+function getPosition(player) {
+  if (player.positionCode === "G") return "Goalie";
+  if (player.positionCode === "L") return "Left Wing";
+  if (player.positionCode === "C") return "Center";
+  if (player.positionCode === "R") return "Right Wing";
+  if (player.positionCode === "D") return "Defenseman";
+  return "Unknown";
+}
+
+// Open modal with player stats when clicking on a player card
+function openModal(playerId) {
+  const allPlayers = [
+    ...roster.forwards,
+    ...roster.defensemen,
+    ...roster.goalies,
+  ];
+  const selectedPlayer = allPlayers.find((player) => player.id === playerId);
+
+  if (selectedPlayer) {
+    const modalContent = `
+      <div class="modal-content">
+        <span class="close" onclick="closeModal()">&times;</span>
+        <h2>${selectedPlayer.firstName.default} ${
+      selectedPlayer.lastName.default
+    }</h2>
+        <img src="${selectedPlayer.headshot}" alt="${
+      selectedPlayer.firstName.default
+    } ${selectedPlayer.lastName.default}" />
+        <p>Position: ${getPosition(selectedPlayer)}</p>
+        <p>Height: ${selectedPlayer.heightInInches}" (${
+      selectedPlayer.heightInCentimeters
+    } cm)</p>
+        <p>Weight: ${selectedPlayer.weightInPounds} lbs (${
+      selectedPlayer.weightInKilograms
+    } kg)</p>
+        <p>Birthdate: ${selectedPlayer.birthDate}</p>
+        <p>Birthplace: ${selectedPlayer.birthCity.default}, ${
+      selectedPlayer.birthCountry
+    }</p>
+        <p>Shoots: ${selectedPlayer.shootsCatches}</p>
+      </div>
+    `;
+    document.getElementById("modal").innerHTML = modalContent;
+    document.getElementById("modal").style.display = "block";
+  }
+}
+
+// Close the modal
+function closeModal() {
+  document.getElementById("modal").style.display = "none";
+}
+
+// Fetch the roster on page load
+document.addEventListener("DOMContentLoaded", fetchRoster);
+
 // Initialize all data fetching functions when the page loads
 function init() {
+  fetchRoster();
   fetchTeamSchedule();
   fetchStandings();
   fetchPlayerStats();
