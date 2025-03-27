@@ -1,12 +1,12 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  // For static export (GitHub Pages, etc.)
+  // For static export
   output: "export",
   images: {
     unoptimized: true,
   },
-  // For GitHub Pages: Replace 'ggrant111.github.io' with your actual GitHub username/org
-  basePath: "/leadgen-next",
+  // Remove basePath for Vercel deployment
+  // basePath: "/leadgen-next",
   trailingSlash: true,
 
   // For Docker deployment
