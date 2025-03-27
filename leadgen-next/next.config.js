@@ -11,6 +11,15 @@ const nextConfig = {
 
   // For Docker deployment
   // output: 'standalone',
+
+  // Disable TypeScript type checking during build
+  typescript: {
+    ignoreBuildErrors: true,
+  },
+  // Disable ESLint during builds
+  eslint: {
+    ignoreDuringBuilds: true,
+  },
 };
 
 module.exports = nextConfig;

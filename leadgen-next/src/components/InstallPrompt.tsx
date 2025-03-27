@@ -47,11 +47,11 @@ const InstallPrompt = () => {
                   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
                     <path d="M13 4.5a2.5 2.5 0 11.5 0v7.55a3.5 3.5 0 005.5 1.45l-1.293-1.293a.5.5 0 01.707-.707l2.5 2.5a.5.5 0 010 .707l-2.5 2.5a.5.5 0 01-.707-.707L20 14.55a3.5 3.5 0 00-5.5-1.45v1.5a2.5 2.5 0 01-5 0V8.4a.9.9 0 00-1.8 0v7.1a2.5 2.5 0 01-5 0V8.5a2.5 2.5 0 012.5-2.5H8v-1.5a2.5 2.5 0 015 0z" />
                   </svg>
-                </span> and select "Add to Home Screen"
+                </span> and select &quot;Add to Home Screen&quot;
               </p>
             ) : isAndroid ? (
               <p className="text-sm text-gray-600">
-                Tap the menu icon and select "Add to Home Screen"
+                Tap the menu icon and select &quot;Add to Home Screen&quot;
               </p>
             ) : (
               <p className="text-sm text-gray-600">
