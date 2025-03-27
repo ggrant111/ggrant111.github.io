@@ -10,9 +10,6 @@ const nextConfig = {
   // basePath: "/leadgen-next",
   trailingSlash: true,
 
-  // For Docker deployment
-  // output: 'standalone',
-
   // Disable TypeScript type checking during build
   typescript: {
     ignoreBuildErrors: true,
