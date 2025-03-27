@@ -1,7 +1,8 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  // For static export
+  // For Vercel deployment
   output: "export",
+  distDir: "out",
   images: {
     unoptimized: true,
   },

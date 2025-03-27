@@ -2,6 +2,6 @@
   "buildCommand": "npm run build && node build.js",
   "outputDirectory": "out",
   "installCommand": "npm install",
-  "framework": "static",
+  "framework": "nextjs",
   "devCommand": "npm run dev"
 }
