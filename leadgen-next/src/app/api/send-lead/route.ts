@@ -3,6 +3,9 @@ import { sendLeadEmail } from '@/lib/email';
 import { supabase, LEADS_TABLE } from '@/lib/supabase';
 import { generateAdfXml } from '@/lib/xml-generator';
 
+// Make this route compatible with static export
+export const dynamic = "force-static";
+
 // Define a proper error type
 interface AppError extends Error {
   message: string;

@@ -1,6 +1,9 @@
 import { NextResponse } from 'next/server';
 import { supabase, LEADS_TABLE } from '@/lib/supabase';
 
+// Make this route compatible with static export
+export const dynamic = "force-static";
+
 // Define a proper error type
 interface AppError extends Error {
   message: string;

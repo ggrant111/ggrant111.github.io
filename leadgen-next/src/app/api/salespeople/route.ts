@@ -1,6 +1,9 @@
 import { NextRequest, NextResponse } from 'next/server';
 import { getSalespeople, addSalesperson } from '@/lib/salespeople';
 
+// Make this route compatible with static export
+export const dynamic = "force-static";
+
 export async function GET() {
   try {
     const salespeople = await getSalespeople();
