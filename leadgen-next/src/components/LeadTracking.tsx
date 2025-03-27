@@ -160,17 +160,52 @@ export const LeadTracking = ({ salesPerson }: LeadTrackingProps) => {
       vehicleMakes[make] = (vehicleMakes[make] || 0) + 1;
     });
 
-    // Format for displaying percentage in tooltips
-    const percentageTooltip = {
-      callbacks: {
-        label: function(context: any) {
-          const label = context.label || '';
-          const value = context.raw || 0;
-          const total = context.dataset.data.reduce((a: number, b: number) => a + b, 0);
-          const percentage = Math.round((value / total) * 100);
-          return `${label}: ${percentage}% (${value})`;
-        }
-      }
+    // Common chart options
+    const commonChartOptions = {
+      responsive: true,
+      maintainAspectRatio: false,
+      plugins: {
+        legend: {
+          position: 'bottom' as const,
+          labels: {
+            usePointStyle: true,
+            boxWidth: 8,
+            padding: 20,
+            color: '#4B5563',
+            font: {
+              size: 11,
+              family: 'Inter, sans-serif',
+            },
+          },
+        },
+        tooltip: {
+          backgroundColor: 'rgba(255, 255, 255, 0.9)',
+          titleColor: '#1F2937',
+          bodyColor: '#4B5563',
+          borderColor: 'rgba(229, 231, 235, 1)',
+          borderWidth: 1,
+          padding: 12,
+          cornerRadius: 8,
+          boxPadding: 6,
+          usePointStyle: true,
+          titleFont: {
+            size: 12,
+            weight: 'bold' as const,
+            family: 'Inter, sans-serif',
+          },
+          bodyFont: {
+            size: 12,
+            family: 'Inter, sans-serif',
+          },
+          callbacks: {
+            label: function(context: any) {
+              const label = context.dataset.label || '';
+              const value = context.parsed || context.raw || 0;
+              return `${label}: ${value}`;
+            }
+          }
+        },
+      },
     };
     
     return {
@@ -230,54 +265,6 @@ export const LeadTracking = ({ salesPerson }: LeadTrackingProps) => {
   const chartData = prepareChartData();
   const { statusCounts } = chartData;
   
-  // Common chart options
-  const commonChartOptions = {
-    responsive: true,
-    maintainAspectRatio: false,
-    plugins: {
-      legend: {
-        position: 'bottom' as const,
-        labels: {
-          usePointStyle: true,
-          boxWidth: 8,
-          padding: 20,
-          color: '#4B5563',
-          font: {
-            size: 11,
-            family: 'Inter, sans-serif',
-          },
-        },
-      },
-      tooltip: {
-        backgroundColor: 'rgba(255, 255, 255, 0.9)',
-        titleColor: '#1F2937',
-        bodyColor: '#4B5563',
-        borderColor: 'rgba(229, 231, 235, 1)',
-        borderWidth: 1,
-        padding: 12,
-        cornerRadius: 8,
-        boxPadding: 6,
-        usePointStyle: true,
-        titleFont: {
-          size: 12,
-          weight: 'bold' as const,
-          family: 'Inter, sans-serif',
-        },
-        bodyFont: {
-          size: 12,
-          family: 'Inter, sans-serif',
-        },
-        callbacks: {
-          label: function(context: any) {
-            const label = context.dataset.label || '';
-            const value = context.parsed || context.raw || 0;
-            return `${label}: ${value}`;
-          }
-        }
-      },
-    },
-  };
-
   return (
     <div className="w-full max-w-5xl mx-auto bg-white rounded-xl shadow-md overflow-hidden">
       <div className="bg-blue-600 text-white p-4">
