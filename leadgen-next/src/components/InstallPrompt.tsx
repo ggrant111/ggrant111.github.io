@@ -42,22 +42,25 @@ const InstallPrompt = () => {
           <div className="flex-1">
             <h3 className="text-lg font-medium text-gray-900 mb-1">Add to Home Screen</h3>
             {isIOS ? (
-              <p className="text-sm text-gray-600">
-                Tap the share icon <span className="inline-block w-5 h-5 align-text-bottom">
-                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
-                    <path d="M13 4.5a2.5 2.5 0 11.5 0v7.55a3.5 3.5 0 005.5 1.45l-1.293-1.293a.5.5 0 01.707-.707l2.5 2.5a.5.5 0 010 .707l-2.5 2.5a.5.5 0 01-.707-.707L20 14.55a3.5 3.5 0 00-5.5-1.45v1.5a2.5 2.5 0 01-5 0V8.4a.9.9 0 00-1.8 0v7.1a2.5 2.5 0 01-5 0V8.5a2.5 2.5 0 012.5-2.5H8v-1.5a2.5 2.5 0 015 0z" />
-                  </svg>
-                </span> and select &quot;Add to Home Screen&quot;
-              </p>
-            ) : isAndroid ? (
-              <p className="text-sm text-gray-600">
-                Tap the menu icon and select &quot;Add to Home Screen&quot;
-              </p>
-            ) : (
-              <p className="text-sm text-gray-600">
-                Add this app to your home screen for quick access.
-              </p>
-            )}
+  <p className="text-sm text-gray-600">
+    Tap the share icon
+    <span className="inline-block w-5 h-5 align-middle ml-1">
+      <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24">
+        <path d="M12 3a1 1 0 011 1v9.586l3.293-3.293a1 1 0 111.414 1.414l-5 5a1 1 0 01-1.414 0l-5-5a1 1 0 111.414-1.414L11 13.586V4a1 1 0 011-1z" />
+        <path d="M5 18a1 1 0 011-1h12a1 1 0 110 2H6a1 1 0 01-1-1z" />
+      </svg>
+    </span>{" "}
+    and select &quot;Add to Home Screen&quot;
+  </p>
+) : isAndroid ? (
+  <p className="text-sm text-gray-600">
+    Tap the menu icon and select &quot;Add to Home Screen&quot;
+  </p>
+) : (
+  <p className="text-sm text-gray-600">
+    Add this app to your home screen for quick access.
+  </p>
+)}
           </div>
           <button 
             onClick={() => setShowPrompt(false)}
