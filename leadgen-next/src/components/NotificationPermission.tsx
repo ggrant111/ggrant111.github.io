@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { Button } from '@shadcn/ui';
+import { Button } from '@/components/ui/button';
 import { Bell, BellOff } from 'lucide-react';
 import { requestNotificationPermission, subscribeToPushNotifications, unsubscribeFromPushNotifications } from '@/utils/pushNotifications';
 
