@@ -356,72 +356,26 @@ export const LeadTracking = ({ salesPerson }: LeadTrackingProps) => {
           <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-4 mb-8">
             <h2 className="text-2xl font-bold text-gray-800">Lead Tracking Dashboard</h2>
             
-            <div className="flex justify-between items-center mb-4">
-              <div className="flex space-x-2">
-                <button
-                  onClick={() => setViewMode('table')}
-                  className={`px-4 py-2 rounded-md ${
-                    viewMode === 'table'
-                      ? 'bg-blue-600 text-white'
-                      : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
-                  }`}
-                >
-                  Table View
-                </button>
-                <button
-                  onClick={() => setViewMode('dashboard')}
-                  className={`px-4 py-2 rounded-md ${
-                    viewMode === 'dashboard'
-                      ? 'bg-blue-600 text-white'
-                      : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
-                  }`}
-                >
-                  Dashboard View
-                </button>
-              </div>
-            </div>
-          </div>
-          
-          <div className="mb-6 p-4 bg-gray-50 rounded-lg">
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
-              <div>
-                <label className="block text-sm font-medium text-gray-700 mb-1">Salesperson</label>
-                <input
-                  type="text"
-                  name="sentBy"
-                  value={filter.sentBy}
-                  onChange={handleFilterChange}
-                  placeholder="Filter by salesperson"
-                  className={inputClassName}
-                />
-              </div>
-              <div>
-                <label className="block text-sm font-medium text-gray-700 mb-1">Start Date</label>
-                <input
-                  type="date"
-                  name="startDate"
-                  value={filter.startDate}
-                  onChange={handleFilterChange}
-                  className={inputClassName}
-                />
-              </div>
-              <div>
-                <label className="block text-sm font-medium text-gray-700 mb-1">End Date</label>
-                <input
-                  type="date"
-                  name="endDate"
-                  value={filter.endDate}
-                  onChange={handleFilterChange}
-                  className={inputClassName}
-                />
-              </div>
-            </div>
-            <div className="mt-4">
+            <div className="flex space-x-2">
               <button
-                onClick={() => fetchLeads()}
-                className="px-4 py-2 bg-blue-600 text-white rounded-md hover:bg-blue-700 transition-colors"
+                onClick={() => setViewMode('table')}
+                className={`px-4 py-2 rounded-md ${
+                  viewMode === 'table'
+                    ? 'bg-blue-600 text-white'
+                    : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
+                }`}
               >
-                Apply Filters
+                Table View
+              </button>
+              <button
+                onClick={() => setViewMode('dashboard')}
+                className={`px-4 py-2 rounded-md ${
+                  viewMode === 'dashboard'
+                    ? 'bg-blue-600 text-white'
+                    : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
+                }`}
+              >
+                Dashboard View
               </button>
             </div>
           </div>
