@@ -1,13 +1,27 @@
 import { NextResponse } from 'next/server';
-import { supabase, LEADS_TABLE } from '@/lib/supabase';
+import { LEADS_TABLE, isSupabaseConfigured, fetchFromSupabase } from '@/lib/supabase';
 
 // Make this route compatible with static export
-export const dynamic = "force-static";
+export const dynamic = "force-dynamic";
+export const fetchCache = 'force-no-store';
 
 // Define a proper error type
 interface AppError extends Error {
   message: string;
   status?: number;
+}
+
+// Define the lead type from the database
+interface LeadRecord {
+  id: string;
+  first_name: string;
+  last_name: string;
+  destination: string;
+  sent_at: string;
+  success: boolean;
+  vehicle_make: string;
+  vehicle_model: string;
+  sent_by: string;
 }
 
 // Mock leads for build environment
@@ -43,7 +57,7 @@ const MOCK_LEADS = [
 export async function GET(req: Request) {
   try {
     // Mock data for build environment or when Supabase is not configured
-    if (process.env.NODE_ENV === 'production' && !process.env.NEXT_PUBLIC_SUPABASE_URL) {
+    if (!isSupabaseConfigured()) {
       console.log('Using mock lead data during build');
       return NextResponse.json({ 
         success: true, 
@@ -52,48 +66,47 @@ export async function GET(req: Request) {
       });
     }
 
+    console.log('API: Fetching leads from Supabase');
+    
     // Get the URL parameters
     const { searchParams } = new URL(req.url);
     const sentBy = searchParams.get('sentBy');
     const startDate = searchParams.get('startDate');
     const endDate = searchParams.get('endDate');
     
-    // Build the Supabase query
-    let query = supabase
-      .from(LEADS_TABLE)
-      .select(`
-        id,
-        first_name,
-        last_name,
-        destination,
-        sent_at,
-        success,
-        vehicle_make,
-        vehicle_model,
-        sent_by
-      `)
-      .order('sent_at', { ascending: false });
+    console.log('API: Query parameters:', { sentBy, startDate, endDate });
     
-    // Apply filters
+    // Build the Supabase REST API query
+    let queryPath = `${LEADS_TABLE}?select=id,first_name,last_name,destination,sent_at,success,vehicle_make,vehicle_model,sent_by`;
+    
+    // Apply filters - fix the query parameter format
+    const queryParams = [];
+    
     if (sentBy) {
-      query = query.eq('sent_by', sentBy);
+      queryParams.push(`sent_by=eq.${encodeURIComponent(sentBy)}`);
     }
     
     if (startDate) {
-      query = query.gte('sent_at', `${startDate}T00:00:00.000Z`);
+      queryParams.push(`sent_at=gte.${encodeURIComponent(`${startDate}T00:00:00.000Z`)}`);
     }
     
     if (endDate) {
-      query = query.lte('sent_at', `${endDate}T23:59:59.999Z`);
+      queryParams.push(`sent_at=lte.${encodeURIComponent(`${endDate}T23:59:59.999Z`)}`);
     }
+    
+    // Add sorting
+    queryParams.push('order=sent_at.desc');
+    
+    // Combine the query parameters
+    if (queryParams.length > 0) {
+      queryPath += `&${queryParams.join('&')}`;
+    }
+    
+    console.log(`API: Final query path: ${queryPath}`);
     
     // Execute the query
-    const { data: leads, error } = await query;
-    
-    if (error) {
-      console.error('Error fetching leads from Supabase:', error);
-      throw new Error('Failed to fetch leads from database');
-    }
+    const leads = await fetchFromSupabase<LeadRecord[]>(queryPath);
+    console.log(`API: Fetched ${leads.length} leads`);
     
     // Transform the data to match the expected format in the frontend
     const transformedLeads = leads.map(lead => ({

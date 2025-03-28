@@ -1,7 +1,5 @@
-import { supabase, isSupabaseConfigured } from './supabase';
+import { supabase, isSupabaseConfigured, SALESPEOPLE_TABLE, fetchFromSupabase } from './supabase';
 import { Salesperson } from '@/types/lead';
-
-const SALESPEOPLE_TABLE = 'salespeople';
 
 // Mock salespeople data for when Supabase is not available (during build)
 const MOCK_SALESPEOPLE: Salesperson[] = [
@@ -21,17 +19,17 @@ export const getSalespeople = async (): Promise<Salesperson[]> => {
       return MOCK_SALESPEOPLE;
     }
 
-    const { data, error } = await supabase
-      .from(SALESPEOPLE_TABLE)
-      .select('*')
-      .order('name', { ascending: true });
+    // This matches the format we tested in test-supabase.mjs
+    const data = await fetchFromSupabase<any[]>(`${SALESPEOPLE_TABLE}?select=*`);
     
-    if (error) {
-      console.error('Error fetching salespeople:', error);
-      return MOCK_SALESPEOPLE;
-    }
+    // Transform to match expected format if needed
+    const salespeople = data.map(item => ({
+      id: item.id.toString(),
+      name: item.name
+    }));
     
-    return data || MOCK_SALESPEOPLE;
+    console.log(`Fetched ${salespeople.length} salespeople`);
+    return salespeople.length > 0 ? salespeople : MOCK_SALESPEOPLE;
   } catch (error) {
     console.error('Failed to fetch salespeople:', error);
     return MOCK_SALESPEOPLE;
@@ -49,41 +47,39 @@ export const addSalesperson = async (name: string): Promise<Salesperson | null> 
       return { id: '999', name };
     }
 
-    // Check if the salesperson already exists
-    const { data: existingData, error: existingError } = await supabase
-      .from(SALESPEOPLE_TABLE)
-      .select('*')
-      .ilike('name', name)
-      .single();
-    
-    if (existingError && existingError.code !== 'PGRST116') {
-      // PGRST116 means no rows returned, which is expected if the salesperson doesn't exist
-      console.error('Error checking if salesperson exists:', existingError);
-      return null;
-    }
+    // Check if the salesperson already exists - fix URL encoding
+    const encodedName = encodeURIComponent(name);
+    const existingData = await fetchFromSupabase<any[]>(`${SALESPEOPLE_TABLE}?name=ilike.${encodedName}&limit=1`);
     
     // If salesperson already exists, return it
-    if (existingData) {
-      return existingData as Salesperson;
+    if (existingData && existingData.length > 0) {
+      return {
+        id: existingData[0].id.toString(),
+        name: existingData[0].name
+      };
     }
     
     // Otherwise, create a new salesperson
-    const newSalesperson: Omit<Salesperson, 'id'> = {
+    const newSalesperson = {
       name: name.trim()
     };
     
-    const { data, error } = await supabase
-      .from(SALESPEOPLE_TABLE)
-      .insert([newSalesperson])
-      .select()
-      .single();
+    const data = await fetchFromSupabase<any[]>(SALESPEOPLE_TABLE, {
+      method: 'POST',
+      body: JSON.stringify([newSalesperson]),
+      headers: {
+        'Prefer': 'return=representation'
+      }
+    });
     
-    if (error) {
-      console.error('Error adding salesperson:', error);
-      return null;
+    if (data && data.length > 0) {
+      return {
+        id: data[0].id.toString(),
+        name: data[0].name
+      };
     }
     
-    return data as Salesperson;
+    return null;
   } catch (error) {
     console.error('Failed to add salesperson:', error);
     return null;
