@@ -12,6 +12,7 @@ export const LeadForm = ({ onSubmit, isSubmitting }: LeadFormProps) => {
   const [currentStep, setCurrentStep] = useState(1);
   const [salespeople, setSalespeople] = useState<Salesperson[]>([]);
   const [isLoadingSalespeople, setIsLoadingSalespeople] = useState(false);
+  const [apiError, setApiError] = useState<string | null>(null);
   const { register, handleSubmit, setValue, watch, formState: { errors } } = useForm<LeadFormData>();
   
   const selectedVehicle = watch('vehicle');
@@ -50,28 +51,22 @@ export const LeadForm = ({ onSubmit, isSubmitting }: LeadFormProps) => {
   useEffect(() => {
     const fetchSalespeople = async () => {
       setIsLoadingSalespeople(true);
+      setApiError(null);
+      
       try {
-        // Default mock salespeople in case the API fails
-        const mockSalespeople = [
-          { id: '1', name: 'John Doe' },
-          { id: '2', name: 'Jane Smith' },
-          { id: '3', name: 'Bob Johnson' }
-        ];
-
-        try {
-          const response = await fetch('/api/salespeople');
-          const result = await response.json();
-          
-          if (result.success) {
-            setSalespeople(result.data);
-          } else {
-            console.error('Failed to fetch salespeople:', result.error);
-            setSalespeople(mockSalespeople);
-          }
-        } catch (error) {
-          console.error('Error fetching salespeople:', error);
-          setSalespeople(mockSalespeople);
+        const response = await fetch('/api/salespeople');
+        const result = await response.json();
+        
+        if (result.success) {
+          setSalespeople(result.data);
+        } else {
+          setApiError(result.error || 'Failed to fetch salespeople from API');
+          setSalespeople([]);
         }
+      } catch (error) {
+        console.error('Error fetching salespeople:', error);
+        setApiError(error instanceof Error ? error.message : 'Unknown error fetching salespeople');
+        setSalespeople([]);
       } finally {
         setIsLoadingSalespeople(false);
       }
@@ -83,19 +78,29 @@ export const LeadForm = ({ onSubmit, isSubmitting }: LeadFormProps) => {
   // Save salesperson to Supabase when form is submitted
   const handleSaveAndSubmit: SubmitHandler<LeadFormData> = async (data) => {
     try {
+      setApiError(null);
+      
       if (data.sentBy && data.sentBy !== 'new') {
         try {
           // Try to save the salesperson name to Supabase
-          await fetch('/api/salespeople', {
+          const response = await fetch('/api/salespeople', {
             method: 'POST',
             headers: {
               'Content-Type': 'application/json',
             },
             body: JSON.stringify({ name: data.sentBy }),
           });
+          
+          const result = await response.json();
+          
+          if (!result.success) {
+            setApiError(result.error || 'Failed to save salesperson');
+            return;
+          }
         } catch (error) {
-          // Silently fail if the API is not available (static export)
           console.error('Failed to save salesperson:', error);
+          setApiError(error instanceof Error ? error.message : 'Failed to save salesperson');
+          return;
         }
       }
       
@@ -103,6 +108,7 @@ export const LeadForm = ({ onSubmit, isSubmitting }: LeadFormProps) => {
       await onSubmit(data);
     } catch (error) {
       console.error('Error in form submission:', error);
+      setApiError(error instanceof Error ? error.message : 'Error during form submission');
     }
   };
   
@@ -152,6 +158,13 @@ export const LeadForm = ({ onSubmit, isSubmitting }: LeadFormProps) => {
           ))}
         </div>
       </div>
+      
+      {apiError && (
+        <div className="bg-red-100 border border-red-400 text-red-700 px-4 py-3 rounded relative mb-4 mx-6 mt-4" role="alert">
+          <strong className="font-bold">API Error: </strong>
+          <span className="block sm:inline">{apiError}</span>
+        </div>
+      )}
       
       <form onSubmit={handleSubmit(formSubmit)} className="p-6 bg-gray-50">
         {currentStep === 1 && (

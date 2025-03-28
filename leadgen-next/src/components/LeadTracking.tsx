@@ -82,10 +82,12 @@ export const LeadTracking = ({ salesPerson }: LeadTrackingProps) => {
         throw new Error(data.error || 'Failed to fetch leads');
       }
 
-      setLeads(data.leads);
+      setLeads(data.leads || []);
     } catch (error: unknown) {
       const err = error as APIError;
       setError(err.message);
+      // Clear leads instead of showing mock data
+      setLeads([]);
     } finally {
       setLoading(false);
     }
@@ -267,30 +269,46 @@ export const LeadTracking = ({ salesPerson }: LeadTrackingProps) => {
   const { statusCounts, commonChartOptions } = chartData;
   
   return (
-    <div className="w-full max-w-5xl mx-auto bg-white rounded-xl shadow-md overflow-hidden">
-      <div className="bg-blue-600 text-white p-4">
-        <h2 className="text-xl font-bold">Lead Tracking</h2>
-      </div>
-
-      <div className="p-6 bg-gray-50">
-        <div className="mb-6 space-y-4">
-          <h3 className="text-lg font-medium text-gray-700">Filter Leads</h3>
+    <div className="w-full max-w-7xl mx-auto">
+      <div className="p-6 bg-white shadow-md rounded-lg">
+        <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-4 mb-8">
+          <h2 className="text-2xl font-bold text-gray-800">Lead Tracking Dashboard</h2>
           
+          <div className="flex gap-2">
+            <button
+              onClick={() => setViewMode('table')}
+              className={`px-4 py-2 rounded-md ${viewMode === 'table' 
+                ? 'bg-blue-600 text-white' 
+                : 'bg-gray-200 text-gray-700 hover:bg-gray-300'}`}
+            >
+              Table View
+            </button>
+            <button
+              onClick={() => setViewMode('dashboard')}
+              className={`px-4 py-2 rounded-md ${viewMode === 'dashboard' 
+                ? 'bg-blue-600 text-white' 
+                : 'bg-gray-200 text-gray-700 hover:bg-gray-300'}`}
+            >
+              Dashboard
+            </button>
+          </div>
+        </div>
+        
+        <div className="mb-6 p-4 bg-gray-50 rounded-lg">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
             <div>
-              <label className="block text-sm font-medium text-gray-700">Sales Person</label>
+              <label className="block text-sm font-medium text-gray-700 mb-1">Salesperson</label>
               <input
                 type="text"
                 name="sentBy"
                 value={filter.sentBy}
                 onChange={handleFilterChange}
+                placeholder="Filter by salesperson"
                 className={inputClassName}
-                placeholder="Enter name"
               />
             </div>
-            
             <div>
-              <label className="block text-sm font-medium text-gray-700">Start Date</label>
+              <label className="block text-sm font-medium text-gray-700 mb-1">Start Date</label>
               <input
                 type="date"
                 name="startDate"
@@ -299,9 +317,8 @@ export const LeadTracking = ({ salesPerson }: LeadTrackingProps) => {
                 className={inputClassName}
               />
             </div>
-            
             <div>
-              <label className="block text-sm font-medium text-gray-700">End Date</label>
+              <label className="block text-sm font-medium text-gray-700 mb-1">End Date</label>
               <input
                 type="date"
                 name="endDate"
@@ -311,46 +328,49 @@ export const LeadTracking = ({ salesPerson }: LeadTrackingProps) => {
               />
             </div>
           </div>
-          
-          <div className="flex justify-between items-center">
+          <div className="mt-4">
             <button
-              onClick={fetchLeads}
-              className="bg-blue-500 hover:bg-blue-600 text-white px-4 py-2 rounded-md"
+              onClick={() => fetchLeads()}
+              className="px-4 py-2 bg-blue-600 text-white rounded-md hover:bg-blue-700 transition-colors"
             >
               Apply Filters
             </button>
-            
-            <div className="flex space-x-2">
-              <button
-                onClick={() => setViewMode('table')}
-                className={`px-4 py-2 rounded-md ${
-                  viewMode === 'table' 
-                    ? 'bg-blue-500 text-white'
-                    : 'bg-gray-200 text-gray-700 hover:bg-gray-300'
-                }`}
-              >
-                Table View
-              </button>
-              <button
-                onClick={() => setViewMode('dashboard')}
-                className={`px-4 py-2 rounded-md ${
-                  viewMode === 'dashboard' 
-                    ? 'bg-blue-500 text-white'
-                    : 'bg-gray-200 text-gray-700 hover:bg-gray-300'
-                }`}
-              >
-                Dashboard
-              </button>
-            </div>
           </div>
         </div>
-
-        {loading ? (
-          <div className="flex justify-center items-center py-8">
-            <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-blue-500"></div>
+        
+        {/* Display errors prominently */}
+        {error && (
+          <div className="mb-6 p-4 bg-red-100 border border-red-400 text-red-700 rounded-lg" role="alert">
+            <div className="flex">
+              <div className="py-1">
+                <svg className="fill-current h-6 w-6 text-red-500 mr-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
+                  <path d="M2.93 17.07A10 10 0 1 1 17.07 2.93 10 10 0 0 1 2.93 17.07zm12.73-1.41A8 8 0 1 0 4.34 4.34a8 8 0 0 0 11.32 11.32zM9 11V9h2v6H9v-4zm0-6h2v2H9V5z"/>
+                </svg>
+              </div>
+              <div>
+                <p className="font-bold">API Error</p>
+                <p className="text-sm">{error}</p>
+                <p className="text-sm mt-2">
+                  Please check your Supabase connection and configuration. Detailed error information is available in the console.
+                </p>
+              </div>
+            </div>
           </div>
-        ) : error ? (
-          <div className="text-red-500 text-center py-4">{error}</div>
+        )}
+        
+        {loading ? (
+          <div className="flex justify-center items-center p-12">
+            <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-blue-600"></div>
+          </div>
+        ) : leads.length === 0 ? (
+          <div className="bg-gray-50 p-8 text-center rounded-lg">
+            <h3 className="text-lg font-medium text-gray-700 mb-2">No leads found</h3>
+            <p className="text-gray-500">
+              {error 
+                ? "There was an error fetching your leads. Please try adjusting your filters or check the API connection." 
+                : "Try adjusting your filters to see more results."}
+            </p>
+          </div>
         ) : (
           <>
             <div className="mt-4 text-sm text-gray-500">

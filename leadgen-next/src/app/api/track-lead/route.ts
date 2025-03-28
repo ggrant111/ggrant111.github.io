@@ -24,46 +24,11 @@ interface LeadRecord {
   sent_by: string;
 }
 
-// Mock leads for build environment
-const MOCK_LEADS = [
-  {
-    _id: '1',
-    firstName: 'John',
-    lastName: 'Doe',
-    destination: 'Sales Department',
-    sentAt: new Date().toISOString(),
-    success: true,
-    sentBy: 'Jane Smith',
-    vehicle: {
-      make: 'Toyota',
-      model: 'Camry'
-    }
-  },
-  {
-    _id: '2',
-    firstName: 'Alice',
-    lastName: 'Johnson',
-    destination: 'Service Center',
-    sentAt: new Date().toISOString(),
-    success: true,
-    sentBy: 'Bob Wilson',
-    vehicle: {
-      make: 'Honda',
-      model: 'Civic'
-    }
-  }
-];
-
 export async function GET(req: Request) {
   try {
-    // Mock data for build environment or when Supabase is not configured
+    // Check if Supabase is configured
     if (!isSupabaseConfigured()) {
-      console.log('Using mock lead data during build');
-      return NextResponse.json({ 
-        success: true, 
-        leads: MOCK_LEADS,
-        count: MOCK_LEADS.length
-      });
+      throw new Error('Supabase configuration is missing or invalid');
     }
 
     console.log('API: Fetching leads from Supabase');
