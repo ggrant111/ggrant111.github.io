@@ -17,13 +17,34 @@ export async function GET(request: Request) {
       );
     }
 
-    // Get all push subscriptions for the salesperson
+    // First, get the salesperson's UUID from the salespeople table
+    const { data: salesperson, error: salespersonError } = await supabase
+      .from('salespeople')
+      .select('id')
+      .eq('id', userId)
+      .single();
+
+    if (salespersonError) {
+      console.error('Error fetching salesperson:', salespersonError);
+      return NextResponse.json(
+        { error: `Failed to find salesperson: ${salespersonError.message}` },
+        { status: 404 }
+      );
+    }
+
+    // Get all push subscriptions for the salesperson using their UUID
     const { data: subscriptions, error } = await supabase
       .from('push_subscriptions')
       .select('subscription')
-      .eq('user_id', userId);
+      .eq('user_id', salesperson.id);
 
-    if (error) throw error;
+    if (error) {
+      console.error('Supabase error:', error);
+      return NextResponse.json(
+        { error: `Database error: ${error.message}` },
+        { status: 500 }
+      );
+    }
 
     return NextResponse.json({
       hasSubscription: subscriptions && subscriptions.length > 0
@@ -31,7 +52,7 @@ export async function GET(request: Request) {
   } catch (error) {
     console.error('Error checking subscription:', error);
     return NextResponse.json(
-      { error: 'Failed to check subscription status' },
+      { error: `Server error: ${error instanceof Error ? error.message : 'Unknown error'}` },
       { status: 500 }
     );
   }
