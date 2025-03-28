@@ -22,8 +22,8 @@ export const metadata: Metadata = {
     title: "Lead Generator",
   },
   icons: {
-    icon: "/leadgenlogo_square.svg",
-    apple: "/leadgenlogo_square.svg",
+    icon: "/leadgenlogo_square_blue.svg",
+    apple: "/apple-icon-180x180.png",
   },
 };
 
@@ -43,8 +43,9 @@ export default function RootLayout({
   return (
     <html lang="en">
       <head>
-        <link rel="icon" href="/leadgenlogo_square.svg" />
-        <link rel="apple-touch-icon" href="/leadgenlogo_square.svg" />
+        <link rel="icon" href="/leadgenlogo_square_blue.svg" />
+        <link rel="apple-touch-icon" href="/apple-icon-180x180.png" />
+        <link rel="apple-touch-icon" sizes="180x180" href="/apple-icon-180x180.png" />
         <meta name="apple-mobile-web-app-capable" content="yes" />
         <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
         <meta name="apple-mobile-web-app-title" content="Lead Generator" />
