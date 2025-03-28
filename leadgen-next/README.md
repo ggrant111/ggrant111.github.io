@@ -198,3 +198,86 @@ If you encounter linter errors:
    ```bash
    npm run type-check
    ```
+
+# Push Notifications Setup
+
+This project includes push notification support for real-time lead submission notifications. Here's how to set it up:
+
+## 1. Generate VAPID Keys
+
+Run the following command to generate VAPID keys for web push notifications:
+
+```bash
+npm run generate-vapid-keys
+```
+
+This will output a public and private key. Add these to your `.env.local` file:
+
+```
+NEXT_PUBLIC_VAPID_PUBLIC_KEY=your-public-key
+VAPID_PRIVATE_KEY=your-private-key
+VAPID_SUBJECT=mailto:your-email@example.com
+```
+
+## 2. Set Up Supabase Database
+
+The project includes a migration file for creating the push subscriptions table. Run this migration in your Supabase project:
+
+1. Go to your Supabase project dashboard
+2. Navigate to the SQL editor
+3. Copy and paste the contents of `supabase/migrations/20240328000000_create_push_subscriptions.sql`
+4. Run the SQL
+
+## 3. Service Worker
+
+The service worker is automatically registered when the application starts. It's located at `public/sw.js` and handles:
+
+- Push notification reception
+- Notification display
+- Click handling for notifications
+
+## 4. Usage
+
+The `NotificationPermission` component can be added to any page where you want to allow users to enable notifications:
+
+```tsx
+import { NotificationPermission } from "@/components/NotificationPermission";
+
+// In your component:
+<NotificationPermission userId={currentUser.id} />;
+```
+
+## 5. Sending Notifications
+
+When a new lead is submitted, the system will automatically:
+
+1. Look up the salesperson's push subscriptions
+2. Send a push notification to all their registered devices
+3. Include the lead details and demo environment in the notification
+
+## Browser Support
+
+Push notifications are supported in:
+
+- Chrome (desktop and mobile)
+- Firefox (desktop and mobile)
+- Edge (desktop and mobile)
+- Opera (desktop and mobile)
+- Safari (desktop and mobile)
+
+## Security
+
+- Push subscriptions are stored securely in Supabase
+- Row Level Security ensures users can only access their own subscriptions
+- VAPID keys are used to authenticate push notification requests
+- Invalid subscriptions are automatically cleaned up
+
+## Troubleshooting
+
+If notifications aren't working:
+
+1. Check the browser console for errors
+2. Verify that the service worker is registered (check Application tab in DevTools)
+3. Ensure VAPID keys are correctly set in environment variables
+4. Check that the user has granted notification permissions
+5. Verify that the push subscription is stored in Supabase
