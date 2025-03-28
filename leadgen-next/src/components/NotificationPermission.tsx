@@ -10,33 +10,82 @@ interface NotificationPermissionProps {
 export function NotificationPermission({ userId }: NotificationPermissionProps) {
   const [isSubscribed, setIsSubscribed] = useState(false);
   const [isLoading, setIsLoading] = useState(false);
+  const [salespersonId, setSalespersonId] = useState<string | null>(null);
+  const [error, setError] = useState<string | null>(null);
 
   useEffect(() => {
-    // Check if notifications are already enabled
-    if ('Notification' in window) {
-      setIsSubscribed(Notification.permission === 'granted');
-    }
-  }, []);
+    // Get the salesperson's ID from their name and check subscription status
+    const fetchSalespersonId = async () => {
+      try {
+        console.log('Fetching salesperson ID for:', userId);
+        const response = await fetch('/api/salespeople');
+        if (!response.ok) {
+          throw new Error('Failed to fetch salespeople');
+        }
+        const data = await response.json();
+        console.log('Salespeople data:', data);
+        
+        const salesperson = data.find((s: any) => s.name === userId);
+        if (salesperson) {
+          console.log('Found salesperson:', salesperson);
+          setSalespersonId(salesperson.id);
+          
+          // Check if we have a subscription for this salesperson
+          const subscriptionResponse = await fetch(`/api/notifications/subscription?userId=${salesperson.id}`);
+          if (subscriptionResponse.ok) {
+            const subscriptionData = await subscriptionResponse.json();
+            setIsSubscribed(subscriptionData.hasSubscription);
+          }
+        } else {
+          console.log('No salesperson found with name:', userId);
+          setError('Salesperson not found');
+        }
+      } catch (error) {
+        console.error('Error fetching salesperson ID:', error);
+        setError('Failed to fetch salesperson data');
+      }
+    };
+
+    fetchSalespersonId();
+  }, [userId]);
 
   const handleNotificationToggle = async () => {
+    if (!salespersonId) {
+      console.error('No salesperson ID available');
+      return;
+    }
+    
     setIsLoading(true);
     try {
       if (isSubscribed) {
-        const success = await unsubscribeFromPushNotifications(userId);
+        const success = await unsubscribeFromPushNotifications(salespersonId);
         setIsSubscribed(!success);
       } else {
         const permissionGranted = await requestNotificationPermission();
         if (permissionGranted) {
-          const success = await subscribeToPushNotifications(userId);
+          const success = await subscribeToPushNotifications(salespersonId);
           setIsSubscribed(success);
         }
       }
     } catch (error) {
       console.error('Error toggling notifications:', error);
+      setError('Failed to toggle notifications');
     } finally {
       setIsLoading(false);
     }
   };
+
+  if (error) {
+    return (
+      <div className="text-sm text-red-600">
+        {error}
+      </div>
+    );
+  }
+
+  if (!salespersonId) {
+    return null;
+  }
 
   return (
     <Button

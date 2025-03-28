@@ -1,5 +1,9 @@
 import { NextRequest, NextResponse } from 'next/server';
-import { getSalespeople, addSalesperson } from '@/lib/salespeople';
+import { createClient } from '@supabase/supabase-js';
+
+const supabaseUrl = process.env.NEXT_PUBLIC_SUPABASE_URL!;
+const supabaseServiceKey = process.env.SUPABASE_SERVICE_ROLE_KEY!;
+const supabase = createClient(supabaseUrl, supabaseServiceKey);
 
 // Make this route compatible with dynamic functionality
 export const dynamic = 'force-dynamic';
@@ -7,14 +11,22 @@ export const fetchCache = 'force-no-store';
 
 export async function GET() {
   try {
-    console.log('API: Fetching salespeople');
-    const salespeople = await getSalespeople();
-    console.log(`API: Found ${salespeople.length} salespeople`);
-    return NextResponse.json({ success: true, data: salespeople });
+    console.log('Fetching salespeople from Supabase');
+    const { data: salespeople, error } = await supabase
+      .from('salespeople')
+      .select('*');
+
+    if (error) {
+      console.error('Error fetching salespeople:', error);
+      throw error;
+    }
+
+    console.log(`Found ${salespeople.length} salespeople`);
+    return NextResponse.json(salespeople);
   } catch (error) {
-    console.error('Error fetching salespeople:', error);
+    console.error('Error in salespeople API:', error);
     return NextResponse.json(
-      { success: false, error: 'Failed to fetch salespeople' },
+      { error: 'Failed to fetch salespeople' },
       { status: 500 }
     );
   }
@@ -23,30 +35,32 @@ export async function GET() {
 export async function POST(request: NextRequest) {
   try {
     const { name } = await request.json();
-    console.log(`API: Adding salesperson ${name}`);
+    console.log(`Adding salesperson: ${name}`);
     
     if (!name || typeof name !== 'string' || name.trim().length === 0) {
       return NextResponse.json(
-        { success: false, error: 'Valid name is required' },
+        { error: 'Valid name is required' },
         { status: 400 }
       );
     }
     
-    const salesperson = await addSalesperson(name);
-    
-    if (!salesperson) {
-      return NextResponse.json(
-        { success: false, error: 'Failed to add salesperson' },
-        { status: 500 }
-      );
+    const { data: salesperson, error } = await supabase
+      .from('salespeople')
+      .insert([{ name }])
+      .select()
+      .single();
+
+    if (error) {
+      console.error('Error adding salesperson:', error);
+      throw error;
     }
     
-    console.log(`API: Added salesperson: ${JSON.stringify(salesperson)}`);
-    return NextResponse.json({ success: true, data: salesperson });
+    console.log(`Added salesperson: ${JSON.stringify(salesperson)}`);
+    return NextResponse.json(salesperson);
   } catch (error) {
-    console.error('Error adding salesperson:', error);
+    console.error('Error in salespeople API:', error);
     return NextResponse.json(
-      { success: false, error: 'Failed to process request' },
+      { error: 'Failed to add salesperson' },
       { status: 500 }
     );
   }

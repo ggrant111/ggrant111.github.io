@@ -46,7 +46,7 @@ interface TrackingLead {
 }
 
 interface LeadTrackingProps {
-  salesPerson?: string;
+  salesPerson: string | null;
 }
 
 interface APIError extends Error {
@@ -310,7 +310,9 @@ export const LeadTracking = ({ salesPerson }: LeadTrackingProps) => {
             className={inputClassName}
           />
         </div>
-        {salesPerson && <NotificationPermission userId={salesPerson} />}
+        {salesPerson && salesPerson !== 'default@example.com' && (
+          <NotificationPermission userId={salesPerson} />
+        )}
       </div>
 
       <div className="w-full max-w-7xl mx-auto">

@@ -103,15 +103,20 @@ self.addEventListener("activate", (event) => {
 });
 
 self.addEventListener("push", function (event) {
+  let payload;
+  try {
+    payload = JSON.parse(event.data.text());
+  } catch (e) {
+    console.error("Error parsing push payload:", e);
+    return;
+  }
+
   const options = {
-    body: event.data.text(),
+    body: payload.body,
     icon: "/icon-192x192.png",
     badge: "/icon-192x192.png",
     vibrate: [100, 50, 100],
-    data: {
-      dateOfArrival: Date.now(),
-      primaryKey: 1,
-    },
+    data: payload.data,
     actions: [
       {
         action: "explore",
@@ -126,9 +131,7 @@ self.addEventListener("push", function (event) {
     ],
   };
 
-  event.waitUntil(
-    self.registration.showNotification("New Lead Submitted", options)
-  );
+  event.waitUntil(self.registration.showNotification(payload.title, options));
 });
 
 self.addEventListener("notificationclick", function (event) {

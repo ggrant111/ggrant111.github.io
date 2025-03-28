@@ -8,7 +8,7 @@ const supabase = createClient(supabaseUrl, supabaseServiceKey);
 
 // Configure web-push with VAPID keys
 webpush.setVapidDetails(
-  'mailto:your-email@example.com',
+  process.env.VAPID_SUBJECT!,
   process.env.NEXT_PUBLIC_VAPID_PUBLIC_KEY!,
   process.env.VAPID_PRIVATE_KEY!
 );
@@ -17,17 +17,39 @@ export async function POST(request: Request) {
   try {
     const { lead, salespersonName, demoEnvironment } = await request.json();
 
+    // First, get the salesperson's ID from their name
+    const { data: salespeople, error: salespersonError } = await supabase
+      .from('salespeople')
+      .select('id')
+      .eq('name', salespersonName);
+
+    if (salespersonError) {
+      console.error('Error finding salesperson:', salespersonError);
+      throw salespersonError;
+    }
+
+    if (!salespeople || salespeople.length === 0) {
+      console.error('No salesperson found with name:', salespersonName);
+      return NextResponse.json({ message: 'Salesperson not found' });
+    }
+
+    // Use the first matching salesperson
+    const salesperson = salespeople[0];
+
     // Get all push subscriptions for the salesperson
     const { data: subscriptions, error } = await supabase
       .from('push_subscriptions')
       .select('subscription')
-      .eq('user_id', lead.salesperson_id);
+      .eq('user_id', salesperson.id);
 
     if (error) throw error;
 
     if (!subscriptions || subscriptions.length === 0) {
+      console.log('No subscriptions found for:', salespersonName);
       return NextResponse.json({ message: 'No subscriptions found' });
     }
+
+    console.log('Found subscriptions:', subscriptions);
 
     // Send push notification to all subscriptions
     const notificationPromises = subscriptions.map(async ({ subscription }) => {
@@ -42,7 +64,8 @@ export async function POST(request: Request) {
 
       try {
         await webpush.sendNotification(subscription, payload);
-      } catch (error) {
+        console.log('Notification sent successfully');
+      } catch (error: any) {
         console.error('Error sending push notification:', error);
         // If the subscription is invalid, remove it from the database
         if (error.statusCode === 410) {
@@ -50,6 +73,7 @@ export async function POST(request: Request) {
             .from('push_subscriptions')
             .delete()
             .eq('subscription', subscription);
+          console.log('Removed invalid subscription');
         }
       }
     });

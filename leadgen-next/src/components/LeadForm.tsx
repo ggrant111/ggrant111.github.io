@@ -56,13 +56,15 @@ export const LeadForm = ({ onSubmit, isSubmitting }: LeadFormProps) => {
       
       try {
         const response = await fetch('/api/salespeople');
-        const result = await response.json();
+        const data = await response.json();
         
-        if (result.success) {
-          setSalespeople(result.data);
-        } else {
-          setApiError(result.error || 'Failed to fetch salespeople from API');
+        // Check if the response is an error
+        if (data.error) {
+          setApiError(data.error || 'Failed to fetch salespeople from API');
           setSalespeople([]);
+        } else {
+          // The API returns the data directly
+          setSalespeople(data);
         }
       } catch (error) {
         console.error('Error fetching salespeople:', error);
@@ -81,9 +83,9 @@ export const LeadForm = ({ onSubmit, isSubmitting }: LeadFormProps) => {
     try {
       setApiError(null);
       
-      if (data.sentBy) {
+      // Only try to save if it's a new salesperson
+      if (isNewSalesperson && data.sentBy) {
         try {
-          // Try to save the salesperson name to Supabase
           const response = await fetch('/api/salespeople', {
             method: 'POST',
             headers: {
@@ -94,7 +96,8 @@ export const LeadForm = ({ onSubmit, isSubmitting }: LeadFormProps) => {
           
           const result = await response.json();
           
-          if (!result.success) {
+          // Check if there was an error in the response
+          if (result.error) {
             setApiError(result.error || 'Failed to save salesperson');
             return;
           }
@@ -103,8 +106,7 @@ export const LeadForm = ({ onSubmit, isSubmitting }: LeadFormProps) => {
           setApiError(error instanceof Error ? error.message : 'Failed to save salesperson');
           return;
         }
-      } else if (isNewSalesperson) {
-        // They selected "new" but didn't enter a name
+      } else if (!data.sentBy) {
         setApiError('Please enter a sales person name');
         return;
       }

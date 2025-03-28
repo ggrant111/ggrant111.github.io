@@ -10,6 +10,7 @@ import { registerServiceWorker } from './swRegistration';
 export default function Home() {
   const [activeTab, setActiveTab] = useState<'form' | 'tracking'>('form');
   const [isSubmitting, setIsSubmitting] = useState(false);
+  const [currentSalesPerson, setCurrentSalesPerson] = useState<string | null>(null);
   const [notification, setNotification] = useState<{
     type: 'success' | 'error';
     message: string;
@@ -37,6 +38,27 @@ export default function Home() {
 
       if (!result.success) {
         throw new Error(result.error || 'Failed to send lead');
+      }
+
+      // Set the current salesperson
+      setCurrentSalesPerson(data.sentBy);
+
+      // Send notification after successful lead submission
+      try {
+        await fetch('/api/notifications', {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+          },
+          body: JSON.stringify({
+            lead: result.lead,
+            salespersonName: data.sentBy,
+            demoEnvironment: data.destination
+          }),
+        });
+      } catch (error) {
+        console.error('Error sending notification:', error);
+        // Don't throw here, as the lead was still submitted successfully
       }
 
       setNotification({
@@ -106,7 +128,7 @@ export default function Home() {
         {activeTab === 'form' ? (
           <LeadForm onSubmit={handleSubmitLead} isSubmitting={isSubmitting} />
         ) : (
-          <LeadTracking />
+          <LeadTracking salesPerson={currentSalesPerson} />
         )}
         
         {/* Footer with About and Privacy links */}
