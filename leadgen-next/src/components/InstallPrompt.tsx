@@ -42,16 +42,18 @@ const InstallPrompt = () => {
           <div className="flex-1">
             <h3 className="text-lg font-medium text-gray-900 mb-1">Add to Home Screen</h3>
             {isIOS ? (
-  <p className="text-sm text-gray-600">
-    Tap the share icon
-    <span className="inline-block w-5 h-5 align-middle ml-1">
-      <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24">
-        <path d="M12 3a1 1 0 011 1v9.586l3.293-3.293a1 1 0 111.414 1.414l-5 5a1 1 0 01-1.414 0l-5-5a1 1 0 111.414-1.414L11 13.586V4a1 1 0 011-1z" />
-        <path d="M5 18a1 1 0 011-1h12a1 1 0 110 2H6a1 1 0 01-1-1z" />
-      </svg>
-    </span>{" "}
-    and select &quot;Add to Home Screen&quot;
-  </p>
+ <p className="text-sm text-gray-600">
+ Tap the share icon
+ <span className="inline-block w-5 h-5 align-middle ml-1">
+   {/* Real iOS share icon */}
+   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
+     <path d="M10 2a.75.75 0 01.75.75v8.19l2.72-2.72a.75.75 0 111.06 1.06l-4 4a.75.75 0 01-1.06 0l-4-4a.75.75 0 111.06-1.06l2.72 2.72V2.75A.75.75 0 0110 2z" />
+     <path d="M3.5 12.5a.75.75 0 01.75-.75h11.5a.75.75 0 010 1.5H4.25a.75.75 0 01-.75-.75z" />
+   </svg>
+ </span>{" "}
+ and select &quot;Add to Home Screen&quot;
+</p>
+
 ) : isAndroid ? (
   <p className="text-sm text-gray-600">
     Tap the menu icon and select &quot;Add to Home Screen&quot;
