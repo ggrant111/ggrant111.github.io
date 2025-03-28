@@ -64,6 +64,18 @@ export const LeadTracking = ({ salesPerson }: LeadTrackingProps) => {
   });
   const [viewMode, setViewMode] = useState<'table' | 'dashboard'>('table');
 
+  // Mapping of destination emails to store names
+  const destinationNameMap: Record<string, string> = {
+    'excellencemotors@eleadtrack.net': 'Excellence Motors',
+    'excellencegm@eleadtrack.net': 'Universal Motors',
+    'excellenceford@demosite.forddirectcrmpro.com': 'Excellence Ford',
+  };
+
+  // Function to get store name from email
+  const getStoreName = (email: string): string => {
+    return destinationNameMap[email] || email;
+  };
+
   const fetchLeads = useCallback(async () => {
     setLoading(true);
     setError(null);
@@ -138,7 +150,9 @@ export const LeadTracking = ({ salesPerson }: LeadTrackingProps) => {
     // Lead destinations distribution
     const destinationCounts: Record<string, number> = {};
     leads.forEach(lead => {
-      destinationCounts[lead.destination] = (destinationCounts[lead.destination] || 0) + 1;
+      // Use store name instead of email address
+      const storeName = getStoreName(lead.destination);
+      destinationCounts[storeName] = (destinationCounts[storeName] || 0) + 1;
     });
     
     // Sales person performance
@@ -416,7 +430,7 @@ export const LeadTracking = ({ salesPerson }: LeadTrackingProps) => {
                           </div>
                         </td>
                         <td className="px-6 py-4 whitespace-nowrap">
-                          <div className="text-sm text-gray-900">{lead.destination}</div>
+                          <div className="text-sm text-gray-900">{getStoreName(lead.destination)}</div>
                         </td>
                         <td className="px-6 py-4 whitespace-nowrap">
                           <div className="text-sm text-gray-900">{lead.sentBy || 'N/A'}</div>

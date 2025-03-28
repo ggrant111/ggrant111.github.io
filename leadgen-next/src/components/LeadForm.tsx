@@ -13,6 +13,7 @@ export const LeadForm = ({ onSubmit, isSubmitting }: LeadFormProps) => {
   const [salespeople, setSalespeople] = useState<Salesperson[]>([]);
   const [isLoadingSalespeople, setIsLoadingSalespeople] = useState(false);
   const [apiError, setApiError] = useState<string | null>(null);
+  const [isNewSalesperson, setIsNewSalesperson] = useState(false);
   const { register, handleSubmit, setValue, watch, formState: { errors } } = useForm<LeadFormData>();
   
   const selectedVehicle = watch('vehicle');
@@ -41,7 +42,7 @@ export const LeadForm = ({ onSubmit, isSubmitting }: LeadFormProps) => {
   const destinations = [
     { name: 'Excellence Motors', email: 'excellencemotors@eleadtrack.net' },
     { name: 'Universal Motors', email: 'excellencegm@eleadtrack.net' },
-    { name: 'Excellence Ford', email: 'excellenceford@eleadtrack.net' },
+    { name: 'Excellence Ford', email: 'excellenceford@demosite.forddirectcrmpro.com' },
   ];
   
   const nextStep = () => setCurrentStep(currentStep + 1);
@@ -80,7 +81,7 @@ export const LeadForm = ({ onSubmit, isSubmitting }: LeadFormProps) => {
     try {
       setApiError(null);
       
-      if (data.sentBy && data.sentBy !== 'new') {
+      if (data.sentBy) {
         try {
           // Try to save the salesperson name to Supabase
           const response = await fetch('/api/salespeople', {
@@ -102,6 +103,10 @@ export const LeadForm = ({ onSubmit, isSubmitting }: LeadFormProps) => {
           setApiError(error instanceof Error ? error.message : 'Failed to save salesperson');
           return;
         }
+      } else if (isNewSalesperson) {
+        // They selected "new" but didn't enter a name
+        setApiError('Please enter a sales person name');
+        return;
       }
       
       // Submit the lead data
@@ -136,6 +141,32 @@ export const LeadForm = ({ onSubmit, isSubmitting }: LeadFormProps) => {
   const selectClassName = "mt-1 block w-full rounded-md border border-gray-300 bg-white shadow-sm py-2 px-3 text-gray-700 focus:border-blue-500 focus:ring-1 focus:ring-blue-500";
   
   const formSubmit: SubmitHandler<LeadFormData> = async (data) => {
+    // Validate required fields
+    const missingFields = [];
+    
+    if (!data.firstName) missingFields.push('First Name');
+    if (!data.lastName) missingFields.push('Last Name');
+    if (!data.email && !data.phone) missingFields.push('Either Email or Phone');
+    if (!data.vehicle || !data.vehicle.stock) missingFields.push('Vehicle');
+    if (!data.comment) missingFields.push('Comment');
+    
+    if (missingFields.length > 0) {
+      const missingFieldsMessage = missingFields.join(', ');
+      alert(`Please complete the following required fields: ${missingFieldsMessage}`);
+      
+      // Set the step to the appropriate page based on missing fields
+      if (missingFields.includes('First Name') || 
+          missingFields.includes('Last Name') || 
+          missingFields.includes('Either Email or Phone')) {
+        setCurrentStep(1);
+      } else if (missingFields.includes('Vehicle') || 
+                 missingFields.includes('Comment')) {
+        setCurrentStep(3);
+      }
+      
+      return;
+    }
+    
     await handleSaveAndSubmit(data);
   };
   
@@ -217,8 +248,15 @@ export const LeadForm = ({ onSubmit, isSubmitting }: LeadFormProps) => {
               <label className="block text-sm font-medium text-gray-700">Phone</label>
               <input
                 type="tel"
-                {...register('phone', { required: 'Phone is required' })}
+                {...register('phone', { 
+                  required: 'Phone is required',
+                  pattern: {
+                    value: /^(\d{3}[-.\s]??\d{3}[-.\s]??\d{4}|\(\d{3}\)[-.\s]??\d{3}[-.\s]??\d{4}|\d{10})$/,
+                    message: 'Please enter a valid 10-digit phone number'
+                  }
+                })}
                 className={inputClassName}
+                placeholder="e.g. 555-123-4567"
               />
               {errors.phone && (
                 <p className="mt-1 text-sm text-red-600">{errors.phone.message}</p>
@@ -392,7 +430,11 @@ export const LeadForm = ({ onSubmit, isSubmitting }: LeadFormProps) => {
                     className={`${selectClassName} flex-grow`}
                     onChange={(e) => {
                       if (e.target.value === 'new') {
+                        setIsNewSalesperson(true);
+                        // Keep 'new' as a placeholder but don't submit it
                         setValue('sentBy', '');
+                      } else {
+                        setIsNewSalesperson(false);
                       }
                     }}
                   >
@@ -411,7 +453,7 @@ export const LeadForm = ({ onSubmit, isSubmitting }: LeadFormProps) => {
                   />
                 )}
               </div>
-              {selectedSalesperson === 'new' && (
+              {isNewSalesperson && (
                 <input
                   type="text"
                   {...register('sentBy', { required: 'Sales person name is required' })}
