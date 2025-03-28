@@ -45,6 +45,11 @@ interface TrackingLead {
   };
 }
 
+interface Salesperson {
+  id: string;
+  name: string;
+}
+
 interface LeadTrackingProps {
   salesPerson: string | null;
 }
@@ -64,6 +69,8 @@ export const LeadTracking = ({ salesPerson }: LeadTrackingProps) => {
     endDate: ''
   });
   const [viewMode, setViewMode] = useState<'table' | 'dashboard'>('table');
+  const [salespeople, setSalespeople] = useState<Salesperson[]>([]);
+  const [isLoadingSalespeople, setIsLoadingSalespeople] = useState(false);
 
   // Mapping of destination emails to store names
   const destinationNameMap: Record<string, string> = {
@@ -76,6 +83,28 @@ export const LeadTracking = ({ salesPerson }: LeadTrackingProps) => {
   const getStoreName = (email: string): string => {
     return destinationNameMap[email] || email;
   };
+
+  // Load salespeople from API on component mount
+  useEffect(() => {
+    const fetchSalespeople = async () => {
+      setIsLoadingSalespeople(true);
+      try {
+        const response = await fetch('/api/salespeople');
+        const data = await response.json();
+        if (data.error) {
+          console.error('Error fetching salespeople:', data.error);
+        } else {
+          setSalespeople(data);
+        }
+      } catch (error) {
+        console.error('Error fetching salespeople:', error);
+      } finally {
+        setIsLoadingSalespeople(false);
+      }
+    };
+    
+    fetchSalespeople();
+  }, []);
 
   const fetchLeads = useCallback(async () => {
     setLoading(true);
@@ -110,7 +139,7 @@ export const LeadTracking = ({ salesPerson }: LeadTrackingProps) => {
     fetchLeads();
   }, [fetchLeads]);
 
-  const handleFilterChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+  const handleFilterChange = (e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement>) => {
     const { name, value } = e.target;
     setFilter(prev => ({ ...prev, [name]: value }));
   };
@@ -287,14 +316,21 @@ export const LeadTracking = ({ salesPerson }: LeadTrackingProps) => {
     <div className="space-y-6">
       <div className="flex justify-between items-center">
         <div className="flex space-x-4">
-          <input
-            type="text"
-            name="sentBy"
-            placeholder="Filter by Sales Person"
-            value={filter.sentBy}
-            onChange={handleFilterChange}
-            className={inputClassName}
-          />
+          {isLoadingSalespeople ? (
+            <div className="w-full py-2 text-gray-500">Loading salespeople...</div>
+          ) : (
+            <select
+              name="sentBy"
+              value={filter.sentBy}
+              onChange={handleFilterChange}
+              className={inputClassName}
+            >
+              <option value="">All Sales People</option>
+              {salespeople.map((sp) => (
+                <option key={sp.id} value={sp.name}>{sp.name}</option>
+              ))}
+            </select>
+          )}
           <input
             type="date"
             name="startDate"
@@ -320,23 +356,29 @@ export const LeadTracking = ({ salesPerson }: LeadTrackingProps) => {
           <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-4 mb-8">
             <h2 className="text-2xl font-bold text-gray-800">Lead Tracking Dashboard</h2>
             
-            <div className="flex gap-2">
-              <button
-                onClick={() => setViewMode('table')}
-                className={`px-4 py-2 rounded-md ${viewMode === 'table' 
-                  ? 'bg-blue-600 text-white' 
-                  : 'bg-gray-200 text-gray-700 hover:bg-gray-300'}`}
-              >
-                Table View
-              </button>
-              <button
-                onClick={() => setViewMode('dashboard')}
-                className={`px-4 py-2 rounded-md ${viewMode === 'dashboard' 
-                  ? 'bg-blue-600 text-white' 
-                  : 'bg-gray-200 text-gray-700 hover:bg-gray-300'}`}
-              >
-                Dashboard
-              </button>
+            <div className="flex justify-between items-center mb-4">
+              <div className="flex space-x-2">
+                <button
+                  onClick={() => setViewMode('table')}
+                  className={`px-4 py-2 rounded-md ${
+                    viewMode === 'table'
+                      ? 'bg-blue-600 text-white'
+                      : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
+                  }`}
+                >
+                  Table View
+                </button>
+                <button
+                  onClick={() => setViewMode('dashboard')}
+                  className={`px-4 py-2 rounded-md ${
+                    viewMode === 'dashboard'
+                      ? 'bg-blue-600 text-white'
+                      : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
+                  }`}
+                >
+                  Dashboard View
+                </button>
+              </div>
             </div>
           </div>
           
