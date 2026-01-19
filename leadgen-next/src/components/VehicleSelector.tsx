@@ -8,85 +8,274 @@ interface VehicleSelectorProps {
 // Sample vehicle data
 const vehicles = [
   {
-    year: '2025',
-    make: 'Nissan',
-    model: 'Rogue',
-    vin: '5N1BT3AA7SC769391',
-    stock: 'CNT250007',
-    trim: 'S 4DR FRONT-WHEEL DRIVE',
-    transmission: 'Automatic'
+    "Stock#": 26402727,
+    "Year": 2026,
+    "Make": "CHEVROLET",
+    "Model": "SILVERADO EV",
+    "Trim": "LT W/3LT ALL-WHEEL DRIVE CREW CAB 5.75 FT. BOX 145.7 IN. WB",
+    "N/U/T": "N",
+    "Vin": "1GC10ZED5TU402727"
   },
   {
-    year: '2025',
-    make: 'Nissan',
-    model: 'Frontier',
-    vin: '1N6ED1EJ1SN608517',
-    stock: 'CNT250020',
-    trim: 'PRO-X 4X2 CREW CAB',
-    transmission: 'Automatic'
+    "Stock#": 26000462,
+    "Year": 2026,
+    "Make": "VOLKSWAGEN",
+    "Model": "TIGUAN",
+    "Trim": "2.0T SE R-LINE BLACK 4DR ALL-WHEEL DRIVE 4MOTION",
+    "N/U/T": "N",
+    "Vin": "3VVGR7RM6TM000462"
   },
   {
-    year: '2025',
-    make: 'Nissan',
-    model: 'Pathfinder',
-    vin: '5N1DR3BA8SC200796',
-    stock: 'CNT250116',
-    trim: 'SV 4DR FRONT-WHEEL DRIVE',
-    transmission: 'Automatic'
+    "Stock#": "CNT26515",
+    "Year": 2026,
+    "Make": "NISSAN",
+    "Model": "FRONTIER",
+    "Trim": "",
+    "N/U/T": "N",
+    "Vin": "1N6ED1EKXTN620515"
   },
   {
-    year: '2025',
-    make: 'Nissan',
-    model: 'Altima',
-    vin: '1N4BL4CV8SN333542',
-    stock: 'CNT250185',
-    trim: 'SR (CVT) 4DR FWD Sedan',
-    transmission: 'Automatic CVT'
+    "Stock#": 2619178,
+    "Year": 2026,
+    "Make": "FORD",
+    "Model": "F-250",
+    "Trim": "",
+    "N/U/T": "N",
+    "Vin": "1FT8X2AA4TEC19178"
   },
   {
-    year: '2025',
-    make: 'Nissan',
-    model: 'Frontier',
-    vin: '1N6ED1EJ4SN611010',
-    stock: 'CNT250177',
-    trim: 'PRO-X 4X2 CREW CAB',
-    transmission: 'Automatic'
+    "Stock#": 26438388,
+    "Year": 2026,
+    "Make": "MERCEDES-BENZ",
+    "Model": "GLC 350E",
+    "Trim": "GLC 350E 4DR ALL-WHEEL DRIVE 4MATIC",
+    "N/U/T": "N",
+    "Vin": "W1NKM5GBXTF438388"
   },
   {
-    year: '2025',
-    make: 'Nissan',
-    model: 'Pathfinder',
-    vin: '5N1DR3CBXSC205456',
-    stock: 'CNT250478',
-    trim: 'SL 4DR FRONT-WHEEL DRIVE',
-    transmission: 'Automatic'
+    "Stock#": "CNT265300",
+    "Year": 2026,
+    "Make": "MERCEDES-BENZ",
+    "Model": "GLE 350",
+    "Trim": "GLE 350 4DR ALL-WHEEL DRIVE 4MATIC",
+    "N/U/T": "N",
+    "Vin": "4JGFB4FB7TB585300"
   },
   {
-    year: '2025',
-    make: 'Nissan',
-    model: 'Frontier',
-    vin: '1N6ED1EK7SN625685',
-    stock: 'CNT250501',
-    trim: 'PRO-4X 4X4 CREW CAB',
-    transmission: 'Automatic'
+    "Stock#": 266000,
+    "Year": 2026,
+    "Make": "HONDA",
+    "Model": "CR-V HYBRID",
+    "Trim": "SPORT TOURING (ECVT) 4DR ALL-WHEEL DRIVE",
+    "N/U/T": "N",
+    "Vin": "2HKRS6H96TH216000"
   },
   {
-    year: '2025',
-    make: 'Nissan',
-    model: 'Pathfinder',
-    vin: '5N1DR3BD4SC223311',
-    stock: 'CNT250497',
-    trim: 'ROCK CREEK 4DR 4X4',
-    transmission: 'Automatic'
+    "Stock#": 260170,
+    "Year": 2026,
+    "Make": "NISSAN",
+    "Model": "FRONTIER",
+    "Trim": "S 4X2 KING CAB 6 FT. BOX 126 IN. WB",
+    "N/U/T": "N",
+    "Vin": "1N6ED1CL2TN610170"
   },
   {
-    year: '2025',
-    make: 'Nissan',
-    model: 'Rogue',
-    vin: '5N1BT3BB0SC804697',
-    stock: 'CNT250410',
-    trim: 'ROCK CREEK 4DR AWD',
-    transmission: 'Automatic'
+    "Stock#": "CNT26691",
+    "Year": 2026,
+    "Make": "NISSAN",
+    "Model": "ARMADA",
+    "Trim": "PLATINUM (EOP 12-01-2025) 4DR 4X4",
+    "N/U/T": "N",
+    "Vin": "JN8AY3EEXT9430691"
+  },
+  {
+    "Stock#": "CNT26380",
+    "Year": 2026,
+    "Make": "NISSAN",
+    "Model": "KICKS",
+    "Trim": "SV 4DR FRONT-WHEEL DRIVE",
+    "N/U/T": "N",
+    "Vin": "3N8AP6CE6TL349380"
+  },
+  {
+    "Stock#": 2607148,
+    "Year": 2026,
+    "Make": "NISSAN",
+    "Model": "KICKS",
+    "Trim": "SV 4DR ALL-WHEEL DRIVE",
+    "N/U/T": "N",
+    "Vin": "3N8AP6CB4TL307148"
+  },
+  {
+    "Stock#": "CNT26572",
+    "Year": 2026,
+    "Make": "NISSAN",
+    "Model": "FRONTIER",
+    "Trim": "S 4X4 KING CAB 6 FT. BOX 126 IN. WB",
+    "N/U/T": "N",
+    "Vin": "1N6ED1CM4TN622572"
+  },
+  {
+    "Stock#": 264026,
+    "Year": 2026,
+    "Make": "HONDA",
+    "Model": "CIVIC HYBRID",
+    "Trim": "",
+    "N/U/T": "N",
+    "Vin": "2HGFE4F83TH004206"
+  },
+  {
+    "Stock#": 263670,
+    "Year": 2026,
+    "Make": "HONDA",
+    "Model": "HR-V",
+    "Trim": "EX-L (CVT) 4DR ALL-WHEEL DRIVE",
+    "N/U/T": "N",
+    "Vin": "3CZRZ2H72TM103670"
+  },
+  {
+    "Stock#": 26402726,
+    "Year": 2026,
+    "Make": "CHEVROLET",
+    "Model": "SILVERADO EV",
+    "Trim": "LT W/3LT ALL-WHEEL DRIVE CREW CAB 5.75 FT. BOX 145.7 IN. WB",
+    "N/U/T": "N",
+    "Vin": "1GC10ZED3TU402726"
+  },
+  {
+    "Stock#": "CNT26083",
+    "Year": 2026,
+    "Make": "NISSAN",
+    "Model": "KICKS",
+    "Trim": "SR 4DR ALL-WHEEL DRIVE",
+    "N/U/T": "N",
+    "Vin": "3N8AP6DB6TL336083"
+  },
+  {
+    "Stock#": 264934,
+    "Year": 2026,
+    "Make": "HONDA",
+    "Model": "CIVIC HYBRID",
+    "Trim": "",
+    "N/U/T": "N",
+    "Vin": "2HGFE4F83TH004934"
+  },
+  {
+    "Stock#": 2620046,
+    "Year": 2026,
+    "Make": "NISSAN",
+    "Model": "ARMADA",
+    "Trim": "PLATINUM (EOP 12-01-2025) 4DR 4X4",
+    "N/U/T": "N",
+    "Vin": "JN8AY3EB1T9120046"
+  },
+  {
+    "Stock#": 260171,
+    "Year": 2026,
+    "Make": "NISSAN",
+    "Model": "FRONTIER",
+    "Trim": "S 4X2 KING CAB 6 FT. BOX 126 IN. WB",
+    "N/U/T": "N",
+    "Vin": "1N6ED1CL4TN610171"
+  },
+  {
+    "Stock#": "CNT26674",
+    "Year": 2026,
+    "Make": "NISSAN",
+    "Model": "ROGUE",
+    "Trim": "",
+    "N/U/T": "N",
+    "Vin": "JN8BT3DD9TW473674"
+  },
+  {
+    "Stock#": 260179,
+    "Year": 2026,
+    "Make": "NISSAN",
+    "Model": "FRONTIER",
+    "Trim": "S 4X2 KING CAB 6 FT. BOX 126 IN. WB",
+    "N/U/T": "N",
+    "Vin": "1N6ED1CL9TN610179"
+  },
+  {
+    "Stock#": 2619174,
+    "Year": 2026,
+    "Make": "FORD",
+    "Model": "F-250",
+    "Trim": "",
+    "N/U/T": "N",
+    "Vin": "1FT8X2AA7TEC19174"
+  },
+  {
+    "Stock#": "CNT26122",
+    "Year": 2026,
+    "Make": "NISSAN",
+    "Model": "MURANO",
+    "Trim": "PLATINUM 4DR ALL-WHEEL DRIVE",
+    "N/U/T": "N",
+    "Vin": "5N1AZ3DSXTC102122"
+  },
+  {
+    "Stock#": "CNT26437",
+    "Year": 2026,
+    "Make": "NISSAN",
+    "Model": "ROGUE",
+    "Trim": "",
+    "N/U/T": "N",
+    "Vin": "JN8BT3BB3TW372437"
+  },
+  {
+    "Stock#": 26438383,
+    "Year": 2026,
+    "Make": "MERCEDES-BENZ",
+    "Model": "GLC 350E",
+    "Trim": "GLC 350E 4DR ALL-WHEEL DRIVE 4MATIC",
+    "N/U/T": "N",
+    "Vin": "W1NKM5GB0TF438383"
+  },
+  {
+    "Stock#": "CNT26855",
+    "Year": 2026,
+    "Make": "NISSAN",
+    "Model": "SENTRA",
+    "Trim": "SV 4DR SEDAN",
+    "N/U/T": "N",
+    "Vin": "3N1AB9CVXTY221855"
+  },
+  {
+    "Stock#": 2623098,
+    "Year": 2026,
+    "Make": "NISSAN",
+    "Model": "FRONTIER",
+    "Trim": "",
+    "N/U/T": "N",
+    "Vin": "1N6ED1EK2TN623098"
+  },
+  {
+    "Stock#": 26000468,
+    "Year": 2026,
+    "Make": "VOLKSWAGEN",
+    "Model": "TIGUAN",
+    "Trim": "2.0T SE R-LINE BLACK 4DR ALL-WHEEL DRIVE 4MOTION",
+    "N/U/T": "N",
+    "Vin": "3VVGR7RM7TM000468"
+  },
+  {
+    "Stock#": "CNT26927",
+    "Year": 2026,
+    "Make": "NISSAN",
+    "Model": "FRONTIER",
+    "Trim": "S 4X4 KING CAB 6 FT. BOX 126 IN. WB",
+    "N/U/T": "N",
+    "Vin": "1N6ED1CM0TN619927"
+  },
+  {
+    "Stock#": "CNT264782",
+    "Year": 2026,
+    "Make": "MERCEDES-BENZ",
+    "Model": "CLE 300",
+    "Trim": "CLE 300 2DR ALL-WHEEL DRIVE 4MATIC COUPE",
+    "N/U/T": "N",
+    "Vin": "W1KMJ4HB3TF094782"
   }
 ];
 
