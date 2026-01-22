@@ -139,7 +139,7 @@ export const LeadForm = ({ onSubmit, isSubmitting }: LeadFormProps) => {
   };
   
   // Update the input field styling to add more contrast
-  const inputClassName = "mt-1 block w-full rounded-md border border-gray-300 bg-white shadow-sm py-2 px-3 text-gray-700 focus:border-blue-500 focus:ring-1 focus:ring-blue-500 text-base";
+  const inputClassName = "mt-1 block w-full rounded-md border border-gray-300 bg-white shadow-sm py-2 px-3 text-gray-700 focus:border-blue-500 focus:ring-1 focus:ring-blue-500";
   const selectClassName = "mt-1 block w-full rounded-md border border-gray-300 bg-white shadow-sm py-2 px-3 text-gray-700 focus:border-blue-500 focus:ring-1 focus:ring-blue-500";
   
   const formSubmit: SubmitHandler<LeadFormData> = async (data) => {
@@ -208,8 +208,6 @@ export const LeadForm = ({ onSubmit, isSubmitting }: LeadFormProps) => {
                 <label className="block text-sm font-medium text-gray-700">First Name</label>
                 <input
                   type="text"
-                  inputMode="text"
-                  autoComplete="given-name"
                   {...register('firstName', { required: 'First name is required' })}
                   className={inputClassName}
                 />
@@ -234,8 +232,6 @@ export const LeadForm = ({ onSubmit, isSubmitting }: LeadFormProps) => {
               <label className="block text-sm font-medium text-gray-700">Email</label>
               <input
                 type="email"
-                inputMode="email"
-                autoComplete="email"
                 {...register('email', { 
                   required: 'Email is required',
                   pattern: {
@@ -254,8 +250,6 @@ export const LeadForm = ({ onSubmit, isSubmitting }: LeadFormProps) => {
               <label className="block text-sm font-medium text-gray-700">Phone</label>
               <input
                 type="tel"
-                inputMode="tel"
-                autoComplete="tel"
                 {...register('phone', { 
                   required: 'Phone is required',
                   pattern: {
@@ -297,8 +291,6 @@ export const LeadForm = ({ onSubmit, isSubmitting }: LeadFormProps) => {
               <label className="block text-sm font-medium text-gray-700">Street</label>
               <input
                 type="text"
-                inputMode="text"
-                autoComplete="street-address"
                 {...register('address.street', { required: 'Street is required' })}
                 className={inputClassName}
               />
@@ -312,8 +304,6 @@ export const LeadForm = ({ onSubmit, isSubmitting }: LeadFormProps) => {
                 <label className="block text-sm font-medium text-gray-700">City</label>
                 <input
                   type="text"
-                  inputMode="text"
-                  autoComplete="address-level2"
                   {...register('address.city', { required: 'City is required' })}
                   className={inputClassName}
                 />
@@ -326,8 +316,6 @@ export const LeadForm = ({ onSubmit, isSubmitting }: LeadFormProps) => {
                   <label className="block text-sm font-medium text-gray-700">State</label>
                   <input
                     type="text"
-                    inputMode="text"
-                    autoComplete="address-level1"
                     {...register('address.state', { 
                       required: 'State is required',
                       maxLength: { value: 2, message: 'Use 2-letter abbreviation' }
@@ -342,8 +330,6 @@ export const LeadForm = ({ onSubmit, isSubmitting }: LeadFormProps) => {
                   <label className="block text-sm font-medium text-gray-700">Zip Code</label>
                   <input
                     type="text"
-                    inputMode="numeric"
-                    autoComplete="postal-code"
                     {...register('address.postalCode', { required: 'Zip code is required' })}
                     className={inputClassName}
                   />
