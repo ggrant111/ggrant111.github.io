@@ -1,0 +1,22 @@
+[
+  {
+    "fileName": "main-overview.mdc",
+    "description": "Complete system overview documenting the automotive lead management architecture, key components, and their interactions"
+  },
+  {
+    "fileName": "lead-data-models.mdc",
+    "description": "Detailed documentation of lead data structures, ADF XML schema, vehicle data models, and their relationships with dealer CRM systems"
+  },
+  {
+    "fileName": "lead-processing-flow.mdc",
+    "description": "Comprehensive documentation of the lead generation workflow, routing logic, and notification system integration with detailed sequence diagrams"
+  },
+  {
+    "fileName": "xml-generation-spec.mdc",
+    "description": "Technical specification of the ADF XML generation process, including required fields, formatting rules, and dealer-specific customizations"
+  },
+  {
+    "fileName": "analytics-implementation.mdc",
+    "description": "Documentation of lead tracking analytics implementation, including performance metrics calculations and data aggregation methods"
+  }
+]
