@@ -1,11 +1,12 @@
 import { VehicleInfo } from '@/types/lead';
+import { useEffect, useState } from 'react';
 
 interface VehicleSelectorProps {
   value?: VehicleInfo;
   onChange: (vehicle: VehicleInfo | undefined) => void;
 }
 
-// Sample vehicle data
+// Sample vehicle data (fallback)
 const vehicles = [
   {
     year: '2025',
@@ -90,7 +91,33 @@ const vehicles = [
   }
 ];
 
+
 export const VehicleSelector = ({ value, onChange }: VehicleSelectorProps) => {
+  const [vehiclesList, setVehiclesList] = useState<VehicleInfo[]>(vehicles);
+
+  useEffect(() => {
+    let mounted = true;
+
+    const loadVehicles = async () => {
+      try {
+        const res = await fetch('/vehicles.json');
+        if (!res.ok) return;
+        const data = await res.json();
+        if (mounted && Array.isArray(data) && data.length > 0) {
+          setVehiclesList(data as VehicleInfo[]);
+        }
+      } catch (err) {
+        // silently ignore and keep fallback
+      }
+    };
+
+    loadVehicles();
+
+    return () => {
+      mounted = false;
+    };
+  }, []);
+
   const handleChange = (e: React.ChangeEvent<HTMLSelectElement>) => {
     const selectedValue = e.target.value;
     
@@ -122,8 +149,8 @@ export const VehicleSelector = ({ value, onChange }: VehicleSelectorProps) => {
         className={selectClassName}
       >
         <option value="">Please select a vehicle</option>
-        {vehicles.map((vehicle, index) => (
-          <option key={index} value={JSON.stringify(vehicle)}>
+        {vehiclesList.map((vehicle) => (
+          <option key={vehicle.vin ?? vehicle.stock ?? `${vehicle.make}-${vehicle.model}`} value={JSON.stringify(vehicle)}>
             {vehicle.year} {vehicle.make} {vehicle.model}
           </option>
         ))}
