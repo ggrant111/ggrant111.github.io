@@ -1,4 +1,6 @@
-const CACHE_NAME = "leadgen-v1";
+// `leadgen-0.1.0-1769748971234` will be replaced at build/deploy time with a unique cache name.
+// This ensures each release uses a new cache and clients pick up updates automatically.
+const CACHE_NAME = "__SW_CACHE_NAME__";
 
 // Basic files to cache initially
 const urlsToCache = ["/", "/manifest.json", "/leadgenlogo_square.svg"];
@@ -22,11 +24,13 @@ self.addEventListener("install", (event) => {
   self.skipWaiting();
 });
 
+// Handle fetch events with strategies tuned for updates:
+// - navigation (HTML): network-first (ensures users get latest HTML)
+// - same-origin assets: stale-while-revalidate (fast + updates cache in background)
 self.addEventListener("fetch", (event) => {
-  // Only handle GET requests
   if (event.request.method !== "GET") return;
 
-  // Skip some third-party requests and non-http(s) requests
+  // Ignore non-http(s) or cross-origin requests
   if (
     !event.request.url.startsWith(self.location.origin) &&
     !event.request.url.startsWith("http")
@@ -34,52 +38,41 @@ self.addEventListener("fetch", (event) => {
     return;
   }
 
-  event.respondWith(
-    caches.match(event.request).then((response) => {
-      // Cache hit - return response
-      if (response) {
-        return response;
-      }
+  const acceptHeader = event.request.headers.get('accept') || '';
 
-      // Clone the request because it's a one-time use stream
-      const fetchRequest = event.request.clone();
-
-      return fetch(fetchRequest)
-        .then((response) => {
-          // Check if valid response
-          if (
-            !response ||
-            response.status !== 200 ||
-            response.type !== "basic"
-          ) {
-            return response;
-          }
-
-          // Clone the response because it's a one-time use stream
-          const responseToCache = response.clone();
-
-          // Don't cache auth related requests
-          if (!event.request.url.match(/^(.*)?\/api\/auth\/(.*)$/)) {
-            caches.open(CACHE_NAME).then((cache) => {
-              // Add fetched resource to cache
-              cache.put(event.request, responseToCache);
-            });
-          }
-
-          return response;
+  // Network-first for navigation requests (HTML pages)
+  if (event.request.mode === 'navigate' || acceptHeader.includes('text/html')) {
+    event.respondWith(
+      fetch(event.request)
+        .then((networkResponse) => {
+          // Update cache with latest HTML
+          const copy = networkResponse.clone();
+          caches.open(CACHE_NAME).then((cache) => cache.put(event.request, copy));
+          return networkResponse;
         })
-        .catch(() => {
-          // If both cache and network fail, serve offline page
-          if (event.request.mode === "navigate") {
-            return caches.match("/");
-          }
+        .catch(() => caches.match('/'))
+    );
+    return;
+  }
 
-          // For non-HTML requests, return nothing
-          return new Response("", {
-            status: 408,
-            headers: { "Content-Type": "text/plain" },
-          });
-        });
+  // For same-origin assets (css, js, images, json): stale-while-revalidate
+  event.respondWith(
+    caches.match(event.request).then((cachedResponse) => {
+      const fetchPromise = fetch(event.request.clone())
+        .then((networkResponse) => {
+          if (
+            networkResponse &&
+            networkResponse.status === 200 &&
+            networkResponse.type === 'basic'
+          ) {
+            const responseToCache = networkResponse.clone();
+            caches.open(CACHE_NAME).then((cache) => cache.put(event.request, responseToCache));
+          }
+          return networkResponse;
+        })
+        .catch(() => undefined);
+
+      return cachedResponse || fetchPromise;
     })
   );
 });
@@ -100,6 +93,14 @@ self.addEventListener("activate", (event) => {
   );
   // Claim any clients immediately
   self.clients.claim();
+});
+
+// Allow the page to trigger immediate activation of a waiting worker
+self.addEventListener('message', (event) => {
+  if (!event.data) return;
+  if (event.data.type === 'SKIP_WAITING') {
+    self.skipWaiting();
+  }
 });
 
 self.addEventListener("push", function (event) {
