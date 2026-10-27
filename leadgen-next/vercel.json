@@ -1,0 +1,9 @@
+{
+  "redirects": [
+    {
+      "source": "/:path*",
+      "destination": "https://crmleadgen.lovable.app/",
+      "permanent": false
+    }
+  ]
+}
