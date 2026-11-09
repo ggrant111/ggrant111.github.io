@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="GlowDeck GameDay firmware releases and ESP32 USB installer." />
+    <title>GlowDeck GameDay</title>
+    <style>
+      :root { color-scheme: dark; --bg: #07111f; --panel: #111f31; --text: #eef6ff; --muted: #b7c7d9; --accent: #31d6c3; }
+      * { box-sizing: border-box; }
+      body { margin: 0; min-height: 100vh; padding: 32px 18px; background: radial-gradient(ellipse at top, #15314a, var(--bg) 62%); color: var(--text); font: 16px/1.6 system-ui, sans-serif; }
+      main { width: min(760px, 100%); margin: 0 auto; }
+      .eyebrow { color: var(--accent); font-weight: 700; letter-spacing: .12em; text-transform: uppercase; }
+      h1 { margin: 4px 0 8px; font-size: clamp(2.2rem, 8vw, 4rem); line-height: 1.05; }
+      h2 { margin-top: 0; }
+      p, li { color: var(--muted); }
+      .panel { margin: 22px 0; padding: 22px; border: 1px solid #29415b; border-radius: 18px; background: color-mix(in srgb, var(--panel) 92%, transparent); }
+      .actions { display: flex; flex-wrap: wrap; gap: 12px; margin: 20px 0; }
+      .button { display: inline-block; padding: 12px 18px; border-radius: 10px; background: var(--accent); color: #04221f; font-weight: 750; text-decoration: none; }
+      .button.secondary { border: 1px solid #54708e; background: transparent; color: var(--text); }
+      code { color: #fff; overflow-wrap: anywhere; }
+      .warning { border-left: 4px solid #f6bd60; padding-left: 14px; }
+      footer { margin-top: 30px; text-align: center; }
+      footer a { color: var(--accent); }
+    </style>
+  </head>
+  <body>
+    <main>
+      <p class="eyebrow">GlowDeck · GameDay</p>
+      <h1>GameDay firmware</h1>
+      <p>Install GameDay on a supported ESP32 display, or browse the release assets for firmware updates and board-specific images.</p>
+
+      <section class="panel" aria-labelledby="install-heading">
+        <h2 id="install-heading">New installation</h2>
+        <p>Use the hosted ESP Web Tools installer for a first-time USB installation. It detects the connected chip and chooses the matching factory image.</p>
+        <div class="actions">
+          <a class="button" href="https://ggrant111.github.io/glowdeck-gameday/">Open ESP Web Installer</a>
+          <a class="button secondary" href="https://github.com/ggrant111/glowdeck-gameday/releases/download/v2026.11.08-beta.1/glowdeck-gameday-v2026.11.08-beta.1-web-installer.zip">Download installer ZIP</a>
+        </div>
+        <p>Requires a desktop Chrome or Edge browser with Web Serial support and a data-capable USB cable. USB installation is not supported on iPhone or iPad.</p>
+      </section>
+
+      <section class="panel" aria-labelledby="release-heading">
+        <h2 id="release-heading">GameDay v2026.11.08-beta.1</h2>
+        <p>This is a beta release. Review the release notes and choose the correct image for your board before flashing.</p>
+        <div class="actions">
+          <a class="button" href="https://github.com/ggrant111/glowdeck-gameday/releases/tag/v2026.11.08-beta.1">View release and all downloads</a>
+        </div>
+        <ul>
+          <li>Original ESP32 CYD: factory image for a fresh USB flash; OTA image for an existing device.</li>
+          <li>Waveshare ESP32-S3-Touch-LCD-3.5 (ST7796): use its matching factory or OTA image.</li>
+        </ul>
+        <p class="warning"><strong>Important:</strong> Do not mix board images. Factory flashing can erase saved settings. For an update to a running device, use its matching <code>-ota.bin</code> image from Device → Firmware &amp; Maintenance.</p>
+      </section>
+
+      <footer><a href="/">Back to the home page</a> · <a href="https://github.com/ggrant111/glowdeck-gameday">Source and documentation</a></footer>
+    </main>
+  </body>
+</html>
